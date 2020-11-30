@@ -5,7 +5,6 @@ module.exports = {
 	},
 
 	extends: [
-		"vuepress",
 		"prettier"
 	],
 
