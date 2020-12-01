@@ -148,7 +148,7 @@ html[lights-out] {
 
 * {
   transition-property: color, background-color, border-color;
-  transition-duration: 200ms;
+  transition-duration: 0ms;
   transition-timing-function: ease-in-out;
 }
 
@@ -209,7 +209,7 @@ blockquote {
   h1, h2, h3, h4, h5, h6 {
     @apply -mt-12 pt-20;
   }
-    
+
   h2 + h3,
   h2 + h2,
   h3 + h3 {

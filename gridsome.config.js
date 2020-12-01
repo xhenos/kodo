@@ -1,23 +1,25 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Docc',
+  siteName: 'Tachiyomi',
+  siteDescription: 'Free and open source manga reader for Android',
   icon: {
     favicon: './src/assets/favicon.png',
     touchicon: './src/assets/favicon.png'
   },
-  siteUrl: (process.env.SITE_URL ? process.env.SITE_URL : 'https://example.com'),
+  siteUrl: (process.env.SITE_URL ? process.env.SITE_URL : 'https://tachiyomi.org'),
   settings: {
     web: process.env.URL_WEB || false,
-    twitter: process.env.URL_TWITTER || false,
+	twitter: process.env.URL_TWITTER || false,
+    discord: process.env.URL_DISCORD || false,
     github: process.env.URL_GITHUB || false,
     nav: {
       links: [
-        { path: '/docs/', title: 'Docs' }
+        { path: '/help/', title: 'Help' }
       ]
     },
     sidebar: [
@@ -83,7 +85,7 @@ module.exports = {
 
     {
       use: '@gridsome/plugin-sitemap',
-      options: {  
+      options: {
       }
     }
 

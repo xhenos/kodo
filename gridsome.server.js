@@ -5,13 +5,36 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection, addMetadata }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-    addMetadata('settings', require('./gridsome.config').settings);
-  });
+const axios = require('axios')
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  });
+module.exports = function (api) {
+	api.loadSource(async ({ addMetadata, addCollection }) => {
+
+		let appVerStable = 'v0.00.0'
+		let appVerPreview = 'v0.00.0'
+
+		try {
+			const { data } = await axios.get('https://api.github.com/repos/inorichi/tachiyomi/releases/latest');
+			appVerStable = data.tag_name.slice(1);
+		} catch (err) {
+			console.warn('Failed to get Tachiyomi version from GitHub.')
+		}
+
+		try {
+			const { data } = await axios.get('https://api.github.com/repos/tachiyomiorg/android-app-preview/releases/latest');
+			appVerPreview = data.tag_name;
+		} catch (err) {
+			console.warn('Failed to get Tachiyomi Preview version from GitHub.')
+		}
+
+		addMetadata('appVerStable', appVerStable);
+		addMetadata('appVerPreview', appVerPreview);
+
+		// Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+		addMetadata('settings', require('./gridsome.config').settings);
+	});
+
+	api.createPages(({ createPage }) => {
+		// Use the Pages API here: https://gridsome.org/docs/pages-api/
+	});
 }
