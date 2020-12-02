@@ -4,7 +4,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import MaterialIcon from '~/components/MaterialIcon.vue'
 import Navigation from '~/components/Navigation.vue'
 
-
+import "gridsome-plugin-remark-container/themes/classic.css";
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)

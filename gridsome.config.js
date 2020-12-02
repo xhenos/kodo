@@ -43,22 +43,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		// This seems to be replace by @gridsome/vue-remark
-		// {
-		//     use: "@gridsome/source-filesystem",
-		//     options: {
-		//         baseDir: "./content",
-		//         path: "**/*.md",
-		//         typeName: "MarkdownPage",
-		//         remark: {
-		//             externalLinksTarget: "_blank",
-		//             externalLinksRel: ["noopener", "noreferrer"],
-		//             plugins: [
-		//                 "@gridsome/remark-prismjs"
-		//             ]
-		//         }
-		//     }
-		// },
 		{
 			use: "gridsome-plugin-tailwindcss",
 			options: {
@@ -89,7 +73,26 @@ module.exports = {
 			options: {
 				typeName: "MarkdownPage",
 				baseDir: "./content",
-				template: "./src/templates/MarkdownPage.vue"
+				template: "./src/templates/MarkdownPage.vue",
+				plugins: [
+					'@gridsome/remark-prismjs',
+					[
+						"gridsome-plugin-remark-container",
+						{
+							customTypes: {
+								// This is an example how one can define custom types
+								vwarning: {
+									keyword: 'vwarning',
+									customBlock: true,
+									tagName: 'v-alert',
+									properties: {
+										type: 'warning'
+									}
+								},
+							}
+						}
+					]
+				]
 			}
 		}
 
