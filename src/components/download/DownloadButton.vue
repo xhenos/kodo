@@ -1,7 +1,7 @@
 <template>
-	<button class="downloadButton" v-bind:class="{ alternative: isAlternative}">
-		<p>{{ title }}</p>
-		<p>{{ data.version }}</p>
+	<button class="rounded-md my-2 md:mx-2  px-20 py-2" v-bind:class="{ 'bg-blue-400': isAlternative, 'bg-blue-600': !isAlternative}">
+		<p class="font-bold text-white mb-0">{{ title }}</p>
+		<p class="text-sm font-light text-white m-0">{{ data.version }}</p>
 	</button>
 </template>
 
@@ -16,18 +16,5 @@ export default {
 </script>
 
 <style>
-.downloadButton {
-	background: royalblue;
-	padding: 5px 50px;
-	margin: 5px;
-	border-radius: 5px;
-}
 
-.alternative {
-	background: cornflowerblue;
-}
-
-.downloadButton p {
-	margin: 0px;
-}
 </style>

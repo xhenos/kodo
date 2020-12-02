@@ -1,5 +1,5 @@
 <template>
-	<div class="releaseNotes">
+	<div class="bg-ui-container rounded-lg p-8">
 		<h2>Whats New</h2>
 		<div v-html="marked" />
 	</div>
@@ -24,9 +24,5 @@ export default {
 </script>
 
 <style>
-.releaseNotes {
-	background: rgba(255, 255, 255, 0.1);
-	padding: 10px;
-	border-radius: 5px;
-}
+
 </style>

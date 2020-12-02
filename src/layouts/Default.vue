@@ -131,6 +131,7 @@ export default {
   --color-ui-sidebar: theme('colors.gray.200');
   --color-ui-border: theme('colors.gray.300');
   --color-ui-primary: theme('colors.indigo.600');
+  --color-ui-container: theme('colors.gray.200')
 }
 
 html[lights-out] {
@@ -139,6 +140,7 @@ html[lights-out] {
   --color-ui-sidebar: theme('colors.gray.800');
   --color-ui-border: theme('colors.gray.800');
   --color-ui-primary: theme('colors.indigo.500');
+  --color-ui-container: theme('colors.gray.800');
 
   pre[class*="language-"],
   code[class*="language-"] {
@@ -313,5 +315,9 @@ table {
     @apply w-1/4 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0;
     transform: translateX(0);
   }
+}
+
+.bg-ui-container {
+  background: var(--color-ui-container);
 }
 </style>

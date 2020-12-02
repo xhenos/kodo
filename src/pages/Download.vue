@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<h1>Download</h1>
+		<h1 class="mt-8">Download</h1>
 
 		<p>
 			Download the latest stable version of
@@ -12,16 +12,19 @@
 			.
 		</p>
 
-    <download-button title="Stable" v-bind:data="stable" />
-    <download-button title="Preview" isAlternative v-bind:data="preview" />
+		<div class="content-center text-center my-8">
+			<div class="flex justify-center flex-col md:flex-row">
+				<download-button title="Stable" v-bind:data="stable" />
+				<download-button title="Preview" isAlternative v-bind:data="preview" />
+			</div>
+			<p>
+				Requires
+				<b>Android 5.0</b>
+				or higher.
+			</p>
+		</div>
 
-		<p>
-			Requires
-			<b>Android 5.0</b>
-			or higher.
-		</p>
-
-    <whats-new v-bind:body="stable.body"/>
+		<whats-new v-bind:body="stable.body" />
 	</Layout>
 </template>
 
@@ -46,34 +49,33 @@ query {
 
 <script>
 import moment from "moment";
-import WhatsNew from '../components/download/WhatsNew.vue';
-import DownloadButton from '../components/download/DownloadButton.vue';
+import WhatsNew from "../components/download/WhatsNew.vue";
+import DownloadButton from "../components/download/DownloadButton.vue";
 
 export default {
-  components: { WhatsNew, DownloadButton },
+	components: { WhatsNew, DownloadButton },
 	computed: {
 		stable() {
-      const data = this.$static.metadata.appStable
+			const data = this.$static.metadata.appStable;
 			return {
-        body: data.body,
-        date: moment(this.$static.metadata.appStable.releaseDate).fromNow(),
-        downloadUrl: data.downloadUrl,
-        version: data.version
-      };
+				body: data.body,
+				date: moment(data.releaseDate).fromNow(),
+				downloadUrl: data.downloadUrl,
+				version: data.version,
+			};
 		},
 		preview() {
-      const data = this.$static.metadata.appPreview;
+			const data = this.$static.metadata.appPreview;
 			return {
-        body: data.body,
-        date: moment(this.$static.metadata.appStable.releaseDate).fromNow(),
-        downloadUrl: data.downloadUrl,
-        version: data.version
-      };
+				body: data.body,
+				date: moment(data.releaseDate).fromNow(),
+				downloadUrl: data.downloadUrl,
+				version: 'r' + data.version,
+			};
 		},
 	},
 };
 </script>
 
 <style>
-
 </style>
