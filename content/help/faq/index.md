@@ -1,8 +1,5 @@
 ---
-title: Frequently Asked Questions
 description: Need help with something? Most of your issues can probably be solved from this page.
-lang: en-US
-sidebarDepth: 2
 ---
 
 # Frequently Asked Questions
@@ -12,24 +9,24 @@ sidebarDepth: 2
 ### Library
 
 #### How can I see how many chapters I've downloaded?
-This can be done by enabling **Download badges** under `<Navigation item="library"/>`.
+This can be done by enabling **Download badges** under <Navigation item="library"/>.
 
 ::: guide
-Enable it by going to `<Navigation item="library"/>` → `<Navigation item="filter"/>` → **Display** section and then checking the **Download badges** option at the bottom.
+Enable it by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Display** section and then checking the **Download badges** option at the bottom.
 :::
 
 #### Why are some covers white after restoring from backup?
 The URL to the cover has probably changed. To fix this, refresh the metadata of your library.
 
 ::: guide
-Refresh your metadata by going to `<Navigation item="more"/>` → `<Navigation item="settings"/>` → `<Navigation item="settings_advanced"/>` then pressing **Refresh library metadata**.
+Refresh your metadata by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> then pressing **Refresh library metadata**.
 :::
 
 #### How do I ignore chapters from certain scanlator groups?
 Every now and then you find a manga that is translated by more than one group. Because of this, you get multiple releases for each chapter in the manga. The easiest way to fix this is to change sorting to **Total chapters**. You won't see any changes but, when you start reading you'll automatically skip the duplicate releases.
 
 ::: guide
-Change library sorting by going to `<Navigation item="library"/>` → `<Navigation item="filter"/>` → **Sort** section then in this case selecting **Total chapters**.
+Change library sorting by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Sort** section then in this case selecting **Total chapters**.
 :::
 
 ### Browse
@@ -86,11 +83,11 @@ If you don't see a **Tachiyomi** folder on your device, try downloading a chapte
 #### How do I enable automatic updates?
 From version **0.9.0** and onwards, Tachiyomi has automatic updates for the app enabled by default. The **Preview** version also has automatic updates enabled by default.
 
-However, if you think you are on an outdated version, go to `<Navigation item="more"/>` → `<Navigation item="about"/>` → and click on **Check for updates**.
+However, if you think you are on an outdated version, go to <Navigation item="more"/> → <Navigation item="about"/> → and click on **Check for updates**.
 
 #### Why are automatic updates not working?
 
-Certain devices such as MIUI have very aggressive battery saving, which can kill the app in the background. To whitelist Tachiyomi from battery saver, go to `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>` and click on **Disable battery optimization**.
+Certain devices such as MIUI have very aggressive battery saving, which can kill the app in the background. To whitelist Tachiyomi from battery saver, go to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> and click on **Disable battery optimization**.
 
 ### User Interface
 #### Can I change the app language?
@@ -98,7 +95,7 @@ Certain devices such as MIUI have very aggressive battery saving, which can kill
 Only the UI has been localized, the language of the manga will still be using the language of the source selected.
 
 ::: guide
-You can change language by going to `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_general"/>` then pressing **Language**.
+You can change language by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_general"/> then pressing **Language**.
 :::
 
 ### Miscellaneous
@@ -205,19 +202,19 @@ If you need more help regarding this, read [this](https://www.theandroidsoul.com
 Extensions for **Tachiyomi** are technically installed the same as normal apps. Either you uninstall them through the app section on your phone's settings or you go can do it in the app.
 
 ::: guide
-To uninstall an extension from within **Tachiyomi**, go to `<Navigation item="browse"/>` → **Extensions** then tap **Uninstall** on the extension you want to remove.
+To uninstall an extension from within **Tachiyomi**, go to <Navigation item="browse"/> → **Extensions** then tap **Uninstall** on the extension you want to remove.
 :::
 
 #### Why don't I have extensions or any sources in Browse?
-- **Tachiyomi** no longer have pre-installed extensions, this means that you will need to install extensions you want to use from the `<Navigation item="browse"/>` → **Extensions** menu.
+- **Tachiyomi** no longer have pre-installed extensions, this means that you will need to install extensions you want to use from the <Navigation item="browse"/> → **Extensions** menu.
 - If you're getting the `Loader not implemented` error after clicking on a manga, you will need to reinstall the extensions you used to use.
 
 #### How do see sources of other languages?
 
 You do this by following the steps below.
 
-1. Go to `<Navigation item="browse"/>` → **Sources**.
-1. Click on `<Navigation item="filter"/>` on the top right corner.
+1. Go to <Navigation item="browse"/> → **Sources**.
+1. Click on <Navigation item="filter"/> on the top right corner.
 1. Scroll down until you find the language of your source and enable it.
 
 #### Why can't I restore my backup?
@@ -228,29 +225,29 @@ To restore backups, **Tachiyomi** requires to have extensions installed for the 
 It might be because the title is worded differently. Follow any of the steps below:
 - Look up the title on a search engine like **Google** or a manga tracking service such as [AniList](https://anilist.co/home).
 - See which site has the series, often a single source will not satisfy all your needs.
-- Download the extension for that source from `<Navigation item="browse"/>` → **Extensions** if it exists, read [this](/help/faq/#which-sources-are-in-the-multi-source-extensions) for a list of which extensions contains what sources.
-- Go to `<Navigation item="browse"/>` and tap on a source then search for the manga again.
+- Download the extension for that source from <Navigation item="browse"/> → **Extensions** if it exists, read [this](/help/faq/#which-sources-are-in-the-multi-source-extensions) for a list of which extensions contains what sources.
+- Go to <Navigation item="browse"/> and tap on a source then search for the manga again.
 
 ### MangaDex
 
 #### Why are there no results when searching?
 ::: videolink
-`<MaterialIcon icon="videocam"/>` [ Click for video guide](/assets/faq_mangadex-no-results.mp4)
+[<MaterialIcon icon="videocam"/> Click for video guide](/assets/faq_mangadex-no-results.mp4)
 :::
 
-If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the `<Navigation item="webview"/>` for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
+If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
 
 ::: guide
-To enter the **WebView** go to `<Navigation item="browse"/> → <Navigation item="button_latest"/>` next to **MangaDex**, then press on `<Navigation item="webview"/>` in the top right corner.
+To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item="button_latest"/> next to **MangaDex**, then press on <Navigation item="webview"/> in the top right corner.
 :::
 
 #### Why is MangaDex slow?
 If pages are loading slowly or not at all, try:
 - Making sure you have the *latest* version of the extension.
 - Checking if **MangaDex** is either down, or is having the same issues.
-- Trying to **Clear database** under `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>`.
-- Trying to **Clear chapter cache** under `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>`.
-- Going to `<Navigation item="browse"/> → <Navigation item="extensions"/>` → **MangaDex** → **Image Server** and then selecting a *different* server location.
+- Trying to **Clear database** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
+- Trying to **Clear chapter cache** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
+- Going to <Navigation item="browse"/> → <Navigation item="extensions"/> → **MangaDex** → **Image Server** and then selecting a *different* server location.
 
 `<ElAlert type="info" title="Disclaimer" description="Tachiyomi is not hosting any content, we are not affiliated with or responsible for any source that is; slow, down, missing chapters, or has subpar image quality." show-icon :closable="false"></ElAlert>`
 
@@ -262,7 +259,7 @@ An example search would be **`id:23427`** which would return results for [Candy 
 :::
 
 #### How do I deal with duplicate chapters in MangaDex?
-This can be solved by opening **MangaDex** in `<Navigation item="webview"/>` and block the scanlator group whose chapter you don't want to see.
+This can be solved by opening **MangaDex** in <Navigation item="webview"/> and block the scanlator group whose chapter you don't want to see.
 
 #### How do I fix chapters from Mangaplus being broken?
 Install the **MANGA Plus by SHUEISHA** extension instead and then migrate the manga that uses **MANGA Plus** on **MangaDex** onto the **MANGA Plus** source.
@@ -276,7 +273,7 @@ Read about source migration [here](/help/guides/source-migration/)
 #### How do I deal with duplicate chapters in MangaPark?
 To solve this issue, follow the below steps.
 
-1. Go to `<Navigation item="browse"/> → <Navigation item="extensions"/>`.
+1. Go to <Navigation item="browse"/> → <Navigation item="extensions"/>.
 1. Click on **MangaPark** extension and then **Chapter List Source**.
 1. Choose an option like **Smart list** or **Prioritize source**.
 1. Go back to **MangaPark**'s chapter list and refresh it.

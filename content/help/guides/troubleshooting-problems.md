@@ -22,14 +22,14 @@ This is just a list of some errors. Go through [Diagnosis](#diagnosis) even if y
 :::
 
 ## Diagnosis
-* Verify your extensions are up to date. (`<Navigation item="browse"/>` → Extensions, make sure no extensions have an update button)
-* Check if **Tachiyomi** has an update (`<Navigation item="more"/> → <Navigation item="about"/>` then click **Check for updates**)
-* Try opening the manga in `<Navigation item="webview"/>`. If there is [CAPTCHA](#solving-a-captcha), solve it and see if it helped.
+* Verify your extensions are up to date. (<Navigation item="browse"/> → Extensions, make sure no extensions have an update button)
+* Check if **Tachiyomi** has an update (<Navigation item="more"/> → <Navigation item="about"/> then click **Check for updates**)
+* Try opening the manga in <Navigation item="webview"/>. If there is [CAPTCHA](#solving-a-captcha), solve it and see if it helped.
 * Change your internet connection (*switch to Wi-Fi, mobile data or a VPN, use a "What's my IP" site to confirm your IP has changed*), then try again.
 * Ask other users to try the action that gives you the error.
 * Check if the source is either down, or is having issues in a browser.
 * Press the retry button in the middle of your manga page if one exists.
-* Try the following at `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>`
+* Try the following at <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>
   * **Clear Cache**
   * **Clear Cookies**
   * **Clear Database**
@@ -84,17 +84,17 @@ The source you selected may have **Cloudflare** protection on and is enforcing [
 The source banned your IP address (in most cases it's temporary). We suggest to [migrate](./source-migration.md) part of your manga to another source.
 :::
 ::: el-collapse-item title="HTTP error 5xx"
-Most probably the source you are trying to access has problems on their side. Open the source in `<Navigation item="webview"/>` and check if the site is down.
+Most probably the source you are trying to access has problems on their side. Open the source in <Navigation item="webview"/> and check if the site is down.
 :::
 ::: el-collapse-item title="Unable to resolve host / Connection failed"
-That means that something prevents your connection with the site. Possible reasons: your internet connection is bad, the app doesn't have access to internet, your ISP have blocked the site, the site is down. Try using different internet connection (switch to Wi-Fi, mobile data or a VPN). Try to enable `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>` → **DNS over HTTPS**.
+That means that something prevents your connection with the site. Possible reasons: your internet connection is bad, the app doesn't have access to internet, your ISP have blocked the site, the site is down. Try using different internet connection (switch to Wi-Fi, mobile data or a VPN). Try to enable <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> → **DNS over HTTPS**.
 :::
 ::: el-collapse-item title="java.security.cert.CertPathValidatorException / Chain validation failed"
 That means there is a problem with validating source's sertificate.
 
 - Check if the site's certificate have expired. Use an online service for checking SSL certificates. If the certificate have expired, then wait while the site owner will renew it.
 - Ensure that you have right date and time set on your phone.
-- Try `<Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>` → **Clear cache** and **Clear cookies**.
+- Try <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> → **Clear cache** and **Clear cookies**.
 - Try using different internet connection (switch to Wi-Fi, mobile data or a VPN).
 - Try to restart the device.
 :::
@@ -123,9 +123,9 @@ This error is typically caused by having a file or folder name that is too long.
 You must solve the **CAPTCHA** in **WebView**.
 
 ::: guide How to open WebView
-1. Go to `<Navigation item="browse"/>` in the bottom navbar.
+1. Go to <Navigation item="browse"/> in the bottom navbar.
 1. Press the source you'd like to access.
-1. Press the `<Navigation item="webview"/>` icon.
+1. Press the <Navigation item="webview"/> icon.
 	<figure class="centered">
 		<img class="zoomable" :src="$withBase('/assets/guides_webview-open.jpg')">
 	</figure>
