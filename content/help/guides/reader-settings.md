@@ -1,7 +1,8 @@
 ---
-title: Reader settings
 description: Reader settings for Tachiyomi.
-lang: en-US
+sidebar: "guides"
+prev: "/help/guides/reading-local-manga/"
+next: "/help/guides/categories/"
 ---
 
 import Carousel from '~/components/carousel/Carousel.vue'
@@ -60,18 +61,18 @@ This allows you to control what color the background should be in reader. Backgr
 **White**.
 <Carousel v-bind:items="[
     {
-        title: 'Black', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Black',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Surrounds page with black. With an AMOLED screen you can save battery by using this.'
     },
     {
-        title: 'Gray', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Gray',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Surrounds page with gray.'
     },
     {
-        title: 'White', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'White',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Surrounds page with white. Makes pages seemless with the screen.'
     }
 ]" />
@@ -80,7 +81,7 @@ This allows you to control what color the background should be in reader. Backgr
 This setting specifies if the notification and navigation bar are to be hidden while in the reader.
 
 ## Show content in cutout area `<Badge text="True" type="default-indicator" vertical="middle" />`
-Lets reader use all screen space even that around punch hole camera and camera notch 
+Lets reader use all screen space even that around punch hole camera and camera notch
 
 ## Keep screen on `<Badge text="True" type="default-indicator" vertical="middle" />`
 This setting determines if the device should be allowed to go to sleep while reading a manga.
@@ -106,29 +107,29 @@ All examples are illustrations and may not reflect what actually happens.
 
 <Carousel v-bind:items="[
     {
-        title: 'Fit screen', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Fit screen',
+        image: 'https://tachiyomi.org/icons/logo.svg',
     },
     {
-        title: 'Stretch', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Stretch',
+        image: 'https://tachiyomi.org/icons/logo.svg',
     },
     {
-        title: 'Fit width', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Fit width',
+        image: 'https://tachiyomi.org/icons/logo.svg',
     },
     {
-        title: 'Fit height', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Fit height',
+        image: 'https://tachiyomi.org/icons/logo.svg',
     },
     {
-        title: 'Original size', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Original size',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Will be either zoom in or out depending on image resolution'
     },
     {
-        title: 'Smart fit', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Smart fit',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Fits to the longest side of the image'
     }
 ]" />
@@ -147,18 +148,18 @@ All examples are illustrations
 
 <Carousel v-bind:items="[
     {
-        title: 'Left', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Left',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Will start at the left side of the page.'
     },
     {
-        title: 'Right', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Right',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Will start at the right side of the page.'
     },
     {
-        title: 'Center', 
-        image: 'https://tachiyomi.org/icons/logo.svg', 
+        title: 'Center',
+        image: 'https://tachiyomi.org/icons/logo.svg',
         desc: 'Will start at the center of the page.'
     }
 ]" />

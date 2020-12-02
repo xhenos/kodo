@@ -1,7 +1,7 @@
 ---
-title: Getting started
 description: Essential information to help you get set up with Tachiyomi.
-lang: en-US
+sidebar: "guides"
+next: "/help/guides/troubleshooting-problems/"
 ---
 
 # Getting started

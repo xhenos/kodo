@@ -1,7 +1,8 @@
 ---
-title: Troubleshooting problems
 description: Encountered an issue with a source or the app? Here are resources to help you troubleshoot it.
-lang: en-US
+sidebar: "guides"
+prev: "/help/guides/getting-started/"
+next: "/help/guides/source-migration/"
 ---
 
 # Troubleshooting problems

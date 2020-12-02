@@ -1,7 +1,8 @@
 ---
-title: Creating backups
 description: Backups can save you a lot of headache in case something happens to your installation or device.
-lang: en-US
+sidebar: "guides"
+prev: "/help/guides/source-migration/"
+next: "/help/guides/reading-local-manga/"
 ---
 
 # Creating backups
