@@ -9,6 +9,8 @@
   "dependencies": {
     "axios": "^0.21.0",
     "gridsome": "^0.7.0",
+    "marked": "^1.2.5",
+    "moment": "^2.29.1",
     "vue-carousel": "^0.18.0"
   },
   "devDependencies": {

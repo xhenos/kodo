@@ -13,8 +13,21 @@ module.exports = function (api) {
 		let appVerStable = 'v0.00.0'
 		let appVerPreview = 'v0.00.0'
 
+		let dataStable = {}
+		let dataPreview = {}
+
 		try {
 			const { data } = await axios.get('https://api.github.com/repos/inorichi/tachiyomi/releases/latest');
+
+			const apkAsset = data.assets.find((a) => a.name.includes(".apk"));
+
+			dataStable = {
+				body: data.body,
+				version: data.tag_name.slice(1),
+				downloadUrl: apkAsset.browser_download_url,
+				releaseDate: data.published_at
+			}
+
 			appVerStable = data.tag_name.slice(1);
 		} catch (err) {
 			console.warn('Failed to get Tachiyomi version from GitHub.')
@@ -22,11 +35,23 @@ module.exports = function (api) {
 
 		try {
 			const { data } = await axios.get('https://api.github.com/repos/tachiyomiorg/android-app-preview/releases/latest');
+
+			const apkAsset = data.assets.find((a) => a.name.includes(".apk"));
+
+			dataPreview = {
+				body: data.body,
+				version: data.tag_name.slice(1),
+				downloadUrl: apkAsset.browser_download_url,
+				releaseDate: data.published_at
+			}
+
 			appVerPreview = data.tag_name;
 		} catch (err) {
 			console.warn('Failed to get Tachiyomi Preview version from GitHub.')
 		}
 
+		addMetadata("appStable" , dataStable)
+		addMetadata("appPreview" , dataPreview)
 		addMetadata('appVerStable', appVerStable);
 		addMetadata('appVerPreview', appVerPreview);
 
