@@ -126,9 +126,11 @@ You must solve the **CAPTCHA** in **WebView**.
 1. Go to <Navigation item="browse"/> in the bottom navbar.
 1. Press the source you'd like to access.
 1. Press the <Navigation item="webview"/> icon.
+  ```
 	<figure class="centered">
 		<img class="zoomable" :src="$withBase('/assets/guides_webview-open.jpg')">
 	</figure>
+  ```
 1. Complete **CAPTCHA** if one is present.
 1. Once done, press the *Back Arrow* at the top left to return.
 :::

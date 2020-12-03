@@ -80,13 +80,41 @@ module.exports = {
 						"gridsome-plugin-remark-container",
 						{
 							customTypes: {
-								// This is an example how one can define custom types
 								videolink : {
 									keyword: 'videolink',
 									customBlock: true,
 									tagName: 'div',
+									children: `[contentNodes]`,
 									properties: {
 										class: ['videolink']
+									}
+								},
+								note : {
+									keyword: 'note',
+									customBlock: true,
+									tagName: 'div',
+									children: `[contentNodes]`,
+									properties: {
+										class: ['note']
+									}
+								},
+								'e-guide' : {
+									keyword: 'e-guide',
+									customBlock: true,
+									children: `[contentNodes]`,
+									tagName: 'div',
+									properties: {
+										class: ['guide', 'g-empty']
+									}
+								},
+								// TODO FIX TITLE
+								guide : {
+									keyword: 'guide',
+									customBlock: true,
+									tagName: 'div',
+									children: `[element('p', 'title', titleNodes), contentNodes]`,
+									properties: {
+										class: ['guide']
 									}
 								},
 							},

@@ -11,21 +11,21 @@ description: Need help with something? Most of your issues can probably be solve
 #### How can I see how many chapters I've downloaded?
 This can be done by enabling **Download badges** under <Navigation item="library"/>.
 
-:::guide
+:::e-guide
 Enable it by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Display** section and then checking the **Download badges** option at the bottom.
 :::
 
 #### Why are some covers white after restoring from backup?
 The URL to the cover has probably changed. To fix this, refresh the metadata of your library.
 
-:::guide
+:::e-guide
 Refresh your metadata by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> then pressing **Refresh library metadata**.
 :::
 
 #### How do I ignore chapters from certain scanlator groups?
 Every now and then you find a manga that is translated by more than one group. Because of this, you get multiple releases for each chapter in the manga. The easiest way to fix this is to change sorting to **Total chapters**. You won't see any changes but, when you start reading you'll automatically skip the duplicate releases.
 
-:::guide
+:::e-guide
 Change library sorting by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Sort** section then in this case selecting **Total chapters**.
 :::
 
@@ -94,7 +94,7 @@ Certain devices such as MIUI have very aggressive battery saving, which can kill
 **Tachiyomi** is translated in 40+ different languages. By default, the app follows the language used on your device.
 Only the UI has been localized, the language of the manga will still be using the language of the source selected.
 
-:::guide
+:::e-guide
 You can change language by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_general"/> then pressing **Language**.
 :::
 
@@ -156,7 +156,7 @@ Learn more about scanlation in this **Wikipedia** [**article**](https://en.wikip
 #### Which sources are in the multi-source extensions?
 Some extensions contain multiple sources, look at the list below to find out which extension to install for the specific source that you want.
 
-:::guide
+:::e-guide
 User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
 :::note
 Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
@@ -201,7 +201,7 @@ If you need more help regarding this, read [this](https://www.theandroidsoul.com
 #### How do I uninstall an extension?
 Extensions for **Tachiyomi** are technically installed the same as normal apps. Either you uninstall them through the app section on your phone's settings or you go can do it in the app.
 
-:::guide
+:::e-guide
 To uninstall an extension from within **Tachiyomi**, go to <Navigation item="browse"/> → **Extensions** then tap **Uninstall** on the extension you want to remove.
 :::
 
@@ -237,7 +237,7 @@ It might be because the title is worded differently. Follow any of the steps bel
 
 If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
 
-:::guide
+:::e-guide
 To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item="button_latest"/> next to **MangaDex**, then press on <Navigation item="webview"/> in the top right corner.
 :::
 
@@ -254,7 +254,7 @@ If pages are loading slowly or not at all, try:
 #### Is there an alternate searching method?
 **MangaDex** allows you to search using the ID number to find manga. The easiest way to get the ID is by opening the manga in your browser and looking at the URL.
 
-:::guide
+:::e-guide
 An example search would be **`id:23427`** which would return results for [Candy & Cigarettes](https://mangadex.org/title/23427/candy-cigarettes)
 :::
 
