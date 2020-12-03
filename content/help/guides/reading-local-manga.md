@@ -21,7 +21,7 @@ If you add more chapters then you'll have to manually refresh the chapter list (
 
 Supported chapter formats are folder with pictures inside (such as `.jpg`, `.png`, etc), `ZIP`/`CBZ`, `RAR`/`CBR` and `EPUB`. But expect better performance with directories and `ZIP`/`CBZ`.
 
-::: c-warning
+:::c-warning
 Remember to give the app storage permissions on **Android 6** and newer.
 :::
 
@@ -29,7 +29,7 @@ Remember to give the app storage permissions on **Android 6** and newer.
 
 Tachiyomi requires a specific folder structure for local manga to be correctly processed. Local manga will be read from the `Tachiyomi/local` folder. Each manga must have a `Manga` folder and a `Chapter` folder. Images will then go into the chapter folder. See below for more information on archive files. You can refer to the following example:
 
-::: guide Example (Folder)
+:::guide Example (Folder)
 <div class="side-by-side">
 	<ul class="file-tree">
 		<li>
@@ -88,7 +88,7 @@ Tachiyomi requires a specific folder structure for local manga to be correctly p
 Tachiyomi will see four chapters in a single manga.
 The path to the folder with images must contain both the manga title and the chapter name (as seen above).
 
-::: guide-empty
+:::guide-empty
 <figure class="centered">
 	<h4>Example structure using the file manager</h4>
 	<p>Here, the manga name is <strong>test</strong> so the file structure is <code>/Tachiyomi/local/test/ch1/images</code>.</p>
@@ -99,7 +99,7 @@ The path to the folder with images must contain both the manga title and the cha
 ## Archive Files
 Archive files such as `ZIP`/`CBZ` are supported but the folder structure inside is not. Any folders inside the archive file are ignored. You must place the archive inside the `Manga` folder where the name will become the `Chapter` title. All images inside the archive regardless of folder structure will become pages for that chapter.
 
-::: guide Example (ZIP)
+:::guide Example (ZIP)
 <ul class="file-tree">
 		<li>
 			/sdcard/Tachiyomi/local

@@ -28,7 +28,7 @@ This setting sets the reader's default direction when you open a manga.
 **Continuous vertical**
 - Similar to webtoon but with a little space between pages.
 
-::: c-tip
+:::c-tip
 You can change viewer for different series by going to the series, opening a chapter, tapping the middle of the screen, pressing the gear icon, and selecting a different viewer in **Viewer for this series**.
 :::
 
@@ -41,7 +41,7 @@ Briefly show current mode when reader is opened
 ## 32-bit color `<Badge text="False" type="default-indicator" vertical="middle" />`
 This setting decodes images in `ARGB888` format to allow the reader to display more colors.
 
-::: c-warning
+:::c-warning
 This setting will only show up on smartphones running **Android 8.0** or higher.
 :::
 
@@ -134,7 +134,7 @@ All examples are illustrations and may not reflect what actually happens.
     }
 ]" />
 
-::: c-tip
+:::c-tip
 You can change scale type when reading a chapter. Tap the middle of the screen, press the gear icon at the top, select a different scale type under **Scale type**. This will change Scale type for all series.
 :::
 
@@ -204,7 +204,7 @@ Inverts the tapping position depending on which setting you choose.
 **Both**
 - Applies the two previous mentioned settings
 
-::: c-warning
+:::c-warning
 This setting can only be used when Tapping is enabled.
 :::
 
@@ -218,6 +218,6 @@ This setting allows you to flip pages using the volume keys, with the volume up 
 
 Reverses the Volume keys function of volume up going to the next page and volume down going to the last page.
 
-::: c-warning
+:::c-warning
 This setting can only be used when Volume keys setting is enabled.
 :::

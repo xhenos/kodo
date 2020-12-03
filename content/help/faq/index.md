@@ -11,21 +11,21 @@ description: Need help with something? Most of your issues can probably be solve
 #### How can I see how many chapters I've downloaded?
 This can be done by enabling **Download badges** under <Navigation item="library"/>.
 
-::: guide
+:::guide
 Enable it by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Display** section and then checking the **Download badges** option at the bottom.
 :::
 
 #### Why are some covers white after restoring from backup?
 The URL to the cover has probably changed. To fix this, refresh the metadata of your library.
 
-::: guide
+:::guide
 Refresh your metadata by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> then pressing **Refresh library metadata**.
 :::
 
 #### How do I ignore chapters from certain scanlator groups?
 Every now and then you find a manga that is translated by more than one group. Because of this, you get multiple releases for each chapter in the manga. The easiest way to fix this is to change sorting to **Total chapters**. You won't see any changes but, when you start reading you'll automatically skip the duplicate releases.
 
-::: guide
+:::guide
 Change library sorting by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Sort** section then in this case selecting **Total chapters**.
 :::
 
@@ -33,7 +33,7 @@ Change library sorting by going to <Navigation item="library"/> → <Navigation 
 
 #### Why can't I find X manga?
 Sometimes you can struggle to find a source hosting the manga you're looking for, look here for some tips to help you find it.
-::: guide Tips to find your manga
+:::guide Tips to find your manga
 1. Look up the title on [Google](https://google.com/) or a manga database such as [MangaUpdates](https://www.mangaupdates.com/).
 1. See if a website or scanlator has the series, then check the [Extensions](/extensions/) list.
 
@@ -58,7 +58,7 @@ Be aware that it could be a network issue on your device or on the catalog you a
 
 #### Can you make it possible to store manga on both internal storage and external SD-card?
 At the moment, no. You could try using symlinks but that requires having your phone rooted.
-::: note
+:::note
 Read more about rooting your phone [here](https://www.xda-developers.com/root/)
 :::
 
@@ -68,7 +68,7 @@ To log in with Kitsu you need to use your email address as your username.
 
 #### Why can't I find manga in MAL's search results?
 You can search a manga from your MAL profile's list by searching in the following format: `my:<manga>`
-::: note
+:::note
 Related GitHub issue: [#65](https://github.com/inorichi/tachiyomi/issues/65)
 :::
 
@@ -94,7 +94,7 @@ Certain devices such as MIUI have very aggressive battery saving, which can kill
 **Tachiyomi** is translated in 40+ different languages. By default, the app follows the language used on your device.
 Only the UI has been localized, the language of the manga will still be using the language of the source selected.
 
-::: guide
+:::guide
 You can change language by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_general"/> then pressing **Language**.
 :::
 
@@ -133,7 +133,7 @@ Tachiyomi by default adds a `.nomedia` file to prevent this from happening but s
 #### I lost everything, what now?
 To avoid data loss in the future, you can use the automatic backup feature.
 
-::: note
+:::note
 Learn how to create automatic backups [here](/help/guides/creating-backups/#turning-on-auto-backups/)
 :::
 
@@ -156,16 +156,16 @@ Learn more about scanlation in this **Wikipedia** [**article**](https://en.wikip
 #### Which sources are in the multi-source extensions?
 Some extensions contain multiple sources, look at the list below to find out which extension to install for the specific source that you want.
 
-::: guide
+:::guide
 User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
-::: note
+:::note
 Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
 :::
 
 #### How do I request a new extension?
 Open an issue [on GitHub](https://github.com/inorichi/tachiyomi-extensions/issues) if one does not already exist.
 
-::: note
+:::note
 You can find the list of extensions to download [here](/extensions/)
 :::
 
@@ -177,7 +177,7 @@ To install just download the file for the extension you want and then install it
 #### How do I allow third-party installations?
 ::::: el-tabs
 :::: el-tab-pane label="Android 8.0 and higher"
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for Android 8.0 and newer video guide](/assets/faq_unknown-sources-a10.webm)
 :::
 When installing your first extension and are prompted that your phone *isn't allowed* to install unknown apps from that source, simply follow the prompt to allow it.
@@ -185,7 +185,7 @@ When installing your first extension and are prompted that your phone *isn't all
 In *newer* versions of **Android** you need to enable **Install unknown apps** by a per-app basis.
 ::::
 :::: el-tab-pane label="Android 7.1 and lower"
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for Android 7.1 and older video guide](/assets/faq_unknown-sources-a7.webm)
 :::
 When installing your first extension and are prompted that your phone *isn't allowed* to install unknown apps from that source, simply follow the prompt to allow it.
@@ -194,14 +194,14 @@ In *older* versions of **Android** you only need to enable **Unknown sources** g
 ::::
 :::::
 
-::: note
+:::note
 If you need more help regarding this, read [this](https://www.theandroidsoul.com/how-to-allow-apps-installation-from-unknown-sources-on-android-9-pie/)
 :::
 
 #### How do I uninstall an extension?
 Extensions for **Tachiyomi** are technically installed the same as normal apps. Either you uninstall them through the app section on your phone's settings or you go can do it in the app.
 
-::: guide
+:::guide
 To uninstall an extension from within **Tachiyomi**, go to <Navigation item="browse"/> → **Extensions** then tap **Uninstall** on the extension you want to remove.
 :::
 
@@ -231,13 +231,13 @@ It might be because the title is worded differently. Follow any of the steps bel
 ### MangaDex
 
 #### Why are there no results when searching?
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/faq_mangadex-no-results.mp4)
 :::
 
 If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
 
-::: guide
+:::guide
 To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item="button_latest"/> next to **MangaDex**, then press on <Navigation item="webview"/> in the top right corner.
 :::
 
@@ -254,7 +254,7 @@ If pages are loading slowly or not at all, try:
 #### Is there an alternate searching method?
 **MangaDex** allows you to search using the ID number to find manga. The easiest way to get the ID is by opening the manga in your browser and looking at the URL.
 
-::: guide
+:::guide
 An example search would be **`id:23427`** which would return results for [Candy & Cigarettes](https://mangadex.org/title/23427/candy-cigarettes)
 :::
 
@@ -264,7 +264,7 @@ This can be solved by opening **MangaDex** in <Navigation item="webview"/> and b
 #### How do I fix chapters from Mangaplus being broken?
 Install the **MANGA Plus by SHUEISHA** extension instead and then migrate the manga that uses **MANGA Plus** on **MangaDex** onto the **MANGA Plus** source.
 
-::: note
+:::note
 Read about source migration [here](/help/guides/source-migration/)
 :::
 
@@ -301,10 +301,10 @@ Japscan has some manga that are scrambled using a different algorithm than other
 
 ### KissManga and MangaRock
 :::: el-collapse
-::: el-collapse-item title="Where is KissManga?"
+:::el-collapse-item title="Where is KissManga?"
 **KissManga** went under permanently in August 2020, we will not add something that doesn't exist back..
 :::
-::: el-collapse-item title="Where is MangaRock"
+:::el-collapse-item title="Where is MangaRock"
 **MangaRock** converted from a piracy app and went legit, they are now called **INKR** but is nowhere near what they were before.
 :::
 ::::

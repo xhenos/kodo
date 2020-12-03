@@ -81,15 +81,15 @@ module.exports = {
 						{
 							customTypes: {
 								// This is an example how one can define custom types
-								vwarning: {
-									keyword: 'vwarning',
+								videolink : {
+									keyword: 'videolink',
 									customBlock: true,
-									tagName: 'v-alert',
+									tagName: 'div',
 									properties: {
-										type: 'warning'
+										class: ['videolink']
 									}
 								},
-							}
+							},
 						}
 					]
 				]

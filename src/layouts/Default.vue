@@ -320,4 +320,18 @@ table {
 .bg-ui-container {
   background: var(--color-ui-container);
 }
+
+.videolink {
+	background-color: transparent !important;
+	border: none !important;
+	padding-left: 0.25rem !important;
+	font-size: 0.9rem;
+	text-align: left;
+	p {
+		margin-top: 0;
+	}
+	a, .material-holder {
+		color: var(--color-ui-primary) !important;
+	}
+}
 </style>

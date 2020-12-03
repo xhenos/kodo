@@ -9,15 +9,15 @@ next: "/help/guides/creating-backups/"
 
 Migration is the process of moving manga between sources without losing progress. This is most often used when a source is no longer accessible or another source is more up-to-date.
 
-::: c-warning
+:::c-warning
 Always make sure to have a [backup](/help/guides/creating-backups/) in case anything unexpected occurs.
 :::
 
 ## Migrating on Stable/Preview
 
 :::: guide Migrating from Manga
-::: videolink
-<MaterialIcon icon="videocam"/>[ Click for video guide](/assets/guides_migrate-preview-manga.mp4)
+:::videolink
+[<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-preview-manga.mp4)
 :::
 
 1. Tap into a **Manga** you would like to migrate.
@@ -28,7 +28,7 @@ Always make sure to have a [backup](/help/guides/creating-backups/) in case anyt
 ::::
 
 :::: guide Migrating from Source
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-preview-source.mp4)
 :::
 
@@ -41,7 +41,7 @@ Always make sure to have a [backup](/help/guides/creating-backups/) in case anyt
 1. Choose which data you want to transfer over, and you're done.
 ::::
 
-::: c-tip Searching only pinned sources
+:::c-tip Searching only pinned sources
 You can restrict global searching to pinned sources if you wish to declutter your search.</br>To do this, go to <Navigation item="more"/> → <Navigation item="settings"/> →  <Navigation item="browse"/> then toggle the **Only include pinned sources** setting.
 
 Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pin" /> pin icon next to the source name.
@@ -50,7 +50,7 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 ## Migrating on TachiyomiJ2K
 
 :::: guide Migrating multiple manga
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-j2k.mp4)
 :::
 
@@ -63,7 +63,7 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 ::::
 
 :::: guide Migrating a single manga
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-j2k-single.mp4)
 :::
 
@@ -77,7 +77,7 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 ## Migrating on TachiyomiAZ
 
 :::: guide Instructions
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-az.mp4)
 :::
 
@@ -93,7 +93,7 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 ## Migrating on TachiyomiSY
 
 :::: guide Migrating from Library
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-sy-library.mp4)
 :::
 
@@ -107,8 +107,8 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 ::::
 
 :::: guide Migrating from Source
-::: videolink
-<MaterialIcon icon="videocam"/>[ Click for video guide](/assets/guides_migrate-sy-source.mp4)
+:::videolink
+[<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-sy-source.mp4)
 :::
 
 1. Tap into <Navigation item="browse"/> on the bottom navbar.

@@ -6,7 +6,7 @@
 			</div>
 
 			<div class="order-1 w-full md:w-2/3">
-				<VueRemarkContent />
+				<VueRemarkContent id="Markdown" />
 
 				<div class="mt-8 pt-8 lg:mt-12 lg:pt-12 border-t border-ui-border">
 					<NextPrevLinks />
@@ -91,6 +91,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "prism-themes/themes/prism-material-oceanic.css";
+
+#Markdown {
+	ul, ol {
+		list-style: revert;
+		padding: revert;
+	}
+}
 </style>
