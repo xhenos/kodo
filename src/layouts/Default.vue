@@ -336,24 +336,24 @@ table {
 }
 
 .note {
-    * {
-      font-size: 0.9rem;
-		  text-align: right;
-    }
-    p {
-	    color: rgba(0, 0, 0, 0.4) !important;  
-    }
-		a {
-      color: var(--color-ui-primary) !important;
-    }
+	* {
+		font-size: 0.9rem;
+		text-align: right;
+	}
+	p {
+		color: rgba(0, 0, 0, 0.4) !important;
+	}
+	a {
+		color: var(--color-ui-primary) !important;
+	}
 }
 
 // TODO Move color to a varaible?
 html[lights-out] {
 	.note {
-    p {
-      color: rgba(255, 255, 255, 0.4) !important;
-    }
+		p {
+			color: rgba(255, 255, 255, 0.4) !important;
+		}
 	}
 }
 
@@ -367,6 +367,108 @@ html[lights-out] {
 	}
 	.videolink {
 		margin-top: -1rem;
+	}
+}
+
+.custom-block {
+	padding-left: 1.25rem;
+	padding-right: 1rem;
+	border-radius: 0.125rem;
+	overflow: hidden;
+	position: relative;
+	background-color: var(--color-ui-container);
+	border: 1px solid #e4e8ef;
+	border-radius: 6px;
+	margin-bottom: 0.5rem;
+	.c-title {
+		margin-top: 1rem;
+		margin-bottom: -0.75rem;
+		&:empty {
+			display: none;
+		}
+	}
+
+	&.c- {
+		&tip &warning &danger {
+			padding-left: 3.75rem;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin-top: 1rem;
+				margin-left: 1rem;
+				width: 1.75rem;
+				height: 1.75rem;
+				background-size: contain;
+			}
+		}
+
+		&tip {
+			background-color: rgba(#184cef, 0.02); // alpha($customTip, 2%);
+			border: 1px solid rgba(#184cef, 0.2); // alpha($customTip, 20%);
+			&:before {
+				background: transparent url(https://tachiyomi.org/assets/icon_warning.svg) no-repeat 0 0;
+			}
+			a {
+				color: #184cef; // $customTip;
+			}
+			h4 {
+				color: darken(#184cef, 60%); // darken($customTip, 60%);
+			}
+		}
+
+		&warning {
+			background-color: rgba(#b29400, 0.02); // alpha($customWarning, 2%);
+			border: 1px solid rgba(#b29400, 0.2); // alpha($customWarning, 20%);
+			&:before {
+				background: transparent url(https://tachiyomi.org/assets/icon_warning.svg) no-repeat 0 0;
+			}
+			a {
+				color: #b29400; // $customWarning;
+			}
+
+			h4 {
+				color: darken(#b29400, 40%); // darken($customWarning, 40%);
+			}
+		}
+
+		&danger {
+			background-color: rgba(#e5422b, 0.02); // alpha($customDanger, 2%);
+			border: 1px solid rgba(#e5422b, 0.2); // alpha($customDanger, 20%);
+			&:before {
+				background: transparent url(https://tachiyomi.org/assets/icon_warning.svg) no-repeat 0 0;
+			}
+			a {
+				color:  #e5422b; // $customDanger;
+			}
+			h4 {
+				color: darken( #e5422b, 40%); // darken($customDanger, 40%);
+			}
+		}
+	}
+
+	&.aside {
+		background-color: transparent;
+		border: none;
+		color: transparentify(#2c3e50, 0.4); // transparentify($textColor, 0.4);
+		font-size: 0.9rem;
+		text-align: right;
+	}
+
+	&.aside-guide {
+		background-color: transparent;
+		border: none;
+		font-size: 0.9rem;
+		text-align: left;
+		padding-left: unset;
+		p {
+			margin-top: 0;
+		}
+		a {
+			color: #476582;// $accentColorSecondary;
+		}
 	}
 }
 </style>

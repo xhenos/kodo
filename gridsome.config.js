@@ -107,12 +107,50 @@ module.exports = {
 										class: ['guide', 'g-empty']
 									}
 								},
-								// TODO FIX TITLE
 								guide : {
 									keyword: 'guide',
 									customBlock: true,
 									tagName: 'div',
 									children: `[element('p', 'title', titleNodes), contentNodes]`,
+									properties: {
+										class: ['guide']
+									}
+								},
+								'c-tip' : {
+									keyword: 'c-tip',
+									defaultTitle: 'Tip',
+									customBlock: true,
+									tagName: 'div',
+									children: `[element('h4', 'title', titleNodes), contentNodes]`,
+									properties: {
+										class: ['custom-block', 'c-tip']
+									}
+								},
+								'c-warning' : {
+									keyword: 'c-warning',
+									defaultTitle: 'Warning',
+									customBlock: true,
+									tagName: 'div',
+									children: `[element('h4', 'title', titleNodes), contentNodes]`,
+									properties: {
+										class: ['custom-block', 'c-warning']
+									}
+								},
+								'c-danger' : {
+									keyword: 'c-danger',
+									defaultTitle: 'Danger',
+									customBlock: true,
+									tagName: 'div',
+									children: `[element('h4', 'title', titleNodes), contentNodes]`,
+									properties: {
+										class: ['custom-block', 'c-danger']
+									}
+								},
+								expander : {
+									keyword: 'expander',
+									customBlock: true,
+									tagName: 'details',
+									children: `[element('summary', 'expansion', titleNodes), contentNodes]`,
 									properties: {
 										class: ['guide']
 									}
