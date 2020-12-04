@@ -38,6 +38,21 @@ module.exports = {
 					},
 				],
 			},
+			{
+				name: "forks",
+				sections: [
+					{
+						title: "Forks",
+						items: [
+							"/forks/",
+							"/forks/neko/",
+							"/forks/tachiyomi-az/",
+							"/forks/tachiyomi-j2-k/",
+							"/forks/tachiyomi-sy/",
+						],
+					},
+				],
+			},
 		],
 	},
 	plugins: [

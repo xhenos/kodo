@@ -2,6 +2,7 @@
 title: TachiyomiJ2K
 metaTitle: TachiyomiJ2K
 description: This fork takes a new approach to the design of the base app along with several other enhancements.
+sidebar: "forks"
 lang: en-US
 meta:
   - property: og:image
@@ -21,7 +22,7 @@ meta:
 
 This fork takes a new approach to the design of the base app along with several other enhancements.
 
-`<img class="zoomable" :src="$withBase('/assets/forks_banner-j2k.png')"/>`
+<g-image class="zoomable" src="~/images/forks_banner-j2k.png" />
 
 ## Features
 :::videolink

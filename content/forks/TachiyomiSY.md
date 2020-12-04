@@ -2,6 +2,7 @@
 title: TachiyomiSY
 metaTitle: TachiyomiSY
 description: This fork adds quite a few custom unique features, it also has new features from the latest Tachiyomi version as well as from other forks such as TachiyomiJ2K.
+sidebar: "forks"
 lang: en-US
 meta:
   - property: og:image
@@ -20,7 +21,7 @@ meta:
 This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K).
 
 ## Screenshots
-`<img class="zoomable" :src="$withBase('/assets/forks_banner-sy.png')"/>`
+<g-image class="zoomable" src="~/images/forks_banner-sy.png" />
 
 ## Features
 - Uses the new **Tachiyomi** UI
