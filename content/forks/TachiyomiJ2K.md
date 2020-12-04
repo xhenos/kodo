@@ -12,7 +12,7 @@ meta:
     content: "#2e84bf"
 ---
 
-# ![Alternative text](https://tachiyomi.org/icons/logo.svg) TachiyomiJ2K
+# <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain"/> TachiyomiJ2K
 
 `<ForkButtons forkName="TachiyomiJ2K" downloadForkLink="https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest" githubForkLink="https://github.com/Jays2Kings/tachiyomiJ2K" androidVersion="6.0"/>`
 

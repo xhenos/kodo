@@ -12,7 +12,7 @@ meta:
     content: "#2e84bf"
 ---
 
-# ![Alternative text](https://tachiyomi.org/icons/logo.svg) TachiyomiEH `<Badge text="Deprecated" type="error" vertical="middle" />`
+# <g-image class="headerLogo" src="~/images/forks_logo-eh.png" width="64" height="64" fit="contain"/> TachiyomiEH `<Badge text="Deprecated" type="error" vertical="middle" />`
 
 `<ForkButtons forkName="TachiyomiEH" downloadForkLink="https://api.github.com/repos/NerdNumber9/TachiyomiEH/releases/latest" githubForkLink="https://github.com/NerdNumber9/TachiyomiEH"/>`
 

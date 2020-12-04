@@ -80,7 +80,7 @@ meta:
 </style>
 ```
 
-# ![Alternative text](https://tachiyomi.org/icons/logo.svg) TachiyomiAZ
+# <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain"/> TachiyomiAZ
 
 `<ForkButtons forkName="TachiyomiAZ" downloadForkLink="https://api.github.com/repos/az4521/TachiyomiAZ/releases/latest" downloadForkStyle="background-color:#FFCC4D;color:#000000;" githubForkLink="https://github.com/az4521/TachiyomiAZ"/>`
 ```

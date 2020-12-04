@@ -12,7 +12,7 @@ meta:
     content: "#38CA79"
 ---
 
-# ![Alternative text](https://tachiyomi.org/icons/logo.svg) Neko
+# <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="64" height="64" fit="contain"/> Neko
 
 `<ForkButtons forkName="Neko" downloadForkLink="https://api.github.com/repos/CarlosEsco/Neko/releases/latest" downloadForkStyle="background-color:#3DDA83;color:#000000;" githubForkLink="https://github.com/CarlosEsco/Neko" androidVersion="7.0"/>`
 

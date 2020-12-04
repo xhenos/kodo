@@ -12,7 +12,7 @@ meta:
     content: "#BE0F6E"
 ---
 
-# ![Alternative text](https://tachiyomi.org/icons/logo.svg) TachiyomiSY
+# <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain"/> TachiyomiSY
 
 `<ForkButtons forkName="TachiyomiSY" downloadForkLink="https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest" downloadForkStyle="background-color:#BE0F6E;color:#FFFFFF;" githubForkLink="https://github.com/jobobby04/TachiyomiSY"/>`
 
