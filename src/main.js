@@ -3,6 +3,7 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import MaterialIcon from "~/components/MaterialIcon.vue";
 import Navigation from "~/components/Navigation.vue";
+import Badge from "~/components/Badge.vue";
 
 import "gridsome-plugin-remark-container/themes/classic.css";
 export default function(Vue, { router, head, isClient }) {
