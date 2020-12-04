@@ -4,7 +4,7 @@
 			<div class="flex items-center justify-between -mx-2 sm:-mx-4">
 				<div class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row">
 					<g-link to="/" class="flex items-center nav-link nav-primary hover:text-ui-primary" title="Home">
-						<Logo :width="40" class="text-ui-primary" />
+						<Logo :width="32" class="text-ui-primary" />
 						<span class="hidden ml-2 text-xl font-black tracking-tighter sm:block">
 							{{ meta.siteName }}
 						</span>

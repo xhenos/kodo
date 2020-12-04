@@ -66,7 +66,7 @@
 
 			<p class="mt-8 text-center">
 				<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Licensed</a>
-				| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás. All rights reserved.
+				| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
 			</p>
 		</div>
 	</Layout>

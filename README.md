@@ -1,15 +1,50 @@
-<p align="center">
-    <img src="https://github.com/mrcrmn/docc/raw/master/static/logo.jpg" alt="Docc Logo" width="450">
-</p>
+<div>
+	<p align="center">
+		<img src="./src/.vuepress/public/icons/logo.png" height="100px">
+	</p>
+	<h1 align="center">Tachiyomi Website</h1>
+	<p align="center">
+		<a href="https://discord.gg/tachiyomi">
+			<img src="https://img.shields.io/discord/349436576037732353.svg?label=Discord&labelColor=7289da&color=2c2f33&style=flat" alt="Discord">
+		</a>
+	</p>
+</div>
 
-A starter documentation theme for [Gridsome](https://gridsome.org/).
+## Contributing
 
-## Installation
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-If you have the Gridsome CLI installed, simply run:
+You can find a project style guide [here](https://tachiyomi.org/sandbox/style-guide/).</br>
+If you got any questions, [join our Discord server](https://discord.gg/tachiyomi).
 
-`gridsome create your-project https://github.com/mrcrmn/docc`
+## Repositories
 
-## Documentation
+<div>
+	<p align="center">
+		<a href="https://github.com/inorichi/tachiyomi/">
+			<img src="https://github-readme-stats.vercel.app/api/pin/?username=inorichi&repo=tachiyomi" alt="Android App">
+		</a>
+		<a href="https://github.com/inorichi/tachiyomi-extensions/">
+			<img src="https://github-readme-stats.vercel.app/api/pin/?username=inorichi&repo=tachiyomi-extensions" alt="App Extensions">
+		</a>
+	</p>
+</div>
 
-Documentation can be found [here](https://docc-theme.netlify.com/).
+<div>
+	<p align="center">
+		<a href="https://github.com/tachiyomiorg/android-app/">
+			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=android-app" alt="Android App (Rewrite)">
+		</a>
+		<a href="https://github.com/tachiyomiorg/extensions/">
+			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=extensions" alt="App Extensions (Rewrite)">
+		</a>
+	</p>
+</div>
+
+## License
+
+	Copyright (C) 2018 The Tachiyomi Open Source Project
+
+	This Source Code Form is subject to the terms of the Mozilla Public
+	License, v. 2.0. If a copy of the MPL was not distributed with this
+	file, You can obtain one at http://mozilla.org/MPL/2.0/.
