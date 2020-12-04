@@ -12,17 +12,19 @@
 			.
 		</p>
 
-		<div class="content-center text-center my-8">
-			<div class="flex justify-center flex-col md:flex-row">
+		<download-buttons>
+			<template slot="default">
 				<download-button title="Stable" v-bind:data="stable" />
-				<download-button title="Preview" isAlternative v-bind:data="preview" />
-			</div>
-			<p>
-				Requires
-				<b>Android 5.0</b>
-				or higher.
-			</p>
-		</div>
+				<download-button title="Preview" variant="400" isAlternative v-bind:data="preview" />
+			</template>
+			<template slot="footer">
+				<p>
+					Requires
+					<b>Android 5.0</b>
+					or higher.
+				</p>
+			</template>
+		</download-buttons>
 
 		<whats-new v-bind:body="stable.body" />
 	</Layout>
