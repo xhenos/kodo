@@ -53,9 +53,10 @@ query {
 import moment from "moment";
 import WhatsNew from "../components/download/WhatsNew.vue";
 import DownloadButton from "../components/download/DownloadButton.vue";
+import DownloadButtons from "../components/download/DownloadButtons.vue";
 
 export default {
-	components: { WhatsNew, DownloadButton },
+	components: { WhatsNew, DownloadButton, DownloadButtons },
 	computed: {
 		stable() {
 			const data = this.$static.metadata.appStable;
