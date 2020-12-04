@@ -1,43 +1,22 @@
 module.exports = {
+	root: true,
 	env: {
-		browser: true,
-		es6: true,
+		node: true,
 	},
-
-	extends: [
-		"prettier"
-	],
-
-	globals: {
-		Atomics: "readonly",
-		SharedArrayBuffer: "readonly",
-	},
-
-	parserOptions: {
-		ecmaVersion: 2018,
-		sourceType: "module",
-	},
-
+	extends: ["plugin:vue/essential", "plugin:prettier/recommended", "@vue/prettier"],
 	rules: {
-		"prettier/prettier": [
-			"error",
-			{
-				endOfLine: "auto",
-			},
-		],
-		"import/no-unresolved": [
-			2,
-			{
-				ignore: [
-					"^@",
-				],
-			},
-		],
+		"no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+		"no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
 	},
-
-	plugins: [
-		"vue",
-		"prettier",
-		"markdown",
+	parserOptions: {
+		parser: "babel-eslint",
+	},
+	overrides: [
+		{
+			files: ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"],
+			env: {
+				jest: true,
+			},
+		},
 	],
-}
+};

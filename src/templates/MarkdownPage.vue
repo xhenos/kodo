@@ -95,7 +95,8 @@ export default {
 @import "prism-themes/themes/prism-material-oceanic.css";
 
 #Markdown {
-	ul, ol {
+	ul,
+	ol {
 		list-style: revert;
 		padding: revert;
 	}

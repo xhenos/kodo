@@ -70,12 +70,11 @@ export default {
 				body: data.body,
 				date: moment(data.releaseDate).fromNow(),
 				downloadUrl: data.downloadUrl,
-				version: 'r' + data.version,
+				version: "r" + data.version,
 			};
 		},
 	},
 };
 </script>
 
-<style>
-</style>
+<style></style>

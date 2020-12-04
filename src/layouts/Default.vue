@@ -61,7 +61,7 @@ export default {
 		};
 	},
 	watch: {
-		sidebarOpen: function (isOpen) {
+		sidebarOpen: function(isOpen) {
 			document.body.classList.toggle("overflow-hidden", isOpen);
 		},
 	},
@@ -441,10 +441,10 @@ html[lights-out] {
 				background: transparent url(https://tachiyomi.org/assets/icon_warning.svg) no-repeat 0 0;
 			}
 			a {
-				color:  #e5422b; // $customDanger;
+				color: #e5422b; // $customDanger;
 			}
 			h4 {
-				color: darken( #e5422b, 40%); // darken($customDanger, 40%);
+				color: darken(#e5422b, 40%); // darken($customDanger, 40%);
 			}
 		}
 	}
@@ -467,7 +467,7 @@ html[lights-out] {
 			margin-top: 0;
 		}
 		a {
-			color: #476582;// $accentColorSecondary;
+			color: #476582; // $accentColorSecondary;
 		}
 	}
 }

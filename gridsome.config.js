@@ -9,18 +9,16 @@ module.exports = {
 	siteDescription: "Free and open source manga reader for Android",
 	icon: {
 		favicon: "./src/assets/favicon.png",
-		touchicon: "./src/assets/favicon.png"
+		touchicon: "./src/assets/favicon.png",
 	},
-	siteUrl: (process.env.SITE_URL ? process.env.SITE_URL : "https://tachiyomi.org"),
+	siteUrl: process.env.SITE_URL ? process.env.SITE_URL : "https://tachiyomi.org",
 	settings: {
 		web: process.env.URL_WEB || false,
 		twitter: process.env.URL_TWITTER || false,
 		discord: process.env.URL_DISCORD || false,
 		github: process.env.URL_GITHUB || false,
 		nav: {
-			links: [
-				{ path: "/help/", title: "Help" }
-			],
+			links: [{ path: "/help/", title: "Help" }],
 		},
 		sidebar: [
 			{
@@ -36,11 +34,11 @@ module.exports = {
 							"/help/guides/reading-local-manga/",
 							"/help/guides/reader-settings/",
 							"/help/guides/categories/",
-						]
+						],
 					},
-				]
-			}
-		]
+				],
+			},
+		],
 	},
 	plugins: [
 		{
@@ -49,24 +47,21 @@ module.exports = {
 				tailwindConfig: "./tailwind.config.js",
 				purgeConfig: {
 					// Prevent purging of prism classes.
-					whitelistPatternsChildren: [
-						/token$/
-					]
-				}
-			}
+					whitelistPatternsChildren: [/token$/],
+				},
+			},
 		},
 
 		{
 			use: "@gridsome/plugin-google-analytics",
 			options: {
-				id: (process.env.GA_ID ? process.env.GA_ID : "XX-999999999-9")
-			}
+				id: process.env.GA_ID ? process.env.GA_ID : "XX-999999999-9",
+			},
 		},
 
 		{
 			use: "@gridsome/plugin-sitemap",
-			options: {
-			}
+			options: {},
 		},
 		{
 			use: "@gridsome/vue-remark",
@@ -75,92 +70,91 @@ module.exports = {
 				baseDir: "./content",
 				template: "./src/templates/MarkdownPage.vue",
 				plugins: [
-					'@gridsome/remark-prismjs',
+					"@gridsome/remark-prismjs",
 					[
 						"gridsome-plugin-remark-container",
 						{
 							customTypes: {
-								videolink : {
-									keyword: 'videolink',
+								videolink: {
+									keyword: "videolink",
 									customBlock: true,
-									tagName: 'div',
+									tagName: "div",
 									children: `[contentNodes]`,
 									properties: {
-										class: ['videolink']
-									}
+										class: ["videolink"],
+									},
 								},
-								note : {
-									keyword: 'note',
+								note: {
+									keyword: "note",
 									customBlock: true,
-									tagName: 'div',
+									tagName: "div",
 									children: `[contentNodes]`,
 									properties: {
-										class: ['note']
-									}
+										class: ["note"],
+									},
 								},
-								'e-guide' : {
-									keyword: 'e-guide',
+								"e-guide": {
+									keyword: "e-guide",
 									customBlock: true,
 									children: `[contentNodes]`,
-									tagName: 'div',
+									tagName: "div",
 									properties: {
-										class: ['guide', 'g-empty']
-									}
+										class: ["guide", "g-empty"],
+									},
 								},
-								guide : {
-									keyword: 'guide',
+								guide: {
+									keyword: "guide",
 									customBlock: true,
-									tagName: 'div',
+									tagName: "div",
 									children: `[element('p', 'title', titleNodes), contentNodes]`,
 									properties: {
-										class: ['guide']
-									}
+										class: ["guide"],
+									},
 								},
-								'c-tip' : {
-									keyword: 'c-tip',
-									defaultTitle: 'Tip',
+								"c-tip": {
+									keyword: "c-tip",
+									defaultTitle: "Tip",
 									customBlock: true,
-									tagName: 'div',
+									tagName: "div",
 									children: `[element('h4', 'title', titleNodes), contentNodes]`,
 									properties: {
-										class: ['custom-block', 'c-tip']
-									}
+										class: ["custom-block", "c-tip"],
+									},
 								},
-								'c-warning' : {
-									keyword: 'c-warning',
-									defaultTitle: 'Warning',
+								"c-warning": {
+									keyword: "c-warning",
+									defaultTitle: "Warning",
 									customBlock: true,
-									tagName: 'div',
+									tagName: "div",
 									children: `[element('h4', 'title', titleNodes), contentNodes]`,
 									properties: {
-										class: ['custom-block', 'c-warning']
-									}
+										class: ["custom-block", "c-warning"],
+									},
 								},
-								'c-danger' : {
-									keyword: 'c-danger',
-									defaultTitle: 'Danger',
+								"c-danger": {
+									keyword: "c-danger",
+									defaultTitle: "Danger",
 									customBlock: true,
-									tagName: 'div',
+									tagName: "div",
 									children: `[element('h4', 'title', titleNodes), contentNodes]`,
 									properties: {
-										class: ['custom-block', 'c-danger']
-									}
+										class: ["custom-block", "c-danger"],
+									},
 								},
-								expander : {
-									keyword: 'expander',
+								expander: {
+									keyword: "expander",
 									customBlock: true,
-									tagName: 'details',
+									tagName: "details",
 									children: `[element('summary', 'expansion', titleNodes), contentNodes]`,
 									properties: {
-										class: ['guide']
-									}
+										class: ["guide"],
+									},
 								},
 							},
-						}
-					]
-				]
-			}
-		}
-
-	]
-}
+						},
+					],
+				],
+			},
+		},
+	],
+};

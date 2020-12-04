@@ -3,7 +3,9 @@
 		<carousel :perPage="1">
 			<slide v-for="item in items" :key="item">
 				<img class="slide-image" v-bind:src="item.image" />
-                <p class="slide-title"><b v-if="item.title">{{ item.title }}</b></p>
+				<p class="slide-title">
+					<b v-if="item.title">{{ item.title }}</b>
+				</p>
 				<p class="slide-desc" v-if="item.desc">{{ item.desc }}</p>
 			</slide>
 		</carousel>
@@ -13,16 +15,16 @@
 <script>
 export default {
 	props: {
-		items: Array
+		items: Array,
 	},
 	components: {
 		Carousel: () =>
 			import("vue-carousel")
-				.then((m) => m.Carousel)
+				.then(m => m.Carousel)
 				.catch(),
 		Slide: () =>
 			import("vue-carousel")
-				.then((m) => m.Slide)
+				.then(m => m.Slide)
 				.catch(),
 	},
 };
@@ -30,9 +32,10 @@ export default {
 
 <style>
 .slide-image {
-    margin: auto;
+	margin: auto;
 }
-.slide-title, .slide-desc {
-    text-align: center;
+.slide-title,
+.slide-desc {
+	text-align: center;
 }
 </style>
