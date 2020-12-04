@@ -1,5 +1,8 @@
 <template>
 	<i v-if="iconOnly" :class="name" class="material-icons">{{ icon }}</i>
+	<div v-else-if="color" :class="classColor">
+		<i class="material-icons">{{ icon }}</i>
+	</div>
 	<div v-else :class="name" class="material-holder">
 		<i class="material-icons">{{ icon }}</i>
 	</div>
@@ -24,6 +27,15 @@ export default {
 			type: String,
 			default: "",
 		},
+		color: {
+			type: String,
+			default: "",
+		},
+	},
+	computed: {
+		classColor() {
+			return this.color ? `text-${this.color}-100` : "";
+		},
 	},
 };
 </script>
@@ -35,17 +47,15 @@ $material-design-icons-font-directory-path: "~material-design-icons-iconfont/dis
 
 <style lang="scss">
 .material-holder {
-    color: #476582;
 	margin: 0;
 	font-size: 0.85em;
 	border-radius: 3px;
 	display: inline;
 }
-	
+
 .material-icons {
-    font-size: 1.35em;
+	font-size: 1.35em;
 	position: relative;
 	top: 0.2rem;
 }
-	
 </style>

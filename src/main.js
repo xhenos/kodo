@@ -10,6 +10,7 @@ export default function(Vue, { router, head, isClient }) {
 	Vue.component("Layout", DefaultLayout);
 	Vue.component("MaterialIcon", MaterialIcon);
 	Vue.component("Navigation", Navigation);
+	Vue.component("Badge", Badge);
 
 	router.beforeEach((to, _from, next) => {
 		head.meta.push({
