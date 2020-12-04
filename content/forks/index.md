@@ -3,8 +3,6 @@ title: Forks
 description: Forks are alternative versions of Tachiyomi with exclusive features.
 lang: en-US
 prev: '/extensions/'
-sidebar: true
-sidebarDepth: 0
 ---
 
 # Forks

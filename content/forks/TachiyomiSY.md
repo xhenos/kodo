@@ -10,7 +10,6 @@ meta:
     content: "#BE0F6E"
   - name: msapplication-TileColor
     content: "#BE0F6E"
-sidebar: false
 ---
 
 # ![Alternative text](https://tachiyomi.org/icons/logo.svg) TachiyomiSY

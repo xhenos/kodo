@@ -10,7 +10,6 @@ meta:
     content: "#FFCC4D"
   - name: msapplication-TileColor
     content: "#FFCC4D"
-sidebar: false
 ---
 ```css
 <style lang="css">

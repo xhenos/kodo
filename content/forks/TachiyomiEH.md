@@ -10,7 +10,6 @@ meta:
     content: "#2e84bf"
   - name: msapplication-TileColor
     content: "#2e84bf"
-sidebar: false
 ---
 
 # ![Alternative text](https://tachiyomi.org/icons/logo.svg) TachiyomiEH `<Badge text="Deprecated" type="error" vertical="middle" />`

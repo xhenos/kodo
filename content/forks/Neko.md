@@ -10,7 +10,6 @@ meta:
     content: "#38CA79"
   - name: msapplication-TileColor
     content: "#38CA79"
-sidebar: false
 ---
 
 # ![Alternative text](https://tachiyomi.org/icons/logo.svg) Neko
