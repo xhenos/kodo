@@ -6,7 +6,7 @@
         <div class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row">
           <g-link
             to="/"
-            class="flex items-center text-ui-primary"
+            class="flex items-center nav-link nav-primary hover:text-ui-primary"
             title="Home"
           >
             <Logo :width="40" class="text-ui-primary" />
@@ -20,7 +20,7 @@
               v-for="link in settings.nav.links"
               :key="link.path"
               :to="link.path"
-              class="block p-1 font-medium nav-link text-ui-typo hover:text-ui-primary"
+              class="block p-1 font-medium nav-link nav-secondary text-ui-typo hover:text-ui-primary"
             >
               {{ link.title }}
             </g-link>
@@ -136,5 +136,16 @@ header {
   &.active {
     @apply text-ui-primary border-ui-primary;
   }
+}
+
+.nav-link {
+	&.nav-primary {
+		&.active:not(.active--exact) {
+			color: var(--color-ui-typo);
+			&:hover {
+				color: var(--color-ui-primary);
+			}
+		}
+	}
 }
 </style>

@@ -183,7 +183,7 @@ h4 {
 	@apply text-lg;
 }
 
-a:not(.active):not(.text-ui-primary):not(.text-white) {
+a:not(.active):not(.text-ui-primary):not(.text-white):not(:hover) {
 	@apply text-ui-typo;
 }
 
