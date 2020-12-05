@@ -1,11 +1,13 @@
-// This is the main.js file. Import global CSS and scripts here.
-// The Client API can be used here. Learn more: gridsome.org/docs/client-api
+// Import global styles
+import "~/assets/style/index.scss";
+import "gridsome-plugin-remark-container/themes/classic.css";
+
+// Import global components
 import DefaultLayout from "~/layouts/Default.vue";
 import MaterialIcon from "~/components/MaterialIcon.vue";
 import Navigation from "~/components/Navigation.vue";
 import Badge from "~/components/Badge.vue";
 
-import "gridsome-plugin-remark-container/themes/classic.css";
 export default function(Vue, { router, head, isClient }) {
 	// Set default layout as a global component
 	Vue.component("Layout", DefaultLayout);

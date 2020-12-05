@@ -11,7 +11,7 @@ meta:
     content: "#FFCC4D"
 ---
 
-import '~/assets/az.scss'
+import "~/assets/style/tachiyomiaz.scss"
 
 # <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain"/> TachiyomiAZ
 

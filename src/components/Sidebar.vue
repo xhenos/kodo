@@ -6,7 +6,7 @@
 			class="pb-4 mb-4 border-ui-border"
 			:class="{ 'border-b': index < sidebar.sections.length - 1 }"
 		>
-			<h3 class="pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
+			<h3 class="menu-item pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
 				{{ section.title }}
 			</h3>
 
@@ -18,9 +18,9 @@
 					:class="getClassesForAnchor(page)"
 					@mousedown="$emit('navigate')"
 				>
-					<g-link :to="`${page.path}`" class="flex items-center py-1 font-semibold">
+					<g-link :to="`${page.path}`" class="menu-item menu-link flex items-center py-1 font-semibold">
 						<span
-							class="absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-ui-primary transition transform scale-0 origin-center"
+							class="menu-item-dot absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-ui-primary transition transform scale-0 origin-center"
 							:class="{
 								'opacity-100 scale-100': currentPage.path === page.path,
 							}"
@@ -76,7 +76,7 @@ export default {
 		getClassesForAnchor({ path }) {
 			return {
 				"text-ui-primary": this.currentPage.path === path,
-				"transition transform hover:translate-x-1 hover:text-ui-primary": !this.currentPage.path === path,
+				"transform hover:translate-x-1 hover:text-ui-primary": !this.currentPage.path === path,
 			};
 		},
 		findPages(links) {
