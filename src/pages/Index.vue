@@ -12,17 +12,17 @@
 					{{ meta.siteDescription }}
 				</h1>
 
-				<div class="flex justify-center mt-8">
+				<div class="flex flex-col md:flex-row justify-center mt-8">
 					<g-link
 						to="/download/"
-						class="flex items-center px-6 py-4 ml-auto mr-2 text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1"
+						class="flex order-1 items-center px-6 py-4 md:ml-auto md:mr-2 text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1"
 					>
 						<DownloadIcon class="mr-4" size="1x" />
 						Download
 					</g-link>
 					<g-link
 						to="/help/guides/getting-started/"
-						class="flex items-center px-6 py-4 ml-auto text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1"
+						class="flex order-2 items-center px-6 py-4 ml-auto mt-2 md:mt-auto text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1"
 					>
 						<BookIcon class="mr-4" size="1x" />
 						User guide
