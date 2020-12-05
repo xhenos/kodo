@@ -1,0 +1,29 @@
+:root {
+	--color-ui-background: theme("colors.white");
+	--color-ui-typo: theme("colors.gray.700");
+	--color-ui-sidebar: theme("colors.gray.200");
+	--color-ui-border: theme("colors.gray.300");
+	--color-ui-primary: theme("colors.indigo.600");
+	--color-ui-primary-dark: theme("colors.indigo.700");
+	--color-ui-container: theme("colors.gray.200");
+	--color-ui-search: theme("colors.gray.200");
+	--select-color: rgba(212, 53, 159, 0.2);
+	--inline-code-bg: rgba(212, 53, 159, 0.03);
+	--inline-code-text: #b32585;
+}
+
+html[lights-out] {
+	--color-ui-background: theme("colors.gray.900");
+	--color-ui-typo: theme("colors.gray.100");
+	--color-ui-sidebar: theme("colors.gray.800");
+	--color-ui-border: theme("colors.gray.800");
+	--color-ui-primary: theme("colors.indigo.500");
+	--color-ui-primary-dark: theme("colors.indigo.600");
+	--color-ui-container: theme("colors.gray.800");
+	--color-ui-search: theme("colors.gray.800");
+
+	pre[class*="language-"],
+	code[class*="language-"] {
+		@apply bg-ui-border;
+	}
+}
