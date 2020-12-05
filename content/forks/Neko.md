@@ -2,6 +2,7 @@
 title: Neko
 metaTitle: Neko
 description: MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains features specific to MangaDex that those versions cannot offer.
+sidebar: default
 meta:
   - property: og:image
     content: /assets/forks_logo-neko.png

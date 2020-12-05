@@ -47,8 +47,13 @@ module.exports = {
 						],
 					},
 					{
+						title: "Forks",
+						index: "/forks/",
+						items: ["/forks/neko/", "/forks/tachiyomi-j2-k/", "/forks/tachiyomi-az/", "/forks/tachiyomi-sy/"],
+					},
+					{
 						title: "Other",
-						items: ["/help/contribution/", "/extensions/", "/forks/"],
+						items: ["/help/contribution/", "/extensions/"],
 					},
 				],
 			},

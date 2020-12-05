@@ -2,6 +2,7 @@
 title: TachiyomiSY
 metaTitle: TachiyomiSY
 description: This fork adds quite a few custom unique features, it also has new features from the latest Tachiyomi version as well as from other forks such as TachiyomiJ2K.
+sidebar: default
 meta:
   - property: og:image
     content: /assets/forks_logo-sy.png

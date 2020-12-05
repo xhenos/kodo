@@ -1,4 +1,13 @@
 .sidebar {
+	h3 {
+		color: currentColor;
+		&.active--exact {
+			color: var(--color-ui-primary);
+			span {
+				background-color: var(--color-ui-primary);
+			}
+		}
+	}
 	a {
 		color: currentColor;
 		&.active--exact {

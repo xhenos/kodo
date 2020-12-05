@@ -6,7 +6,21 @@
 			class="pb-4 mb-4 border-ui-border"
 			:class="{ 'border-b': index < sidebar.sections.length - 1 }"
 		>
-			<h3 class="menu-item pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
+			<g-link
+				v-if="section.index.length > 0"
+				:to="`${section.index}`"
+				class="menu-item menu-link flex items-center py-1 font-semibold"
+				:class="getClassesForAnchor({ page: section.index })"
+				@mousedown="$emit('navigate')"
+			>
+				<span
+					class="menu-item-dot absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-ui-primary transition transform scale-0 origin-center"
+				></span>
+				<h3 class="menu-item pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
+					{{ section.title }}
+				</h3>
+			</g-link>
+			<h3 v-else class="menu-item pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
 				{{ section.title }}
 			</h3>
 
@@ -41,6 +55,7 @@ query Sidebar {
         name
         sections {
           title
+		  index
           items
         }
       }
@@ -58,11 +73,11 @@ export default {
 	},
 	computed: {
 		pages() {
-			return this.$page.allMarkdownPage.edges.map(edge => edge.node);
+			return this.$page.allMarkdownPage.edges.map((edge) => edge.node);
 		},
 		sidebar() {
 			return this.$static.metadata.settings.sidebar.find(
-				sidebar => sidebar.name === this.$page.markdownPage.sidebar
+				(sidebar) => sidebar.name === this.$page.markdownPage.sidebar
 			);
 		},
 		showSidebar() {
@@ -74,13 +89,14 @@ export default {
 	},
 	methods: {
 		getClassesForAnchor({ path }) {
+			if (!path) return {};
 			return {
 				"text-ui-primary": this.currentPage.path === path,
 				"transform hover:translate-x-1 hover:text-ui-primary": !this.currentPage.path === path,
 			};
 		},
 		findPages(links) {
-			return links.map(link => this.pages.find(page => page.path === link));
+			return links.map((link) => this.pages.find((page) => page.path === link));
 		},
 	},
 };
