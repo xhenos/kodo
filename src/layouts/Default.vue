@@ -1,5 +1,5 @@
 <template>
-	<div class="font-sans antialiased text-ui-typo bg-ui-background">
+	<div class="scrollbar-fix font-sans antialiased text-ui-typo bg-ui-background">
 		<div class="flex flex-col justify-start min-h-screen">
 			<header
 				ref="header"
@@ -143,6 +143,10 @@ html[lights-out] {
 	transition-property: color, background-color, border-color;
 	transition-duration: 0ms;
 	transition-timing-function: ease-in-out;
+}
+
+.scrollbar-fix {
+	padding-left: calc(100vw - 100%);
 }
 
 h1,
