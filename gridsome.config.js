@@ -23,8 +23,12 @@ module.exports = {
 		},
 		sidebar: [
 			{
-				name: "guides",
+				name: "default",
 				sections: [
+					{
+						title: "Frequently Asked Questions",
+						items: ["/help/faq/application/", "/help/faq/extensions/"],
+					},
 					{
 						title: "Guides",
 						items: [
@@ -37,20 +41,9 @@ module.exports = {
 							"/help/guides/categories/",
 						],
 					},
-				],
-			},
-			{
-				name: "forks",
-				sections: [
 					{
-						title: "Forks",
-						items: [
-							"/forks/",
-							"/forks/neko/",
-							"/forks/tachiyomi-az/",
-							"/forks/tachiyomi-j2-k/",
-							"/forks/tachiyomi-sy/",
-						],
+						title: "Other",
+						items: ["/help/contribution/", "/extensions/", "/forks/"],
 					},
 				],
 			},

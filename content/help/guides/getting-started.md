@@ -1,7 +1,7 @@
 ---
 description: Essential information to help you get set up with Tachiyomi.
-sidebar: "guides"
-next: "/help/guides/troubleshooting-problems/"
+sidebar: default
+next: /help/guides/troubleshooting-problems/
 ---
 
 

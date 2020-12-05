@@ -1,7 +1,7 @@
 ---
 description: Store your manga in custom categories, which help you keep your library neat and organized.
-sidebar: "guides"
-prev: "/help/guides/reader-settings/"
+sidebar: default
+prev: /help/guides/reader-settings/
 ---
 
 # Categories

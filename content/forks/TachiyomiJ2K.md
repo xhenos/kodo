@@ -2,8 +2,6 @@
 title: TachiyomiJ2K
 metaTitle: TachiyomiJ2K
 description: This fork takes a new approach to the design of the base app along with several other enhancements.
-sidebar: "forks"
-lang: en-US
 meta:
   - property: og:image
     content: /assets/forks_logo-j2k.png

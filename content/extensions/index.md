@@ -1,8 +1,9 @@
 ---
 title: Extensions
 description: Here is a list of all available extensions to download inside the app.
-prev: '/download/'
-next: '/forks/'
+sidebar: default
+prev: /help/contribution/
+next: /forks/
 lang: en-US
 ---
 

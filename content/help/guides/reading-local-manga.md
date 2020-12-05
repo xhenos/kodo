@@ -1,8 +1,8 @@
 ---
 description: All the information you would need to read your own local manga.
-sidebar: "guides"
-prev: "/help/guides/creating-backups/"
-next: "/help/guides/reader-settings/"
+sidebar: default
+prev: /help/guides/creating-backups/
+next: /help/guides/reader-settings/
 ---
 
 # Reading local manga

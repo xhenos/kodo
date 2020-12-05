@@ -1,8 +1,6 @@
 ---
 title: Help Center
 description: From common questions to guides, find help for everything Tachiyomi.
-next: '/download/'
-lang: en-US
 hideSearch: true
 help:
   - title: Application

@@ -1,8 +1,8 @@
 ---
 description: Reader settings for Tachiyomi.
-sidebar: "guides"
-prev: "/help/guides/reading-local-manga/"
-next: "/help/guides/categories/"
+sidebar: default
+prev: /help/guides/reading-local-manga/
+next: /help/guides/categories/
 ---
 
 import Carousel from '~/components/carousel/Carousel.vue'

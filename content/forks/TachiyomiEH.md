@@ -2,8 +2,6 @@
 title: TachiyomiEH
 metaTitle: TachiyomiEH
 description: This fork adds features that enhances the hentai experience with integrations to popular sevices such as E-Hentai, nHentai and more.
-sidebar: "forks"
-lang: en-US
 meta:
   - property: og:image
     content: /assets/forks_logo-eh.png

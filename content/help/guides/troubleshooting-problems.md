@@ -1,8 +1,8 @@
 ---
 description: Encountered an issue with a source or the app? Here are resources to help you troubleshoot it.
-sidebar: "guides"
-prev: "/help/guides/getting-started/"
-next: "/help/guides/source-migration/"
+sidebar: default
+prev: /help/guides/getting-started/
+next: /help/guides/source-migration/
 ---
 
 # Troubleshooting problems
