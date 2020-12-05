@@ -27,7 +27,12 @@ module.exports = {
 				sections: [
 					{
 						title: "Frequently Asked Questions",
-						items: ["/help/faq/application/", "/help/faq/extensions/"],
+						items: [
+							"/help/faq/application/",
+							"/help/faq/settings/",
+							"/help/faq/extensions/",
+							"/help/faq/sources/",
+						],
 					},
 					{
 						title: "Guides",

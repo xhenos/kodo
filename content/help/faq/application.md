@@ -2,7 +2,7 @@
 title: Application
 description: Need help with something? Most of your issues can probably be solved from this page.
 sidebar: default
-next: /help/faq/extensions/
+next: /help/faq/settings/
 ---
 
 # Application FAQ
@@ -40,6 +40,7 @@ Sometimes you can struggle to find a source hosting the manga you're looking for
 
 ### If you found the website/scanlator in the list
 Download the corresponding extension, go to the source, then search for the manga there.
+
 ### If you didn't find the website/scanlator in the list
 If you found a website or scanlator that hosts your manga but doesn't exist as a source or extension, then you can see if its [already been requested](https://github.com/inorichi/tachiyomi-extensions/issues) or you can [request it yourself](https://github.com/inorichi/tachiyomi-extensions/issues/new/choose).
 
@@ -47,12 +48,11 @@ If the website/scanlator group doesn't have an online manga reader, you can down
 :::
 
 ## Reader
+
 ### Why are some images not displayed?
 Aside from network issues, it could be because the images are too big or that the decoder doesn't support that image type.
 
 ## Downloads
-### What happened to the simultaneous downloads feature?
-It was removed to prevent IP bans caused by too many requests. We know that speed is being sacrificed but it's better than not being able to access a source at all.
 
 ### Why are Downloads unstable?
 Be aware that it could be a network issue on your device or on the catalog you are trying to download from.
@@ -64,8 +64,6 @@ Read more about rooting your phone [here](https://www.xda-developers.com/root/)
 :::
 
 ## Tracking
-### How do I log in with Kitsu?
-To log in with Kitsu you need to use your email address as your username.
 
 ### Why can't I find manga in MAL's search results?
 You can search a manga from your MAL profile's list by searching in the following format: `my:<manga>`
@@ -74,30 +72,12 @@ Related GitHub issue: [#65](https://github.com/inorichi/tachiyomi/issues/65)
 :::
 
 ## Local Manga
+
 ### How do I import my manga into Tachiyomi?
 We recommend you to read [this](/help/guides/reading-local-manga) guide on how to do so.
 
 ### What do I do if I can't find the Tachiyomi folder?
 If you don't see a **Tachiyomi** folder on your device, try downloading a chapter of any manga or creating a backup so that the folder can be created.
-
-## Application Updates
-### How do I enable automatic updates?
-From version **0.9.0** and onwards, Tachiyomi has automatic updates for the app enabled by default. The **Preview** version also has automatic updates enabled by default.
-
-However, if you think you are on an outdated version, go to <Navigation item="more"/> → <Navigation item="about"/> → and click on **Check for updates**.
-
-### Why are automatic updates not working?
-
-Certain devices such as MIUI have very aggressive battery saving, which can kill the app in the background. To whitelist Tachiyomi from battery saver, go to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> and click on **Disable battery optimization**.
-
-## User Interface
-### Can I change the app language?
-**Tachiyomi** is translated in 40+ different languages. By default, the app follows the language used on your device.
-Only the UI has been localized, the language of the manga will still be using the language of the source selected.
-
-:::e-guide
-You can change language by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_general"/> then pressing **Language**.
-:::
 
 ## Miscellaneous
 
@@ -124,9 +104,6 @@ No. Tachiyomi is an image parser, meaning it can't parse text.
 
 ### Can I revert back from the Material Design 2 update of Tachiyomi?
 While there will never be a toggle between the two UI versions, you can continue to use the old UI version by using [TachiyomiAZ](https://tachiyomi.org/forks/TachiyomiAZ/).
-
-### Will there ever be a dual-page reader option?
-The logic required to make a dual-page reader automatically work along with scanlator page inconsistencies and other issues means it is unlikely to be added at this time.
 
 ### I see manga images in my phone gallery, what gives!?
 Tachiyomi by default adds a `.nomedia` file to prevent this from happening but sometimes it doesn't work or something went wrong. To fix this, all you need to do is create the file yourself. Name it `.nomedia` and place it in your download folder.
