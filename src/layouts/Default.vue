@@ -123,6 +123,7 @@ export default {
 	--color-ui-border: theme("colors.gray.300");
 	--color-ui-primary: theme("colors.indigo.600");
 	--color-ui-container: theme("colors.gray.200");
+	--color-ui-search: theme("colors.gray.200");
 }
 
 html[lights-out] {
@@ -132,6 +133,7 @@ html[lights-out] {
 	--color-ui-border: theme("colors.gray.800");
 	--color-ui-primary: theme("colors.indigo.500");
 	--color-ui-container: theme("colors.gray.800");
+	--color-ui-search: theme("colors.gray.800");
 
 	pre[class*="language-"],
 	code[class*="language-"] {

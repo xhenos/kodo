@@ -29,24 +29,12 @@
 				</div>
 
 				<div class="flex items-center justify-end px-2 sm:px-4">
-					<ToggleDarkMode class="ml-2 sm:ml-8">
+					<ToggleDarkMode class="ml-0 sm:ml-4">
 						<template slot="default" slot-scope="{ dark }">
-							<MoonIcon v-if="dark" size="1.5x" />
-							<SunIcon v-else size="1.5x" />
+							<MoonIcon v-if="dark" size="22" />
+							<SunIcon v-else size="22" />
 						</template>
 					</ToggleDarkMode>
-
-					<a
-						v-if="settings.web"
-						:href="settings.web"
-						class="hidden ml-4 sm:block"
-						target="_blank"
-						rel="noopener noreferrer"
-						title="Website"
-						name="Website"
-					>
-						<GlobeIcon size="1.5x" />
-					</a>
 
 					<a
 						v-if="settings.twitter"
@@ -57,7 +45,7 @@
 						title="Twitter"
 						name="Twitter"
 					>
-						<TwitterIcon size="1.5x" />
+						<twitter-logo />
 					</a>
 
 					<a
@@ -69,24 +57,31 @@
 						title="Discord"
 						name="Discord"
 					>
-						<UsersIcon size="1.5x" />
+						<discord-logo />
 					</a>
 
 					<a
 						v-if="settings.github"
 						:href="settings.github"
-						class="sm:ml-4"
+						class="ml-4"
 						target="_blank"
 						rel="noopener noreferrer"
 						title="Github"
 						name="Github"
 					>
-						<GithubIcon size="1.3x" />
+						<github-logo height="20px" width="20px" />
 					</a>
 
 					<g-link
 						to="/download/"
-						class="sm:ml-4 p-1 text-xl font-medium nav-link text-ui-typo hover:text-ui-primary"
+						class="sm:hidden ml-4 sm:block text-xl font-medium nav-link text-ui-typo hover:text-ui-primary"
+					>
+						<DownloadIcon size="22" />
+					</g-link>
+
+					<g-link
+						to="/download/"
+						class="hidden ml-4 sm:block p-1 text-xl font-medium nav-link text-ui-typo hover:text-ui-primary"
 					>
 						v{{ $static.metadata.appVerStable }}
 					</g-link>
@@ -118,9 +113,12 @@ query {
 </static-query>
 
 <script>
+import Logo from "@/components/Logo.vue";
 import ToggleDarkMode from "@/components/ToggleDarkMode";
-import Logo from "@/components/Logo";
-import { SunIcon, MoonIcon, GlobeIcon, GithubIcon, TwitterIcon, UsersIcon } from "vue-feather-icons";
+import { SunIcon, MoonIcon, DownloadIcon } from "vue-feather-icons";
+import GithubLogo from "@/assets/images/github-logo.svg";
+import TwitterLogo from "@/assets/images/twitter-logo.svg";
+import DiscordLogo from "@/assets/images/discord-logo.svg";
 
 const Search = () => import(/* webpackChunkName: "search" */ "@/components/Search").catch(error => console.warn(error));
 
@@ -131,10 +129,10 @@ export default {
 		ToggleDarkMode,
 		SunIcon,
 		MoonIcon,
-		GlobeIcon,
-		GithubIcon,
-		TwitterIcon,
-		UsersIcon,
+		DownloadIcon,
+		GithubLogo,
+		TwitterLogo,
+		DiscordLogo,
 	},
 
 	computed: {
