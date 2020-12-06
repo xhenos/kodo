@@ -39,10 +39,11 @@ class Tachiyomi extends Default {
         this.stableUrl = "https://api.github.com/repos/inorichi/tachiyomi/releases/latest"
         this.previewUrl = "https://api.github.com/repos/tachiyomiorg/android-app-preview/releases/latest"
         this.JOB = {}
+        this.REPO = 'tachiyomi'
     }
 
     async stable(store) {
-        const REPO = 'tachiyomi'
+        const REPO = this.REPO
         const FLAVOUR = 'stable'
         if (this.JOB.hasOwnProperty(FLAVOUR)) {
             try {
@@ -87,7 +88,7 @@ class Tachiyomi extends Default {
     };
 
     async preview(store) {
-        const REPO = 'tachiyomi'
+        const REPO = this.REPO
         const FLAVOUR = 'preview'
         if (this.JOB.hasOwnProperty(FLAVOUR)) {
             try {
@@ -131,10 +132,79 @@ class Tachiyomi extends Default {
     };
 }
 
+class TachiyomiAZ extends Tachiyomi {
+    constructor() {
+        super()
+        this.stableUrl = "https://api.github.com/repos/az4521/tachiyomiAZ/releases/latest"
+        this.previewUrl = "https://crafty.moe/tachiyomiAZ.apk"
+        this.REPO = 'tachiyomiaz'
+    }
+
+    async preview(store) {
+        const REPO = this.REPO
+        const FLAVOUR = 'preview'
+        if (store.getters.isFlavourUpdated({ _repo: REPO, _flavour: FLAVOUR })) {
+            return store.getters.getRelease({ _repo: REPO, _flavour: FLAVOUR })
+        }
+        let data = {
+            body: 'We have no idea!',
+            version: 'Ask AZ',
+            downloadUrl: "https://crafty.moe/tachiyomiAZ.apk",
+            releaseDate: Date.now(),
+        }
+        store.commit({
+            type: 'setRelease',
+            _repo: REPO,
+            _flavour: FLAVOUR,
+            _data: data
+        })
+        return Promise.resolve(store.getters.getRelease({ _repo: REPO, _flavour: FLAVOUR }))
+    }
+}
+
+class TachiyomiJ2K extends Tachiyomi {
+    constructor() {
+        super()
+        this.stableUrl = "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest"
+        this.previewUrl = ""
+        this.REPO = 'tachiyomij2k'
+    }
+
+    async preview(store) {
+        return Promise.resolve({})
+    }
+}
+
+class TachiyomiSY extends Tachiyomi {
+    constructor() {
+        super()
+        this.stableUrl = "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest"
+        this.previewUrl = "https://api.github.com/repos/jobobby04/TachiyomiSYPreview/releases/latest"
+        this.REPO = 'tachiyomisy'
+    }
+}
+
+class Neko extends Tachiyomi {
+    constructor() {
+        super()
+        this.stableUrl = "https://api.github.com/repos/CarlosEsco/Neko/releases/latest"
+        this.previewUrl = ""
+        this.REPO = 'neko'
+    }
+
+    async preview(store) {
+        return Promise.resolve({})
+    }
+}
+
 class Fetchers {
     constructor() {
         this.fetchers = {
-            tachiyomi: new Tachiyomi()
+            tachiyomi: new Tachiyomi(),
+            tachiyomiaz: new TachiyomiAZ(),
+            tachiyomij2k: new TachiyomiJ2K(),
+            tachiyomisy: new TachiyomiSY(),
+            neko: new Neko()
         }
         this.install = function (Vue) {
             Vue.prototype.$fetchers = this.fetchers
@@ -142,4 +212,4 @@ class Fetchers {
     }
 }
 
-export { Tachiyomi, Fetchers }
+export { Fetchers }
