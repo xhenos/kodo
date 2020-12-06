@@ -1,5 +1,5 @@
 <template>
-	<div class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 sm:border-l border-ui-border md:mt-0">
+	<div id="OnThisPage" class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 sm:border-l border-ui-border md:mt-0">
 		<h3 class="pt-0 mt-0 text-sm tracking-wide uppercase border-none">On this page</h3>
 		<div>
 			<ul>
@@ -14,7 +14,7 @@
 				>
 					<g-link
 						:to="`${page.path}${heading.anchor}`"
-						class="relative flex items-center py-1 text-sm transition transform hover:translate-x-1"
+						class="relative flex items-center py-1 text-sm transition transform"
 						:class="{
 							'pl-2': heading.depth === 3,
 							'pl-3': heading.depth === 4,
@@ -118,3 +118,26 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+#OnThisPage {
+	a {
+		&.active--exact {
+			color: var(--color-ui-primary);
+			span {
+				background-color: var(--color-ui-primary);
+			}
+		}
+		&:hover {
+			color: var(--color-ui-primary);
+		}
+	}
+	li a {
+		transition: all 0.3s;
+		&.active {
+			color: var(--color-ui-primary);
+			padding-left: .8rem;
+		}
+	}
+}
+</style>

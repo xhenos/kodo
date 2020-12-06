@@ -1,5 +1,5 @@
 <template>
-	<div ref="sidebar" v-if="showSidebar" class="px-4 pt-8 lg:pt-12">
+	<div id="Sidebar" ref="sidebar" v-if="showSidebar" class="px-4 pt-8 lg:pt-12">
 		<div
 			v-for="(section, index) in sidebar.sections"
 			:key="section.title"
@@ -101,3 +101,36 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+#Sidebar {
+	h3 {
+		color: currentColor;
+		&.active--exact {
+			color: var(--color-ui-primary);
+			span {
+				background-color: var(--color-ui-primary);
+			}
+		}
+	}
+	a {
+		color: currentColor;
+		&.active--exact {
+			color: var(--color-ui-primary);
+			span {
+				background-color: var(--color-ui-primary);
+			}
+		}
+		&:hover {
+			color: var(--color-ui-primary);
+		}
+	}
+	li a {
+		transition: all 0.3s;
+		&.active {
+			color: var(--color-ui-primary);
+			padding-left: .8rem;
+		}
+	}
+}
+</style>
