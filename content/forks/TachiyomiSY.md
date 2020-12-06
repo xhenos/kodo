@@ -3,6 +3,7 @@ title: TachiyomiSY
 metaTitle: TachiyomiSY
 description: This fork adds quite a few custom unique features, it also has new features from the latest Tachiyomi version as well as from other forks such as TachiyomiJ2K.
 sidebar: default
+path: /forks/TachiyomiSY/
 meta:
   - property: og:image
     content: /assets/forks_logo-sy.png
@@ -17,7 +18,7 @@ meta:
 `<ForkButtons forkName="TachiyomiSY" downloadForkLink="https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest" downloadForkStyle="background-color:#BE0F6E;color:#FFFFFF;" githubForkLink="https://github.com/jobobby04/TachiyomiSY"/>`
 
 ## About
-This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K).
+This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ/) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K/).
 
 ## Screenshots
 <g-image class="zoomable" src="~/images/forks_banner-sy.png" />
@@ -38,7 +39,7 @@ This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ) and adds quite a few
 - Source categories
 - Manga info edit
 - Enhanced views for internal and delegated sources
-- Numerous features from [TachiyomiAZ](/forks/TachiyomiAZ)
+- Numerous features from [TachiyomiAZ](/forks/TachiyomiAZ/)
 
 ## Credits
 - [She11Shocked](https://github.com/she11sh0cked/) for the extra tracking, filter, recommendation features and a ton more.

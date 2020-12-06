@@ -3,6 +3,7 @@ title: Neko
 metaTitle: Neko
 description: MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains features specific to MangaDex that those versions cannot offer.
 sidebar: default
+path: /forks/Neko/
 meta:
   - property: og:image
     content: /assets/forks_logo-neko.png
@@ -17,7 +18,7 @@ meta:
 `<ForkButtons forkName="Neko" downloadForkLink="https://api.github.com/repos/CarlosEsco/Neko/releases/latest" downloadForkStyle="background-color:#3DDA83;color:#000000;" githubForkLink="https://github.com/CarlosEsco/Neko" androidVersion="7.0"/>`
 
 ## About
-This is a [MangaDex](https://mangadex.org/) specific fork of **Tachiyomi** and [TachiyomiJ2K](/forks/TachiyomiJ2K). This contains features specific to **MangaDex** that those versions cannot offer. It also features almost every feature that **J2K** has except for extensions (aka other sources), custom covers, and local manga.
+This is a [MangaDex](https://mangadex.org/) specific fork of **Tachiyomi** and [TachiyomiJ2K](/forks/TachiyomiJ2K/). This contains features specific to **MangaDex** that those versions cannot offer. It also features almost every feature that **J2K** has except for extensions (aka other sources), custom covers, and local manga.
 
 ## Screenshots
 <g-image class="zoomable" src="~/images/forks_banner-neko.png" />

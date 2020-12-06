@@ -56,7 +56,7 @@ module.exports = {
 					{
 						title: "Forks",
 						index: "/forks/",
-						items: ["/forks/neko/", "/forks/tachiyomi-j2-k/", "/forks/tachiyomi-az/", "/forks/tachiyomi-sy/"],
+						items: ["/forks/Neko/", "/forks/TachiyomiJ2K/", "/forks/TachiyomiAZ/", "/forks/TachiyomiSY/"],
 					},
 					{
 						title: "Other",

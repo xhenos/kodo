@@ -83,10 +83,10 @@ export default {
 				overflow: { text: "Overflow", icon:"more_vert" },
 				/* Forks */
 				neko: { text: "Neko", internalClass:"nav-tachiyomi_neko"},
-				tachiyomij2k: { text: "TachiyomiJ2K", link:"/forks/neko"},
-				tachiyomiaz: { text: "TachiyomiAZ", link:"/forks/tachiyomi-az"},
-				tachiyomisy: { text: "TachiyomiSY", link:"/forks/tachiyomi-sy"},
-				tachiyomieh: { text: "TachiyomiEH", link:"/forks/tachiyomi-eh"},
+				tachiyomij2k: { text: "TachiyomiJ2K", link:"/forks/Neko/"},
+				tachiyomiaz: { text: "TachiyomiAZ", link:"/forks/TachiyomiAZ/"},
+				tachiyomisy: { text: "TachiyomiSY", link:"/forks/TachiyomiSY/"},
+				tachiyomieh: { text: "TachiyomiEH", link:"/forks/TachiyomiEH/"},
 			}[this.item];
 		},
 	},

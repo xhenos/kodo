@@ -3,6 +3,7 @@ title: TachiyomiEH
 metaTitle: TachiyomiEH
 description: This fork adds features that enhances the hentai experience with integrations to popular sevices such as E-Hentai, nHentai and more.
 sidebar: default
+path: /forks/TachiyomiEH/
 meta:
   - property: og:image
     content: /assets/forks_logo-eh.png
@@ -21,7 +22,7 @@ meta:
 
 This fork adds features that enhances the hentai experience with integrations to popular sevices such as **E-Hentai**, **nHentai** and more.
 
-At the moment, it is **deprecated** as the developer does not have time to maintain it. Use [TachiyomiAZ](/forks/TachiyomiAZ) instead.
+At the moment, it is **deprecated** as the developer does not have time to maintain it. Use [TachiyomiAZ](/forks/TachiyomiAZ/) instead.
 
 <g-image class="zoomable" src="~/images/forks_banner-eh.png" />
 

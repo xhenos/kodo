@@ -49,11 +49,11 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 ## Forks information
 
-### ![Alternative text](https://tachiyomi.org/icons/logo.svg) [Neko](/forks/Neko)
+### ![Alternative text](https://tachiyomi.org/icons/logo.svg) [Neko](/forks/Neko/)
 
 This fork can only restore **MangaDex** entries in a backup. If there are entries from other sources that are a part of that backup then they will not transfer.
 
-### ![Alternative text](https://tachiyomi.org/icons/logo.svg) [TachiyomiAZ](/forks/TachiyomiAZ), ![Alternative text](https://tachiyomi.org/icons/logo.svg)  [TachiyomiSY](/forks/TachiyomiSY) and ![Alternative text](https://tachiyomi.org/icons/logo.svg)  [TachiyomiEH](/forks/TachiyomiEH)
+### ![Alternative text](https://tachiyomi.org/icons/logo.svg) [TachiyomiAZ](/forks/TachiyomiAZ/), ![Alternative text](https://tachiyomi.org/icons/logo.svg)  [TachiyomiSY](/forks/TachiyomiSY/) and ![Alternative text](https://tachiyomi.org/icons/logo.svg)  [TachiyomiEH](/forks/TachiyomiEH/)
 
 These forks have some built-in extensions, namely: **E-Hentai**, **Hitomi.la**, and **nHentai** for <Navigation item="tachiyomiaz" /> and <Navigation item="tachiyomieh" /> while <Navigation item="tachiyomisy" /> only has **E-Hentai**.
 
