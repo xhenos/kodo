@@ -1,7 +1,7 @@
 <template>
 	<div @keydown.down="increment" @keydown.up="decrement" @keydown.enter="go" class="relative">
 		<label class="relative block">
-			<span class="sr-only">Search Tachiyomi docs...</span>
+			<span class="sr-only">Search docs...</span>
 			<div class="absolute inset-y-0 left-0 flex items-center justify-center px-3 py-2 opacity-50">
 				<SearchIcon size="1.25x" class="text-ui-typo" />
 			</div>
@@ -10,7 +10,7 @@
 				type="search"
 				:value="query"
 				class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg"
-				placeholder="Search Tachiyomi docs..."
+				placeholder="Search docs..."
 				@focus="focused = true"
 				@blur="focused = false"
 				@input="
@@ -56,7 +56,7 @@
 
 						<span v-else class="flex items-center">
 							{{ result.title }}
-							<ChevronRightIcon size="1x" class="mx-1" />
+							<ChevronsRightIcon size="1x" class="mx-1" />
 							<span class="font-normal opacity-75">{{ result.value }}</span>
 						</span>
 					</g-link>
@@ -87,11 +87,11 @@ query Search {
 
 <script>
 import Fuse from "fuse.js";
-import { ChevronRightIcon, SearchIcon } from "vue-feather-icons";
+import { ChevronsRightIcon, SearchIcon } from "vue-feather-icons";
 
 export default {
 	components: {
-		ChevronRightIcon,
+		ChevronsRightIcon,
 		SearchIcon,
 	},
 
