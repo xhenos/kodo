@@ -3,7 +3,7 @@
 		<div class="flex justify-center flex-col xxl:flex-row">
 			<slot></slot>
 		</div>
-	    <slot name="footer"></slot>
+		<slot name="footer"></slot>
 	</div>
 </template>
 
@@ -11,5 +11,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>

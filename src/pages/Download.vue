@@ -38,7 +38,7 @@ import DownloadButtons from "../components/download/DownloadButtons.vue";
 
 export default {
 	components: { WhatsNew, DownloadButton, DownloadButtons },
-	data: function () {
+	data: function() {
 		return {
 			stable: {
 				body: "",
@@ -54,8 +54,11 @@ export default {
 			},
 		};
 	},
-	created: async function () {
-		let all = await Promise.all([this.$fetchers.tachiyomi.stable(this.$store), this.$fetchers.tachiyomi.preview(this.$store)]);
+	created: async function() {
+		let all = await Promise.all([
+			this.$fetchers.tachiyomi.stable(this.$store),
+			this.$fetchers.tachiyomi.preview(this.$store),
+		]);
 
 		this.stable = all[0].data;
 		this.preview = all[1].data;

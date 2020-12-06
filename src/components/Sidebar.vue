@@ -73,11 +73,11 @@ export default {
 	},
 	computed: {
 		pages() {
-			return this.$page.allMarkdownPage.edges.map((edge) => edge.node);
+			return this.$page.allMarkdownPage.edges.map(edge => edge.node);
 		},
 		sidebar() {
 			return this.$static.metadata.settings.sidebar.find(
-				(sidebar) => sidebar.name === this.$page.markdownPage.sidebar
+				sidebar => sidebar.name === this.$page.markdownPage.sidebar
 			);
 		},
 		showSidebar() {
@@ -96,7 +96,7 @@ export default {
 			};
 		},
 		findPages(links) {
-			return links.map((link) => this.pages.find((page) => page.path === link));
+			return links.map(link => this.pages.find(page => page.path === link));
 		},
 	},
 };
@@ -129,7 +129,7 @@ export default {
 		transition: all 0.3s;
 		&.active {
 			color: var(--color-ui-primary);
-			padding-left: .8rem;
+			padding-left: 0.8rem;
 		}
 	}
 }

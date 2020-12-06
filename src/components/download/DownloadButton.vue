@@ -11,11 +11,11 @@ export default {
 		title: String,
 		color: {
 			type: String,
-			default: "blue"
+			default: "blue",
 		},
 		variant: {
 			type: String,
-			default: "800"
+			default: "800",
 		},
 		data: Object,
 	},

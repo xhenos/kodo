@@ -133,15 +133,15 @@ export default {
 		TwitterLogo,
 		DiscordLogo,
 	},
-	data: function () {
+	data: function() {
 		return {
 			stable: {
 				version: "v0.00.0",
 			},
 		};
 	},
-	created: async function () {
-		let stable = await this.$fetchers.tachiyomi.stable(this.$store)
+	created: async function() {
+		let stable = await this.$fetchers.tachiyomi.stable(this.$store);
 		this.stable = stable.data;
 	},
 	computed: {

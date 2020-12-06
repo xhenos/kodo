@@ -136,7 +136,7 @@ export default {
 		transition: all 0.3s;
 		&.active {
 			color: var(--color-ui-primary);
-			padding-left: .8rem;
+			padding-left: 0.8rem;
 		}
 	}
 }

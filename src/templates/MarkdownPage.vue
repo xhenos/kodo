@@ -109,7 +109,9 @@ export default {
 		color: var(--color-ui-primary);
 	}
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		padding-top: 6rem;
 		margin-top: -5rem;
 	}
@@ -138,8 +140,8 @@ export default {
 	blockquote {
 		margin: 0 0 2em;
 		padding: 0 1.5em;
-		border-left: .25em solid var(--color-ui-border);
-		transition: border-color .3s;
+		border-left: 0.25em solid var(--color-ui-border);
+		transition: border-color 0.3s;
 		font-size: 1.1rem;
 	}
 }
