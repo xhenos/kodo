@@ -5,7 +5,7 @@
 				<div class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row">
 					<g-link to="/" class="flex items-center nav-link nav-primary hover:text-ui-primary" title="Home">
 						<Logo :width="32" class="text-ui-primary" />
-						<span class="hidden ml-2 text-xl font-black tracking-tighter md:block">
+						<span class="hidden ml-2 text-xl font-semibold md:block">
 							{{ meta.siteName }}
 						</span>
 					</g-link>
@@ -81,7 +81,7 @@
 
 					<g-link
 						to="/download/"
-						class="hidden ml-4 md:block p-1 text-xl font-medium nav-link text-ui-typo hover:text-ui-primary"
+						class="hidden ml-4 md:block p-1 text-lg font-fancy font-medium nav-link text-ui-typo hover:text-ui-primary"
 					>
 						{{ stable.version }}
 					</g-link>

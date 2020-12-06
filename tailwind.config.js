@@ -7,6 +7,7 @@ module.exports = {
 					sidebar: "var(--color-ui-sidebar)",
 					typo: "var(--color-ui-typo)",
 					primary: "var(--color-ui-primary)",
+					primaryDark: "var(--color-ui-primary-dark)",
 					border: "var(--color-ui-border)",
 					container: "var(--color-ui-container)",
 				},
@@ -17,8 +18,8 @@ module.exports = {
 			screens: {
 				xxl: "1400px",
 			},
-			fontWeight: {
-				black: 500,
+			fontFamily: {
+				fancy: ["Jost", "Helvetica", "Helvetica Neue", "Segoe UI", "Arial", "sans-serif"],
 			},
 		},
 		container: {

@@ -13,13 +13,6 @@ module.exports = {
 	},
 	siteUrl: process.env.SITE_URL ? process.env.SITE_URL : "https://tachiyomi.org",
 	pathPrefix: process.env.SITE_URL_PREFIX ? process.env.SITE_URL_PREFIX : "/",
-
-	chainWebpack: config => {
-		const svgRule = config.module.rule("svg");
-		svgRule.uses.clear();
-		svgRule.use("vue-svg-loader").loader("vue-svg-loader");
-	},
-
 	settings: {
 		web: process.env.URL_WEB || false,
 		twitter: process.env.URL_TWITTER || false,
@@ -183,4 +176,9 @@ module.exports = {
 			},
 		},
 	],
+	chainWebpack: config => {
+		const svgRule = config.module.rule("svg");
+		svgRule.uses.clear();
+		svgRule.use("vue-svg-loader").loader("vue-svg-loader");
+	},
 };

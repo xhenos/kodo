@@ -21,6 +21,7 @@ html[lights-out] {
 	--color-ui-primary-dark: theme("colors.indigo.600");
 	--color-ui-container: theme("colors.gray.800");
 	--color-ui-search: theme("colors.gray.800");
+	--inline-code-text: #e24cb2;
 
 	pre[class*="language-"],
 	code[class*="language-"] {

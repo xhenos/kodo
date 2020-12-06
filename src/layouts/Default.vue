@@ -1,5 +1,5 @@
 <template>
-	<div class="scrollbar-fix font-sans antialiased text-ui-typo bg-ui-background">
+	<div class="font-sans antialiased text-ui-typo bg-ui-background">
 		<div class="flex flex-col justify-start min-h-screen">
 			<header
 				ref="header"
@@ -125,15 +125,11 @@ export default {
 	transition-timing-function: ease-in-out;
 }
 
-.scrollbar-fix {
-	padding-left: calc(100vw - 100%);
-}
-
 h1,
 h2,
 h3,
 h4 {
-	@apply leading-snug font-black mb-4 text-ui-typo;
+	@apply leading-snug font-semibold mb-4 text-ui-typo;
 
 	&:hover {
 		a::before {

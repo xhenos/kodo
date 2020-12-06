@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="flex flex-wrap items-start justify-start">
+		<div id="MarkdownPage" class="flex flex-wrap items-start justify-start">
 			<div class="order-2 w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8 sticky" style="top: 4rem">
 				<OnThisPage />
 			</div>
@@ -105,10 +105,42 @@ export default {
 @import "prism-themes/themes/prism-material-oceanic.css";
 
 #Markdown {
+	a {
+		color: var(--color-ui-primary);
+	}
+
+	h1, h2, h3 {
+		padding-top: 6rem;
+		margin-top: -5rem;
+	}
+
+	h2 {
+		&:before {
+			content: " ";
+			display: block;
+			margin-bottom: 1.5rem;
+			border-top: 1px solid var(--color-ui-border);
+		}
+	}
+
 	ul,
 	ol {
 		list-style: revert;
 		padding: revert;
+	}
+
+	ul {
+		li {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	blockquote {
+		margin: 0 0 2em;
+		padding: 0 1.5em;
+		border-left: .25em solid var(--color-ui-border);
+		transition: border-color .3s;
+		font-size: 1.1rem;
 	}
 }
 </style>
