@@ -7,14 +7,14 @@
 
 			<div class="order-1 w-full md:w-2/3">
 				<VueRemarkContent id="Markdown" />
-				<p>
-					<a :href="editLink" target="_blank" class="github-edit-link">
+				<div class="github-edit-link">
+					<a :href="editLink" target="_blank" class="hover:text-ui-primary">
 						<GithubLogo />
 						<span>Edit this page on GitHub</span>
 					</a>
-				</p>
+				</div>
 
-				<div class="mt-8 pt-8 lg:mt-12 lg:pt-12 border-t border-ui-border">
+				<div class="mt-6 pt-8 border-t border-ui-border">
 					<NextPrevLinks />
 				</div>
 			</div>
@@ -120,16 +120,12 @@ export default {
 	}
 }
 
-.github-edit-link {
-	font-size: .9rem;
+.github-edit-link a {
+	font-size: 0.9rem;
 	font-weight: normal;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	padding-top: 1rem;
-
-	&:not(:hover) {
-		color: var(--color-ui-primary-dark) !important;
-	}
 
 	svg {
 		margin-right: 0.5rem;
