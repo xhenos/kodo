@@ -83,7 +83,7 @@
 						to="/download/"
 						class="hidden ml-4 sm:block p-1 text-xl font-medium nav-link text-ui-typo hover:text-ui-primary"
 					>
-						v{{ $static.metadata.appVerStable }}
+						{{ stable.version }}
 					</g-link>
 				</div>
 			</div>
@@ -95,7 +95,6 @@
 query {
   metadata {
     siteName
-    appVerStable
     settings {
       web
       github
@@ -134,7 +133,17 @@ export default {
 		TwitterLogo,
 		DiscordLogo,
 	},
-
+	data: function () {
+		return {
+			stable: {
+				version: "v0.00.0",
+			},
+		};
+	},
+	created: async function () {
+		let stable = await this.$fetchers.tachiyomi.stable(this.$store)
+		this.stable = stable.data;
+	},
 	computed: {
 		meta() {
 			return this.$static.metadata;

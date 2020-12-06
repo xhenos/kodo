@@ -30,25 +30,6 @@
 	</Layout>
 </template>
 
-<static-query>
-query {
-  metadata {
-    appStable {
-      body
-      version
-      releaseDate
-      downloadUrl
-    }
-    appPreview {
-      body
-      version
-      releaseDate
-      downloadUrl
-    }
-  }
-}
-</static-query>
-
 <script>
 import moment from "moment";
 import WhatsNew from "../components/download/WhatsNew.vue";
@@ -57,26 +38,29 @@ import DownloadButtons from "../components/download/DownloadButtons.vue";
 
 export default {
 	components: { WhatsNew, DownloadButton, DownloadButtons },
-	computed: {
-		stable() {
-			const data = this.$static.metadata.appStable;
-			return {
-				body: data.body,
-				date: moment(data.releaseDate).fromNow(),
-				downloadUrl: data.downloadUrl,
-				version: data.version,
-			};
-		},
-		preview() {
-			const data = this.$static.metadata.appPreview;
-			return {
-				body: data.body,
-				date: moment(data.releaseDate).fromNow(),
-				downloadUrl: data.downloadUrl,
-				version: "r" + data.version,
-			};
-		},
+	data: function () {
+		return {
+			stable: {
+				body: "",
+				date: moment(0).fromNow(),
+				downloadUrl: "",
+				version: "v0.00.0",
+			},
+			preview: {
+				body: "",
+				date: moment(0).fromNow(),
+				downloadUrl: "",
+				version: "r0000",
+			},
+		};
 	},
+	created: async function () {
+		let all = await Promise.all([this.$fetchers.tachiyomi.stable(this.$store), this.$fetchers.tachiyomi.preview(this.$store)]);
+
+		this.stable = all[0].data;
+		this.preview = all[1].data;
+	},
+	computed: {},
 };
 </script>
 

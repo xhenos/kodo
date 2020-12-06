@@ -83,6 +83,9 @@ export default {
 			return this.$page && this.headerHeight > 0;
 		},
 	},
+	beforeMount() {
+		this.$store.dispatch("init")
+	},
 	mounted() {
 		this.setHeaderHeight();
 	},
