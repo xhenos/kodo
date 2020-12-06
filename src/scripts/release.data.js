@@ -1,9 +1,12 @@
 import axios from "axios"
+import { TACHIYOMI_STABLE_API_URL, TACHIYOMI_PREVIEW_API_URL, TACHIYOMI_AZ_STABLE_API_URL, TACHIYOMI_AZ_PREVIEW_API_URL, TACHIYOMI_J2K_STABLE_API_URL, TACHIYOMI_SY_STABLE_API_URL, TACHIYOMI_SY_PREVIEW_API_URL, NEKO_STABLE_API_URL, } from "~/constants"
+
+const EMPTY_URL = ""
 
 class Default {
     constructor() {
-        this.stableUrl = "";
-        this.previewUrl = "";
+        this.stableUrl = EMPTY_URL;
+        this.previewUrl = EMPTY_URL;
     }
 
     async stable() {
@@ -36,8 +39,8 @@ class Default {
 class Tachiyomi extends Default {
     constructor() {
         super()
-        this.stableUrl = "https://api.github.com/repos/inorichi/tachiyomi/releases/latest"
-        this.previewUrl = "https://api.github.com/repos/tachiyomiorg/android-app-preview/releases/latest"
+        this.stableUrl = TACHIYOMI_STABLE_API_URL
+        this.previewUrl = TACHIYOMI_PREVIEW_API_URL
         this.JOB = {}
         this.REPO = 'tachiyomi'
     }
@@ -135,8 +138,8 @@ class Tachiyomi extends Default {
 class TachiyomiAZ extends Tachiyomi {
     constructor() {
         super()
-        this.stableUrl = "https://api.github.com/repos/az4521/tachiyomiAZ/releases/latest"
-        this.previewUrl = "https://crafty.moe/tachiyomiAZ.apk"
+        this.stableUrl = TACHIYOMI_AZ_STABLE_API_URL
+        this.previewUrl = TACHIYOMI_AZ_PREVIEW_API_URL
         this.REPO = 'tachiyomiaz'
     }
 
@@ -149,7 +152,7 @@ class TachiyomiAZ extends Tachiyomi {
         let data = {
             body: 'We have no idea!',
             version: 'Ask AZ',
-            downloadUrl: "https://crafty.moe/tachiyomiAZ.apk",
+            downloadUrl: TACHIYOMI_AZ_PREVIEW_API_URL,
             releaseDate: Date.now(),
         }
         store.commit({
@@ -165,8 +168,8 @@ class TachiyomiAZ extends Tachiyomi {
 class TachiyomiJ2K extends Tachiyomi {
     constructor() {
         super()
-        this.stableUrl = "https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest"
-        this.previewUrl = ""
+        this.stableUrl = TACHIYOMI_J2K_STABLE_API_URL
+        this.previewUrl = EMPTY_URL
         this.REPO = 'tachiyomij2k'
     }
 
@@ -178,8 +181,8 @@ class TachiyomiJ2K extends Tachiyomi {
 class TachiyomiSY extends Tachiyomi {
     constructor() {
         super()
-        this.stableUrl = "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest"
-        this.previewUrl = "https://api.github.com/repos/jobobby04/TachiyomiSYPreview/releases/latest"
+        this.stableUrl = TACHIYOMI_SY_STABLE_API_URL
+        this.previewUrl = TACHIYOMI_SY_PREVIEW_API_URL
         this.REPO = 'tachiyomisy'
     }
 }
@@ -187,8 +190,8 @@ class TachiyomiSY extends Tachiyomi {
 class Neko extends Tachiyomi {
     constructor() {
         super()
-        this.stableUrl = "https://api.github.com/repos/CarlosEsco/Neko/releases/latest"
-        this.previewUrl = ""
+        this.stableUrl = NEKO_STABLE_API_URL
+        this.previewUrl = EMPTY_URL
         this.REPO = 'neko'
     }
 
