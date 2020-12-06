@@ -68,7 +68,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 			actions: {
 				init({ state }) {
 					if (localStorage.getItem(KEY) == null) {
-						console.log(JSON.parse(localStorage.getItem('releases')))
 						localStorage.setItem(KEY, JSON.stringify({}))
 					}
 					state.releases = JSON.parse(localStorage.getItem('releases'))

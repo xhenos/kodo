@@ -36,8 +36,8 @@ class Default {
 class Tachiyomi extends Default {
     constructor() {
         super()
-        this.stableUrl = "https://ea6df2f5-0ded-4b64-8d86-610572821667.mock.pstmn.io/repos/inorichi/tachiyomi/releases/latest"
-        this.previewUrl = "https://ea6df2f5-0ded-4b64-8d86-610572821667.mock.pstmn.io/repos/tachiyomiorg/android-app-preview/releases/latest"
+        this.stableUrl = "https://api.github.com/repos/inorichi/tachiyomi/releases/latest"
+        this.previewUrl = "https://api.github.com/repos/tachiyomiorg/android-app-preview/releases/latest"
         this.JOB = {}
     }
 
@@ -137,7 +137,6 @@ class Fetchers {
             tachiyomi: new Tachiyomi()
         }
         this.install = function (Vue) {
-            console.log("installing", this.fetchers)
             Vue.prototype.$fetchers = this.fetchers
         }
     }
