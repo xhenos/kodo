@@ -6,7 +6,15 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function(api) {
-	api.loadSource(async ({ addMetadata, addCollection }) => {
+	api.onCreateNode(variables => {
+		// Use the Server API here: https://gridsome.org/docs/server-api/
+		if (variables.internal.typeName === "MarkdownPage") {
+			variables.editOnGithub = variables.editOnGithub !== false ? true : false;
+			return { ...variables };
+		}
+	});
+
+	api.loadSource(async ({ addMetadata }) => {
 		// Use the Data Store API here: https://gridsome.org/docs/data-store-api/
 		addMetadata("settings", require("./gridsome.config").settings);
 	});

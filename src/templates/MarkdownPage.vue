@@ -7,14 +7,15 @@
 
 			<div class="order-1 w-full md:w-2/3">
 				<VueRemarkContent id="Markdown" />
-				<div class="github-edit-link">
-					<a :href="editLink" target="_blank" class="hover:text-ui-primary">
-						<GithubLogo />
-						<span>Edit this page on GitHub</span>
-					</a>
+
+				<div v-if="this.$page.markdownPage.editOnGithub == true" class="mt-2 pt-4">
+					<EditOnGithub />
 				</div>
 
-				<div class="mt-6 pt-8 border-t border-ui-border">
+				<div
+					v-if="this.$page.markdownPage.prev !== '' || this.$page.markdownPage.next !== ''"
+					class="mt-6 pt-8 border-t border-ui-border"
+				>
 					<NextPrevLinks />
 				</div>
 			</div>
@@ -31,6 +32,7 @@ query ($id: ID!) {
     path
     content
     sidebar
+	editOnGithub
     next
     prev
     headings {
@@ -53,23 +55,13 @@ query ($id: ID!) {
 <script>
 import OnThisPage from "@/components/OnThisPage.vue";
 import NextPrevLinks from "@/components/NextPrevLinks.vue";
-import GithubLogo from "@/assets/images/github-logo.svg";
+import EditOnGithub from "@/components/EditOnGithub.vue";
 
 export default {
 	components: {
 		OnThisPage,
 		NextPrevLinks,
-		GithubLogo,
-	},
-	computed: {
-		currentPath() {
-			return this.$route.matched[0].path;
-		},
-		editLink() {
-			let path = this.currentPath;
-			if ((path.match(new RegExp("/", "g")) || []).length == 1) path = path + "/README";
-			return `https://github.com/xhenos/website/blob/gridsome/content${path}.md`;
-		},
+		EditOnGithub,
 	},
 
 	metaInfo() {
@@ -117,18 +109,6 @@ export default {
 	ol {
 		list-style: revert;
 		padding: revert;
-	}
-}
-
-.github-edit-link a {
-	font-size: 0.9rem;
-	font-weight: normal;
-	display: inline-flex;
-	align-items: center;
-	padding-top: 1rem;
-
-	svg {
-		margin-right: 0.5rem;
 	}
 }
 </style>
