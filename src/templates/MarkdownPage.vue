@@ -63,7 +63,6 @@ export default {
 		NextPrevLinks,
 		EditOnGithub,
 	},
-
 	metaInfo() {
 		const title = this.$page.markdownPage.title;
 		const description = this.$page.markdownPage.description || this.$page.markdownPage.excerpt;

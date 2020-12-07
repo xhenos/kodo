@@ -141,7 +141,7 @@ export default {
 		};
 	},
 	created: async function() {
-		let stable = await this.$fetchers.tachiyomi.stable(this.$store);
+		let stable = await this.$fetchers.tachiyomi().stable(this.$store);
 		this.stable = stable.data;
 	},
 	computed: {

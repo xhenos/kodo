@@ -56,8 +56,8 @@ export default {
 	},
 	created: async function() {
 		let all = await Promise.all([
-			this.$fetchers.tachiyomi.stable(this.$store),
-			this.$fetchers.tachiyomi.preview(this.$store),
+			this.$fetchers.tachiyomi().stable(this.$store),
+			this.$fetchers.tachiyomi().preview(this.$store),
 		]);
 
 		this.stable = all[0].data;
