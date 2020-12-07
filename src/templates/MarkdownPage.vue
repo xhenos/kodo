@@ -30,6 +30,7 @@ query($id: ID!) {
 		title
 		description
 		metaImage
+		metaImageType
 		metaColor
 		path
 		content
@@ -68,7 +69,8 @@ export default {
 	metaInfo() {
 		const title = this.$page.markdownPage.title;
 		const description = this.$page.markdownPage.description || this.$page.markdownPage.excerpt;
-		const image = process.env.SITE_URL + this.$page.markdownPage.metaImage || process.env.SITE_URL + "/logo.jpg";
+		const image = process.env.SITE_URL + this.$page.markdownPage.metaImage || process.env.SITE_URL + "/ogimage.png";
+		const imageType = this.$page.markdownPage.metaImageType || "summary";
 		const color = this.$page.markdownPage.metaColor || process.env.SITE_COLOR || "#667EEA";
 
 		return {
