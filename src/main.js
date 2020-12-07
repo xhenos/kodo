@@ -11,6 +11,8 @@ import Badge from "~/components/Badge.vue";
 import Fetchers from "./scripts/data-fetchers";
 import PersistStore from "./scripts/store";
 
+import "./scripts/prototypes";
+
 export default function(Vue, { router, head, isClient, appOptions }) {
 	// Set default layout as a global component
 	Vue.component("Layout", DefaultLayout);
@@ -19,10 +21,9 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 	Vue.component("Badge", Badge);
 
 	router.beforeEach((to, _from, next) => {
-		head.meta.push({
+		head.meta.popAndPushContent(process.env.SITE_URL + _from.path, process.env.SITE_URL + to.path, {
 			key: "og:url",
 			name: "og:url",
-			content: process.env.SITE_URL + to.path,
 		});
 		next();
 	});

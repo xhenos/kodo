@@ -5,8 +5,8 @@ export default class Tachiyomi extends Default {
 	constructor() {
 		super();
 		this.stableUrl = TACHIYOMI_STABLE_API_URL;
-        this.previewUrl = TACHIYOMI_PREVIEW_API_URL;
-        this.githubUrl = "https://github.com/inorichi/tachiyomi"
+		this.previewUrl = TACHIYOMI_PREVIEW_API_URL;
+		this.githubUrl = "https://github.com/inorichi/tachiyomi";
 		this.JOB = {};
 		this.REPO = "tachiyomi";
 	}
@@ -20,8 +20,8 @@ export default class Tachiyomi extends Default {
 			} catch (e) {
 				throw new Error(e);
 			}
-        }
-        console.log(REPO, store)
+		}
+		console.log(REPO, store);
 		if (store.getters.isFlavourUpdated({ _repo: REPO, _flavour: FLAVOUR })) {
 			return store.getters.getRelease({ _repo: REPO, _flavour: FLAVOUR });
 		}

@@ -5,8 +5,8 @@ export default class Neko extends Tachiyomi {
 	constructor() {
 		super();
 		this.stableUrl = NEKO_STABLE_API_URL;
-        this.previewUrl = EMPTY_URL;
-        this.githubUrl = "https://github.com/CarlosEsco/Neko"
+		this.previewUrl = EMPTY_URL;
+		this.githubUrl = "https://github.com/CarlosEsco/Neko";
 		this.REPO = "neko";
 	}
 

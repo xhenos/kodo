@@ -56,7 +56,6 @@ export default function PersistStore(Vue, appOptions) {
 					}
 					state.releases = JSON.parse(localStorage.getItem("releases"));
 				}
-				
 			},
 		},
 	});
