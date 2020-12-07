@@ -101,6 +101,9 @@ export default {
 				case 'neko':
 					return 10
 					break;
+				default:
+					return 0
+					break;
 			}
 		},
 		darker() {
@@ -116,6 +119,9 @@ export default {
 					break;
 				case 'neko':
 					return -8
+					break;
+				default:
+					return 0
 					break;
 			}
 		},
