@@ -90,35 +90,42 @@ export default {
 		this.setHeaderHeight();
 	},
 	metaInfo() {
-		return {
-			meta: [
-				{
-					key: "og:type",
-					name: "og:type",
-					content: "website",
-				},
-				{
-					key: "twitter:card",
-					name: "twitter:card",
-					content: "summary_large_image",
-				},
-				{
-					key: "og:image",
-					name: "og:image",
-					content: process.env.SITE_URL + "/logo.jpg",
-				},
-				{
-					key: "twitter:image",
-					name: "twitter:image",
-					content: process.env.SITE_URL + "/logo.jpg",
-				},
-				{
-					key: "theme-color",
-					name: "theme-color",
-					content: process.env.SITE_COLOR || "#667EEA",
-				},
-			],
-		};
+		const markdownPage = this.$page
+			? this.$page.allMarkdownPage.edges.find(element => {
+					return element.node.path === this.$router.currentRoute.path;
+			  })
+			: undefined;
+		if (!markdownPage) {
+			return {
+				meta: [
+					{
+						key: "og:type",
+						name: "og:type",
+						content: "website",
+					},
+					{
+						key: "twitter:card",
+						name: "twitter:card",
+						content: "summary_large_image",
+					},
+					{
+						key: "og:image",
+						name: "og:image",
+						content: process.env.SITE_URL + "/logo.jpg",
+					},
+					{
+						key: "twitter:image",
+						name: "twitter:image",
+						content: process.env.SITE_URL + "/logo.jpg",
+					},
+					{
+						key: "theme-color",
+						name: "theme-color",
+						content: process.env.SITE_COLOR || "#667EEA",
+					},
+				],
+			};
+		}
 	},
 };
 </script>

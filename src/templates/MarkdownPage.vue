@@ -79,6 +79,11 @@ export default {
 					content: description,
 				},
 				{
+					key: "og:type",
+					name: "og:type",
+					content: "website",
+				},
+				{
 					key: "og:title",
 					name: "og:title",
 					content: title,
@@ -112,6 +117,11 @@ export default {
 					key: "theme-color",
 					name: "theme-color",
 					content: color,
+				},
+				{
+					key: "twitter:card",
+					name: "twitter:card",
+					content: "summary_large_image",
 				},
 			],
 		};
