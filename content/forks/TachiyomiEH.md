@@ -1,16 +1,10 @@
 ---
 title: TachiyomiEH
-metaTitle: TachiyomiEH
 description: This fork adds features that enhances the hentai experience with integrations to popular sevices such as E-Hentai, nHentai and more.
+metaImage: /ogimage-eh.png
+metaColor: "#2e84bf"
 sidebar: default
 path: /forks/TachiyomiEH/
-meta:
-  - property: og:image
-    content: /assets/forks_logo-eh.png
-  - name: theme-color
-    content: "#2e84bf"
-  - name: msapplication-TileColor
-    content: "#2e84bf"
 ---
 
 # <g-image class="headerLogo" src="~/images/forks_logo-eh.png" width="64" height="64" fit="contain"/> TachiyomiEH <Badge text="Deprecated" color="red" />
