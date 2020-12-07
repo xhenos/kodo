@@ -112,6 +112,10 @@ export default {
 					name: "twitter:image",
 					content: process.env.SITE_URL + "/logo.jpg",
 				},
+				{
+					name: "theme-color",
+					content: process.env.SITE_COLOR || "#5a67d8",
+				},
 			],
 		};
 	},

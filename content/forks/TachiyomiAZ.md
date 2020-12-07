@@ -1,16 +1,10 @@
 ---
 title: TachiyomiAZ
-metaTitle: TachiyomiAZ
 description: This hentai focused fork is based off of TachiyomiEH, it has most features and fixes from Tachiyomi, as well as features from TachiyomiJ2K.
+metaImage: ~/images/forks_gunz-az.png
+metaColor: "#FFCC4D"
 sidebar: default
 path: /forks/TachiyomiAZ/
-meta:
-  - property: og:image
-    content: /assets/forks_logo-az.png
-  - name: theme-color
-    content: "#FFCC4D"
-  - name: msapplication-TileColor
-    content: "#FFCC4D"
 ---
 
 import "~/assets/style/tachiyomiaz.scss"

@@ -1,16 +1,10 @@
 ---
 title: TachiyomiSY
-metaTitle: TachiyomiSY
 description: This fork adds quite a few custom unique features, it also has new features from the latest Tachiyomi version as well as from other forks such as TachiyomiJ2K.
+metaImage: ~/images/forks_banner-sy.png
+metaColor: "#BE0F6E"
 sidebar: default
 path: /forks/TachiyomiSY/
-meta:
-  - property: og:image
-    content: /assets/forks_logo-sy.png
-  - name: theme-color
-    content: "#BE0F6E"
-  - name: msapplication-TileColor
-    content: "#BE0F6E"
 ---
 
 # <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain"/> TachiyomiSY

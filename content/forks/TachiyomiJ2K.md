@@ -1,16 +1,10 @@
 ---
 title: TachiyomiJ2K
-metaTitle: TachiyomiJ2K
 description: This fork takes a new approach to the design of the base app along with several other enhancements.
+metaImage: ~/images/forks_banner-j2k.png
+metaColor: "#2e84bf"
 sidebar: default
 path: /forks/TachiyomiJ2K/
-meta:
-  - property: og:image
-    content: /assets/forks_logo-j2k.png
-  - name: theme-color
-    content: "#2e84bf"
-  - name: msapplication-TileColor
-    content: "#2e84bf"
 ---
 
 # <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain"/> TachiyomiJ2K
