@@ -5,3 +5,9 @@ body {
 ::selection {
 	background: var(--select-color);
 }
+
+hr {
+	border-color: var(--color-ui-border);
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+}

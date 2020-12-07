@@ -150,9 +150,17 @@ export default {
 #Markdown {
 	a {
 		color: var(--color-ui-primary);
+		&:hover {
+			color: var(--color-ui-primary-dark);
+		}
+
 	}
 
-	h1,
+	h1 {
+		padding-top: 7rem;
+		margin-top: -5rem;
+	}
+
 	h2,
 	h3 {
 		padding-top: 6rem;
@@ -172,6 +180,7 @@ export default {
 	ol {
 		list-style: revert;
 		padding: revert;
+		padding-left: 1.25rem;
 	}
 
 	ul {

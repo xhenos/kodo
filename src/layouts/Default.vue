@@ -324,15 +324,17 @@ table {
 .videolink {
 	background-color: transparent !important;
 	border: none !important;
-	padding-left: 0.25rem !important;
-	font-size: 0.9rem;
+	padding-left: 0.75rem !important;
+	padding-top: 0.25rem;
+	padding-bottom: 1rem;
 	text-align: left;
 	p {
 		margin-top: 0;
+		font-size: 0.9rem;
 	}
 	a,
 	.material-holder {
-		color: var(--color-ui-primary) !important;
+		color: var(--color-ui-primary);
 	}
 }
 
