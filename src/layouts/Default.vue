@@ -90,12 +90,7 @@ export default {
 		this.setHeaderHeight();
 	},
 	metaInfo() {
-		const markdownPage = this.$page
-			? this.$page.allMarkdownPage.edges.find(element => {
-					return element.node.path === this.$router.currentRoute.path;
-			  })
-			: undefined;
-		if (!markdownPage) {
+		if (!this.$page) {
 			return {
 				meta: [
 					{
