@@ -24,33 +24,33 @@
 </template>
 
 <page-query>
-query ($id: ID!) {
-  markdownPage(id: $id) {
-    id
-    title
-    description
-	metaImage
-	metaColor
-    path
-    content
-    sidebar
-	editOnGithub
-    next
-    prev
-    headings {
-      depth
-      value
-      anchor
-    }
-  }
-  allMarkdownPage{
-    edges {
-      node {
-        path
-        title
-      }
-    }
-  }
+query($id: ID!) {
+	markdownPage(id: $id) {
+		id
+		title
+		description
+		metaImage
+		metaColor
+		path
+		content
+		sidebar
+		editOnGithub
+		next
+		prev
+		headings {
+			depth
+			value
+			anchor
+		}
+	}
+	allMarkdownPage {
+		edges {
+			node {
+				path
+				title
+			}
+		}
+	}
 }
 </page-query>
 

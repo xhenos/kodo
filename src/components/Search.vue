@@ -68,20 +68,20 @@
 
 <static-query>
 query Search {
-   allMarkdownPage{
-    edges {
-      node {
-        id
-        path
-        title
-        headings {
-        	depth
-          value
-          anchor
-      	}
-      }
-    }
-  }
+	allMarkdownPage {
+		edges {
+			node {
+				id
+				path
+				title
+				headings {
+					depth
+					value
+					anchor
+				}
+			}
+		}
+	}
 }
 </static-query>
 

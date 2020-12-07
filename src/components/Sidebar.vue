@@ -49,18 +49,18 @@
 
 <static-query>
 query Sidebar {
-  metadata {
-    settings {
-      sidebar {
-        name
-        sections {
-          title
-		  index
-          items
-        }
-      }
-    }
-  }
+	metadata {
+		settings {
+			sidebar {
+				name
+				sections {
+					title
+					index
+					items
+				}
+			}
+		}
+	}
 }
 </static-query>
 
