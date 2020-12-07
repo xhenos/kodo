@@ -87,15 +87,47 @@ export default {
 		};
 	},
 	computed: {
+		lighter() {
+			switch (this.fork) {
+				case 'az':
+					return 10
+					break;
+				case 'j2k':
+					return 10
+					break;
+				case 'sy':
+					return 8
+					break;
+				case 'neko':
+					return 10
+					break;
+			}
+		},
+		darker() {
+			switch (this.fork) {
+				case 'az':
+					return -10
+					break;
+				case 'j2k':
+					return -8
+					break;
+				case 'sy':
+					return -4
+					break;
+				case 'neko':
+					return -8
+					break;
+			}
+		},
 		style() {
 			return `
 						fork {
-							--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(10)};
-							--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(10)};
+							--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(this.lighter)};
+							--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(this.lighter)};
     						--color-ui-primary: ${this.$page.markdownPage.metaColor.toHSL(0)};
     						--color-ui-primary: ${this.$page.markdownPage.metaColor.toHSL(0)};
-							--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(-10)};
-							--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(-10)};
+							--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(this.darker)};
+							--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(this.darker)};
 						}
 					`;
 		},
