@@ -1,11 +1,21 @@
 <template>
 	<Layout>
 		<div id="MarkdownPage" class="flex flex-wrap items-start justify-start">
-			<div class="order-2 w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8 sticky" style="top: 4rem">
+			<div
+				v-if="this.$page.markdownPage.onThisPage == true"
+				class="order-2 w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8 sticky"
+				style="top: 4rem"
+			>
 				<OnThisPage />
 			</div>
 
-			<div class="order-1 w-full md:w-2/3">
+			<div
+				class="order-1"
+				:class="{
+					'md:w-2/3': this.$page.markdownPage.onThisPage == true,
+					'lg:px-56': this.$page.markdownPage.onThisPage == false && this.$page.markdownPage.sidebar == '',
+				}"
+			>
 				<VueRemarkContent id="Markdown" />
 
 				<div v-if="this.$page.markdownPage.editOnGithub == true" class="mt-2 pt-4">
@@ -35,6 +45,7 @@ query($id: ID!) {
 		path
 		content
 		sidebar
+		onThisPage
 		editOnGithub
 		next
 		prev

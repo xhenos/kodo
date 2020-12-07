@@ -1,6 +1,8 @@
 ---
 title: Help Center
 description: From common questions to guides, find help for everything Tachiyomi.
+onThisPage: false
+editOnGithub: false
 hideSearch: true
 help:
   - title: Application

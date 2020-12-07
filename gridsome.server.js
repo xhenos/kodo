@@ -10,6 +10,7 @@ module.exports = function(api) {
 		// Use the Server API here: https://gridsome.org/docs/server-api/
 		if (variables.internal.typeName === "MarkdownPage") {
 			variables.editOnGithub = variables.editOnGithub !== false ? true : false;
+			variables.onThisPage = variables.onThisPage !== false ? true : false;
 			return { ...variables };
 		}
 	});

@@ -4,7 +4,7 @@ description: This fork adds quite a few custom unique features, it also has new 
 metaImage: /ogimage_large-sy.png
 metaImageType: summary_large_image
 metaColor: "#BE0F6E"
-sidebar: default
+onThisPage: false
 path: /forks/TachiyomiSY/
 ---
 

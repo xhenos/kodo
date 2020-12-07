@@ -4,7 +4,7 @@ description: MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains
 metaImage: /ogimage_large-neko.png
 metaImageType: summary_large_image
 metaColor: "#38CA79"
-sidebar: default
+onThisPage: false
 path: /forks/Neko/
 ---
 

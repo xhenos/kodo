@@ -10,19 +10,33 @@
 			</header>
 
 			<main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
-				<aside v-if="hasSidebar" class="sidebar" :class="{ open: sidebarOpen }" :style="sidebarStyle">
+				<aside
+					v-if="hasSidebar && this.$page.markdownPage.sidebar !== ''"
+					class="sidebar"
+					:class="{ open: sidebarOpen }"
+					:style="sidebarStyle"
+				>
 					<div class="w-full pb-16 bg-ui-background">
 						<Sidebar @navigate="sidebarOpen = false" />
 					</div>
 				</aside>
 
-				<div class="w-full pb-24" :class="{ 'pl-0 lg:pl-12 lg:w-3/4': hasSidebar, 'xl:mx-48': !hasSidebar }">
+				<div
+					class="w-full pb-24"
+					:class="{
+						'pl-0 lg:pl-12 lg:w-3/4': hasSidebar && this.$page.markdownPage.sidebar !== '',
+						'xl:mx-48': !hasSidebar,
+					}"
+				>
 					<slot />
 				</div>
 			</main>
 		</div>
 
-		<div v-if="hasSidebar" class="fixed bottom-0 right-0 z-50 p-8 lg:hidden">
+		<div
+			v-if="hasSidebar && this.$page.markdownPage.sidebar !== ''"
+			class="fixed bottom-0 right-0 z-50 p-8 lg:hidden"
+		>
 			<button
 				class="p-3 text-white rounded-full shadow-lg bg-ui-primary hover:text-white"
 				@click="sidebarOpen = !sidebarOpen"

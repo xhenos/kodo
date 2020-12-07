@@ -4,7 +4,7 @@ description: This fork adds features that enhances the hentai experience with in
 metaImage: /ogimage_large-eh.png
 metaImageType: summary_large_image
 metaColor: "#2E84BF"
-sidebar: default
+onThisPage: false
 path: /forks/TachiyomiEH/
 ---
 

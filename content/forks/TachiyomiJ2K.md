@@ -4,7 +4,7 @@ description: This fork takes a new approach to the design of the base app along 
 metaImage: /ogimage_large-j2k.png
 metaImageType: summary_large_image
 metaColor: "#2E84BF"
-sidebar: default
+onThisPage: false
 path: /forks/TachiyomiJ2K/
 ---
 
