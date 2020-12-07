@@ -15,7 +15,13 @@ meta:
 
 # <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="64" height="64" fit="contain"/> Neko
 
-`<ForkButtons forkName="Neko" downloadForkLink="https://api.github.com/repos/CarlosEsco/Neko/releases/latest" downloadForkStyle="background-color:#3DDA83;color:#000000;" githubForkLink="https://github.com/CarlosEsco/Neko" androidVersion="7.0"/>`
+import DownloadButtons from '~/components/download/DownloadButtons.vue'
+import ForkButton from '~/components/download/ForkButton.vue'
+
+<DownloadButtons>
+  <ForkButton fork="neko" />
+  <ForkButton fork="neko" isGithub />
+</DownloadButtons>
 
 ## About
 This is a [MangaDex](https://mangadex.org/) specific fork of **Tachiyomi** and [TachiyomiJ2K](/forks/TachiyomiJ2K/). This contains features specific to **MangaDex** that those versions cannot offer. It also features almost every feature that **J2K** has except for extensions (aka other sources), custom covers, and local manga.

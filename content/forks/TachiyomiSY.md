@@ -15,7 +15,14 @@ meta:
 
 # <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain"/> TachiyomiSY
 
-`<ForkButtons forkName="TachiyomiSY" downloadForkLink="https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest" downloadForkStyle="background-color:#BE0F6E;color:#FFFFFF;" githubForkLink="https://github.com/jobobby04/TachiyomiSY"/>`
+import DownloadButtons from '~/components/download/DownloadButtons.vue'
+import ForkButton from '~/components/download/ForkButton.vue'
+
+<DownloadButtons>
+  <ForkButton fork="sy" />
+  <ForkButton fork="sy" isPreview />
+  <ForkButton fork="sy" isGithub />
+</DownloadButtons>
 
 ## About
 This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ/) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K/).

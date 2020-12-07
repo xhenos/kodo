@@ -5,7 +5,8 @@ export default class TachiyomiAZ extends Tachiyomi {
 	constructor() {
 		super();
 		this.stableUrl = TACHIYOMI_AZ_STABLE_API_URL;
-		this.previewUrl = TACHIYOMI_AZ_PREVIEW_API_URL;
+        this.previewUrl = TACHIYOMI_AZ_PREVIEW_API_URL;
+        this.githubUrl = "https://github.com/az4521/TachiyomiAZ"
 		this.REPO = "tachiyomiaz";
 	}
 

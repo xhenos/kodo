@@ -15,7 +15,13 @@ meta:
 
 # <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain"/> TachiyomiJ2K
 
-`<ForkButtons forkName="TachiyomiJ2K" downloadForkLink="https://api.github.com/repos/Jays2Kings/tachiyomiJ2K/releases/latest" githubForkLink="https://github.com/Jays2Kings/tachiyomiJ2K" androidVersion="6.0"/>`
+import DownloadButtons from '~/components/download/DownloadButtons.vue'
+import ForkButton from '~/components/download/ForkButton.vue'
+
+<DownloadButtons>
+  <ForkButton fork="j2k" />
+  <ForkButton fork="j2k" isGithub />
+</DownloadButtons>
 
 ## Introduction
 **TachiyomiJ2K** is maintained by **[Jays2Kings](https://github.com/Jays2Kings)**.

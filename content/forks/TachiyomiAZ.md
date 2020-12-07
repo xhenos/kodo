@@ -17,7 +17,14 @@ import "~/assets/style/tachiyomiaz.scss"
 
 # <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain"/> TachiyomiAZ
 
-`<ForkButtons forkName="TachiyomiAZ" downloadForkLink="https://api.github.com/repos/az4521/TachiyomiAZ/releases/latest" downloadForkStyle="background-color:#FFCC4D;color:#000000;" githubForkLink="https://github.com/az4521/TachiyomiAZ"/>`
+import DownloadButtons from '~/components/download/DownloadButtons.vue'
+import ForkButton from '~/components/download/ForkButton.vue'
+
+<DownloadButtons>
+  <ForkButton fork="az" />
+  <ForkButton fork="az" isPreview />
+  <ForkButton fork="az" isGithub />
+</DownloadButtons>
 
 <div class="azContainer">
   <div class="azMarquee">
