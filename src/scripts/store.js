@@ -43,15 +43,20 @@ export default function PersistStore(Vue, appOptions) {
 					state.releases[_repo] = { lastUpdated: Date.now() };
 				}
 				state.releases[_repo][_flavour] = _data;
-				localStorage.setItem(KEY, JSON.stringify(state.releases));
+				if (process.isClient) {
+					localStorage.setItem(KEY, JSON.stringify(state.releases));
+				}
 			},
 		},
 		actions: {
 			init({ state }) {
-				if (localStorage.getItem(KEY) == null) {
-					localStorage.setItem(KEY, JSON.stringify({}));
+				if (process.isClient) {
+					if (localStorage.getItem(KEY) == null) {
+						localStorage.setItem(KEY, JSON.stringify({}));
+					}
+					state.releases = JSON.parse(localStorage.getItem("releases"));
 				}
-				state.releases = JSON.parse(localStorage.getItem("releases"));
+				
 			},
 		},
 	});
