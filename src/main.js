@@ -22,7 +22,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 		head.meta.push({
 			key: "og:url",
 			name: "og:url",
-			content: process.env.GRIDSOME_BASE_PATH + to.path,
+			content: process.env.SITE_URL + to.path,
 		});
 		next();
 	});

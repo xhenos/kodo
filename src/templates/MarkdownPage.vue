@@ -68,6 +68,8 @@ export default {
 	metaInfo() {
 		const title = this.$page.markdownPage.title;
 		const description = this.$page.markdownPage.description || this.$page.markdownPage.excerpt;
+		const image = process.env.SITE_URL + this.$page.markdownPage.metaImage || process.env.SITE_URL + "/logo.jpg";
+		const color = this.$page.markdownPage.metaColor || process.env.SITE_COLOR || "#667EEA";
 
 		return {
 			title: title,
@@ -95,6 +97,21 @@ export default {
 					key: "twitter:description",
 					name: "twitter:description",
 					content: description,
+				},
+				{
+					key: "og:image",
+					name: "og:image",
+					content: image,
+				},
+				{
+					key: "twitter:image",
+					name: "twitter:image",
+					content: image,
+				},
+				{
+					key: "theme-color",
+					name: "theme-color",
+					content: color,
 				},
 			],
 		};

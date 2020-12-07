@@ -2,7 +2,7 @@
 title: TachiyomiJ2K
 description: This fork takes a new approach to the design of the base app along with several other enhancements.
 metaImage: /ogimage-j2k.png
-metaColor: "#2e84bf"
+metaColor: "#2E84BF"
 sidebar: default
 path: /forks/TachiyomiJ2K/
 ---

@@ -105,16 +105,17 @@ export default {
 				{
 					key: "og:image",
 					name: "og:image",
-					content: this.$page.markdownPage.metaImage || process.env.SITE_URL + "/logo.jpg",
+					content: process.env.SITE_URL + "/logo.jpg",
 				},
 				{
 					key: "twitter:image",
 					name: "twitter:image",
-					content: this.$page.markdownPage.metaImage || process.env.SITE_URL + "/logo.jpg",
+					content: process.env.SITE_URL + "/logo.jpg",
 				},
 				{
+					key: "theme-color",
 					name: "theme-color",
-					content: this.$page.markdownPage.metaColor || process.env.SITE_COLOR || "#5a67d8",
+					content: process.env.SITE_COLOR || "#667EEA",
 				},
 			],
 		};
