@@ -1,20 +1,29 @@
-<template>
-	<button v-if="isGithub" class="rounded-md my-2 md:mx-2 px-20 py-2 bg-indigo-800">
+<template >
+	<button
+		:style="style"
+		v-if="isGithub"
+		class="fork rounded-md my-2 md:mx-2 px-20 py-2"
+		v-bind:class="`fork fork-${fork} ${isGithub ? 'github' : ''}`"
+	>
 		<a v-bind:href="link">
 			<p class="font-bold text-white mb-0">GitHub</p>
 		</a>
 	</button>
 	<download-button
+		:style="style"
 		v-else
 		v-bind:title="isPreview ? 'Preview' : 'Stable'"
 		v-bind:data="data"
-		v-bind:class="`fork-${fork}`"
+		v-bind:class="`fork fork-${fork} ${isPreview ? 'preview' : ''}`"
 	/>
 </template>
 
 <script>
+import "~/scripts/prototypes";
+
 import moment from "moment";
 import DownloadButton from "./DownloadButton.vue";
+
 export default {
 	components: { DownloadButton },
 	props: {
@@ -39,6 +48,7 @@ export default {
 				version: "v0.00.0",
 			},
 			link: "",
+			darkMode: false,
 		};
 	},
 	async mounted() {
@@ -63,8 +73,91 @@ export default {
 		this.link = fetcher.githubUrl;
 		const fetch = this.isPreview ? fetcher.preview(this.$store) : fetcher.stable(this.$store);
 		this.data = (await fetch).data;
+		this.darkMode = localStorage.getItem("lights-out") === "true" ? true : false;
+		console.log(window);
+		if (window.addEventListener) {
+			window.addEventListener("storage", onStorage, false);
+		} else {
+			window.attachEvent("onstorage", onStorage);
+		}
+
+		var onStorage = function (e) {
+			console.log("Hello");
+			this.darkMode = e["light-out"];
+		};
+	},
+	computed: {
+		style() {
+			return `
+						fork {
+							--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(10)};
+							--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(10)};
+    						--color-ui-primary: ${this.$page.markdownPage.metaColor.toHSL(0)};
+    						--color-ui-primary: ${this.$page.markdownPage.metaColor.toHSL(0)};
+							--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(-10)};
+							--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(-10)};
+						}
+					`;
+		},
 	},
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.fork {
+	&-az {
+		background: var(--color-ui-primary);
+		&.preview {
+			background: var(--color-ui-primary-light);
+		}
+		&.github {
+			background: transparent;
+			border: 1px solid var(--color-ui-primary-light);
+			p { 
+				color: var(--color-ui-primary-dark);
+			}
+		
+		}
+	}
+	&-j2k {
+		background: var(--color-ui-primary);
+		
+		&.preview {
+			background: var(--color-ui-primary-light);
+		}
+		&.github {
+			background: transparent;
+			border: 1px solid var(--color-ui-primary-light);
+			p { 
+				color: var(--color-ui-primary-dark);
+			}
+		}
+	}
+	&-sy {
+		background: var(--color-ui-primary);
+		&.preview {
+			background: var(--color-ui-primary-light);
+		}
+		&.github {
+			background: transparent;
+			border: 1px solid var(--color-ui-primary-light);
+			p { 
+				color: var(--color-ui-primary-dark);
+			}
+		}
+	}
+	&-neko {
+		background: var(--color-ui-primary);
+		&.preview {
+			background: var(--color-ui-primary-light);
+		}
+		&.github {
+			background: transparent;
+			border: 1px solid var(--color-ui-primary-light);
+			p { 
+				color: var(--color-ui-primary-dark);
+			}
+		}
+	}
+}
+</style>
