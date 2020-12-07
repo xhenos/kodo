@@ -8,7 +8,7 @@ onThisPage: false
 path: /forks/TachiyomiJ2K/
 ---
 
-# <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain"/> TachiyomiJ2K
+# <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain" immediate /> TachiyomiJ2K
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
 import ForkButton from '~/components/download/ForkButton.vue'
@@ -23,7 +23,7 @@ import ForkButton from '~/components/download/ForkButton.vue'
 
 This fork takes a new approach to the design of the base app along with several other enhancements.
 
-<g-image class="zoomable" src="~/images/forks_banner-j2k.png" />
+<g-image class="zoomable" src="~/images/forks_banner-j2k.png" immediate />
 
 ## Features
 :::videolink

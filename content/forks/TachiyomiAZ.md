@@ -9,7 +9,7 @@ path: /forks/TachiyomiAZ/
 
 import "~/assets/style/tachiyomiaz.scss"
 
-# <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain"/> TachiyomiAZ
+# <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate /> TachiyomiAZ
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
 import ForkButton from '~/components/download/ForkButton.vue'

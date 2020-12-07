@@ -8,7 +8,7 @@ onThisPage: false
 path: /forks/TachiyomiSY/
 ---
 
-# <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain"/> TachiyomiSY
+# <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain" immediate /> TachiyomiSY
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
 import ForkButton from '~/components/download/ForkButton.vue'
@@ -23,7 +23,7 @@ import ForkButton from '~/components/download/ForkButton.vue'
 This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ/) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K/).
 
 ## Screenshots
-<g-image class="zoomable" src="~/images/forks_banner-sy.png" />
+<g-image class="zoomable" src="~/images/forks_banner-sy.png" immediate />
 
 ## Features
 - Uses the new **Tachiyomi** UI

@@ -8,7 +8,7 @@ prev: /extensions/
 # Forks
 Forks are alternative versions of **Tachiyomi** with exclusive features.
 
-## <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="48" height="48" fit="contain"/> [Neko](/forks/Neko/)
+## <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="48" height="48" fit="contain" immediate /> [Neko](/forks/Neko/)
 :::videolink
 Maintained by [CarlosEsco](https://github.com/CarlosEsco)
 <br>Requires Android 7.0+
@@ -19,7 +19,7 @@ Some features include:
 * Same UI and features of J2K minus editing manga/cover
 * Built in manga recommendations
 
-## <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="48" height="48" fit="contain"/> [TachiyomiJ2K](/forks/TachiyomiJ2K/)
+## <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="48" height="48" fit="contain" immediate /> [TachiyomiJ2K](/forks/TachiyomiJ2K/)
 :::videolink
 Maintained by [Jays2Kings](https://github.com/Jays2Kings)
 <br>Requires Android 6.0+
@@ -30,7 +30,7 @@ Some features include:
 * Dynamic Categories
 * Automatic background based on manga page
 
-## <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="48" height="48" fit="contain"/> [TachiyomiAZ](/forks/TachiyomiAZ/)
+## <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="48" height="48" fit="contain" immediate /> [TachiyomiAZ](/forks/TachiyomiAZ/)
 :::videolink
 Maintained by [az4521](https://github.com/az4521)
 <br>Requires Android 5.0+
@@ -43,7 +43,7 @@ Some features include:
 * Manga recommendations from My Anime List and AniDB
 * Grid view corner rounding configuration
 
-## <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="48" height="48" fit="contain"/> [TachiyomiSY](/forks/TachiyomiSY/)
+## <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="48" height="48" fit="contain" immediate /> [TachiyomiSY](/forks/TachiyomiSY/)
 :::videolink
 Maintained by [Syer10](https://github.com/jobobby04)
 <br>Requires Android 5.0+
