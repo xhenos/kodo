@@ -2,7 +2,7 @@
 title: Contribution
 description: Find out how to help translate or build the app and extensions.
 sidebar: default
-next: /extensions/
+next: /download/
 ---
 
 # Contribution

@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<div>
 		<h1 class="mt-8">Download</h1>
 
 		<p>
@@ -27,7 +27,7 @@
 		</download-buttons>
 
 		<whats-new v-bind:body="stable.body" />
-	</Layout>
+	</div>
 </template>
 
 <script>

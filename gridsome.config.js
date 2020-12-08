@@ -48,7 +48,7 @@ module.exports = {
 					},
 					{
 						title: "Tachiyomi",
-						items: ["/help/contribution/", "/extensions/"],
+						items: ["/help/contribution/", "/download/", "/extensions/"],
 					},
 					{
 						title: "Tachiyomi Forks",
