@@ -48,6 +48,5 @@ String.prototype.toHSL = function (L) {
 	s = +(s * 100).toFixed(1);
 	l = +(l * 100).toFixed(1);
 
-	console.log(l - L)
 	return "hsl(" + h + "," + s + "%," + (l + L) + "%)";
 }

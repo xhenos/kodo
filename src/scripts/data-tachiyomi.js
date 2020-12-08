@@ -21,7 +21,6 @@ export default class Tachiyomi extends Default {
 				throw new Error(e);
 			}
 		}
-		console.log(REPO, store);
 		if (store.getters.isFlavourUpdated({ _repo: REPO, _flavour: FLAVOUR })) {
 			return store.getters.getRelease({ _repo: REPO, _flavour: FLAVOUR });
 		}
@@ -45,6 +44,7 @@ export default class Tachiyomi extends Default {
 						resolve(store.getters.getRelease({ _repo: REPO, _flavour: FLAVOUR }));
 					})
 					.catch(err => {
+						reject(e)
 						throw new Error(err);
 					});
 			});
