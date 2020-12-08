@@ -44,7 +44,7 @@ export default class Tachiyomi extends Default {
 						resolve(store.getters.getRelease({ _repo: REPO, _flavour: FLAVOUR }));
 					})
 					.catch(err => {
-						reject(e)
+						reject(e);
 						throw new Error(err);
 					});
 			});
