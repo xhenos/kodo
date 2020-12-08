@@ -25,7 +25,7 @@ export default function PersistStore(Vue, appOptions) {
 				let repo = state.releases[_repo];
 				return repo
 					? repo.lastUpdated &&
-							repo.lastUpdated - Date.now() < 1000 * 60 * 60 * 3 &&
+							Date.now() - repo.lastUpdated < 1000 * 60 * 60 * 3 &&
 							repo.stable &&
 							repo.preview
 					: false;
@@ -34,14 +34,15 @@ export default function PersistStore(Vue, appOptions) {
 				if (!state.releases.hasOwnProperty(_repo)) return false;
 				let repo = state.releases[_repo];
 				if (repo && !repo.hasOwnProperty(_flavour)) return false;
-				return repo ? repo.lastUpdated && repo.lastUpdated - Date.now() < 1000 * 60 * 60 * 3 : false;
+				return repo ? repo.lastUpdated && Date.now() - repo.lastUpdated < 1000 * 60 * 60 * 3 : false;
 			},
 		},
 		mutations: {
 			setRelease(state, { _repo, _flavour, _data }) {
 				if (!state.releases.hasOwnProperty(_repo)) {
-					state.releases[_repo] = { lastUpdated: Date.now() };
+					state.releases[_repo] = {};
 				}
+				state.releases[_repo].lastUpdated = Date.now()
 				state.releases[_repo][_flavour] = _data;
 				if (process.isClient) {
 					localStorage.setItem(KEY, JSON.stringify(state.releases));
