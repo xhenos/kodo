@@ -11,11 +11,18 @@ path: /forks/TachiyomiJ2K/
 # <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain" immediate /> TachiyomiJ2K
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
-import ForkButton from '~/components/download/ForkButton.vue'
+import DownloadButton from '~/components/download/DownloadButton.vue'
 
 <DownloadButtons>
-  <ForkButton fork="j2k" />
-  <ForkButton fork="j2k" isGithub />
+  <DownloadButton fork="j2k" title="Download" />
+  <DownloadButton fork="j2k" title="GitHub" isGithub />
+  <template slot="footer">
+		<p>
+			Requires
+			<b>Android 6.0</b>
+			or higher.
+		</p>
+	</template>
 </DownloadButtons>
 
 ## Introduction

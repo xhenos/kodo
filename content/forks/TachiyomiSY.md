@@ -11,12 +11,19 @@ path: /forks/TachiyomiSY/
 # <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain" immediate /> TachiyomiSY
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
-import ForkButton from '~/components/download/ForkButton.vue'
+import DownloadButton from '~/components/download/DownloadButton.vue'
 
 <DownloadButtons>
-  <ForkButton fork="sy" />
-  <ForkButton fork="sy" isPreview />
-  <ForkButton fork="sy" isGithub />
+  <DownloadButton fork="sy" title="Stable" />
+  <DownloadButton fork="sy" title="Preview" isPreview />
+  <DownloadButton fork="sy" title="GitHub" isGithub />
+  <template slot="footer">
+		<p>
+			Requires
+			<b>Android 5.0</b>
+			or higher.
+		</p>
+	</template>
 </DownloadButtons>
 
 ## About

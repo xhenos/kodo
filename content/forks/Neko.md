@@ -11,11 +11,18 @@ path: /forks/Neko/
 # <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="64" height="64" fit="contain" immediate /> Neko
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
-import ForkButton from '~/components/download/ForkButton.vue'
+import DownloadButton from '~/components/download/DownloadButton.vue'
 
 <DownloadButtons>
-  <ForkButton fork="neko" />
-  <ForkButton fork="neko" isGithub />
+  <DownloadButton fork="neko" title="Download" />
+  <DownloadButton fork="neko" title="GitHub" isGithub />
+  <template slot="footer">
+		<p>
+			Requires
+			<b>Android 7.0</b>
+			or higher.
+		</p>
+	</template>
 </DownloadButtons>
 
 ## About

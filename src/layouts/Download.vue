@@ -14,8 +14,8 @@
 
 		<download-buttons>
 			<template slot="default">
-				<download-button title="Stable" v-bind:data="stable" />
-				<download-button title="Preview" variant="400" isAlternative v-bind:data="preview" />
+				<download-button title="Stable" />
+				<download-button title="Preview" isPreview />
 			</template>
 			<template slot="footer">
 				<p>

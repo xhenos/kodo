@@ -12,12 +12,19 @@ import "~/assets/style/tachiyomiaz.scss"
 # <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate /> TachiyomiAZ
 
 import DownloadButtons from '~/components/download/DownloadButtons.vue'
-import ForkButton from '~/components/download/ForkButton.vue'
+import DownloadButton from '~/components/download/DownloadButton.vue'
 
 <DownloadButtons>
-  <ForkButton fork="az" />
-  <ForkButton fork="az" isPreview />
-  <ForkButton fork="az" isGithub />
+  <DownloadButton fork="az" title="Stable" />
+  <DownloadButton fork="az" title="Preview" isPreview />
+  <DownloadButton fork="az" title="GitHub" isGithub />
+  <template slot="footer">
+		<p>
+		  Requires
+		  <b>Android 5.0</b>
+			or higher.
+		</p>
+	</template>
 </DownloadButtons>
 
 <div class="azContainer">

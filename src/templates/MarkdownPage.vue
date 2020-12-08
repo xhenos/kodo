@@ -153,7 +153,6 @@ export default {
 		&:hover {
 			color: var(--color-ui-primary-dark);
 		}
-
 	}
 
 	h1 {
