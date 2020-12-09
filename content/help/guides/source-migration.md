@@ -15,7 +15,8 @@ Always make sure to have a [backup](/help/guides/creating-backups/) in case anyt
 
 ## Migrating on Stable/Preview
 
-:::: guide Migrating from Manga
+::: guide Migrating from Manga
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-preview-manga.mp4)
 :::
@@ -25,9 +26,10 @@ Always make sure to have a [backup](/help/guides/creating-backups/) in case anyt
 	> **Tachiyomi** will do a global search of all the sources you have installed and enabled.
 1. Select the **Source** that you'd like to migrate *to* by tapping the **Manga** thumbnail.
 1. Choose which data you want to transfer over, and you're done.
-::::
+:::
 
-:::: guide Migrating from Source
+::: guide Migrating from Source
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-preview-source.mp4)
 :::
@@ -39,7 +41,7 @@ Always make sure to have a [backup](/help/guides/creating-backups/) in case anyt
 	> **Tachiyomi** will do a global search of all the sources you have installed and enabled.
 1. Select the **Source** you'd like to migrate *to* by tapping the **Manga** thumbnail.
 1. Choose which data you want to transfer over, and you're done.
-::::
+:::
 
 :::c-tip Searching only pinned sources
 You can restrict global searching to pinned sources if you wish to declutter your search.</br>To do this, go to <Navigation item="more"/> → <Navigation item="settings"/> →  <Navigation item="browse"/> then toggle the **Only include pinned sources** setting.
@@ -49,7 +51,8 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 
 ## Migrating on TachiyomiJ2K
 
-:::: guide Migrating multiple manga
+::: guide Migrating multiple manga
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-j2k.mp4)
 :::
@@ -60,9 +63,10 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 1. Choose which data you want to transfer over.
 1. Wait until all your **Manga** is found and hit the <MaterialIcon icon="done_all"/> at the top and you're done.
 	> If a manga is not found, or is wrong you can manually search it by pressing <Navigation item="overflow"/> → **Search manually**.
-::::
+:::
 
-:::: guide Migrating a single manga
+::: guide Migrating a single manga
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-j2k-single.mp4)
 :::
@@ -72,11 +76,12 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 1. Select the **Sources** you'd like to search and migrate *to* and hit the arrow at the bottom right.
 1. Wait until it is found and select <MaterialIcon icon="done"/> in the top right and you're done.
 	> If a manga is not found, or is wrong you can manually search it by pressing <Navigation item="overflow"/> → **Search manually**
-::::
+:::
 
 ## Migrating on TachiyomiAZ
 
-:::: guide Instructions
+::: guide Instructions
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-az.mp4)
 :::
@@ -88,11 +93,12 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 1. Choose which data you want to transfer over.
 1. Wait until all your **Manga** is found and hit the <MaterialIcon icon="done_all"/> at the top and you're done.
 	> If a manga is not found, or is wrong you can manually search it by pressing <Navigation item="overflow"/> → **Search manually**.
-::::
+:::
 
 ## Migrating on TachiyomiSY
 
-:::: guide Migrating from Library
+::: guide Migrating from Library
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-sy-library.mp4)
 :::
@@ -104,9 +110,10 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 1. Choose which data you want to transfer over.
 1. Wait until all your **Manga** is found and hit the <MaterialIcon icon="done_all"/> at the top and you're done.
 	> If a manga is not found, or is wrong you can manually search it by pressing <Navigation item="overflow"/>  → **Search manually**.
-::::
+:::
 
-:::: guide Migrating from Source
+::: guide Migrating from Source
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_migrate-sy-source.mp4)
 :::
@@ -119,4 +126,4 @@ Pin sources in <Navigation item="browse"/> using the <MaterialIcon icon="push_pi
 1. Choose which data you want to transfer over.
 1. Wait until all your **Manga** is found and hit the <MaterialIcon icon="done_all"/> at the top and you're done.
 	> If a manga is not found, or is wrong you can manually search it by pressing <Navigation item="overflow"/>  → **Search manually**.
-::::
+:::

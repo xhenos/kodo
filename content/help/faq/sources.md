@@ -16,7 +16,7 @@ prev: /help/faq/extensions/
 
 If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
 
-:::e-guide
+:::guide
 To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item="button_latest"/> next to **MangaDex**, then press on <Navigation item="webview"/> in the top right corner.
 :::
 
@@ -33,7 +33,7 @@ If pages are loading slowly or not at all, try:
 ### Is there an alternate searching method?
 **MangaDex** allows you to search using the ID number to find manga. The easiest way to get the ID is by opening the manga in your browser and looking at the URL.
 
-:::e-guide
+:::guide
 An example search would be **`id:23427`** which would return results for [Candy & Cigarettes](https://mangadex.org/title/23427/candy-cigarettes)
 :::
 

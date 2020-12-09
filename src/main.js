@@ -1,6 +1,5 @@
 // Import global styles
 import "~/assets/style/index.scss";
-import "gridsome-plugin-remark-container/themes/classic.css";
 
 // Import global components
 import DefaultLayout from "~/layouts/Default.vue";

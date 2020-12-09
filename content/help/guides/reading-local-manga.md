@@ -88,7 +88,7 @@ Tachiyomi requires a specific folder structure for local manga to be correctly p
 Tachiyomi will see four chapters in a single manga.
 The path to the folder with images must contain both the manga title and the chapter name (as seen above).
 
-:::guide-empty
+:::guide
 <figure class="centered">
 	<h4>Example structure using the file manager</h4>
 	<p>Here, the manga name is <strong>test</strong> so the file structure is <code>/Tachiyomi/local/test/ch1/images</code>.</p>

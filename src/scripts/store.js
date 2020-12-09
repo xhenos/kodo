@@ -42,7 +42,7 @@ export default function PersistStore(Vue, appOptions) {
 				if (!state.releases.hasOwnProperty(_repo)) {
 					state.releases[_repo] = {};
 				}
-				state.releases[_repo].lastUpdated = Date.now()
+				state.releases[_repo].lastUpdated = Date.now();
 				state.releases[_repo][_flavour] = _data;
 				if (process.isClient) {
 					localStorage.setItem(KEY, JSON.stringify(state.releases));

@@ -12,21 +12,21 @@ next: /help/faq/settings/
 ### How can I see how many chapters I've downloaded?
 This can be done by enabling **Download badges** under <Navigation item="library"/>.
 
-:::e-guide
+:::guide
 Enable it by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Display** section and then checking the **Download badges** option at the bottom.
 :::
 
 ### Why are some covers white after restoring from backup?
 The URL to the cover has probably changed. To fix this, refresh the metadata of your library.
 
-:::e-guide
+:::guide
 Refresh your metadata by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> then pressing **Refresh library metadata**.
 :::
 
 ### How do I ignore chapters from certain scanlator groups?
 Every now and then you find a manga that is translated by more than one group. Because of this, you get multiple releases for each chapter in the manga. The easiest way to fix this is to change sorting to **Total chapters**. You won't see any changes but, when you start reading you'll automatically skip the duplicate releases.
 
-:::e-guide
+:::guide
 Change library sorting by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Sort** section then in this case selecting **Total chapters**.
 :::
 
@@ -59,6 +59,7 @@ Be aware that it could be a network issue on your device or on the catalog you a
 
 ### Can you make it possible to store manga on both internal storage and external SD-card?
 At the moment, no. You could try using symlinks but that requires having your phone rooted.
+
 :::note
 Read more about rooting your phone [here](https://www.xda-developers.com/root/)
 :::
@@ -67,6 +68,7 @@ Read more about rooting your phone [here](https://www.xda-developers.com/root/)
 
 ### Why can't I find manga in MAL's search results?
 You can search a manga from your MAL profile's list by searching in the following format: `my:<manga>`
+
 :::note
 Related GitHub issue: [#65](https://github.com/inorichi/tachiyomi/issues/65)
 :::

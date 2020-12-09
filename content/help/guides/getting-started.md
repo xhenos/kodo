@@ -38,10 +38,10 @@ To find and add manga to your library, tap **Latest** for a source's most recent
 
 Now that you've presumably found manga that you want to add, click on it and then press the <Navigation item="bookmark"/> button, it should now appear in your <Navigation item="library"/> ready to be read!
 
-:::guide Other ways to search for manga
+::: guide Other ways to search for manga
 You can also search for manga globally across all your sources by using <Navigation item="search"/> located in the top-right of <Navigation item="browse"/> → **Sources**.
 :::
-:::: guide Trouble finding a specific manga
+::: guide Trouble finding a specific manga
 Check your spelling and try again, there's also the chance that your used source may not host the manga you're looking for.
 * Some sources use **Japanese romanized** titles instead of **English** ones.
   > For example **Boku no Hero Academia** instead of **My Hero Academia**.
@@ -49,7 +49,8 @@ Check your spelling and try again, there's also the chance that your used source
   > For example **Bungo Stray Dogs** instead of **Bungou Stray Dogs**.
 * Some sources use different wordings
   > For example **3-gatsu no Lion** instead of **Sangatsu no Lion**.
-:::note
-Find more potential answers to your questions [here](/help/faq/#why-can-t-i-find-x-manga).
+  
+  :::note
+  Find more potential answers to your questions [here](/help/faq/#why-can-t-i-find-x-manga).
+  :::
 :::
-::::

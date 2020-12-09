@@ -94,85 +94,69 @@ module.exports = {
 				plugins: [
 					"@gridsome/remark-prismjs",
 					[
-						"gridsome-plugin-remark-container",
+						"remark-containers",
 						{
-							customTypes: {
-								videolink: {
-									keyword: "videolink",
-									customBlock: true,
-									tagName: "div",
-									children: `[contentNodes]`,
-									properties: {
-										class: ["videolink"],
+							default: false,
+							custom: [
+								{
+									type: "videolink",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										node.data.hProperties = {
+											className: "videolink",
+										};
 									},
 								},
-								note: {
-									keyword: "note",
-									customBlock: true,
-									tagName: "div",
-									children: `[contentNodes]`,
-									properties: {
-										class: ["note"],
+								{
+									type: "note",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										node.data.hProperties = {
+											className: "note",
+										};
 									},
 								},
-								"e-guide": {
-									keyword: "e-guide",
-									customBlock: true,
-									children: `[contentNodes]`,
-									tagName: "div",
-									properties: {
-										class: ["guide", "g-empty"],
+								{
+									type: "guide",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										node.data.hProperties = {
+											className: "guide",
+										};
+										node.children.splice(0, 0, {
+											type: "paragraph",
+											data: {
+												hName: "p",
+												hProperties: {
+													className: "title",
+												},
+											},
+											children: [{ type: "text", value: config || "" }],
+										});
 									},
 								},
-								guide: {
-									keyword: "guide",
-									customBlock: true,
-									tagName: "div",
-									children: `[element('p', 'title', titleNodes), contentNodes]`,
-									properties: {
-										class: ["guide"],
+								{
+									type: "c-tip",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										return transformContainer(node, config, "tip", "p");
 									},
 								},
-								"c-tip": {
-									keyword: "c-tip",
-									defaultTitle: "Tip",
-									customBlock: true,
-									tagName: "div",
-									children: `[element('h4', 'title', titleNodes), contentNodes]`,
-									properties: {
-										class: ["custom-block", "c-tip"],
+								{
+									type: "c-warning",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										return transformContainer(node, config, "warning", "p");
 									},
 								},
-								"c-warning": {
-									keyword: "c-warning",
-									defaultTitle: "Warning",
-									customBlock: true,
-									tagName: "div",
-									children: `[element('h4', 'title', titleNodes), contentNodes]`,
-									properties: {
-										class: ["custom-block", "c-warning"],
+								{
+									type: "c-danger",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										return transformContainer(node, config, "danger", "p");
 									},
 								},
-								"c-danger": {
-									keyword: "c-danger",
-									defaultTitle: "Danger",
-									customBlock: true,
-									tagName: "div",
-									children: `[element('h4', 'title', titleNodes), contentNodes]`,
-									properties: {
-										class: ["custom-block", "c-danger"],
-									},
-								},
-								expander: {
-									keyword: "expander",
-									customBlock: true,
-									tagName: "details",
-									children: `[element('summary', 'expansion', titleNodes), contentNodes]`,
-									properties: {
-										class: ["guide"],
-									},
-								},
-							},
+							],
 						},
 					],
 				],
@@ -185,3 +169,19 @@ module.exports = {
 		svgRule.use("vue-svg-loader").loader("vue-svg-loader");
 	},
 };
+
+function transformContainer(node, config, type, element) {
+	node.data.hProperties = {
+		className: `custom-block c-${type}`,
+	};
+	node.children.splice(0, 0, {
+		type: "paragraph",
+		data: {
+			hName: element,
+			hProperties: {
+				className: "c-title",
+			},
+		},
+		children: [{ type: "text", value: config || "" }],
+	});
+}

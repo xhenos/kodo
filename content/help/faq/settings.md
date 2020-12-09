@@ -35,7 +35,7 @@ Certain devices such as MIUI have very aggressive battery saving, which can kill
 **Tachiyomi** is translated in 40+ different languages. By default, the app follows the language used on your device.
 Only the UI has been localized, the language of the manga will still be using the language of the source selected.
 
-:::e-guide
+:::guide
 You can change language by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_general"/> then pressing **Language**.
 :::
 

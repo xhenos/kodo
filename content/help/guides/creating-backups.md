@@ -17,7 +17,7 @@ Backups can hold the following information:
 1. **Tracking settings**
 1. **Reading history**
 
-:::e-guide
+:::guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create backup** and select a location to save it.
 :::
 
@@ -35,7 +35,7 @@ Restoring is done from the <Navigation item="settings_backup"/> settings. To res
 
 You can transfer downloaded manga chapters from one version of **Tachiyomi** to another.
 
-:::e-guide
+:::guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_downloads"/> and then set the download directory to that of the download folder of your old **Tachiyomi**, then restore the backup.
 :::
 
@@ -43,17 +43,17 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 It is highly recommended you turn on auto backups, this will ensure you can recover if need be.
 
-:::e-guide
+:::guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then setting a **backup frequency**. In the case of a catastrophic failure, at least you will be able to recover.
 :::
 
 ## Forks information
 
-### ![Alternative text](https://tachiyomi.org/icons/logo.svg) [Neko](/forks/Neko/)
+### ![Alternative text](~/images/forks_logo-neko.png) [Neko](/forks/Neko/)
 
 This fork can only restore **MangaDex** entries in a backup. If there are entries from other sources that are a part of that backup then they will not transfer.
 
-### ![Alternative text](https://tachiyomi.org/icons/logo.svg) [TachiyomiAZ](/forks/TachiyomiAZ/), ![Alternative text](https://tachiyomi.org/icons/logo.svg)  [TachiyomiSY](/forks/TachiyomiSY/) and ![Alternative text](https://tachiyomi.org/icons/logo.svg)  [TachiyomiEH](/forks/TachiyomiEH/)
+### ![Alternative text](~/images/forks_logo-az.png) [TachiyomiAZ](/forks/TachiyomiAZ/), ![Alternative text](~/images/forks_logo-sy.png)  [TachiyomiSY](/forks/TachiyomiSY/) and ![Alternative text](~/images/forks_logo-eh.png)  [TachiyomiEH](/forks/TachiyomiEH/)
 
 These forks have some built-in extensions, namely: **E-Hentai**, **Hitomi.la**, and **nHentai** for <Navigation item="tachiyomiaz" /> and <Navigation item="tachiyomieh" /> while <Navigation item="tachiyomisy" /> only has **E-Hentai**.
 

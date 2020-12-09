@@ -25,10 +25,13 @@ Learn more about scanlation in this **Wikipedia** [**article**](https://en.wikip
 ### Which sources are in the multi-source extensions?
 Some extensions contain multiple sources, look at the list below to find out which extension to install for the specific source that you want.
 
-:::e-guide
+:::guide
 User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
-:::note
+    
+::: note
 Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
+:::
+
 :::
 
 ### How do I request a new extension?
@@ -70,7 +73,7 @@ If you need more help regarding this, read [this](https://www.theandroidsoul.com
 ### How do I uninstall an extension?
 Extensions for **Tachiyomi** are technically installed the same as normal apps. Either you uninstall them through the app section on your phone's settings or you go can do it in the app.
 
-:::e-guide
+:::guide
 To uninstall an extension from within **Tachiyomi**, go to <Navigation item="browse"/> → **Extensions** then tap **Uninstall** on the extension you want to remove.
 :::
 
