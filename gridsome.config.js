@@ -120,19 +120,7 @@ module.exports = {
 									type: "guide",
 									element: "div",
 									transform: function(node, config, tokenize) {
-										node.data.hProperties = {
-											className: "guide",
-										};
-										node.children.splice(0, 0, {
-											type: "paragraph",
-											data: {
-												hName: "p",
-												hProperties: {
-													className: "title",
-												},
-											},
-											children: [{ type: "text", value: config || "" }],
-										});
+										return transformContainer(node, config, "guide", "p")
 									},
 								},
 								{
@@ -156,6 +144,13 @@ module.exports = {
 										return transformContainer(node, config, "danger", "p");
 									},
 								},
+								{
+									type: "collapse",
+									element: "details",
+									transform: function(node, config, tokenize) {
+										return transformContainer(node, config, "details", "summary");
+									},
+								},
 							],
 						},
 					],
@@ -172,7 +167,7 @@ module.exports = {
 
 function transformContainer(node, config, type, element) {
 	node.data.hProperties = {
-		className: `custom-block c-${type}`,
+		className: `custom-block c-${type} ${config ? "" : "c-empty"}`,
 	};
 	node.children.splice(0, 0, {
 		type: "paragraph",

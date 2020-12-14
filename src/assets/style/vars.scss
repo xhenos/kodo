@@ -5,8 +5,14 @@
 	--color-ui-border: theme("colors.gray.300");
 	--color-ui-primary: theme("colors.indigo.600");
 	--color-ui-primary-dark: theme("colors.indigo.700");
-	--color-ui-container: theme("colors.gray.200");
+	--color-ui-container: rgba(237, 242 ,247, 0.25);
 	--color-ui-search: theme("colors.gray.200");
+	--color-ui-tip: rgba(24,76,239,.02);
+	--color-ui-tip-border:  rgba(24,76,239,.2);
+	--color-ui-warning: rgba(178,148,0,.02);
+	--color-ui-warning-border:  rgba(178,148,0,.2);
+	--color-ui-danger: rgba(229,66,43,.02);
+	--color-ui-danger-border: rgba(229,66,43,.2);
 	--select-color: rgba(212, 53, 159, 0.2);
 	--inline-code-bg: rgba(212, 53, 159, 0.03);
 	--inline-code-text: #b32585;
@@ -22,6 +28,12 @@ html[lights-out] {
 	--color-ui-container: theme("colors.gray.800");
 	--color-ui-search: theme("colors.gray.800");
 	--inline-code-text: #e24cb2;
+	--color-ui-tip: var(--color-ui-container);
+	--color-ui-tip-border: var(--color-ui-container);
+	--color-ui-warning:var(--color-ui-container);
+	--color-ui-warning-border:  var(--color-ui-container);
+	--color-ui-danger:var(--color-ui-container);
+	--color-ui-danger-border: var(--color-ui-container);
 
 	pre[class*="language-"],
 	code[class*="language-"] {
