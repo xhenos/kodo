@@ -1,12 +1,17 @@
 ---
-description: Encountered an issue with a source or the app? Here are resources to help you troubleshoot it.
+description: Sandbox playground for demonstrating and documenting how different website functions work for easier integration by contributors.
 sidebar: default
+onThisPage: false
 prev: /help/guides/getting-started/
 next: /help/guides/source-migration/
 ---
 
+# Sandbox
+
+Sandbox playground for demonstrating and documenting how different website functions work for easier integration by contributors.
+
 :::guide
-This is a guide 
+This is a guide
 :::
 
 :::guide This is a guide
