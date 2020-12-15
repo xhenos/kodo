@@ -4,13 +4,14 @@ sidebar: default
 next: /help/guides/troubleshooting-problems/
 ---
 
+import VersionTag from '~/components/VersionTag.vue'
 
 # Getting started
 
 ## Installation
 
 You can download the latest version of **Tachiyomi** by going to our [download](/download/) page.
-When you've completed the download, open the `<VersionTag fileName/>` file and proceed with installing it.
+When you've completed the download, open the <VersionTag /> file and proceed with installing it.
 
 ## Installing an extension
 
