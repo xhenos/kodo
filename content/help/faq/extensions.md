@@ -6,6 +6,9 @@ prev: /help/faq/settings/
 next: /help/faq/sources/
 ---
 
+import Tabs from "~/components/Tabs.vue";
+import Tab from "~/components/Tab.vue";
+
 # Extensions FAQ
 
 ## General
@@ -47,24 +50,33 @@ In some cases your phone might have some issues downloading the extensions, in t
 To install just download the file for the extension you want and then install it, like how you installed **Tachiyomi**.
 
 ### How do I allow third-party installations?
-::::: el-tabs
-:::: el-tab-pane label="Android 8.0 and higher"
+
+<!-- This is a card house it will break if you touch it the wrong way -->
+<tabs>
+<tab name="Android 8.0 and higher" :selected="true">
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for Android 8.0 and newer video guide](/assets/faq_unknown-sources-a10.webm)
 :::
+    
 When installing your first extension and are prompted that your phone *isn't allowed* to install unknown apps from that source, simply follow the prompt to allow it.
 
 In *newer* versions of **Android** you need to enable **Install unknown apps** by a per-app basis.
-::::
-:::: el-tab-pane label="Android 7.1 and lower"
+    
+</tab>
+<tab name="Android 7.1 and lower">
+
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for Android 7.1 and older video guide](/assets/faq_unknown-sources-a7.webm)
 :::
+
+
 When installing your first extension and are prompted that your phone *isn't allowed* to install unknown apps from that source, simply follow the prompt to allow it.
 
 In *older* versions of **Android** you only need to enable **Unknown sources** globally.
-::::
-:::::
+
+</tab>
+</tabs>
 
 :::note
 If you need more help regarding this, read [this](https://www.theandroidsoul.com/how-to-allow-apps-installation-from-unknown-sources-on-android-9-pie/)
