@@ -14,8 +14,8 @@ export default {
 		};
 	},
 	async mounted() {
-        let stable = await this.$fetchers.tachiyomi().stable(this.$store)
-        this.tagName = stable.data.version
+		let stable = await this.$fetchers.tachiyomi().stable(this.$store);
+		this.tagName = stable.data.version;
 	},
 };
 </script>

@@ -120,7 +120,7 @@ module.exports = {
 									type: "guide",
 									element: "div",
 									transform: function(node, config, tokenize) {
-										return transformContainer(node, config, "guide", "p")
+										return transformContainer(node, config, "guide", "p");
 									},
 								},
 								{

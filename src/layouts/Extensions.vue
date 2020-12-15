@@ -5,17 +5,16 @@
 		<tabs>
 			<tab name="Available extensions" :selected="true">
 				<p>
-                    Here is a list of all available extensions to download
-					inside the app.
-                    <!-- <ExtensionList /> -->
+					Here is a list of all available extensions to download inside the app.
+					<!-- <ExtensionList /> -->
 				</p>
 			</tab>
 			<tab name="Spreadsheet">
 				<p>
-                    Spreadsheet to help you find sources bundled in multi-source
-					extensions, courtesy of [SnakeDoc83](https://github.com/snakedoc83). Now maintained by
-					[Riztard](https://github.com/Riztard) and other volunteers.
-                    <!-- <SourceSheet /> -->
+					Spreadsheet to help you find sources bundled in multi-source extensions, courtesy of
+					[SnakeDoc83](https://github.com/snakedoc83). Now maintained by [Riztard](https://github.com/Riztard)
+					and other volunteers.
+					<!-- <SourceSheet /> -->
 				</p>
 			</tab>
 		</tabs>
@@ -34,5 +33,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

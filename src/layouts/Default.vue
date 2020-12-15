@@ -372,6 +372,4 @@ html[lights-out] {
 		margin-top: -1rem;
 	}
 }
-
-
 </style>

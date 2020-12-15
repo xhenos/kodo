@@ -27,7 +27,7 @@ export default {
 	},
 	methods: {
 		selectTab(selectedTab) {
-			this.tabs.forEach((tab) => {
+			this.tabs.forEach(tab => {
 				tab.isActive = tab.name === selectedTab.name;
 			});
 		},
@@ -43,8 +43,8 @@ export default {
 			list-style: none;
 			padding: 0 0.5rem 1rem;
 			margin-bottom: 0 !important;
-            border-bottom: 1px solid var(--color-ui-border);
-            text-align: center;
+			border-bottom: 1px solid var(--color-ui-border);
+			text-align: center;
 			&.isActive {
 				border-bottom: 2px solid var(--color-ui-primary);
 			}
