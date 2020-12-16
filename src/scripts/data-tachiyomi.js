@@ -77,7 +77,7 @@ export default class Tachiyomi extends Default {
 					.then(preview => {
 						let data = {
 							body: preview.body,
-							version: "v" + preview.version,
+							version: "r" + preview.version,
 							downloadUrl: preview.downloadUrl,
 							releaseDate: preview.releaseDate,
 						};

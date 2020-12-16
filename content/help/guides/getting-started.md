@@ -11,7 +11,7 @@ import VersionTag from '~/components/VersionTag.vue'
 ## Installation
 
 You can download the latest version of **Tachiyomi** by going to our [download](/download/) page.
-When you've completed the download, open the <VersionTag /> file and proceed with installing it.
+When you've completed the download, open the <VersionTag stableFileName /> file and proceed with installing it.
 
 ## Installing an extension
 
@@ -50,7 +50,7 @@ Check your spelling and try again, there's also the chance that your used source
   > For example **Bungo Stray Dogs** instead of **Bungou Stray Dogs**.
 * Some sources use different wordings
   > For example **3-gatsu no Lion** instead of **Sangatsu no Lion**.
-  
+
   :::note
   Find more potential answers to your questions [here](/help/faq/#why-can-t-i-find-x-manga).
   :::
