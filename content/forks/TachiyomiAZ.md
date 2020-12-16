@@ -1,6 +1,7 @@
 ---
 title: TachiyomiAZ
 description: This hentai focused fork is based off of TachiyomiEH, it has most features and fixes from Tachiyomi, as well as features from TachiyomiJ2K.
+forkName: tachiyomi-az
 metaImage: /ogimage-az.png
 metaColor: "#FFCC4D"
 onThisPage: false

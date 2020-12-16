@@ -39,6 +39,7 @@ query($id: ID!) {
 		id
 		title
 		description
+		forkName
 		metaImage
 		metaImageType
 		metaColor

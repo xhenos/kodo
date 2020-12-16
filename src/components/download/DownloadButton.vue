@@ -14,7 +14,9 @@
 		class="fork rounded-md my-2 md:mx-2 px-20 py-2"
 		v-bind:class="`${isPreview ? 'preview' : ''}`"
 		:style="style"
+		@click="isPreview ? downloadPreview() : downloadStable()"
 	>
+		<material-icon iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
 		<p class="font-bold text-white mb-0">{{ title }}</p>
 		<p v-if="data" class="text-sm font-light text-white m-0">{{ data.version }}</p>
 	</button>
@@ -51,17 +53,17 @@ export default {
 	},
 	computed: {
 		fetcher() {
-			switch (this.$page.markdownPage.title || "tachiyomi") {
-				case "TachiyomiAZ":
+			switch (this.$page.markdownPage.forkName || "tachiyomi") {
+				case "tachiyomi.az":
 					return this.$fetchers.tachiyomiaz();
 					break;
-				case "TachiyomiJ2K":
+				case "tachiyomi-j2k":
 					return this.$fetchers.tachiyomij2k();
 					break;
-				case "TachiyomiSY":
+				case "tachiyomi-sy":
 					return this.$fetchers.tachiyomisy();
 					break;
-				case "Neko":
+				case "neko":
 					return this.$fetchers.neko();
 					break;
 				default:
@@ -74,16 +76,16 @@ export default {
 		},
 		lighter() {
 			switch (this.$page.markdownPage.forkName || "tachiyomi") {
-				case "az":
+				case "tachiyomi-az":
 					return 10;
 					break;
-				case "j2k":
+				case "tachiyomi-j2k":
 					return 10;
 					break;
-				case "sy":
+				case "tachiyomi-sy":
 					return 8;
 					break;
-				case "neko":
+				case "tachiyomi-neko":
 					return 10;
 					break;
 				default:
@@ -93,13 +95,13 @@ export default {
 		},
 		darker() {
 			switch (this.$page.markdownPage.forkName || "tachiyomi") {
-				case "az":
+				case "tachiyomi-az":
 					return -10;
 					break;
-				case "j2k":
+				case "tachiyomi-j2k":
 					return -8;
 					break;
-				case "sy":
+				case "tachiyomi-sy":
 					return -4;
 					break;
 				case "neko":
@@ -123,12 +125,25 @@ export default {
 			`;
 		},
 	},
+	methods: {
+		downloadStable() {
+			let name = this.$page.markdownPage.forkName || "tachiyomi"
+			console.log(name, "Lets download stable version")
+		},
+		downloadPreview() {
+			let name = this.$page.markdownPage.forkName || "tachiyomi"
+			console.log(name, "Lets download preview version")
+		}
+	}
 };
 </script>
 
 <style lang="scss" scoped>
 .fork {
 	background: var(--color-ui-primary);
+	i {
+		display: inline;
+	}
 	&.preview {
 		background: var(--color-ui-primary-light);
 	}
