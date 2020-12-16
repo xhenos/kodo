@@ -6,7 +6,7 @@ export default class Tachiyomi extends Default {
 		super();
 		this.stableUrl = TACHIYOMI_STABLE_API_URL;
 		this.previewUrl = TACHIYOMI_PREVIEW_API_URL;
-		this.githubUrl = "https://github.com/inorichi/tachiyomi";
+		this.githubUrl = "https://github.com/tachiyomiorg/tachiyomi";
 		this.JOB = {};
 		this.REPO = "tachiyomi";
 	}

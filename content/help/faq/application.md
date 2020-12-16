@@ -42,7 +42,7 @@ Sometimes you can struggle to find a source hosting the manga you're looking for
 Download the corresponding extension, go to the source, then search for the manga there.
 
 ### If you didn't find the website/scanlator in the list
-If you found a website or scanlator that hosts your manga but doesn't exist as a source or extension, then you can see if its [already been requested](https://github.com/inorichi/tachiyomi-extensions/issues) or you can [request it yourself](https://github.com/inorichi/tachiyomi-extensions/issues/new/choose).
+If you found a website or scanlator that hosts your manga but doesn't exist as a source or extension, then you can see if its [already been requested](https://github.com/tachiyomiorg/tachiyomi-extensions/issues) or you can [request it yourself](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/new/choose).
 
 If the website/scanlator group doesn't have an online manga reader, you can download the manga manually and set up [local manga](/help/guides/reading-local-manga).
 :::
@@ -70,7 +70,7 @@ Read more about rooting your phone [here](https://www.xda-developers.com/root/)
 You can search a manga from your MAL profile's list by searching in the following format: `my:<manga>`
 
 :::note
-Related GitHub issue: [#65](https://github.com/inorichi/tachiyomi/issues/65)
+Related GitHub issue: [#65](https://github.com/tachiyomiorg/tachiyomi/issues/65)
 :::
 
 ## Local Manga
@@ -96,7 +96,7 @@ On **Android 10**, a bug was introduced which prevented users from uninstalling 
 There is no iOS version and no plans for one. Since iOS and Android apps don't share code it's hard to port.
 
 ### Will Tachiyomi ever be on the Google Play Store?
-Due to Google Play's content policy, almost certainly not, as they do not allow the APK system to work. The content on some sites will lead to Google taking it down at some point, and Inorichi does not want to have to deal with it as they have stated [before](https://github.com/inorichi/tachiyomi/issues/1745#issuecomment-441208074)
+Due to Google Play's content policy, almost certainly not, as they do not allow the APK system to work. The content on some sites will lead to Google taking it down at some point, and [Inorichi](https://github.com/inorichi) does not want to have to deal with it as they have stated [before](https://github.com/tachiyomiorg/tachiyomi/issues/1745#issuecomment-441208074)
 
 ### How can I report Tachiyomi copycats on the Google Play Store?
 If you're on desktop, fill out [this](https://support.google.com/googleplay/android-developer/contact/takedown) form following [these](https://pastebin.com/08eeuJxH) steps.

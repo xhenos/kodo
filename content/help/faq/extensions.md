@@ -30,7 +30,7 @@ Some extensions contain multiple sources, look at the list below to find out whi
 
 :::guide
 User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
-    
+
 ::: note
 Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
 :::
@@ -38,7 +38,7 @@ Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
 :::
 
 ### How do I request a new extension?
-Open an issue [on GitHub](https://github.com/inorichi/tachiyomi-extensions/issues) if one does not already exist.
+Open an issue [on GitHub](https://github.com/tachiyomiorg/tachiyomi-extensions/issues) if one does not already exist.
 
 :::note
 You can find the list of extensions to download [here](/extensions/)
@@ -58,11 +58,11 @@ To install just download the file for the extension you want and then install it
 :::videolink
 [<MaterialIcon icon="videocam"/> Click for Android 8.0 and newer video guide](/assets/faq_unknown-sources-a10.webm)
 :::
-    
+
 When installing your first extension and are prompted that your phone *isn't allowed* to install unknown apps from that source, simply follow the prompt to allow it.
 
 In *newer* versions of **Android** you need to enable **Install unknown apps** by a per-app basis.
-    
+
 </tab>
 <tab name="Android 7.1 and lower">
 
