@@ -21,8 +21,8 @@ export default {
 		},
 		editLink() {
 			let path = this.currentPath;
-			if ((path.match(new RegExp("/", "g")) || []).length == 1) path = path + "/README";
-			return `https://github.com/xhenos/website/blob/gridsome/content${path}.md`;
+			if ((path.match(new RegExp("/", "g")) || []).length == 1) path = path + "/index";
+			return `https://github.com/xhenos/tachiyomi-website/blob/gridsome/content${path}.md`;
 		},
 	},
 };
