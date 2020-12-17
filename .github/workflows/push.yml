@@ -23,6 +23,14 @@ jobs:
           npm install
           npm run lint
           npm run build
+        env:	
+          SITE_URL: ${{ env.SITE_URL }}	
+          SITE_URL_PREFIX: ${{ env.SITE_URL_PREFIX }}	
+          SITE_COLOR: ${{ env.SITE_COLOR }}	
+          GA_ID: ${{ env.GA_ID }}	
+          URL_TWITTER: ${{ env.URL_TWITTER }}	
+          URL_DISCORD: ${{ env.URL_DISCORD }}	
+          URL_GITHUB: ${{ env.URL_GITHUB }}
 
       - name: Add .nojekyll
         run: touch ./dist/.nojekyll
