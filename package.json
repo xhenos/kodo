@@ -8,12 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "axios": "^0.21.0",
     "gridsome": "^0.7.0",
     "marked": "^1.2.5",
     "material-design-icons-iconfont": "^6.1.0",
     "moment": "^2.29.1",
+    "postcss": "^8.2.1",
     "remark-containers": "^1.2.0",
+    "tailwindcss": "^2.0.2",
     "vue-carousel": "^0.18.0",
     "vuex": "^3.6.0"
   },
@@ -39,7 +42,6 @@
     "sass-loader": "^8.0.2",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
-    "tailwindcss": "^1.2.0",
     "vue-eslint-parser": "^7.2.0",
     "vue-feather-icons": "^5.0.0",
     "vue-svg-loader": "^0.16.0"
