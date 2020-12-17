@@ -5,7 +5,7 @@ prev: /help/guides/reading-local-manga/
 next: /help/guides/categories/
 ---
 
-import Carousel from '~/components/carousel/Carousel.vue'
+import Carousel from '~/components/Carousel.vue'
 
 # Reader settings
 This section relates to the reading experience in the app and navigating the reader.

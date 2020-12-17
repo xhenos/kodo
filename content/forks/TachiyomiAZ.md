@@ -12,8 +12,8 @@ import "~/assets/style/tachiyomiaz.styl"
 
 # <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate /> TachiyomiAZ
 
-import DownloadButtons from '~/components/download/DownloadButtons.vue'
-import DownloadButton from '~/components/download/DownloadButton.vue'
+import DownloadButtons from '~/components/DownloadButtons.vue'
+import DownloadButton from '~/components/DownloadButton.vue'
 
 <DownloadButtons>
   <DownloadButton fork="az" title="Stable" />

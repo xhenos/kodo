@@ -11,8 +11,8 @@ path: /forks/TachiyomiSY/
 
 # <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain" immediate /> TachiyomiSY
 
-import DownloadButtons from '~/components/download/DownloadButtons.vue'
-import DownloadButton from '~/components/download/DownloadButton.vue'
+import DownloadButtons from '~/components/DownloadButtons.vue'
+import DownloadButton from '~/components/DownloadButton.vue'
 
 <DownloadButtons>
   <DownloadButton fork="sy" title="Stable" />

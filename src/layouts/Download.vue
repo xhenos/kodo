@@ -32,9 +32,9 @@
 
 <script>
 import moment from "moment";
-import WhatsNew from "../components/download/WhatsNew.vue";
-import DownloadButton from "../components/download/DownloadButton.vue";
-import DownloadButtons from "../components/download/DownloadButtons.vue";
+import WhatsNew from "../components/WhatsNew.vue";
+import DownloadButton from "../components/DownloadButton.vue";
+import DownloadButtons from "../components/DownloadButtons.vue";
 
 export default {
 	components: { WhatsNew, DownloadButton, DownloadButtons },
