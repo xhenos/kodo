@@ -196,5 +196,22 @@ export default {
 		transition border-color 0.3s
 		font-size 1.1rem
 	}
+
+	.header-container {
+		display flex
+		align-items center
+		margin-top 1rem
+		img {
+			margin-left 0.25rem
+		}
+		a, h1 {
+			margin-left 0.5rem
+		}
+		h1 {
+			margin 0
+			padding 0
+			margin-left 0.75rem
+		}
+	}
 }
 </style>

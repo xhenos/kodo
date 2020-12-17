@@ -10,7 +10,10 @@ path: /forks/TachiyomiAZ/
 
 import "~/assets/style/tachiyomiaz.styl"
 
-# <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate /> TachiyomiAZ
+<div class="header-container">
+   <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate />
+    <h1>TachiyomiAZ</h1>
+</div>
 
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'

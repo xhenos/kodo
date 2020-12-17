@@ -9,7 +9,10 @@ onThisPage: false
 path: /forks/Neko/
 ---
 
-# <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="64" height="64" fit="contain" immediate /> Neko
+<div class="header-container">
+    <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="64" height="64" fit="contain" immediate />
+    <h1>Neko</h1>
+</div>
 
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'

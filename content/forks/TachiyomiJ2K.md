@@ -9,7 +9,10 @@ onThisPage: false
 path: /forks/TachiyomiJ2K/
 ---
 
-# <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain" immediate /> TachiyomiJ2K
+<div class="header-container">
+   <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain" immediate />
+    <h1>TachiyomiJ2K</h1>
+</div>
 
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'
