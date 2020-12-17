@@ -14,10 +14,10 @@ export default {};
 <style lang="stylus">
 .buttons-container {
 	button {
-		flex-grow: 1;
+		flex-grow 1
 	}
 	button:nth-child(3) {
-		flex: 1 0 100%;
+		flex 1 0 100%
 	}
 }
 </style>

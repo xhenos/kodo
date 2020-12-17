@@ -127,31 +127,31 @@ export default {
 	},
 	methods: {
 		downloadStable() {
-			let name = this.$page.markdownPage.forkName || "tachiyomi"
-			console.log(name, "Lets download stable version")
+			let name = this.$page.markdownPage.forkName || "tachiyomi";
+			console.log(name, "Lets download stable version");
 		},
 		downloadPreview() {
-			let name = this.$page.markdownPage.forkName || "tachiyomi"
-			console.log(name, "Lets download preview version")
-		}
-	}
+			let name = this.$page.markdownPage.forkName || "tachiyomi";
+			console.log(name, "Lets download preview version");
+		},
+	},
 };
 </script>
 
 <style lang="stylus" scoped>
 .fork {
-	background: var(--color-ui-primary);
+	background var(--color-ui-primary)
 	i {
-		display: inline;
+		display inline
 	}
 	&.preview {
-		background: var(--color-ui-primary-light);
+		background var(--color-ui-primary-light)
 	}
 	&.github {
-		background: transparent;
-		border: 1px solid var(--color-ui-primary-light);
+		background transparent
+		border 1px solid var(--color-ui-primary-light)
 		p {
-			color: var(--color-ui-primary-dark);
+			color var(--color-ui-primary-dark)
 		}
 	}
 }

@@ -41,21 +41,23 @@ export default {
 </script>
 
 <style lang="scss">
+// Temporary as SCSS until the developers stop forcing it.
 $material-design-icons-font-directory-path: "~material-design-icons-iconfont/dist/fonts/";
+
 @import "~material-design-icons-iconfont/src/material-design-icons";
 </style>
 
 <style lang="stylus">
 .material-holder {
-	margin: 0;
-	font-size: 0.85em;
-	border-radius: 3px;
-	display: inline;
+	margin 0
+	font-size 0.85em
+	border-radius 3px
+	display inline
 }
 
 .material-icons {
-	font-size: 1.35em;
-	position: relative;
-	top: 0.2rem;
+	font-size 1.35em
+	position relative
+	top 0.2rem
 }
 </style>

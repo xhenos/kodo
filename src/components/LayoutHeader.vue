@@ -159,23 +159,23 @@ export default {
 header {
 	svg:not(.feather-search) {
 		&:hover {
-			@apply text-ui-primary;
+			@apply text-ui-primary
 		}
 	}
 }
 
 .nav-link {
 	&.active {
-		@apply text-ui-primary border-ui-primary;
+		@apply text-ui-primary border-ui-primary
 	}
 }
 
 .nav-link {
 	&.nav-primary {
 		&.active:not(.active--exact) {
-			color: var(--color-ui-typo);
+			color var(--color-ui-typo)
 			&:hover {
-				color: var(--color-ui-primary);
+				color var(--color-ui-primary)
 			}
 		}
 	}

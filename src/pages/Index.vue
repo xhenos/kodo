@@ -140,6 +140,6 @@ export default {
 
 <style lang="stylus">
 .home-links a {
-	margin-right: 1rem;
+	margin-right 1rem
 }
 </style>

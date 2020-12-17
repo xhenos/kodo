@@ -31,13 +31,13 @@ export default {
 <style lang="stylus">
 #EditOnGithub {
 	a {
-		font-size: 0.9rem;
-		font-weight: normal;
-		display: inline-flex;
-		align-items: center;
+		font-size 0.9rem
+		font-weight normal
+		display inline-flex
+		align-items center
 
 		svg {
-			margin-right: 0.5rem;
+			margin-right 0.5rem
 		}
 	}
 }

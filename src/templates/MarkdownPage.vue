@@ -146,55 +146,55 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "prism-themes/themes/prism-material-oceanic.css";
+@import "prism-themes/themes/prism-material-oceanic.css"
 
 #Markdown {
 	a {
-		color: var(--color-ui-primary);
+		color var(--color-ui-primary)
 		&:hover {
-			color: var(--color-ui-primary-dark);
+			color var(--color-ui-primary-dark)
 		}
 	}
 
 	h1 {
-		padding-top: 7rem;
-		margin-top: -5rem;
+		padding-top 7rem
+		margin-top -5rem
 	}
 
-	h2,
+	h2
 	h3 {
-		padding-top: 6rem;
-		margin-top: -5rem;
+		padding-top 6rem
+		margin-top -5rem
 	}
 
 	h2 {
 		&:before {
-			content: " ";
-			display: block;
-			margin-bottom: 1.5rem;
-			border-top: 1px solid var(--color-ui-border);
+			content " "
+			display block
+			margin-bottom 1.5rem
+			border-top 1px solid var(--color-ui-border)
 		}
 	}
 
-	ul,
+	ul
 	ol {
-		list-style: revert;
-		padding: revert;
-		padding-left: 1.25rem;
+		list-style revert
+		padding revert
+		padding-left 1.25rem
 	}
 
 	ul {
 		li {
-			margin-bottom: 0.5rem;
+			margin-bottom 0.5rem
 		}
 	}
 
 	blockquote {
-		margin: 0 0 2em;
-		padding: 0 1.5em;
-		border-left: 0.25em solid var(--color-ui-border);
-		transition: border-color 0.3s;
-		font-size: 1.1rem;
+		margin 0 0 2em
+		padding 0 1.5em
+		border-left 0.25em solid var(--color-ui-border)
+		transition border-color 0.3s
+		font-size 1.1rem
 	}
 }
 </style>

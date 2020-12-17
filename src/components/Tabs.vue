@@ -38,20 +38,20 @@ export default {
 <style lang="stylus">
 .tabs {
 	ul {
-		padding: 0 !important;
+		padding 0 !important
 		li {
-			list-style: none;
-			padding: 0 0.5rem 1rem;
-			margin-bottom: 0 !important;
-			border-bottom: 1px solid var(--color-ui-border);
-			text-align: center;
+			list-style none
+			padding 0 0.5rem 1rem
+			margin-bottom 0 !important
+			border-bottom 1px solid var(--color-ui-border)
+			text-align center
 			&.isActive {
-				border-bottom: 2px solid var(--color-ui-primary);
+				border-bottom 2px solid var(--color-ui-primary)
 			}
 			a {
-				color: var(--color-ui-typo) !important;
+				color var(--color-ui-typo) !important
 				&:hover {
-					color: var(--color-ui-primary) !important;
+					color var(--color-ui-primary) !important
 				}
 			}
 		}

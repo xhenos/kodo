@@ -11,7 +11,9 @@
 		<span class="fileName">tachiyomi-{{ this.$data.previewTagName }}.apk</span>
 		<slot />
 	</span>
-	<span v-else class="missingProps" title="Check the VersionTag.vue file for code example.">You need to specify props.</span>
+	<span v-else class="missingProps" title="Check the VersionTag.vue file for code example.">
+		You need to specify props.
+	</span>
 </template>
 
 <script>
@@ -55,27 +57,27 @@ export default {
 
 <style lang="stylus" scoped>
 .fileNameContainer {
-	white-space: nowrap;
+	white-space nowrap
 	.fileNameIcon {
-		color: var(--inline-code-text);
-		font-weight: 500;
-		font-size: 1em;
-		vertical-align: top;
+		color var(--inline-code-text)
+		font-weight 500
+		font-size 1em
+		vertical-align top
 	}
 	.fileName {
-		color: var(--inline-code-text);
-		font-weight: 500;
-		font-size: 1em;
+		color var(--inline-code-text)
+		font-weight 500
+		font-size 1em
 	}
 	&:hover {
-		cursor: default;
+		cursor default
 	}
 }
 
-.version,
+.version
 .missingProps {
-	color: var(--inline-code-text);
-	font-weight: 500;
-	font-size: 1em;
+	color var(--inline-code-text)
+	font-weight 500
+	font-size 1em
 }
 </style>

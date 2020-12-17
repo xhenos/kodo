@@ -10,7 +10,9 @@
 		<footer>
 			<p>
 				View the full release
-				<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest" target="_blank" rel="noopener">here</a>
+				<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest" target="_blank" rel="noopener">
+					here
+				</a>
 				.
 			</p>
 		</footer>

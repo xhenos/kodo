@@ -26,10 +26,10 @@ export default {
 </script>
 <style lang="stylus">
 .badge {
-	display: inline-flex;
-	width: max-content;
+	display inline-flex
+	width max-content
 	.material-holder {
-		margin-right: 0.2rem;
+		margin-right 0.2rem
 	}
 }
 </style>

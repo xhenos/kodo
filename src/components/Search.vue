@@ -172,12 +172,12 @@ export default {
 <style lang="stylus">
 header {
 	input {
-		background-color: var(--color-ui-search);
-		border-color: transparent;
-		transition: border-color 0.3s;
+		background-color var(--color-ui-search)
+		border-color transparent
+		transition border-color 0.3s
 		&:focus {
-			outline: 0;
-			border-color: var(--color-ui-primary);
+			outline 0
+			border-color var(--color-ui-primary)
 		}
 	}
 }

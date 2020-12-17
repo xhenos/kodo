@@ -123,20 +123,20 @@ export default {
 #OnThisPage {
 	a {
 		&.active--exact {
-			color: var(--color-ui-primary);
+			color var(--color-ui-primary)
 			span {
-				background-color: var(--color-ui-primary);
+				background-color var(--color-ui-primary)
 			}
 		}
 		&:hover {
-			color: var(--color-ui-primary);
+			color var(--color-ui-primary)
 		}
 	}
 	li a {
-		transition: all 0.3s;
+		transition all 0.3s
 		&.active {
-			color: var(--color-ui-primary);
-			padding-left: 0.8rem;
+			color var(--color-ui-primary)
+			padding-left 0.8rem
 		}
 	}
 }
