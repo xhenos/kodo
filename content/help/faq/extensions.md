@@ -51,7 +51,7 @@ To install just download the file for the extension you want and then install it
 
 ### How do I allow third-party installations?
 
-<!-- This is a card house it will break if you touch it the wrong way -->
+<!-- This is a house of cards it will break if you touch it the wrong way -->
 <tabs>
 <tab name="Android 8.0 and higher" :selected="true">
 
