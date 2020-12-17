@@ -1,45 +1,47 @@
 :root {
-	--color-ui-background: theme("colors.white");
-	--color-ui-typo: theme("colors.gray.700");
-	--color-ui-sidebar: theme("colors.gray.200");
-	--color-ui-border: theme("colors.gray.300");
-	--color-ui-primary: theme("colors.indigo.600");
-	--color-ui-primary-dark: theme("colors.indigo.700");
-	--color-ui-container: rgba(237, 242 ,247, 0.25);
-	--color-ui-search: theme("colors.gray.200");
-	--color-ui-tip: rgba(24,76,239,.02);
-	--color-ui-tip-border: rgba(24,76,239,.2);
-	--color-ui-tip-text: rgba(7, 29, 98, 1);
-	--color-ui-warning: rgba(178,148,0,.02);
-	--color-ui-warning-border: rgba(178,148,0,.2);
-	--color-ui-warning-text: rgba(64, 52, 26, 1);
-	--color-ui-danger: rgba(229,66,43,.02);
-	--color-ui-danger-border: rgba(229,66,43,.2);
-	--color-ui-danger-text: rgba(61, 14, 7, 1);
-	--select-color: rgba(212, 53, 159, 0.2);
-	--inline-code-bg: rgba(212, 53, 159, 0.03);
-	--inline-code-text: #b32585;
+	--color-ui-background: theme("colors.light.background")
+	--color-ui-typo: theme("colors.light.typo")
+	--color-ui-sidebar: theme("colors.light.sidebar")
+	--color-ui-border: theme("colors.light.border")
+	--color-ui-primary: theme("colors.light.primary")
+	--color-ui-primary-dark: theme("colors.light.primary_dark")
+	--color-ui-container: theme("colors.light.container")
+	--color-ui-search: theme("colors.light.search")
+	--color-ui-tip: theme("colors.light.tip.background")
+	--color-ui-tip-border: theme("colors.light.tip.border")
+	--color-ui-tip-text: theme("colors.light.tip.text")
+	--color-ui-warning: theme("colors.light.warning.background")
+	--color-ui-warning-border: theme("colors.light.warning.border")
+	--color-ui-warning-text: theme("colors.light.warning.text")
+	--color-ui-danger: theme("colors.light.danger.background")
+	--color-ui-danger-border: theme("colors.light.danger.border")
+	--color-ui-danger-text: theme("colors.light.danger.text")
+	--select-color: theme("colors.light.select")
+	--inline-code-bg: theme("colors.light.inline_code.background")
+	--inline-code-text: theme("colors.light.inline_code.text")
 }
 
-html[lights-out] {
-	--color-ui-background: theme("colors.gray.900");
-	--color-ui-typo: theme("colors.gray.100");
-	--color-ui-sidebar: theme("colors.gray.800");
-	--color-ui-border: theme("colors.gray.800");
-	--color-ui-primary: theme("colors.indigo.500");
-	--color-ui-primary-dark: theme("colors.indigo.600");
-	--color-ui-container: theme("colors.gray.800");
-	--color-ui-search: theme("colors.gray.800");
-	--inline-code-text: #e24cb2;
-	--color-ui-tip: var(--color-ui-container);
-	--color-ui-tip-border: rgba(45, 96, 255, 0.2);
-	--color-ui-tip-text: rgba(65, 111, 255, 1);
-	--color-ui-warning: var(--color-ui-container);
-	--color-ui-warning-border:  rgba(199, 168, 10, 0.2);
-	--color-ui-warning-text: rgba(199, 168, 10, 1);
-	--color-ui-danger: var(--color-ui-container);
-	--color-ui-danger-border: rgba(222, 65, 43, 0.2);
-	--color-ui-danger-text: rgba(222, 65, 43, 1);
+html[dark-mode] {
+	--color-ui-background: theme("colors.dark.background")
+	--color-ui-typo: theme("colors.dark.typo")
+	--color-ui-sidebar: theme("colors.dark.sidebar")
+	--color-ui-border: theme("colors.dark.border")
+	--color-ui-primary: theme("colors.dark.primary")
+	--color-ui-primary-dark: theme("colors.dark.primary_dark")
+	--color-ui-container: theme("colors.dark.container")
+	--color-ui-search: theme("colors.dark.search")
+	--color-ui-tip: theme("colors.dark.tip.background")
+	--color-ui-tip-border: theme("colors.dark.tip.border")
+	--color-ui-tip-text: theme("colors.dark.tip.text")
+	--color-ui-warning: theme("colors.dark.warning.background")
+	--color-ui-warning-border: theme("colors.dark.warning.border")
+	--color-ui-warning-text: theme("colors.dark.warning.text")
+	--color-ui-danger: theme("colors.dark.danger.background")
+	--color-ui-danger-border: theme("colors.dark.danger.border")
+	--color-ui-danger-text: theme("colors.dark.danger.text")
+	--select-color: theme("colors.dark.select")
+	--inline-code-bg: theme("colors.dark.inline_code.background")
+	--inline-code-text: theme("colors.dark.inline_code.text")
 
 	pre[class*="language-"],
 	code[class*="language-"] {

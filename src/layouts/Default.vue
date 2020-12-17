@@ -352,7 +352,7 @@ table {
 }
 
 // TODO Move color to a varaible?
-html[lights-out] {
+html[dark-mode] {
 	.note {
 		p {
 			color: rgba(255, 255, 255, 0.4) !important;
