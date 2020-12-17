@@ -59,13 +59,13 @@ export default {
 .fileNameContainer {
 	white-space nowrap
 	.fileNameIcon {
-		color var(--inline-code-text)
+		color var(--color-ui-secondary)
 		font-weight 500
 		font-size 1em
 		vertical-align top
 	}
 	.fileName {
-		color var(--inline-code-text)
+		color var(--color-ui-secondary)
 		font-weight 500
 		font-size 1em
 	}
@@ -76,7 +76,7 @@ export default {
 
 .version
 .missingProps {
-	color var(--inline-code-text)
+	color var(--color-ui-secondary)
 	font-weight 500
 	font-size 1em
 }
