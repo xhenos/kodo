@@ -24,7 +24,7 @@ export default {
 	},
 };
 </script>
-<style lang="scss">
+<style lang="stylus">
 .badge {
 	display: inline-flex;
 	width: max-content;

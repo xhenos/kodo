@@ -11,7 +11,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 .buttons-container {
 	button {
 		flex-grow: 1;

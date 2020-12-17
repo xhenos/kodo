@@ -139,7 +139,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 * {
 	transition-property: color, background-color, border-color;
 	transition-duration: 0ms;
@@ -311,7 +311,7 @@ table {
 		transform: translateX(0);
 	}
 
-	@screen lg {
+	@media (min-width: theme('screens.lg')) {
 		@apply w-1/4 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0;
 		transform: translateX(0);
 	}

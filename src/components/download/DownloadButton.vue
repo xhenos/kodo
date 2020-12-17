@@ -138,7 +138,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .fork {
 	background: var(--color-ui-primary);
 	i {

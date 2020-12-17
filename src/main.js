@@ -1,5 +1,5 @@
 // Import global styles
-import "~/assets/style/index.scss";
+import "~/assets/style/index.styl";
 
 // Import global components
 import DefaultLayout from "~/layouts/Default.vue";

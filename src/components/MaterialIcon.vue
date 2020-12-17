@@ -45,7 +45,7 @@ $material-design-icons-font-directory-path: "~material-design-icons-iconfont/dis
 @import "~material-design-icons-iconfont/src/material-design-icons";
 </style>
 
-<style lang="scss">
+<style lang="stylus">
 .material-holder {
 	margin: 0;
 	font-size: 0.85em;

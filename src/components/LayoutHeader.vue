@@ -155,7 +155,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 header {
 	svg:not(.feather-search) {
 		&:hover {

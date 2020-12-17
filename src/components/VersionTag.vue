@@ -53,7 +53,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .fileNameContainer {
 	white-space: nowrap;
 	.fileNameIcon {

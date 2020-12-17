@@ -8,7 +8,7 @@ onThisPage: false
 path: /forks/TachiyomiAZ/
 ---
 
-import "~/assets/style/tachiyomiaz.scss"
+import "~/assets/style/tachiyomiaz.styl"
 
 # <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate /> TachiyomiAZ
 

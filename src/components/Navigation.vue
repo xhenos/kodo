@@ -93,7 +93,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 #NavigationVue {
 	.app-navigation {
 		white-space: pre;

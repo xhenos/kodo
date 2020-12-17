@@ -169,7 +169,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 header {
 	input {
 		background-color: var(--color-ui-search);

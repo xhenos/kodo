@@ -138,7 +138,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 .home-links a {
 	margin-right: 1rem;
 }

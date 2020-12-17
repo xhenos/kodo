@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 #EditOnGithub {
 	a {
 		font-size: 0.9rem;

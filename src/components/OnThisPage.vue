@@ -119,7 +119,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 #OnThisPage {
 	a {
 		&.active--exact {

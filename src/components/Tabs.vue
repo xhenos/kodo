@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="stylus">
 .tabs {
 	ul {
 		padding: 0 !important;
