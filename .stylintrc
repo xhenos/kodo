@@ -1,6 +1,6 @@
 {
 	"blocks": false,
-	"brackets": "never",
+	"brackets": "always",
 	"colons": "never",
 	"colors": "always",
 	"commaSpace": "always",
@@ -27,7 +27,7 @@
 	"parenSpace": "never",
 	"placeholders": "always",
 	"prefixVarsWithDollar": "always",
-	"quotePref": false,
+	"quotePref": "double",
 	"reporterOptions": {
 		"columns": ["lineData", "severity", "description", "rule"],
 		"columnSplitter": "	",
