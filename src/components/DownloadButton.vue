@@ -1,5 +1,20 @@
 <template>
-	<button
+	<div 
+		class="download-button rounded-md px-20 py-2"
+		v-bind:class="`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''}`"
+		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
+		:style="colorStyle"
+	>
+		<div class="download-header">
+			<i v-if="isGithub" class="download-icon material-icons"><github-logo height="21px" width="21.61px" /></i>
+			<material-icon v-else class="download-icon" iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
+			<p class="download-title">{{ title }}</p>
+		</div>
+		
+		<p v-show="!isGithub" class="download-description">{{ data.version }}</p>
+	</div>
+	<!--
+		<button
 		v-if="isGithub"
 		class="fork rounded-md my-2 md:mx-2 px-20 py-2"
 		v-bind:class="`${isGithub ? 'github' : ''}`"
@@ -16,16 +31,24 @@
 		:style="style"
 		@click="isPreview ? downloadPreview() : downloadStable()"
 	>
-		<material-icon iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
-		<p class="font-bold text-white mb-0">{{ title }}</p>
-		<p v-if="data" class="text-sm font-light text-white m-0">{{ data.version }}</p>
+		<div class="download-container">
+			<material-icon iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
+			<p class="font-bold text-white mb-0">{{ title }}</p>
+			<p v-if="data" class="text-sm font-light text-white m-0">{{ data.version }}</p>
+		</div>
 	</button>
+
+	-->
 </template>
 
 <script>
 import moment from "moment";
+import GithubLogo from "@/assets/images/github-logo.svg";
 
 export default {
+	components: {
+		GithubLogo
+	},
 	props: {
 		title: String,
 		isPreview: {
@@ -112,7 +135,7 @@ export default {
 					break;
 			}
 		},
-		style() {
+		colorStyle() {
 			return `
 				fork {
 					--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(this.lighter)};
@@ -126,23 +149,44 @@ export default {
 		},
 	},
 	methods: {
-		downloadStable() {
+		onClickStable() {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download stable version");
 		},
-		downloadPreview() {
+		onClickPreview() {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download preview version");
 		},
+		onClickGitHub() {
+			if (window) {
+				window.location.href = this.link
+			}
+		}
 	},
 };
 </script>
 
 <style lang="stylus" scoped>
-.fork {
+
+.download-button {
 	background var(--color-ui-primary)
-	i {
-		display inline
+	&:hover {
+  		filter: brightness(1.25);
+	}
+	p {
+		margin 0
+	}
+	svg {
+		margin 0
+	}
+	&.github {
+		display flex
+		align-items center
+		justify-content center
+		height 64px
+		path {
+			fill: var(--color-ui-primary)
+		}
 	}
 	&.preview {
 		background var(--color-ui-primary-light)
@@ -153,6 +197,26 @@ export default {
 		p {
 			color var(--color-ui-primary-dark)
 		}
+	}
+	.download-header {
+		& > * {
+			display inline
+		}
+		display flex
+		align-items center
+		justify-content center
+		.download-icon {
+			position unset 
+			top 0
+		}
+		.download-title {
+			font-weight 600
+			font-size 1.1rem
+			margin-left 0.25rem
+		}
+	}
+	.download-description {
+		font-size 0.85rem
 	}
 }
 </style>
