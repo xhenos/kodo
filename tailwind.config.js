@@ -51,6 +51,11 @@ module.exports = {
 						background: colors.coolGray[100],
 						text: colors.pink[600],
 					},
+					alert: {
+						background: "#fbfdfd",
+						text: "#8e96a4",
+						paragraph: '#9ca3b0',
+					}
 				},
 				dark: {
 					background: colors.coolGray[900],
@@ -87,6 +92,11 @@ module.exports = {
 						background: colors.coolGray[800],
 						text: colors.pink[400],
 					},
+					alert: {
+						background: "#2e3d52",
+						text: "#ced7e3",
+						paragraph: '#becada',
+					}
 				},
 			},
 			spacing: {
