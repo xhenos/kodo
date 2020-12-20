@@ -171,7 +171,7 @@ export default {
 .download-button {
 	background var(--color-ui-primary)
 	&:hover {
-  		filter: brightness(1.25);
+		filter brightness(1.25)
 	}
 	p {
 		margin 0
@@ -185,7 +185,7 @@ export default {
 		justify-content center
 		height 64px
 		path {
-			fill: var(--color-ui-primary)
+			fill var(--color-ui-primary)
 		}
 	}
 	&.preview {
@@ -206,7 +206,7 @@ export default {
 		align-items center
 		justify-content center
 		.download-icon {
-			position unset 
+			position unset
 			top 0
 		}
 		.download-title {

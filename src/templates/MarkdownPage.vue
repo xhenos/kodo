@@ -196,7 +196,8 @@ export default {
 		img {
 			margin-left 0.25rem
 		}
-		a, h1 {
+		a
+		h1 {
 			margin-left 0.5rem
 		}
 		h1 {

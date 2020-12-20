@@ -6,7 +6,7 @@
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "lint:code": "vue-cli-service lint",
-    "lint:style": "stylelint --fix 'src/**/*.vue' --custom-syntax stylelint-plugin-stylus/custom-syntax"
+    "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax"
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
