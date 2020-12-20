@@ -124,6 +124,13 @@ module.exports = {
 									},
 								},
 								{
+									type: "alert",
+									element: "div",
+									transform: function(node, config, tokenize) {
+										return transformContainer(node, config, "alert", "p");
+									},
+								},
+								{
 									type: "c-tip",
 									element: "div",
 									transform: function(node, config, tokenize) {
