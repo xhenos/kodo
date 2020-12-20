@@ -96,13 +96,13 @@ export default {
 <style lang="stylus">
 #NavigationVue {
 
-	.app-navigation {
+	&.app-navigation {
 		white-space pre
 		font-size 0
 
 		.app-icon,
 		.app-label {
-			color darken(#2e84bf, 25%) // TODO darken($accentColor, 25%);
+			color var(--color-ui-primary)
 			font-weight 500
 			font-size 1rem
 		}
