@@ -29,12 +29,7 @@
 				</div>
 
 				<div class="flex items-center justify-end px-2 sm:px-4">
-					<ToggleDarkMode class="ml-0 sm:ml-4">
-						<template slot="default" slot-scope="{ dark }">
-							<MoonIcon v-if="dark" size="22" />
-							<SunIcon v-else size="22" />
-						</template>
-					</ToggleDarkMode>
+					<ToggleTheme />
 
 					<a
 						v-if="settings.twitter"
@@ -81,7 +76,7 @@
 
 					<g-link
 						to="/download/"
-						class="hidden ml-4 md:block p-1 text-lg font-fancy font-medium nav-link text-ui-typo hover:text-ui-primary"
+						class="hidden ml-4 md:block p-1 text-lg font-fancy font-medium nav-link text-ui-typo hover:text-ui-primary select-none"
 					>
 						{{ stable.version }}
 					</g-link>
@@ -113,8 +108,8 @@ query {
 
 <script>
 import Logo from "@/components/Logo.vue";
-import ToggleDarkMode from "@/components/ToggleDarkMode";
-import { SunIcon, MoonIcon, DownloadIcon } from "vue-feather-icons";
+import ToggleTheme from "@/components/ToggleTheme";
+import { DownloadIcon } from "vue-feather-icons";
 import GithubLogo from "@/assets/images/github-logo.svg";
 import TwitterLogo from "@/assets/images/twitter-logo.svg";
 import DiscordLogo from "@/assets/images/discord-logo.svg";
@@ -125,9 +120,7 @@ export default {
 	components: {
 		Logo,
 		Search,
-		ToggleDarkMode,
-		SunIcon,
-		MoonIcon,
+		ToggleTheme,
 		DownloadIcon,
 		GithubLogo,
 		TwitterLogo,

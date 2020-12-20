@@ -1,5 +1,5 @@
 <template>
-	<div 
+	<div
 		class="download-button rounded-md px-20 py-2"
 		v-bind:class="`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''}`"
 		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
@@ -10,7 +10,7 @@
 			<material-icon v-else class="download-icon" iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
 			<p class="download-title">{{ title }}</p>
 		</div>
-		
+
 		<p v-show="!isGithub" class="download-description">{{ data.version }}</p>
 	</div>
 	<!--
@@ -47,7 +47,7 @@ import GithubLogo from "@/assets/images/github-logo.svg";
 
 export default {
 	components: {
-		GithubLogo
+		GithubLogo,
 	},
 	props: {
 		title: String,
@@ -159,9 +159,9 @@ export default {
 		},
 		onClickGitHub() {
 			if (window) {
-				window.location.href = this.link
+				window.location.href = this.link;
 			}
-		}
+		},
 	},
 };
 </script>

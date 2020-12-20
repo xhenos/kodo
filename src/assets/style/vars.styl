@@ -1,4 +1,4 @@
-:root {
+:root [data-theme=light] {
 	--color-ui-background theme("colors.light.background")
 	--color-ui-header theme("colors.light.header")
 	--color-ui-typo theme("colors.light.typo")
@@ -27,7 +27,36 @@
 	--inline-code-text theme("colors.light.inline_code.text")
 }
 
-html[dark-mode] {
+:root [data-theme=experimental] {
+	--color-ui-background #292643
+	--color-ui-header theme("colors.dark.header")
+	--color-ui-typo theme("colors.dark.typo")
+	--color-ui-sidebar theme("colors.dark.sidebar")
+	--color-ui-border darken(#292643, 20%)
+	--color-ui-primary #f36561
+	--color-ui-primary-dark theme("colors.dark.primary_dark")
+	--color-ui-secondary theme("colors.dark.secondary")
+	--color-ui-container darken(#292643, 20%)
+	--color-ui-search darken(#292643, 20%)
+	--color-ui-gray theme("colors.dark.gray")
+	--color-ui-tip theme("colors.dark.tip.background")
+	--color-ui-tip-border theme("colors.dark.tip.border")
+	--color-ui-tip-text theme("colors.dark.tip.text")
+	--color-ui-tip-link theme("colors.dark.tip.link")
+	--color-ui-warning theme("colors.dark.warning.background")
+	--color-ui-warning-border theme("colors.dark.warning.border")
+	--color-ui-warning-text theme("colors.dark.warning.text")
+	--color-ui-warning-link theme("colors.dark.warning.link")
+	--color-ui-danger theme("colors.dark.danger.background")
+	--color-ui-danger-border theme("colors.dark.danger.border")
+	--color-ui-danger-text theme("colors.dark.danger.text")
+	--color-ui-danger-link theme("colors.dark.danger.link")
+	--select-color theme("colors.dark.select")
+	--inline-code-bg theme("colors.dark.inline_code.background")
+	--inline-code-text theme("colors.dark.inline_code.text")
+}
+
+:root [data-theme=dark] {
 	--color-ui-background theme("colors.dark.background")
 	--color-ui-header theme("colors.dark.header")
 	--color-ui-typo theme("colors.dark.typo")
