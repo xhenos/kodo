@@ -95,24 +95,30 @@ export default {
 
 <style lang="stylus">
 #NavigationVue {
+
 	.app-navigation {
 		white-space pre
 		font-size 0
-		.app-icon
+
+		.app-icon,
 		.app-label {
 			color darken(#2e84bf, 25%) // TODO darken($accentColor, 25%);
 			font-weight 500
 			font-size 1rem
 		}
+
 		.app-icon {
 			vertical-align top
 			padding-right 0.25rem
 		}
+
 		.app-link {
+
 			&:hover {
 				cursor pointer
 				text-decoration none !important
-				.app-icon
+
+				.app-icon,
 				.app-label {
 					color #2e84bf // TODO $accentColor;
 				}
@@ -131,7 +137,8 @@ export default {
 }
 
 blockquote {
-	.app-navigation .app-icon
+
+	.app-navigation .app-icon,
 	.app-label {
 		color inherit !important
 	}

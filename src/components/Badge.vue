@@ -28,6 +28,7 @@ export default {
 .badge {
 	display inline-flex
 	width max-content
+
 	.material-holder {
 		margin-right 0.2rem
 	}

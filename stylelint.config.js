@@ -8,6 +8,8 @@ module.exports = {
 		"stylus/single-line-comment-double-slash-space-after": "always",
 		"stylus/property-no-unknown": null,
 		"stylus/selector-type-no-unknown": null,
+		"stylus/selector-list-comma": "always",
+		"rule-empty-line-before": "always",
 	},
 	extends: ["stylelint-plugin-stylus/standard"],
 };

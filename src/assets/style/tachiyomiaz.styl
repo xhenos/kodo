@@ -11,19 +11,23 @@
 .azContainer {
 	width 100%
 	overflow hidden
+
 	.azMarquee {
 		display inline-block
 		overflow hidden
 		white-space nowrap
 		animation marquee 10s linear infinite
 		padding-left 100%
+
 		.azWiggleText {
 			padding 2em
 			width fit-content
 			animation wiggleAnimation 1s ease-out infinite
+
 			&:hover {
 				animation barrelRollAnimation 0.6s
 			}
+
 			.azText {
 				font-family "Comic Sans MS", "Comic Sans", cursive
 				font-size 2em
@@ -37,6 +41,7 @@
 }
 
 @keyframes marquee {
+
 	0% {
 		transform translate(0, 0)
 	}
@@ -47,6 +52,7 @@
 }
 
 @keyframes barrelRollAnimation {
+
 	from {
 		transform rotate(0deg)
 	}
@@ -57,6 +63,7 @@
 }
 
 @keyframes wiggleAnimation {
+
 	0% {
 		transform rotate(0deg)
 	}
@@ -79,6 +86,7 @@
 }
 
 @keyframes scaleXTextAnimation {
+
 	0% {
 		transform scaleX(0.5) scaleY(0.5)
 	}
@@ -93,6 +101,7 @@
 }
 
 @keyframes rainbowTextColorAnimation {
+
 	0% {
 		color hsl(0, 100%, 50%)
 	}

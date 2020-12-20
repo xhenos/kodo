@@ -149,8 +149,10 @@ export default {
 @import "prism-themes/themes/prism-material-oceanic.css"
 
 #Markdown {
+
 	a {
 		color var(--color-ui-primary)
+
 		&:hover {
 			color var(--color-ui-primary-dark)
 		}
@@ -161,13 +163,14 @@ export default {
 		margin-top -5rem
 	}
 
-	h2
+	h2,
 	h3 {
 		padding-top 6rem
 		margin-top -5rem
 	}
 
 	h2 {
+
 		&:before {
 			content " "
 			display block
@@ -176,7 +179,7 @@ export default {
 		}
 	}
 
-	ul
+	ul,
 	ol {
 		list-style revert
 		padding revert
@@ -184,6 +187,7 @@ export default {
 	}
 
 	ul {
+
 		li {
 			margin-bottom 0.5rem
 		}
@@ -193,13 +197,16 @@ export default {
 		display flex
 		align-items center
 		margin-top 1rem
+
 		img {
 			margin-left 0.25rem
 		}
-		a
+
+		a,
 		h1 {
 			margin-left 0.5rem
 		}
+
 		h1 {
 			margin 0
 			padding 0

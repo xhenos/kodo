@@ -58,23 +58,26 @@ export default {
 <style lang="stylus" scoped>
 .fileNameContainer {
 	white-space nowrap
+
 	.fileNameIcon {
 		color var(--color-ui-secondary)
 		font-weight 500
 		font-size 1em
 		vertical-align top
 	}
+
 	.fileName {
 		color var(--color-ui-secondary)
 		font-weight 500
 		font-size 1em
 	}
+
 	&:hover {
 		cursor default
 	}
 }
 
-.version
+.version,
 .missingProps {
 	color var(--color-ui-secondary)
 	font-weight 500

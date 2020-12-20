@@ -141,7 +141,9 @@ export default {
 
 <style lang="scss">
 // Temporary as SCSS until I figure out how Stylus does this
+
 .content {
+
 	h2 + h3,
 	h2 + h2,
 	h3 + h3 {
@@ -169,19 +171,21 @@ pre[class*="language-"] {
 	transition-timing-function ease-in-out
 }
 
-h1
-h2
-h3
+h1,
+h2,
+h3,
 h4 {
 	@apply leading-snug font-semibold mb-4 text-ui-header
 
 	&:hover {
+
 		a::before {
 			@apply opacity-100
 		}
 	}
 
 	a {
+
 		&::before {
 			content "#"
 			margin-left -1em
@@ -212,30 +216,31 @@ a:not(.active):not(.text-ui-primary):not(.text-white):not(:hover) {
 	@apply text-ui-typo
 }
 
-p
-ol
-ul
-pre
-strong
+p,
+ol,
+ul,
+pre,
+strong,
 blockquote {
 	@apply mb-4 text-base text-ui-typo
 }
 
 .content {
+
 	a {
 		@apply text-ui-primary underline
 	}
 
-	h1
-	h2
-	h3
-	h4
-	h5
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
 	h6 {
 		@apply -mt-12 pt-20
 	}
 
-	h2
+	h2,
 	h3 {
 		@apply border-b border-ui-border pb-1 mb-3
 	}
@@ -252,7 +257,7 @@ blockquote {
 		@apply list-decimal
 	}
 
-	ol
+	ol,
 	ul {
 		@apply pl-5 py-1
 
@@ -274,6 +279,7 @@ blockquote {
 	@apply border-l-4 py-2 pl-4 mt-4
 
 	border-left-color var(--color-ui-gray)
+
 	p:last-child {
 		@apply mb-0
 	}
@@ -291,12 +297,14 @@ header {
 table {
 	@apply text-left mb-6
 
-	td
+	td,
 	th {
 		@apply py-3 px-4
+
 		&:first-child {
 			@apply pl-0
 		}
+
 		&:last-child {
 			@apply pr-0
 		}
@@ -304,6 +312,7 @@ table {
 
 	tr {
 		@apply border-b border-ui-border
+
 		&:last-child {
 			@apply border-b-0
 		}
@@ -335,32 +344,40 @@ table {
 	padding-top 0.25rem
 	padding-bottom 1rem
 	text-align left
+
 	p {
 		margin-top 0
 		font-size 0.9rem
 	}
-	a
+
+	a,
 	.material-holder {
 		color var(--color-ui-primary)
 	}
 }
 
 .note {
+
 	* {
 		font-size 0.9rem
 		text-align right
 	}
+
 	p {
 		color rgba(0, 0, 0, 0.4) !important
 	}
+
 	a {
 		color var(--color-ui-primary) !important
 	}
 }
 
 // TODO Move color to a varaible?
+
 html[dark-mode] {
+
 	.note {
+
 		p {
 			color rgba(255, 255, 255, 0.4) !important
 		}
@@ -372,9 +389,11 @@ html[dark-mode] {
 	border-radius 0.5em // $containerBorderRadius;
 	margin 1rem 0
 	padding 0.1rem 1.5rem
+
 	.title {
 		font-weight bold
 	}
+
 	.videolink {
 		margin-top -1rem
 	}

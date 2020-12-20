@@ -170,51 +170,64 @@ export default {
 
 .download-button {
 	background var(--color-ui-primary)
+
 	&:hover {
 		filter brightness(1.25)
 	}
+
 	p {
 		margin 0
 	}
+
 	svg {
 		margin 0
 	}
+
 	&.github {
 		display flex
 		align-items center
 		justify-content center
 		height 64px
+
 		path {
 			fill var(--color-ui-primary)
 		}
 	}
+
 	&.preview {
 		background var(--color-ui-primary-light)
 	}
+
 	&.github {
 		background transparent
 		border 1px solid var(--color-ui-primary-light)
+
 		p {
 			color var(--color-ui-primary-dark)
 		}
 	}
+
 	.download-header {
+
 		& > * {
 			display inline
 		}
 		display flex
 		align-items center
 		justify-content center
+
 		.download-icon {
 			position unset
 			top 0
 		}
+
 		.download-title {
 			font-weight 600
 			font-size 1.1rem
 			margin-left 0.25rem
 		}
 	}
+
 	.download-description {
 		font-size 0.85rem
 	}

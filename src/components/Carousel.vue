@@ -34,6 +34,7 @@ export default {
 .slide-image {
 	margin: auto;
 }
+
 .slide-title,
 .slide-desc {
 	text-align: center;

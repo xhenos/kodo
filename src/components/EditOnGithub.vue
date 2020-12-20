@@ -30,6 +30,7 @@ export default {
 
 <style lang="stylus">
 #EditOnGithub {
+
 	a {
 		font-size 0.9rem
 		font-weight normal
