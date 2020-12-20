@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				ui: {
 					background: "var(--color-ui-background)",
+					header: "var(--color-ui-header)",
 					typo: "var(--color-ui-typo)",
 					sidebar: "var(--color-ui-sidebar)",
 					border: "var(--color-ui-border)",
@@ -17,6 +18,7 @@ module.exports = {
 				},
 				light: {
 					background: colors.white,
+					header: colors.coolGray[700],
 					typo: colors.coolGray[700],
 					sidebar: colors.coolGray[200],
 					border: colors.coolGray[200],
@@ -52,7 +54,8 @@ module.exports = {
 				},
 				dark: {
 					background: colors.coolGray[900],
-					typo: colors.coolGray[100],
+					header: colors.coolGray[100],
+					typo: colors.coolGray[300],
 					sidebar: colors.coolGray[800],
 					border: colors.coolGray[800],
 					primary: colors.indigo[400],

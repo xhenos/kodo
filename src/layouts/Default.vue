@@ -173,7 +173,7 @@ h1
 h2
 h3
 h4 {
-	@apply leading-snug font-semibold mb-4 text-ui-typo
+	@apply leading-snug font-semibold mb-4 text-ui-header
 
 	&:hover {
 		a::before {
