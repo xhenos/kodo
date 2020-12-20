@@ -151,6 +151,12 @@ export default {
 	}
 }
 
+h1 + .videolink,
+h2 + .videolink,
+h3 + .videolink {
+	margin-top: -1rem;
+}
+
 pre[class*="language-"] {
 	@apply max-w-full overflow-x-auto rounded;
 
@@ -342,7 +348,6 @@ table {
 	border none !important
 	padding-left 0.75rem !important
 	padding-top 0.25rem
-	padding-bottom 1rem
 	text-align left
 
 	p {
