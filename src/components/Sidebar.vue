@@ -126,7 +126,7 @@ export default {
 		}
 	}
 	li a {
-		transition all 0.3s
+		transition all 0.3s, color 0s
 		&.active {
 			color var(--color-ui-primary)
 			padding-left 0.8rem

@@ -271,8 +271,9 @@ blockquote {
 }
 
 blockquote {
-	@apply border-l-4 border-ui-border py-2 pl-4
+	@apply border-l-4 py-2 pl-4 mt-4
 
+	border-left-color var(--color-ui-gray)
 	p:last-child {
 		@apply mb-0
 	}
@@ -310,7 +311,7 @@ table {
 }
 
 .sidebar {
-	@apply fixed bg-ui-background px-4 inset-x-0 bottom-0 w-full border-r border-ui-border overflow-y-auto transition-all z-40
+	@apply fixed bg-ui-background px-4 inset-x-0 bottom-0 w-full border-r border-ui-border overflow-y-auto z-40
 	transform translateX(-100%)
 
 	&.open {

@@ -19,7 +19,7 @@ But a title and body
 :::
 
 :::c-tip
-This is a tip
+This is a tip [with a link](#)
 :::
 
 :::c-tip This is a tip
@@ -27,7 +27,7 @@ But a title and body
 :::
 
 :::c-warning
-This is a warning
+This is a warning [with a link](#)
 :::
 
 :::c-warning This is a warning
@@ -35,7 +35,7 @@ But a title and body
 :::
 
 :::c-danger
-This is a danger
+This is a danger [with a link](#)
 :::
 
 :::c-danger This is a danger

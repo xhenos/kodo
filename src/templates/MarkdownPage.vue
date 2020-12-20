@@ -189,14 +189,6 @@ export default {
 		}
 	}
 
-	blockquote {
-		margin 0 0 2em
-		padding 0 1.5em
-		border-left 0.25em solid var(--color-ui-border)
-		transition border-color 0.3s
-		font-size 1.1rem
-	}
-
 	.header-container {
 		display flex
 		align-items center
