@@ -1,13 +1,13 @@
 <template>
 	<span v-if="stable" class="version" title="Version">{{ this.$data.stableTagName }}</span>
 	<span v-else-if="stableFileName" class="fileNameContainer" title="File name">
-		<MaterialIcon class="fileNameIcon" icon="get_app" />
+		<MaterialIcon class="fileNameIcon select-none" icon="get_app" />
 		<span class="fileName">tachiyomi-{{ this.$data.stableTagName }}.apk</span>
 		<slot />
 	</span>
 	<span v-else-if="preview" class="version" title="Version">{{ this.$data.previewTagName }}</span>
 	<span v-else-if="previewFileName" class="fileNameContainer" title="File name">
-		<MaterialIcon class="fileNameIcon" icon="get_app" />
+		<MaterialIcon class="fileNameIcon select-none" icon="get_app" />
 		<span class="fileName">tachiyomi-{{ this.$data.previewTagName }}.apk</span>
 		<slot />
 	</span>

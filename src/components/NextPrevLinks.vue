@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="flex flex-col sm:flex-row justify-between items-center">
+		<div class="flex flex-col sm:flex-row justify-between items-center select-none">
 			<g-link
 				v-if="prev"
 				:to="prev.path"

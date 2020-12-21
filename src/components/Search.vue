@@ -9,7 +9,7 @@
 				ref="input"
 				type="search"
 				:value="query"
-				class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg"
+				class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg select-none"
 				placeholder="Search docs..."
 				@focus="focused = true"
 				@blur="focused = false"

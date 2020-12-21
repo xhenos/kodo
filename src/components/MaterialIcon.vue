@@ -1,10 +1,10 @@
 <template>
 	<i v-if="iconOnly" :class="name" class="material-icons">{{ icon }}</i>
 	<div v-else-if="color" :class="classColor">
-		<i class="material-icons">{{ icon }}</i>
+		<i class="material-icons select-none">{{ icon }}</i>
 	</div>
 	<div v-else :class="name" class="material-holder">
-		<i class="material-icons">{{ icon }}</i>
+		<i class="material-icons select-none">{{ icon }}</i>
 	</div>
 </template>
 

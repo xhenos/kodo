@@ -5,7 +5,7 @@
 				<div class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row">
 					<g-link to="/" class="flex items-center nav-link nav-primary hover:text-ui-primary" title="Home">
 						<Logo :width="32" class="text-ui-primary" />
-						<span class="hidden ml-2 text-xl font-semibold md:block">
+						<span class="hidden ml-2 text-xl font-semibold md:block select-none">
 							{{ meta.siteName }}
 						</span>
 					</g-link>

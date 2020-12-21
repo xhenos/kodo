@@ -27,7 +27,7 @@ Restoring is done from the <Navigation item="settings_backup"/> settings. To res
 
 * Install all the <Navigation item="tab_extensions"/> that were installed at the time of the backup.
 * Log into the <Navigation item="settings_tracking"/> services that you use.
-* Log into **MangaDex** using **WebView** [as explained here](/help/faq/#no-results-when-searching).
+* Log into **MangaDex** using **WebView**[ as explained here](/help/faq/#no-results-when-searching).
 * You're able to access all the sources through the **WebView**.
 * Be on a consistent internet connection.
 

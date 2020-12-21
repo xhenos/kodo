@@ -354,6 +354,10 @@ table {
 		font-size 0.9rem
 	}
 
+	.material-holder {
+		user-select none
+	}
+
 	a,
 	.material-holder {
 		color var(--color-ui-primary)
