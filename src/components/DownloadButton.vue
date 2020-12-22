@@ -72,33 +72,29 @@ export default {
 	},
 	async mounted() {
 		let release = this.isPreview ? this.fetcher.preview(this.$store) : this.fetcher.stable(this.$store);
-		this.data = (await release).data;
+		let response = await release
+		this.data = response.data;
 	},
 	computed: {
+		name() {
+			return this.$page.markdownPage.forkName || "tachiyomi"
+		},
+		prettifyName() {
+			return this.name.split("-").map(string => string.match(/az|j2k|sy/gi) ? string.toUpperCase() : string[0].toUpperCase() + string.slice(1)).join(" ")
+		},
 		fetcher() {
-			switch (this.$page.markdownPage.forkName || "tachiyomi") {
-				case "tachiyomi.az":
-					return this.$fetchers.tachiyomiaz();
-					break;
-				case "tachiyomi-j2k":
-					return this.$fetchers.tachiyomij2k();
-					break;
-				case "tachiyomi-sy":
-					return this.$fetchers.tachiyomisy();
-					break;
-				case "neko":
-					return this.$fetchers.neko();
-					break;
-				default:
-					return this.$fetchers.tachiyomi();
-					break;
+			try {
+				console.log(this.name)
+				return this.$fetchers[this.name]()
+			} catch (e) {
+				console.error("Missing fetcher in data-fetcher.js, or check the variable names is correct", e)
 			}
 		},
 		link() {
 			return this.fetcher.githubUrl;
 		},
 		lighter() {
-			switch (this.$page.markdownPage.forkName || "tachiyomi") {
+			switch (this.name) {
 				case "tachiyomi-az":
 					return 10;
 					break;
@@ -117,7 +113,7 @@ export default {
 			}
 		},
 		darker() {
-			switch (this.$page.markdownPage.forkName || "tachiyomi") {
+			switch (this.name) {
 				case "tachiyomi-az":
 					return -10;
 					break;
@@ -149,19 +145,36 @@ export default {
 		},
 	},
 	methods: {
+		// TODO Remove console logs when modal is in place
 		onClickStable() {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download stable version");
+			// TODO Add modal
+			this.promptStable()
 		},
 		onClickPreview() {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download preview version");
+			// TODO Add modal
+			this.promptPreview()
 		},
 		onClickGitHub() {
 			if (window) {
 				window.location.href = this.link;
 			}
 		},
+		promptStable() {
+			const name = this.prettifyName
+			console.log(name)
+			window.location.assign(this.data.downloadUrl);
+			// window.ga("send", "event", "Action", "Download", name);
+		},
+		promptPreview() {
+			const name = this.prettifyName
+			console.log(`${name} Preview`)
+			window.location.assign(this.data.downloadUrl);
+			// window.ga("send", "event", "Action", "Download", `${name} Preview`);
+		}
 	},
 };
 </script>
