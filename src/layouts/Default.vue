@@ -143,6 +143,7 @@ export default {
 // Temporary as SCSS until I figure out how Stylus does this
 
 .content {
+
 	h2 + h3,
 	h2 + h2,
 	h3 + h3 {

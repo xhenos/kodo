@@ -1,5 +1,6 @@
 // Import global styles
 import "~/assets/style/index.styl";
+import "prism-themes/themes/prism-material-oceanic.css";
 
 // Import global components
 import DefaultLayout from "~/layouts/Default.vue";

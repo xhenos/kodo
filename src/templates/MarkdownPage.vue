@@ -146,7 +146,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "prism-themes/themes/prism-material-oceanic.css"
 
 #Markdown {
 

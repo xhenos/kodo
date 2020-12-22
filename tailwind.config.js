@@ -1,6 +1,17 @@
-const colors = require("tailwindcss/colors");
+const colors = { ...require("tailwindcss/defaultTheme").colors, ...require("@tailwindcss/postcss7-compat/colors") };
 
 module.exports = {
+	purge: {
+		content: [
+			"./src/**/*.vue",
+			// other content types mentioned above
+		],
+		options: {
+			whitelist: ["my-special-class", "other-class"],
+			whitelistPatterns: [/^fa-/, /^svg-inline--fa/],
+			whitelistPatternsChildren: [/^token/, /^pre/, /^code/],
+		},
+	},
 	theme: {
 		extend: {
 			colors: {

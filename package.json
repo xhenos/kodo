@@ -9,15 +9,16 @@
     "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax"
   },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9.8.6",
     "axios": "^0.21.0",
     "gridsome": "^0.7.0",
     "marked": "^1.2.5",
     "material-design-icons-iconfont": "^6.1.0",
     "moment": "^2.29.1",
-    "postcss": "^8.2.1",
+    "postcss": "^7.0.35",
     "remark-containers": "^1.2.0",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^1.9.6",
     "vue-carousel": "^0.18.0",
     "vuex": "^3.6.0"
   },
@@ -36,7 +37,6 @@
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-vue": "^7.2.0",
     "fuse.js": "^3.4.6",
-    "gridsome-plugin-tailwindcss": "^2.2.36",
     "node-sass": "^4.13.1",
     "prettier": "^1.16.3",
     "prism-themes": "^1.3.0",

@@ -62,18 +62,16 @@ module.exports = {
 		defaultBlur: 20,
 		defaultQuality: 90,
 	},
-	plugins: [
-		{
-			use: "gridsome-plugin-tailwindcss",
-			options: {
-				tailwindConfig: "./tailwind.config.js",
-				purgeConfig: {
-					// Prevent purging of prism classes.
-					whitelistPatternsChildren: [/token$/],
-				},
+	css: {
+		loaderOptions: {
+			postcss: {
+				plugins: [
+					require("tailwindcss"),
+				],
 			},
 		},
-
+	},
+	plugins: [
 		{
 			use: "@gridsome/plugin-google-analytics",
 			options: {
