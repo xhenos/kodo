@@ -47,15 +47,15 @@ module.exports = {
 						text: "#ef4444e6",
 						link: "#ef4444",
 					},
+					alert: {
+						background: "#F4F4F5",
+						border: "#F4F4F5",
+						text: "#909399",
+					},
 					inline_code: {
 						background: colors.coolGray[100],
 						text: colors.pink[600],
 					},
-					alert: {
-						background: "#fbfdfd",
-						text: "#8e96a4",
-						paragraph: '#9ca3b0',
-					}
 				},
 				dark: {
 					background: colors.coolGray[900],
@@ -88,15 +88,15 @@ module.exports = {
 						text: "#ef4444e6",
 						link: "#ef4444",
 					},
+					alert: {
+						background: colors.coolGray[800],
+						border: colors.coolGray[800],
+						text: "#ced7e3",
+					},
 					inline_code: {
 						background: colors.coolGray[800],
 						text: colors.pink[400],
 					},
-					alert: {
-						background: "#2e3d52",
-						text: "#ced7e3",
-						paragraph: '#becada',
-					}
 				},
 			},
 			spacing: {

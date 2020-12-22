@@ -15,7 +15,7 @@ This is a guide
 :::
 
 :::guide This is a guide
-But a title and body
+With a title and body
 :::
 
 :::c-tip
@@ -23,7 +23,7 @@ This is a tip [with a link](#)
 :::
 
 :::c-tip This is a tip
-But a title and body
+With a title and body
 :::
 
 :::c-warning
@@ -31,7 +31,7 @@ This is a warning [with a link](#)
 :::
 
 :::c-warning This is a warning
-But a title and body
+With a title and body
 :::
 
 :::c-danger
@@ -39,7 +39,15 @@ This is a danger [with a link](#)
 :::
 
 :::c-danger This is a danger
-But a title and body
+With a title and body
+:::
+
+:::alert
+This is an alert [with a link](#)
+:::
+
+:::alert This is an alert
+With a title and body
 :::
 
 :::collapse This is a collapsable

@@ -80,7 +80,7 @@
 
 
 		&tip {
-			background-color var(--color-ui-tip)
+			background-color var(--color-ui-tip-background)
 			border 1px solid var(--color-ui-tip-border)
 
 			&:before {
@@ -97,7 +97,7 @@
 		}
 
 		&warning {
-			background-color var(--color-ui-warning)
+			background-color var(--color-ui-warning-background)
 			border 1px solid var(--color-ui-warning-border)
 
 			&:before {
@@ -114,7 +114,7 @@
 		}
 
 		&danger {
-			background-color var(--color-ui-danger)
+			background-color var(--color-ui-danger-background)
 			border 1px solid var(--color-ui-danger-border)
 
 			&:before {
@@ -131,15 +131,22 @@
 		}
 
 		&alert {
-			background-color: var(--color-ui-alert-background)
+			background-color var(--color-ui-alert-background)
+			border 1px solid var(--color-ui-alert-border)
+
 			&:before {
-				background transparent url("https://tachiyomi.org/assets/icon_tip.svg") no-repeat 0 0
+				background transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA7VBMVEUAAACSlZuOkZeRlJqQk5mSlZuRlJqRlJqQk5mQk5mQk5mSlZuRlJqQk5mQk5mQk5mRlJqQk5mQk5mQk5mQk5mQk5mQk5mQk5mRlJqRlJqQk5mQk5mRlJqRlJqQk5mQk5mQk5mQk5mQk5mQk5mQk5mQk5mQk5mQk5mRlJqRlJqSlZuRlJqQk5mQk5mQk5mQk5mRlJqRlJqQk5mQk5mSlZuQk5mQk5mRlJqRlJqQk5mQk5mQk5mSlZuQk5mQk5mQk5mRlJqSlZuQk5mQk5mQk5mRlJqRlJqRlJqQk5mRlJqRlJqRlJqQk5mQk5mQk5ktLIuVAAAATnRSTlMAAAAAABNHjcru/Qc+mtv4DmnTe+nU+sM2PNW+M0vzztn88MKcu/fmjk0OOtbdrosLP95rC4HGKCbE+YQKYvHgRAye0uQgYIHXTzuC++IP6+ZxAAAA+0lEQVQoz3VSx1LDQAx98sZtvW4bh0AogdB76L2HDvr/z+GArR2YsU4qM69IAgAizw/CKNY6jsLA94gAAIpUYtIsZ2ZmzrPUJIoUAOoUpdUsoW1ZdAggVXQr/hNVt1AESsp/feaqTAiesdLIbW+KmZmt8eCnDr8/PTP45Ul9BJmDmJ2br6ssQJi7wcJwcakGDRFJe7S8srrWFBHiJl3f2Nza3mmqGEK9u7c/PjgUm26gR0fHJ7kbCBSfnp1fsIMS8sur65tbduQi9+7+4fFpwiJXDPafxy+vbywGZSW994/PQe1Pp75b4tfkWzRZ47WvvfVQradtf4aW9/kBb8JwGukGOPcAAAAASUVORK5CYII=") no-repeat 0 0
 			}
+
 			.c-title {
 				color var(--color-ui-alert-text)
+				font-weight 700
+				font-size 0.9rem
 			}
+
 			p {
-				color var(--color-ui-alert-paragraph)
+				color var(--color-ui-alert-text)
+				font-size 0.8rem
 			}
 		}
 	}
