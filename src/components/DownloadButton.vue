@@ -72,23 +72,29 @@ export default {
 	},
 	async mounted() {
 		let release = this.isPreview ? this.fetcher.preview(this.$store) : this.fetcher.stable(this.$store);
-		let response = await release
+		let response = await release;
 		this.data = response.data;
 	},
 	computed: {
 		name() {
-			return this.$page.markdownPage.forkName || "tachiyomi"
+			return this.$page.markdownPage.forkName || "tachiyomi";
 		},
 		prettifyName() {
-			return this.name.split("-").map(string => string.match(/az|j2k|sy/gi) ? string.toUpperCase() : string[0].toUpperCase() + string.slice(1)).join(" ")
+			return this.name
+				.split("-")
+				.map(string =>
+					string.match(/az|j2k|sy/gi) ? string.toUpperCase() : string[0].toUpperCase() + string.slice(1)
+				)
+				.join(" ");
 		},
 		fetcher() {
 			try {
-				console.log(this.name)
-				return this.$fetchers[this.name]()
+				console.log(this.name);
+				return this.$fetchers[this.name]();
 			} catch (e) {
-				console.error("Missing fetcher in data-fetcher.js, or check the variable names is correct", e)
+				console.error("Missing fetcher in data-fetcher.js, or check the variable names is correct", e);
 			}
+			return null;
 		},
 		link() {
 			return this.fetcher.githubUrl;
@@ -150,13 +156,13 @@ export default {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download stable version");
 			// TODO Add modal
-			this.promptStable()
+			this.promptStable();
 		},
 		onClickPreview() {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download preview version");
 			// TODO Add modal
-			this.promptPreview()
+			this.promptPreview();
 		},
 		onClickGitHub() {
 			if (window) {
@@ -164,17 +170,17 @@ export default {
 			}
 		},
 		promptStable() {
-			const name = this.prettifyName
-			console.log(name)
+			const name = this.prettifyName;
+			console.log(name);
 			window.location.assign(this.data.downloadUrl);
 			// window.ga("send", "event", "Action", "Download", name);
 		},
 		promptPreview() {
-			const name = this.prettifyName
-			console.log(`${name} Preview`)
+			const name = this.prettifyName;
+			console.log(`${name} Preview`);
 			window.location.assign(this.data.downloadUrl);
 			// window.ga("send", "event", "Action", "Download", `${name} Preview`);
-		}
+		},
 	},
 };
 </script>
