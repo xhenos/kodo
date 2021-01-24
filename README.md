@@ -1,6 +1,6 @@
 <div>
 	<p align="center">
-		<img src="./src/.vuepress/public/icons/logo.png" height="100px">
+		<img src="https://tachiyomi.org/icons/logo.png" height="100px">
 	</p>
 	<h1 align="center">Tachiyomi Website</h1>
 	<p align="center">
@@ -35,8 +35,8 @@ If you got any questions, [join our Discord server](https://discord.gg/tachiyomi
 		<a href="https://github.com/tachiyomiorg/tachiyomi-1.x/">
 			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=tachiyomi-1.x" alt="Android App (Rewrite)">
 		</a>
-		<a href="https://github.com/tachiyomiorg/extensions-1.x/">
-			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=extensions-1.x" alt="App Extensions (Rewrite)">
+		<a href="https://github.com/tachiyomiorg/tachiyomi-extensions-1.x/">
+			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=tachiyomi-extensions-1.x" alt="App Extensions (Rewrite)">
 		</a>
 	</p>
 </div>
