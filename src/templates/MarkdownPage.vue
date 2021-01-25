@@ -196,6 +196,7 @@ export default {
 		display flex
 		align-items center
 		margin-top 1rem
+		flex-wrap wrap
 
 		img {
 			margin-left 0.25rem

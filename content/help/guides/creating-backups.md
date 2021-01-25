@@ -49,11 +49,24 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 ## Forks information
 
-### ![Alternative text](~/images/forks_logo-neko.png) [Neko](/forks/Neko/)
+<div class="header-container">
+    <g-image class="inline align-top" src="~/images/forks_logo-neko.png" width="28" height="28" fit="contain" immediate /> 
+    <h3><a href="/forks/Neko">Neko</a></h3>
+</div>
 
 This fork can only restore **MangaDex** entries in a backup. If there are entries from other sources that are a part of that backup then they will not transfer.
 
-### ![Alternative text](~/images/forks_logo-az.png) [TachiyomiAZ](/forks/TachiyomiAZ/), ![Alternative text](~/images/forks_logo-sy.png)  [TachiyomiSY](/forks/TachiyomiSY/) and ![Alternative text](~/images/forks_logo-eh.png)  [TachiyomiEH](/forks/TachiyomiEH/)
+
+<div class="header-container">
+    <g-image class="inline align-top" src="~/images/forks_logo-az.png" width="28" height="28" fit="contain" immediate /> 
+    <h3><a href="/forks/TachiyomiAZ/">TachiyomiAZ</a></h3>
+    <h3 style="margin-right: 0.25rem;">, </h3>
+    <g-image class="inline align-top" src="~/images/forks_logo-sy.png" width="28" height="28" fit="contain" immediate /> 
+    <h3><a href="/forks/TachiyomiSY/">TachiyomiSY</a></h3>
+    <h3 style="margin-left: 0.5rem; margin-right: 0.25rem;"> and </h3>
+    <g-image class="inline align-top" src="~/images/forks_logo-eh.png" width="28" height="28" fit="contain" immediate /> 
+    <h3><a href="/forks/TachiyomiEH/">TachiyomiEH</a></h3>
+</div>
 
 These forks have some built-in extensions, namely: **E-Hentai**, **Hitomi.la**, and **nHentai** for <Navigation item="tachiyomiaz" /> and <Navigation item="tachiyomieh" /> while <Navigation item="tachiyomisy" /> only has **E-Hentai**.
 
