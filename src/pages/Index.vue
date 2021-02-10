@@ -176,24 +176,33 @@ export default {
 };
 </script>
 
+<style>
+.indexBackground::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(var(--index-background-gradient-start), 0.92), rgba(var(--index-background-gradient-end), 1));
+}
+	
+</style>
+
 <style lang="stylus">
 .home-links a
 	margin-right 1rem
 
 .indexBackground
 	background-image url(/hero-pattern.png)
-	background-size 3000px
+	background-size 2000px
+	background-position center
 	background-attachment fixed
 
-.indexBackground::before
-	content: ""
-	position fixed
-	top 0
-	left 0
-	width 100%
-	height 100%
-	background-color var(--color-ui-background)
-	opacity 0.9
+@media screen and (max-width: 800px) 
+	.indexBackground
+		background-size 800px
+
 </style>
 
 <style lang="scss">
