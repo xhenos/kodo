@@ -119,6 +119,9 @@ module.exports = {
 			fontFamily: {
 				fancy: ["Jost", "Helvetica", "Helvetica Neue", "Segoe UI", "Arial", "sans-serif"],
 			},
+			backgroundImage: theme => ({
+				"hero-pattern": "url('/hero-pattern.png')",
+			}),
 		},
 		container: {
 			center: true,
