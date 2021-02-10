@@ -1,11 +1,7 @@
 <template>
-	<div id="Index" class="indexBackground font-sans antialiased text-ui-typo">
+	<div class="index font-sans antialiased text-ui-typo">
 		<div class="flex flex-col justify-start min-h-screen">
-			<header
-				ref="header"
-				class="sticky top-0 z-10 w-full border-b bg-ui-background border-ui-border"
-				@resize="setHeaderHeight"
-			>
+			<header ref="header" class="sticky top-0 z-10 w-full border-b border-ui-border" @resize="setHeaderHeight">
 				<LayoutHeader />
 			</header>
 
@@ -177,36 +173,54 @@ export default {
 </script>
 
 <style>
-.indexBackground::before {
+.index {
+	background-image: url(/hero-pattern.png);
+	background-size: 2000px;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.index::before {
 	content: "";
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(rgba(var(--index-background-gradient-start), 0.92), rgba(var(--index-background-gradient-end), 1));
+	background: linear-gradient(
+		rgba(var(--index-background-gradient-start), 0.92),
+		rgba(var(--index-background-gradient-end), 1)
+	);
 }
-	
+
+.index header {
+	backdrop-filter: none;
+	background-color: inherit;
+	border-bottom: none;
+}
+
+.index header input {
+	background-color: rgba(var(--color-ui-search), 0.7) !important;
+	filter: brightness(var(--color-ui-search-fade));
+}
+
+.index header input::placeholder {
+	color: var(--color-ui-search-text);
+}
+
+@media screen and (max-width: 800px) {
+	.index {
+		background-size: 800px;
+	}
+}
 </style>
 
-<style lang="stylus">
-.home-links a
-	margin-right 1rem
-
-.indexBackground
-	background-image url(/hero-pattern.png)
-	background-size 2000px
-	background-position center
-	background-attachment fixed
-
-@media screen and (max-width: 800px) 
-	.indexBackground
-		background-size 800px
-
-</style>
-
-<style lang="scss">
+<style lang="scss" scoped>
 // Temporary as SCSS until I figure out how Stylus does this
+
+.home-links a {
+	margin-right: 1rem;
+}
 
 .content {
 	h2 + h3,
@@ -358,11 +372,6 @@ blockquote {
 
 code {
 	@apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded
-}
-
-header {
-	background-color rgba(255, 255, 255, 0.9)
-	backdrop-filter blur(4px)
 }
 
 table {

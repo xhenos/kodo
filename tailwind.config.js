@@ -37,7 +37,6 @@ module.exports = {
 					primary_dark: colors.indigo[700],
 					secondary: colors.pink[700],
 					container: "#edf2f740",
-					search: colors.coolGray[100],
 					gray: colors.coolGray[300],
 					select: "#d4359f33",
 					tip: {
@@ -78,7 +77,6 @@ module.exports = {
 					primary_dark: colors.indigo[600],
 					secondary: colors.pink[600],
 					container: colors.coolGray[800],
-					search: colors.coolGray[800],
 					select: "#d4359f33",
 					gray: colors.coolGray[600],
 					tip: {

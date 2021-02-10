@@ -2,7 +2,7 @@
 	<div @keydown.down="increment" @keydown.up="decrement" @keydown.enter="go" class="relative">
 		<label class="relative block">
 			<span class="sr-only">Search docs...</span>
-			<div class="absolute inset-y-0 left-0 flex items-center justify-center px-3 py-2 opacity-50">
+			<div class="searchIcon absolute inset-y-0 left-0 flex items-center justify-center px-3 py-2 opacity-60">
 				<SearchIcon size="1.25x" class="text-ui-typo" />
 			</div>
 			<input
@@ -169,18 +169,15 @@ export default {
 };
 </script>
 
-<style lang="stylus">
-header {
+<style>
+header input {
+	background-color: rgba(var(--color-ui-search), 1);
+	border-color: transparent;
+	transition: border-color 0.3s;
+}
 
-	input {
-		background-color var(--color-ui-search)
-		border-color transparent
-		transition border-color 0.3s
-
-		&:focus {
-			outline 0
-			border-color var(--color-ui-primary)
-		}
-	}
+header input:focus {
+	outline: 0;
+	border-color: var(--color-ui-primary);
 }
 </style>
