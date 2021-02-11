@@ -5,82 +5,77 @@
 				<LayoutHeader />
 			</header>
 
-			<main class="container relative flex flex-wrap justify-start flex-1 w-full">
-				<div class="w-full pb-24 xl:mx-48">
-					<div class="pt-8 md:pt-16">
-						<div class="flex flex-col items-center">
-							<div class="flex flex-col items-center mb-2 text-ui-primary">
-								<Logo :width="80" />
-								<h2 class="text-5xl mt-5 lg:mt-2 lg:text-6xl font-medium tracking-tighter border-none">
-									Tachiyomi
-								</h2>
-							</div>
-							<h1 class="text-2xl font-normal text-center lg:text-3xl">
-								Tachiyomi is an open-source Android app that lets you read any manga from your
-								smartphone – faster and easier than ever.
-							</h1>
-
-							<div class="w-full md:w-auto flex flex-col md:flex-row justify-center mt-8">
-								<g-link
-									to="/download/"
-									class="flex order-1  items-center place-content-center px-6 w-10/12 md:w-auto py-4 mx-auto md:mr-2 text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1 select-none"
-								>
-									<DownloadIcon class="mr-4" size="1x" />
-									Download
-								</g-link>
-								<g-link
-									to="/help/guides/getting-started/"
-									class="flex order-2 items-center place-content-center px-6 w-10/12 md:w-auto py-4 mx-auto mt-2 md:mt-auto text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1 select-none"
-								>
-									<BookIcon class="mr-4" size="1x" />
-									User guide
-								</g-link>
-							</div>
-							<span class="versionDisclaimer mt-4">* Requires Android 5.0 or higher.</span>
+			<main>
+				<div class="jumbotron flex flex-wrap content-center">
+					<div class="container mx-auto px-4 flex flex-col items-center mt-32 mb-8 xl:my-64">
+						<div class="flex flex-col items-center mb-2 text-ui-primary">
+							<Logo :width="80" />
+							<h2 class="text-5xl mt-5 lg:mt-2 lg:text-6xl font-medium tracking-tighter border-none">
+								Tachiyomi
+							</h2>
 						</div>
+						<h1 class="text-2xl font-normal text-center lg:text-3xl">
+							Tachiyomi is an open-source Android app that lets you read any manga from your
+							smartphone – faster and easier than ever.
+						</h1>
 
-						<div class="pt-8 mx-auto mt-8 md:mt-16 md:pt-16 max-w-screen-sm"></div>
-
-						<div class="flex flex-wrap justify-center -mx-4">
-							<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-								<UserCheckIcon size="3x" class="mb-6 text-ui-primary" />
-								<h3 class="font-bold tracking-wide uppercase text-ui-primary">
-									Tracking
-								</h3>
-								<p class="text-lg text-center">
-									Automatically keep track of your manga with MyAnimeList, AniList, Kitsu, Shikimori,
-									and Bangumi.
-								</p>
-							</div>
-
-							<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-								<PackageIcon size="3x" class="mb-6 text-ui-primary" />
-								<h3 class="font-bold tracking-wide uppercase text-ui-primary">
-									Extensions
-								</h3>
-								<p class="text-lg text-center">
-									Online and offline reading from sources like MangaDex, MangaKakalot, and hundreds
-									more.
-								</p>
-							</div>
-
-							<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-								<LayoutIcon size="3x" class="mb-6 text-ui-primary" />
-								<h3 class="font-bold tracking-wide uppercase text-ui-primary">
-									Customization
-								</h3>
-								<p class="text-lg text-center">
-									A configurable reader with multiple reading modes, custom color filters, and other
-									settings.
-								</p>
-							</div>
+						<div class="w-full md:w-auto flex flex-col md:flex-row justify-center mt-8">
+							<g-link
+								to="/download/"
+								class="flex order-1  items-center place-content-center px-6 w-10/12 md:w-auto py-4 mx-auto md:mr-2 text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1 select-none"
+							>
+								<DownloadIcon class="mr-4" size="1x" />
+								Download
+							</g-link>
+							<g-link
+								to="/help/guides/getting-started/"
+								class="flex order-2 items-center place-content-center px-6 w-10/12 md:w-auto py-4 mx-auto mt-2 md:mt-auto text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1 select-none"
+							>
+								<BookIcon class="mr-4" size="1x" />
+								User guide
+							</g-link>
 						</div>
-
-						<p class="mt-8 text-center">
-							<a href="https://www.apache.org/licenses/LICENSE-2.0">Open-source Apache Licensed</a>
-							| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
-						</p>
+						<span class="versionDisclaimer mt-4">* Requires Android 5.0 or higher.</span>
 					</div>
+				</div>
+				<div class="features container mx-auto px-4 pt-8 pb-0 xl:py-32">
+					<div class="flex flex-wrap justify-center -mx-4">
+						<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
+							<UserCheckIcon size="3x" class="mb-6 text-ui-primary" />
+							<h3 class="font-bold tracking-wide uppercase text-ui-primary">
+								Tracking
+							</h3>
+							<p class="text-lg text-center">
+								Automatically keep track of your manga with MyAnimeList, AniList, Kitsu, Shikimori,and Bangumi.
+							</p>
+						</div>
+
+						<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
+							<PackageIcon size="3x" class="mb-6 text-ui-primary" />
+							<h3 class="font-bold tracking-wide uppercase text-ui-primary">
+								Extensions
+							</h3>
+							<p class="text-lg text-center">
+								Online and offline reading from sources like MangaDex, MangaKakalot, and hundreds more.
+							</p>
+						</div>
+
+						<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
+							<LayoutIcon size="3x" class="mb-6 text-ui-primary" />
+							<h3 class="font-bold tracking-wide uppercase text-ui-primary">
+								Customization
+							</h3>
+							<p class="text-lg text-center">
+								A configurable reader with multiple reading modes, custom color filters, and other settings.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="copyright container mx-auto px-4 py-8 ">
+					<p class="mt-8 text-center">
+						<a href="https://www.apache.org/licenses/LICENSE-2.0">Open-source Apache Licensed</a>
+							| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
+					</p>
 				</div>
 			</main>
 		</div>
@@ -172,25 +167,23 @@ export default {
 </script>
 
 <style>
-.index {
-	background-image: url(/hero-pattern.png);
-	background-size: 2000px;
-	background-position: center;
-	background-attachment: fixed;
-}
-
-.index::before {
-	content: "";
-	position: fixed;
+main {
+	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(
-		0deg,
-		rgba(var(--index-background-gradient-start), 1),
-		rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
-	);
+	right: 0;
+}
+
+.jumbotron {
+	background: 
+		linear-gradient(
+			0deg,
+			rgba(var(--index-background-gradient-start), 1) 5%,
+			rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
+		), 
+		url(/hero-pattern.png);
+	background-size: 2000px;
+	background-position: center;
 }
 
 .index header {
@@ -209,7 +202,7 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-	.index {
+	.jumbotron {
 		background-size: 800px;
 	}
 }
