@@ -36,11 +36,10 @@
 									User guide
 								</g-link>
 							</div>
+							<span class="versionDisclaimer mt-4">* Requires Android 5.0 or higher.</span>
 						</div>
 
-						<div
-							class="pt-8 mx-auto mt-8 border-t md:mt-16 md:pt-16 border-top border-ui-border max-w-screen-sm"
-						></div>
+						<div class="pt-8 mx-auto mt-8 md:mt-16 md:pt-16 max-w-screen-sm"></div>
 
 						<div class="flex flex-wrap justify-center -mx-4">
 							<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
@@ -78,7 +77,7 @@
 						</div>
 
 						<p class="mt-8 text-center">
-							<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Licensed</a>
+							<a href="https://www.apache.org/licenses/LICENSE-2.0">Open-source Apache Licensed</a>
 							| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
 						</p>
 					</div>
