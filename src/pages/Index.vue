@@ -187,8 +187,9 @@ export default {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(
-		rgba(var(--index-background-gradient-start), 0.92),
-		rgba(var(--index-background-gradient-end), 1)
+		0deg,
+		rgba(var(--index-background-gradient-start), 1),
+		rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
 	);
 }
 
