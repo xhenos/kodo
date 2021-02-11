@@ -7,7 +7,7 @@
 
 			<main>
 				<div class="jumbotron flex flex-wrap content-center">
-					<div class="container mx-auto px-4 flex flex-col items-center mt-32 mb-8 xl:my-64">
+					<div class="container mx-auto px-4 flex flex-col items-center mt-32 mb-8 xl:my-64 xl:px-48">
 						<div class="flex flex-col items-center mb-2 text-ui-primary">
 							<Logo :width="80" />
 							<h2 class="text-5xl mt-5 lg:mt-2 lg:text-6xl font-medium tracking-tighter border-none">
@@ -38,7 +38,7 @@
 						<span class="versionDisclaimer mt-4">* Requires Android 5.0 or higher.</span>
 					</div>
 				</div>
-				<div class="features container mx-auto px-4 pt-8 pb-0 xl:py-32">
+				<div class="features container mx-auto px-4 pt-8 pb-0 xl:py-32 xl:px-48">
 					<div class="flex flex-wrap justify-center -mx-4">
 						<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
 							<UserCheckIcon size="3x" class="mb-6 text-ui-primary" />
