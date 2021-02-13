@@ -175,13 +175,12 @@ main {
 }
 
 .jumbotron {
-	background: 
-		linear-gradient(
+	background: linear-gradient(
 			0deg,
 			rgba(var(--index-background-gradient-start), 1) 5%,
 			rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
-		), 
-		url(/hero-pattern.png);
+		),
+		var(--index-background-image);
 	background-size: 2000px;
 	background-position: center;
 }
