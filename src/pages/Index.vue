@@ -167,7 +167,7 @@ export default {
 </script>
 
 <style>
-main {
+.index main {
 	position: absolute;
 	top: 0;
 	left: 0;
