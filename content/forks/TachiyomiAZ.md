@@ -1,6 +1,7 @@
 ---
 title: TachiyomiAZ
 description: This hentai focused fork is based off of TachiyomiEH, it has most features and fixes from Tachiyomi, as well as features from TachiyomiJ2K.
+icon: /img/forks_logo-az.png
 forkName: tachiyomi-az
 metaImage: /ogimage-az.png
 metaColor: "#FFCC4D"
@@ -9,12 +10,6 @@ path: /forks/TachiyomiAZ/
 ---
 
 import "~/assets/style/tachiyomiaz.styl"
-
-<div class="header-container">
-   <g-image class="headerLogo" src="~/images/forks_logo-az.png" width="64" height="64" fit="contain" immediate />
-    <h1>TachiyomiAZ</h1>
-</div>
-
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'
 
@@ -86,4 +81,4 @@ This hentai focused fork is based off of **[TachiyomiEH](/forks/TachiyomiEH/)**,
 - Grid view corner rounding configuration
 - Manga recommendations
 
-<g-image class="headerLogo" src="~/images/forks_gunz-az.png" width="128" height="128" fit="contain"/>
+<g-image class="headerLogo" src="/img/ogimage-az.png" width="128" height="128" fit="contain"/>

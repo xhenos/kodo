@@ -1,7 +1,5 @@
 <template>
 	<div>
-		<h1 class="mt-8">Download</h1>
-
 		<p>
 			Download the latest stable version of
 			<b>Tachiyomi</b>

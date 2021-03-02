@@ -5,7 +5,6 @@ sidebar: default
 next: /download/
 ---
 
-# Contribution
 Find out how to help translate or build the app and extensions.
 
 ## Code

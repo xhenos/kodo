@@ -5,8 +5,6 @@ sidebar: default
 prev: /help/faq/extensions/
 ---
 
-# Sources FAQ
-
 ## MangaDex
 
 ### Why are there no results when searching?

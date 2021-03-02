@@ -1,6 +1,7 @@
 ---
 title: TachiyomiSY
 description: This fork adds quite a few custom unique features, it also has new features from the latest Tachiyomi version as well as from other forks such as TachiyomiJ2K.
+icon: /img/forks_logo-sy.png
 forkName: tachiyomi-sy
 metaImage: /ogimage_large-sy.png
 metaImageType: summary_large_image
@@ -8,12 +9,6 @@ metaColor: "#BE0F6E"
 onThisPage: false
 path: /forks/TachiyomiSY/
 ---
-
-<div class="header-container">
-    <g-image class="headerLogo" src="~/images/forks_logo-sy.png" width="64" height="64" fit="contain" immediate />
-    <h1>TachiyomiSY</h1>
-</div>
-
 
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'
@@ -35,7 +30,7 @@ import DownloadButton from '~/components/DownloadButton.vue'
 This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ/) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K/).
 
 ## Screenshots
-<g-image class="zoomable" src="~/images/forks_banner-sy.png" immediate />
+<g-image class="zoomable" src="/img/ogimage_large-sy.png" immediate />
 
 ## Features
 - Uses the new **Tachiyomi** UI

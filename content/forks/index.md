@@ -7,13 +7,12 @@ editOnGithub: false
 prev: /extensions/
 ---
 
-# Forks
 Forks are alternative versions of **Tachiyomi** with exclusive features.
 
 <br>
 
-<div class="header-container">
-    <g-image class="inline align-top" src="~/images/forks_logo-neko.png" width="48" height="48" fit="contain" immediate /> 
+<div class="contentHeader contentIcon">
+    <g-image class="inline align-top" src="/img/forks_logo-neko.png" width="48" height="48" fit="contain" immediate />
     <g-link to="/forks/Neko/" class="align-middle ml-2 text-3xl">Neko</g-link>
 </div>
 
@@ -31,8 +30,8 @@ Some features include:
 
 <br>
 
-<div class="header-container">
-    <g-image class="inline align-top" src="~/images/forks_logo-j2k.png" width="48" height="48" fit="contain" immediate /> 
+<div class="contentHeader contentIcon">
+    <g-image class="inline align-top" src="/img/forks_logo-j2k.png" width="48" height="48" fit="contain" immediate />
     <g-link to="/forks/TachiyomiJ2K/" class="align-middle ml-2 text-3xl">TachiyomiJ2K</g-link>
 </div>
 
@@ -51,8 +50,8 @@ Some features include:
 
 <br>
 
-<div class="header-container">
-    <g-image class="inline align-top" src="~/images/forks_logo-az.png" width="48" height="48" fit="contain" immediate /> 
+<div class="contentHeader contentIcon">
+    <g-image class="inline align-top" src="/img/forks_logo-az.png" width="48" height="48" fit="contain" immediate />
     <g-link to="/forks/TachiyomiAZ/" class="align-middle ml-2 text-3xl">TachiyomiAZ</g-link>
 </div>
 
@@ -72,8 +71,8 @@ Some features include:
 
 <br>
 
-<div class="header-container">
-    <g-image class="inline align-top" src="~/images/forks_logo-sy.png" width="48" height="48" fit="contain" immediate /> 
+<div class="contentHeader contentIcon">
+    <g-image class="inline align-top" src="/img/forks_logo-sy.png" width="48" height="48" fit="contain" immediate />
     <g-link to="/forks/TachiyomiSY/" class="align-middle ml-2 text-3xl">TachiyomiSY</g-link>
 </div>
 

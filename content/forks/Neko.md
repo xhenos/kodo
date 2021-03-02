@@ -1,6 +1,7 @@
 ---
 title: Neko
 description: MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains features specific to MangaDex that those versions cannot offer.
+icon: /img/forks_logo-neko.png
 forkName: neko
 metaImage: /ogimage_large-neko.png
 metaImageType: summary_large_image
@@ -8,11 +9,6 @@ metaColor: "#38CA79"
 onThisPage: false
 path: /forks/Neko/
 ---
-
-<div class="header-container">
-    <g-image class="headerLogo" src="~/images/forks_logo-neko.png" width="64" height="64" fit="contain" immediate />
-    <h1>Neko</h1>
-</div>
 
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'
@@ -33,7 +29,7 @@ import DownloadButton from '~/components/DownloadButton.vue'
 This is a [MangaDex](https://mangadex.org/) specific fork of **Tachiyomi** and [TachiyomiJ2K](/forks/TachiyomiJ2K/). This contains features specific to **MangaDex** that those versions cannot offer. It also features almost every feature that **J2K** has except for extensions (aka other sources), custom covers, and local manga.
 
 ## Screenshots
-<g-image class="zoomable" src="~/images/forks_banner-neko.png" immediate />
+<g-image class="zoomable" src="/img/ogimage_large-neko.png" immediate />
 
 ## Mangadex specific features:
 - Supports native login to **MangaDex** and supports 2FA

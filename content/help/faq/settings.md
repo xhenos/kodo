@@ -6,8 +6,6 @@ prev: /help/faq/application/
 next: /help/faq/extensions/
 ---
 
-# Settings FAQ
-
 ## Downloads
 
 ### What happened to the simultaneous downloads feature?

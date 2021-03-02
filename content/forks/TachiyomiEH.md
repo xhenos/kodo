@@ -1,6 +1,7 @@
 ---
 title: TachiyomiEH
 description: This fork adds features that enhances the hentai experience with integrations to popular sevices such as E-Hentai, nHentai and more.
+icon: /img/forks_logo-eh.png
 metaImage: /ogimage_large-eh.png
 metaImageType: summary_large_image
 metaColor: "#2E84BF"
@@ -8,9 +9,7 @@ onThisPage: false
 path: /forks/TachiyomiEH/
 ---
 
-# <g-image class="headerLogo" src="~/images/forks_logo-eh.png" width="64" height="64" fit="contain" immediate /> TachiyomiEH <Badge text="Deprecated" color="red" />
-
-`<ForkButtons forkName="TachiyomiEH" downloadForkLink="https://api.github.com/repos/NerdNumber9/TachiyomiEH/releases/latest" githubForkLink="https://github.com/NerdNumber9/TachiyomiEH"/>`
+<Badge text="Deprecated" color="red" />
 
 ## Introduction
 **TachiyomiEH** is maintained by **[NerdNumber9](https://github.com/NerdNumber9)**.
@@ -19,7 +18,7 @@ This fork adds features that enhances the hentai experience with integrations to
 
 At the moment, it is **deprecated** as the developer does not have time to maintain it. Use [TachiyomiAZ](/forks/TachiyomiAZ/) instead.
 
-<g-image class="zoomable" src="~/images/forks_banner-eh.png" immediate />
+<g-image class="zoomable" src="/img/ogimage_large-eh.png" immediate />
 
 ## Features
 :::videolink

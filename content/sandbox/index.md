@@ -7,8 +7,6 @@ prev: /help/guides/getting-started/
 next: /help/guides/source-migration/
 ---
 
-# Sandbox
-
 Sandbox playground for demonstrating and documenting how different website functions work for easier integration by contributors.
 
 :::guide

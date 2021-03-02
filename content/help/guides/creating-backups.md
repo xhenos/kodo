@@ -6,17 +6,15 @@ prev: /help/guides/source-migration/
 next: /help/guides/reading-local-manga/
 ---
 
-# Creating backups
-
 Backups are inter-compatible between **Tachiyomi** versions, with a few exceptions listed under [forks information](#forks-information).
 
 Backups can hold the following information:
 
 1. **Titles**
-1. **Categories**
-1. **Read chapters**
-1. **Tracking settings**
-1. **Reading history**
+2. **Categories**
+3. **Read chapters**
+4. **Tracking settings**
+5. **Reading history**
 
 :::guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create backup** and select a location to save it.
@@ -50,22 +48,22 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 ## Forks information
 
-<div class="header-container">
-    <g-image class="inline align-top" src="~/images/forks_logo-neko.png" width="28" height="28" fit="contain" immediate />
+<div class="contentHeader contentIcon">
+    <g-image class="inline align-top" src="/img/forks_logo-neko.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/Neko">Neko</a></h3>
 </div>
 
 This fork can only restore **MangaDex** entries in a backup. If there are entries from other sources that are a part of that backup then they will not transfer.
 
 
-<div class="header-container">
-    <g-image class="inline align-top" src="~/images/forks_logo-az.png" width="28" height="28" fit="contain" immediate />
+<div class="contentHeader contentIcon">
+    <g-image class="inline align-top" src="/img/forks_logo-az.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/TachiyomiAZ/">TachiyomiAZ</a></h3>
     <h3 style="margin-right: 0.25rem;">, </h3>
-    <g-image class="inline align-top" src="~/images/forks_logo-sy.png" width="28" height="28" fit="contain" immediate />
+    <g-image class="inline align-top" src="/img/forks_logo-sy.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/TachiyomiSY/">TachiyomiSY</a></h3>
     <h3 style="margin-left: 0.5rem; margin-right: 0.25rem;"> and </h3>
-    <g-image class="inline align-top" src="~/images/forks_logo-eh.png" width="28" height="28" fit="contain" immediate />
+    <g-image class="inline align-top" src="/img/forks_logo-eh.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/TachiyomiEH/">TachiyomiEH</a></h3>
 </div>
 

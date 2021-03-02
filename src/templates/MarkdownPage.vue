@@ -10,12 +10,27 @@
 			</div>
 
 			<div
-				class="order-1"
+				class="markdownContent order-1"
 				:class="{
 					'md:w-2/3': this.$page.markdownPage.onThisPage == true,
 					'lg:px-56': this.$page.markdownPage.onThisPage == false && this.$page.markdownPage.sidebar == '',
 				}"
 			>
+				<div v-if="this.$page.markdownPage.icon != ''" class="contentHeader contentIcon">
+					<img
+						class="headerLogo"
+						:src="this.$page.markdownPage.icon"
+						width="64"
+						height="64"
+						fit="contain"
+						immediate
+					/>
+					<h1>{{ $page.markdownPage.title }}</h1>
+				</div>
+				<div v-else class="contentHeader">
+					<h1>{{ $page.markdownPage.title }}</h1>
+				</div>
+
 				<VueRemarkContent id="Markdown" />
 
 				<div v-if="this.$page.markdownPage.editOnGithub == true" class="mt-2 pt-4">
@@ -39,6 +54,7 @@ query($id: ID!) {
 		id
 		title
 		description
+		icon
 		forkName
 		metaImage
 		metaImageType
@@ -157,11 +173,6 @@ export default {
 		}
 	}
 
-	h1 {
-		padding-top 7rem
-		margin-top -5rem
-	}
-
 	h2,
 	h3 {
 		padding-top 6rem
@@ -191,26 +202,30 @@ export default {
 			margin-bottom 0.5rem
 		}
 	}
+}
 
-	.header-container {
+
+.markdownContent {
+	.contentHeader {
 		display flex
 		align-items center
-		margin-top 1rem
+		margin-top 2rem
 		flex-wrap wrap
+		&.contentIcon {
+			img {
+				margin-left 0.25rem
+			}
 
-		img {
-			margin-left 0.25rem
-		}
+			a,
+			h1 {
+				margin-left 0.5rem
+			}
 
-		a,
-		h1 {
-			margin-left 0.5rem
-		}
-
-		h1 {
-			margin 0
-			padding 0
-			margin-left 0.75rem
+			h1 {
+				margin 0
+				padding 0
+				margin-left 0.75rem
+			}
 		}
 	}
 }

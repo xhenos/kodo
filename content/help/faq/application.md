@@ -5,8 +5,6 @@ sidebar: default
 next: /help/faq/settings/
 ---
 
-# Application FAQ
-
 ## Library
 
 ### How can I see how many chapters I've downloaded?

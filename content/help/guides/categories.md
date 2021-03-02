@@ -5,8 +5,6 @@ sidebar: default
 prev: /help/guides/reader-settings/
 ---
 
-# Categories
-
 **Categories** help you store your bookmarked manga in custom tabs, which keeps your library neat and organized. You can name and sort them however you want according to your preference (ie. _Genre_, _Reading Status_, etc).
 
 You can even add your bookmarked manga in multiple categories and can easily control the update options through Library settings and automatically download new manga chapters from certain categories (if **Download new chapters** option is enabled in **Downloads** settings).

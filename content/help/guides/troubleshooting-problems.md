@@ -6,8 +6,6 @@ prev: /help/guides/getting-started/
 next: /help/guides/source-migration/
 ---
 
-# Troubleshooting problems
-
 This page is for when you encounter a problem with a source or the app.
 
 :::c-danger Common error messages

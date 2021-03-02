@@ -8,7 +8,6 @@ next: /help/guides/categories/
 
 import Carousel from '~/components/Carousel.vue'
 
-# Reader settings
 This section relates to the reading experience in the app and navigating the reader.
 
 ## Default reading mode <Badge text="Right to left" />

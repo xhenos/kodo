@@ -1,6 +1,7 @@
 ---
 title: TachiyomiJ2K
 description: This fork takes a new approach to the design of the base app along with several other enhancements.
+icon: /img/forks_logo-j2k.png
 forkName: tachiyomi-j2k
 metaImage: /ogimage_large-j2k.png
 metaImageType: summary_large_image
@@ -8,11 +9,6 @@ metaColor: "#2E84BF"
 onThisPage: false
 path: /forks/TachiyomiJ2K/
 ---
-
-<div class="header-container">
-   <g-image class="headerLogo" src="~/images/forks_logo-j2k.png" width="64" height="64" fit="contain" immediate />
-    <h1>TachiyomiJ2K</h1>
-</div>
 
 import DownloadButtons from '~/components/DownloadButtons.vue'
 import DownloadButton from '~/components/DownloadButton.vue'
@@ -34,7 +30,7 @@ import DownloadButton from '~/components/DownloadButton.vue'
 
 This fork takes a new approach to the design of the base app along with several other enhancements.
 
-<g-image class="zoomable" src="~/images/forks_banner-j2k.png" immediate />
+<g-image class="zoomable" src="/img/ogimage_large-j2k.png" immediate />
 
 ## Features
 :::videolink
