@@ -3,6 +3,12 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+module.exports = function(api) {
+	api.configureWebpack((config) => {
+		config.mode = "development";
+		return config;
+	});
+}
 
 module.exports = {
 	siteName: "Tachiyomi",
@@ -168,7 +174,6 @@ module.exports = {
 		},
 	],
 	chainWebpack: config => {
-		config.mode("development");
 		const svgRule = config.module.rule("svg");
 		svgRule.uses.clear();
 		svgRule.use("vue-svg-loader").loader("vue-svg-loader");
