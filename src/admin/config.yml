@@ -23,7 +23,7 @@ collections:
     label: FAQ
     description: Frequently Asked Questions
     folder: content/help/faq
-    extension: markdown
+    extension: md
     format: yaml-frontmatter
     create: false
     slug: "{{slug}}"
@@ -43,7 +43,7 @@ collections:
     label_singular: Guide
     description: User guides
     folder: content/help/guides
-    extension: markdown
+    extension: md
     format: yaml-frontmatter
     create: true
     slug: "{{slug}}"
@@ -63,7 +63,7 @@ collections:
     label_singular: Fork
     description: Tachiyomi forks
     folder: content/forks
-    extension: markdown
+    extension: md
     format: yaml-frontmatter
     create: false
     slug: "{{slug}}"
@@ -82,7 +82,7 @@ collections:
     label: Sandbox
     description: Playground area
     folder: content/sandbox
-    extension: markdown
+    extension: md
     format: yaml-frontmatter
     create: true
     slug: "{{slug}}"
