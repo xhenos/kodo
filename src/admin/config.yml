@@ -2,7 +2,6 @@ backend:
   name: github
   repo: xhenos/tachiyomi-website
   branch: gridsome
-  publish_mode: editorial_workflow
   open_authoring: true
   commit_messages:
     create: "🚀 Create {{collection}} “{{slug}}”"
@@ -11,6 +10,8 @@ backend:
     uploadMedia: "🚀 Upload “{{path}}”"
     deleteMedia: "🚀 Delete “{{path}}”"
     openAuthoring: "{{message}}"
+
+publish_mode: editorial_workflow
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
