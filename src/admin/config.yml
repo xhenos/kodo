@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: xhenos/tachiyomi-website
+  branch: gridsome
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
@@ -10,6 +11,9 @@ collections:
     label: "Markdown Page"
     folder: "content"
     create: true
+    nested:
+      depth: 100
+      summary: "{{title}}"
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
