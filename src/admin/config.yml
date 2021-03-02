@@ -2,6 +2,8 @@ backend:
   name: github
   repo: xhenos/tachiyomi-website
   branch: gridsome
+  publish_mode: editorial_workflow
+  open_authoring: true
   commit_messages:
     create: "🚀 Create {{collection}} “{{slug}}”"
     update: "🚀 Update {{collection}} “{{slug}}”"
