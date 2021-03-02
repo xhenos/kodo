@@ -1,8 +1,8 @@
-site_url: https://xhenos.netlify.app
-logo_url: https://xhenos.netlify.app/ogimage.png
+site_url: "https://xhenos.netlify.app"
+logo_url: "https://xhenos.netlify.app/ogimage.png"
 publish_mode: editorial_workflow
-media_folder: "static/img"
-public_folder: "/img/"
+media_folder: static/img
+public_folder: /img/
 
 backend:
   name: github
@@ -11,51 +11,88 @@ backend:
   open_authoring: true
   squash_merges: true
   commit_messages:
-    create: "🚀 Create {{collection}} “{{slug}}”"
-    update: "🚀 Update {{collection}} “{{slug}}”"
-    delete: "🚀 Delete {{collection}} “{{slug}}”"
-    uploadMedia: "🚀 Upload “{{path}}”"
-    deleteMedia: "🚀 Delete “{{path}}”"
+    create: "🚀 Create {{collection}} '{{slug}}'"
+    update: "🚀 Update {{collection}} '{{slug}}'"
+    delete: "🚀 Delete {{collection}} '{{slug}}'"
+    uploadMedia: "🚀 Upload '{{path}}'"
+    deleteMedia: "🚀 Delete '{{path}}'"
     openAuthoring: "{{message}}"
 
 collections:
-  - name: "faq"
-    label: "FAQ"
-    description: "Frequently Asked Questions"
-    folder: "content/help/faq"
+  - name: faq
+    label: FAQ
+    description: Frequently Asked Questions
+    folder: content/help/faq
+    extension: markdown
+    format: yaml-frontmatter
+    create: false
+    slug: "{{slug}}"
+    preview_path: "help/faq/{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        comment: Page title and opening header
+      - label: Body
+        name: body
+        widget: markdown
+        comment: Page content
+
+  - name: guides
+    label: Guides
+    label_singular: Guide
+    description: User guides
+    folder: content/help/guides
+    extension: markdown
+    format: yaml-frontmatter
     create: true
     slug: "{{slug}}"
-    preview_path: help/faq/{{slug}}
+    preview_path: "help/guides/{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
-      - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
-  - name: "guide"
-    label: "Guide"
-    description: "User guides"
-    folder: "content/help/guides"
+      - label: Title
+        name: title
+        widget: string
+        comment: Page title and opening header
+      - label: Body
+        name: body
+        widget: markdown
+        comment: Page content
+
+  - name: forks
+    label: Forks
+    label_singular: Fork
+    description: Tachiyomi forks
+    folder: content/forks
+    extension: markdown
+    format: yaml-frontmatter
+    create: false
+    slug: "{{slug}}"
+    preview_path: "forks/{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        comment: Page title and opening header
+      - label: Body
+        name: body
+        widget: markdown
+        comment: Page content
+
+  - name: sandbox
+    label: Sandbox
+    description: Playground area
+    folder: content/sandbox
+    extension: markdown
+    format: yaml-frontmatter
     create: true
     slug: "{{slug}}"
-    preview_path: help/guides/{{slug}}
+    preview_path: "sandbox/{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
-      - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
-  - name: "forks"
-    label: "Forks"
-    description: "Tachiyomi forks"
-    folder: "content/forks"
-    create: true
-    slug: "{{slug}}"
-    preview_path: forks/{{slug}}
-    fields:
-      - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
-      - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
-  - name: "sandbox"
-    label: "Sandbox"
-    description: "Playground area"
-    folder: "content/sandbox"
-    create: true
-    slug: "{{slug}}"
-    preview_path: sandbox/{{slug}}
-    fields:
-      - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
-      - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
+      - label: Title
+        name: title
+        widget: string
+        comment: Page title and opening header
+      - label: Body
+        name: body
+        widget: markdown
+        comment: Page content
