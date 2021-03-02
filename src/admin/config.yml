@@ -10,11 +10,11 @@ backend:
   open_authoring: true
   squash_merges: true
   commit_messages:
-    create: "🚀 Create {{collection}} “{{title}}”"
-    update: "🚀 Update {{collection}} “{{title}}”"
-    delete: "🚀 Delete {{collection}} “{{title}}”"
-    uploadMedia: "🚀 Upload “{{filename}}.{{extension}}”"
-    deleteMedia: "🚀 Delete “{{filename}}.{{extension}}”"
+    create: "🚀 Create {{collection}} “{{slug}}”"
+    update: "🚀 Update {{collection}} “{{slug}}”"
+    delete: "🚀 Delete {{collection}} “{{slug}}”"
+    uploadMedia: "🚀 Upload “{{path}}”"
+    deleteMedia: "🚀 Delete “{{path}}”"
     openAuthoring: "{{message}}"
 
 collections:
@@ -24,6 +24,7 @@ collections:
     folder: "content/help/faq"
     create: true
     slug: "{{slug}}"
+    preview_path: help/faq/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
       - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
@@ -33,6 +34,7 @@ collections:
     folder: "content/help/guides"
     create: true
     slug: "{{slug}}"
+    preview_path: help/guides/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
       - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
@@ -42,6 +44,7 @@ collections:
     folder: "content/forks"
     create: true
     slug: "{{slug}}"
+    preview_path: forks/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
       - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
@@ -51,6 +54,7 @@ collections:
     folder: "content/sandbox"
     create: true
     slug: "{{slug}}"
+    preview_path: sandbox/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string", comment: "Page title and opening header"}
       - {label: "Body", name: "body", widget: "markdown", comment: "Page content"}
