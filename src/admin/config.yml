@@ -2,6 +2,13 @@ backend:
   name: github
   repo: xhenos/tachiyomi-website
   branch: gridsome
+  commit_messages:
+    create: "🚀 Create {{collection}} “{{slug}}”"
+    update: "🚀 Update {{collection}} “{{slug}}”"
+    delete: "🚀 Delete {{collection}} “{{slug}}”"
+    uploadMedia: "🚀 Upload “{{path}}”"
+    deleteMedia: "🚀 Delete “{{path}}”"
+    openAuthoring: "{{message}}"
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
