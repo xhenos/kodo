@@ -3,13 +3,6 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-module.exports = function(api) {
-	api.configureWebpack((config) => {
-		config.mode = "development";
-		return config;
-	});
-}
-
 module.exports = {
 	siteName: "Tachiyomi",
 	siteDescription: "Free and open source manga reader for Android",
