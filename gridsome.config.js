@@ -172,6 +172,9 @@ module.exports = {
 		svgRule.uses.clear();
 		svgRule.use("vue-svg-loader").loader("vue-svg-loader");
 	},
+	chainWebpack (config) {
+		config.mode("development");
+	},
 };
 
 function transformContainer(node, config, type, element) {
