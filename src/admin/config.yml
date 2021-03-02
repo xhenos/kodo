@@ -22,8 +22,8 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "guides"
-    label: "Guides"
+  - name: "guide"
+    label: "Guide"
     folder: "content/help/guides"
     create: true
     slug: "{{slug}}"

@@ -1,4 +1,5 @@
 ---
+title: Reading local manga
 description: All the information you would need to read your own local manga.
 sidebar: default
 prev: /help/guides/creating-backups/

@@ -1,4 +1,5 @@
 ---
+title: Reader settings
 description: Reader settings for Tachiyomi.
 sidebar: default
 prev: /help/guides/reading-local-manga/
