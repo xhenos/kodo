@@ -1,7 +1,8 @@
 site_url: https://xhenos.netlify.app
 logo_url: https://xhenos.netlify.app/ogimage.png
 publish_mode: editorial_workflow
-media_folder: "static"
+media_folder: "static/img"
+public_folder: "/img/"
 
 backend:
   name: github
