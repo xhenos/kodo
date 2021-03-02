@@ -9,13 +9,16 @@
     "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax"
   },
   "dependencies": {
+    "@gridsome/transformer-remark": "^0.6.4",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
     "gridsome": "^0.7.23",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
     "marked": "^2.0.0",
     "material-design-icons-iconfont": "^6.1.0",
     "moment": "^2.29.1",
+    "netlify-cms": "^2.10.96",
     "postcss": "^7.0.35",
     "remark-containers": "^1.2.0",
     "tailwindcss": "^1.9.6",

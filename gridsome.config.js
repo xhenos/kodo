@@ -160,6 +160,12 @@ module.exports = {
 				],
 			},
 		},
+		{
+			use: "gridsome-plugin-netlify-cms",
+			options: {
+				publicPath: "/admin",
+			},
+		},
 	],
 	chainWebpack: config => {
 		const svgRule = config.module.rule("svg");
