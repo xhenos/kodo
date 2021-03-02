@@ -1,10 +1,11 @@
 ---
+# Page title and opening header
 title: Application
-description: Need help with something? Most of your issues can probably be solved from this page.
+description: Need help with something? Most of your issues can probably be
+  solved from this page.
 sidebar: default
 next: /help/faq/settings/
 ---
-
 ## Library
 
 ### How can I see how many chapters I've downloaded?
