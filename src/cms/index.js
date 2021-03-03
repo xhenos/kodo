@@ -1,5 +1,8 @@
 import CMS from "netlify-cms";
 
+CMS.registerPreviewStyle("/cms/assets/style.css");
+CMS.registerPreviewStyle("/cms/assets/container.css");
+
 CMS.registerEditorComponent({
 	id: "container",
 	label: "Container",
@@ -23,11 +26,12 @@ CMS.registerEditorComponent({
 		{ name: "title", label: "Title", widget: "string", required: "false" },
 		{ name: "description", label: "Description", widget: "string", required: "true" },
 	],
-	pattern: /^\s?:::(guide|c-tip|c-warning|c-danger|alert|note|videolink|collapse)?(.+)\s+?(.+)\s+:::/,
+	pattern: /^\s?:::(guide|alert|c-tip|c-warning|c-danger|note|videolink|collapse)(.+)?\s+?(.+)\s+:::$/,
 	fromBlock: function(match) {
 		return {
 			type: match[1],
 			title: match[2],
+			titleFallback: match[2] || "",
 			description: match[3],
 		};
 	},
@@ -35,6 +39,14 @@ CMS.registerEditorComponent({
 		return `:::${obj.type} ${obj.title}\n${obj.description}\n:::`;
 	},
 	toPreview: function(obj) {
-		return `<div style="background-color: grey"><p><b>${obj.title}</b></p><p>${obj.title}</p><div>`;
+		if (obj.type.startsWith("c-")) {
+			return `<div class="custom-block ${obj.type}"><p class="c-title">${obj.titleFallback}</p><p>${obj.description}</p></div>`;
+		} else if (obj.type == "videolink") {
+			return `<div class="videolink"><p><a href="${obj.description}"></a></p></div>`;
+		} else if (obj.type == "collapse") {
+			return `<details class="custom-block c-details"><summary class="c-title">${obj.titleFallback}</summary><p>${obj.description}</p></details>`;
+		} else {
+			return `<div class="custom-block c-${obj.type}"><p class="c-title">${obj.titleFallback}</p><p>${obj.description}</p></div>`;
+		};
 	},
 });

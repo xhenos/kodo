@@ -1,0 +1,143 @@
+.custom-block {
+	padding-left: 1.25rem;
+	padding-right: 1rem;
+	border-radius: 0.125rem;
+	overflow: hidden;
+	position: relative;
+	background-color: var(--color-ui-container);
+	border: 1px solid var(--color-ui-border);
+	border-radius: 6px;
+	margin: 0.5rem 0;
+}
+.custom-block .c-title {
+	margin: 1rem auto 0.5rem;
+	font-weight: 600;
+}
+.custom-block .c-title:empty {
+	display: none;
+}
+.custom-block.c-empty {
+	padding-top: 1rem;
+}
+.custom-block.c-guide {
+	background-color: var(--color-ui-container);
+}
+.custom-block.c-guide .videolink {
+	margin-top: -1rem;
+}
+.custom-block.c-details {
+	background-color: transparent;
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+	margin: 0;
+}
+.custom-block.c-details:not(:last-child) {
+	border-bottom: none;
+}
+.custom-block.c-details .c-title {
+	margin: 1rem auto;
+	font-weight: bold;
+}
+.custom-block.c-tip,
+.custom-block.c-warning,
+.custom-block.c-danger,
+.custom-block.c-alert {
+	padding-left: 3.75rem;
+}
+.custom-block.c-tip:before,
+.custom-block.c-warning:before,
+.custom-block.c-danger:before,
+.custom-block.c-alert:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	width: 1.75rem;
+	height: 1.75rem;
+	background-size: contain;
+}
+.custom-block.c-tip a:hover,
+.custom-block.c-warning a:hover,
+.custom-block.c-danger a:hover,
+.custom-block.c-alert a:hover {
+	text-decoration: underline;
+}
+.custom-block.c-tip {
+	background-color: var(--color-ui-tip-background);
+	border: 1px solid var(--color-ui-tip-border);
+}
+.custom-block.c-tip:before {
+	background: transparent url("https://tachiyomi.org/assets/icon_tip.svg") no-repeat 0 0;
+}
+.custom-block.c-tip a {
+	color: var(--color-ui-tip-link) !important;
+}
+.custom-block.c-tip .c-title {
+	color: var(--color-ui-tip-text);
+}
+.custom-block.c-warning {
+	background-color: var(--color-ui-warning-background);
+	border: 1px solid var(--color-ui-warning-border);
+}
+.custom-block.c-warning:before {
+	background: transparent url("https://tachiyomi.org/assets/icon_warning.svg") no-repeat 0 0;
+}
+.custom-block.c-warning a {
+	color: var(--color-ui-warning-link) !important;
+}
+.custom-block.c-warning .c-title {
+	color: var(--color-ui-warning-text);
+}
+.custom-block.c-danger {
+	background-color: var(--color-ui-danger-background);
+	border: 1px solid var(--color-ui-danger-border);
+}
+.custom-block.c-danger:before {
+	background: transparent url("https://tachiyomi.org/assets/icon_danger.svg") no-repeat 0 0;
+}
+.custom-block.c-danger a {
+	color: var(--color-ui-danger-link) !important;
+}
+.custom-block.c-danger .c-title {
+	color: var(--color-ui-danger-text);
+}
+.custom-block.c-alert {
+	background-color: var(--color-ui-alert-background);
+	border: 1px solid var(--color-ui-alert-border);
+}
+.custom-block.c-alert:before {
+	background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA7VBMVEUAAACSlZuOkZeRlJqQk5mSlZuRlJqRlJqQk5mQk5mQk5mSlZuRlJqQk5mQk5mQk5mRlJqQk5mQk5mQk5mQk5mQk5mQk5mQk5mRlJqRlJqQk5mQk5mRlJqRlJqQk5mQk5mQk5mQk5mQk5mQk5mQk5mQk5mQk5mQk5mRlJqRlJqSlZuRlJqQk5mQk5mQk5mQk5mRlJqRlJqQk5mQk5mSlZuQk5mQk5mRlJqRlJqQk5mQk5mQk5mSlZuQk5mQk5mQk5mRlJqSlZuQk5mQk5mQk5mRlJqRlJqRlJqQk5mRlJqRlJqRlJqQk5mQk5mQk5ktLIuVAAAATnRSTlMAAAAAABNHjcru/Qc+mtv4DmnTe+nU+sM2PNW+M0vzztn88MKcu/fmjk0OOtbdrosLP95rC4HGKCbE+YQKYvHgRAye0uQgYIHXTzuC++IP6+ZxAAAA+0lEQVQoz3VSx1LDQAx98sZtvW4bh0AogdB76L2HDvr/z+GArR2YsU4qM69IAgAizw/CKNY6jsLA94gAAIpUYtIsZ2ZmzrPUJIoUAOoUpdUsoW1ZdAggVXQr/hNVt1AESsp/feaqTAiesdLIbW+KmZmt8eCnDr8/PTP45Ul9BJmDmJ2br6ssQJi7wcJwcakGDRFJe7S8srrWFBHiJl3f2Nza3mmqGEK9u7c/PjgUm26gR0fHJ7kbCBSfnp1fsIMS8sur65tbduQi9+7+4fFpwiJXDPafxy+vbywGZSW994/PQe1Pp75b4tfkWzRZ47WvvfVQradtf4aW9/kBb8JwGukGOPcAAAAASUVORK5CYII=") no-repeat 0 0;
+}
+.custom-block.c-alert .c-title {
+	color: var(--color-ui-alert-text);
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+.custom-block.c-alert p {
+	color: var(--color-ui-alert-text);
+	font-size: 0.8rem;
+}
+.custom-block.aside {
+	background-color: transparent;
+	border: none;
+	color: rgba(0,0,0,0.4);
+	font-size: 0.9rem;
+	text-align: right;
+}
+.custom-block.aside-guide {
+	background-color: transparent;
+	border: none;
+	font-size: 0.9rem;
+	text-align: left;
+	padding-left: unset;
+}
+.custom-block.aside-guide p {
+	margin-top: 0;
+}
+.custom-block.aside-guide a {
+	color: #476582;
+}
