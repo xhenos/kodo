@@ -8,6 +8,7 @@ CMS.registerEditorComponent({
 			name: "type",
 			label: "Type",
 			widget: "select",
+			required: "true",
 			options: [
 				{ label: "Guide", value: "guide" },
 				{ label: "Tip", value: "c-tip" },
@@ -19,10 +20,10 @@ CMS.registerEditorComponent({
 				{ label: "Collapse", value: "collapse" },
 			],
 		},
-		{ name: "title", label: "Title", widget: "string" },
-		{ name: "description", label: "Description", widget: "string" },
+		{ name: "title", label: "Title", widget: "string", required: "false" },
+		{ name: "description", label: "Description", widget: "string", required: "true" },
 	],
-	pattern: /^\s?:::(guide|error)?(.+)\s+?(.+)\s+:::/,
+	pattern: /^\s?:::(guide|c-tip|c-warning|c-danger|alert|note|videolink|collapse)?(.+)\s+?(.+)\s+:::/,
 	fromBlock: function(match) {
 		return {
 			type: match[1],
