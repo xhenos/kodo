@@ -162,7 +162,12 @@ module.exports = {
 		{
 			use: "gridsome-plugin-netlify-cms",
 			options: {
-				publicPath: "/admin",
+				modulePath: "src/cms/index.js",
+				configPath: "src/cms/config.yml",
+				htmlPath: "src/cms/index.html",
+				publicPath: "/cms",
+				htmlTitle: "Tachiyomi CMS",
+				enableIdentityWidget: true,
 			},
 		},
 	],
