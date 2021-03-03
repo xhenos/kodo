@@ -24,7 +24,15 @@ CMS.registerEditorComponent({
 			],
 		},
 		{ name: "title", label: "Title", widget: "string", required: false },
-		{ name: "body", label: "Body", widget: "markdown", required: true },
+		{
+			name: "body",
+			label: "Body",
+			widget: "markdown",
+			required: true,
+			buttons: ["bold", "italic", "code", "link"],
+			editor_components: ["code-block"],
+			minimal: true,
+		},
 	],
 	pattern: /^\s?:::(guide|alert|c-tip|c-warning|c-danger|note|videolink|collapse)(.+)?\s+?(.+)\s+:::$/,
 	fromBlock: function(match) {

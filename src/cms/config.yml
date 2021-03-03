@@ -29,14 +29,15 @@ collections:
     slug: "{{slug}}"
     preview_path: "help/faq/{{slug}}"
     fields:
-      - label: Title
-        name: title
-        widget: string
-        comment: Page title and opening header
-      - label: Body
-        name: body
-        widget: markdown
-        comment: Page content
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+          minimal: true,
+        }
+
 
   - name: guides
     label: Guides
@@ -49,14 +50,15 @@ collections:
     slug: "{{slug}}"
     preview_path: "help/guides/{{slug}}"
     fields:
-      - label: Title
-        name: title
-        widget: string
-        comment: Page title and opening header
-      - label: Body
-        name: body
-        widget: markdown
-        comment: Page content
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+          minimal: true,
+        }
+
 
   - name: forks
     label: Forks
@@ -69,14 +71,15 @@ collections:
     slug: "{{slug}}"
     preview_path: "forks/{{slug}}"
     fields:
-      - label: Title
-        name: title
-        widget: string
-        comment: Page title and opening header
-      - label: Body
-        name: body
-        widget: markdown
-        comment: Page content
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+          minimal: true,
+        }
+
 
   - name: sandbox
     label: Sandbox
@@ -88,11 +91,11 @@ collections:
     slug: "{{slug}}"
     preview_path: "sandbox/{{slug}}"
     fields:
-      - label: Title
-        name: title
-        widget: string
-        comment: Page title and opening header
-      - label: Body
-        name: body
-        widget: markdown
-        comment: Page content
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+          minimal: true,
+        }
