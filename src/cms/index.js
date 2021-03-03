@@ -11,7 +11,7 @@ CMS.registerEditorComponent({
 			name: "type",
 			label: "Type",
 			widget: "select",
-			required: "true",
+			required: true,
 			options: [
 				{ label: "Guide", value: "guide" },
 				{ label: "Tip", value: "c-tip" },
@@ -23,8 +23,8 @@ CMS.registerEditorComponent({
 				{ label: "Collapse", value: "collapse" },
 			],
 		},
-		{ name: "title", label: "Title", widget: "string", required: "false" },
-		{ name: "body", label: "Body", widget: "markdown", required: "true" },
+		{ name: "title", label: "Title", widget: "string", required: false },
+		{ name: "body", label: "Body", widget: "markdown", required: true },
 	],
 	pattern: /^\s?:::(guide|alert|c-tip|c-warning|c-danger|note|videolink|collapse)(.+)?\s+?(.+)\s+:::$/,
 	fromBlock: function(match) {
