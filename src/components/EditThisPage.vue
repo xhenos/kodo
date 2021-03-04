@@ -1,18 +1,18 @@
 <template>
-	<div id="EditOnGithub">
+	<div id="EditThisPage">
 		<a :href="editLink" target="_blank" class="hover:text-ui-primary">
-			<GithubLogo />
-			<span>Edit this page on GitHub</span>
+			<Edit3Icon />
+			<span>Edit this page</span>
 		</a>
 	</div>
 </template>
 
 <script>
-import GithubLogo from "@/assets/images/github-logo.svg";
+import { Edit3Icon } from "vue-feather-icons";
 
 export default {
 	components: {
-		GithubLogo,
+		Edit3Icon,
 	},
 
 	computed: {
@@ -20,16 +20,14 @@ export default {
 			return this.$route.matched[0].path;
 		},
 		editLink() {
-			let path = this.currentPath;
-			if ((path.match(new RegExp("/", "g")) || []).length == 1) path = path + "/index";
-			return `https://github.com/xhenos/tachiyomi-website/blob/gridsome/content${path}.md`;
+			return `/cms/#/edit/${this.$page.markdownPage.cms.collection}/${this.$page.markdownPage.cms.slug}`;
 		},
 	},
 };
 </script>
 
 <style lang="stylus">
-#EditOnGithub {
+#EditThisPage {
 
 	a {
 		font-size 0.9rem

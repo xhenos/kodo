@@ -1,6 +1,10 @@
 ---
 title: Source migration
 description: Your source is no longer accessible or you just want to move to another? No problem.
+cms:
+  collection: guides
+  slug: source-migration
+  edit: true
 sidebar: default
 prev: /help/guides/troubleshooting-problems/
 next: /help/guides/creating-backups/

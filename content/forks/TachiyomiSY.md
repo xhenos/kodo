@@ -1,6 +1,10 @@
 ---
 title: TachiyomiSY
 description: This fork adds quite a few custom unique features, it also has new features from the latest Tachiyomi version as well as from other forks such as TachiyomiJ2K.
+cms:
+  collection: forks
+  slug: TachiyomiSY
+  edit: true
 icon: /img/forks_logo-sy.png
 forkName: tachiyomi-sy
 metaImage: /ogimage_large-sy.png

@@ -33,8 +33,8 @@
 
 				<VueRemarkContent id="Markdown" />
 
-				<div v-if="this.$page.markdownPage.editOnGithub == true" class="mt-2 pt-4">
-					<EditOnGithub />
+				<div v-if="this.$page.markdownPage.cms.edit == true" class="mt-2 pt-4">
+					<EditThisPage />
 				</div>
 
 				<div
@@ -63,9 +63,13 @@ query($id: ID!) {
 		content
 		sidebar
 		onThisPage
-		editOnGithub
 		next
 		prev
+		cms {
+			collection
+			slug
+			edit
+		}
 		headings {
 			depth
 			value
@@ -86,13 +90,13 @@ query($id: ID!) {
 <script>
 import OnThisPage from "@/components/OnThisPage.vue";
 import NextPrevLinks from "@/components/NextPrevLinks.vue";
-import EditOnGithub from "@/components/EditOnGithub.vue";
+import EditThisPage from "@/components/EditThisPage.vue";
 
 export default {
 	components: {
 		OnThisPage,
 		NextPrevLinks,
-		EditOnGithub,
+		EditThisPage,
 	},
 	metaInfo() {
 		const title = this.$page.markdownPage.title;

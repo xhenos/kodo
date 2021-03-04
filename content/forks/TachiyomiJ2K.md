@@ -1,6 +1,10 @@
 ---
 title: TachiyomiJ2K
 description: This fork takes a new approach to the design of the base app along with several other enhancements.
+cms:
+  collection: forks
+  slug: TachiyomiJ2K
+  edit: true
 icon: /img/forks_logo-j2k.png
 forkName: tachiyomi-j2k
 metaImage: /ogimage_large-j2k.png

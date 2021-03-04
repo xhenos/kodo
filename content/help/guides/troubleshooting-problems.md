@@ -1,6 +1,10 @@
 ---
 title: Troubleshooting problems
 description: Encountered an issue with a source or the app? Here are resources to help you troubleshoot it.
+cms:
+  collection: guides
+  slug: troubleshooting-problems
+  edit: true
 sidebar: default
 prev: /help/guides/getting-started/
 next: /help/guides/source-migration/

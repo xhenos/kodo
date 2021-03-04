@@ -1,9 +1,12 @@
 ---
 title: Forks
 description: Forks are alternative versions of Tachiyomi with exclusive features.
+cms:
+  collection: forks
+  slug: index
+  edit: true
 sidebar: default
 onThisPage: false
-editOnGithub: false
 prev: /extensions/
 ---
 

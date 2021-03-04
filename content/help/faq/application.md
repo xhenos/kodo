@@ -1,8 +1,11 @@
 ---
 # Page title and opening header
 title: Application
-description: Need help with something? Most of your issues can probably be
-  solved from this page.
+description: Need help with something? Most of your issues can probably be solved from this page.
+cms:
+  collection: faq
+  slug: application
+  edit: true
 sidebar: default
 next: /help/faq/settings/
 ---

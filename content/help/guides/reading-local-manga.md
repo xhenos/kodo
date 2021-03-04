@@ -1,6 +1,10 @@
 ---
 title: Reading local manga
 description: All the information you would need to read your own local manga.
+cms:
+  collection: guides
+  slug: reading-local-manga
+  edit: true
 sidebar: default
 prev: /help/guides/creating-backups/
 next: /help/guides/reader-settings/
