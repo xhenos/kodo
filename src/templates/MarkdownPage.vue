@@ -33,7 +33,10 @@
 
 				<VueRemarkContent id="Markdown" />
 
-				<div v-if="this.$page.markdownPage.cms.edit == true" class="mt-2 pt-4">
+				<div
+					v-if="this.$page.markdownPage.cms != null && this.$page.markdownPage.cms.edit == true"
+					class="mt-2 pt-4"
+				>
 					<EditThisPage />
 				</div>
 
