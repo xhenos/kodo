@@ -11,7 +11,7 @@
 
 			<main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
 				<aside
-					v-if="hasSidebar && this.$page.markdownPage.sidebar !== ''"
+					v-if="hasSidebar && this.$page.markdownPage.sidebar"
 					class="sidebar"
 					:class="{ open: sidebarOpen }"
 					:style="sidebarStyle"
@@ -24,7 +24,7 @@
 				<div
 					class="w-full pb-24"
 					:class="{
-						'pl-0 lg:pl-12 lg:w-3/4': hasSidebar && this.$page.markdownPage.sidebar !== '',
+						'pl-0 lg:pl-12 lg:w-3/4': hasSidebar && this.$page.markdownPage.sidebar,
 						'xl:mx-48': !hasSidebar,
 					}"
 				>

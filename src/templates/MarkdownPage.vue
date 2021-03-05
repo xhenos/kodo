@@ -16,7 +16,7 @@
 					'lg:px-56': this.$page.markdownPage.onThisPage == false && this.$page.markdownPage.sidebar == '',
 				}"
 			>
-				<div v-if="this.$page.markdownPage.icon != ''" class="contentHeader contentIcon">
+				<div v-if="this.$page.markdownPage.icon" class="contentHeader contentIcon">
 					<img
 						class="headerLogo"
 						:src="this.$page.markdownPage.icon"
@@ -33,15 +33,12 @@
 
 				<VueRemarkContent id="Markdown" />
 
-				<div
-					v-if="this.$page.markdownPage.cms != null && this.$page.markdownPage.cms.edit == true"
-					class="mt-2 pt-4"
-				>
+				<div v-if="this.$page.markdownPage.cms && this.$page.markdownPage.cms.edit" class="mt-2 pt-4">
 					<EditThisPage />
 				</div>
 
 				<div
-					v-if="this.$page.markdownPage.prev !== '' || this.$page.markdownPage.next !== ''"
+					v-if="this.$page.markdownPage.prev || this.$page.markdownPage.next"
 					class="mt-6 pt-8 border-t border-ui-border"
 				>
 					<NextPrevLinks />
