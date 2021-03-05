@@ -23,7 +23,12 @@ CMS.registerEditorComponent({
 				{ label: "Collapse", value: "collapse" },
 			],
 		},
-		{ name: "title", label: "Title", widget: "string", required: false },
+		{
+			name: "title",
+			label: "Title",
+			widget: "string",
+			required: false
+		},
 		{
 			name: "body",
 			label: "Body",
@@ -38,23 +43,22 @@ CMS.registerEditorComponent({
 	fromBlock: function(match) {
 		return {
 			type: match[1],
-			title: match[2],
-			titleFallback: match[2] || "",
+			title: match[2] || "",
 			body: match[3],
 		};
 	},
 	toBlock: function(obj) {
-		return `:::${obj.type} ${obj.title}\n${obj.body}\n:::`;
+		return `:::${obj.type} ${obj.title || ""}\n${obj.body}\n:::`;
 	},
 	toPreview: function(obj) {
 		if (obj.type.startsWith("c-")) {
-			return `<div class="custom-block ${obj.type}"><p class="c-title">${obj.titleFallback}</p><p>${obj.body}</p></div>`;
-		} else if (obj.type == "videolink") {
+			return `<div class="custom-block ${obj.type}"><p class="c-title">${obj.title}</p><p>${obj.body}</p></div>`;
+		} else if (obj.type === "videolink") {
 			return `<div class="videolink"><p><a href="${obj.body}"></a></p></div>`;
-		} else if (obj.type == "collapse") {
-			return `<details class="custom-block c-details"><summary class="c-title">${obj.titleFallback}</summary><p>${obj.body}</p></details>`;
+		} else if (obj.type === "collapse") {
+			return `<details class="custom-block c-details"><summary class="c-title">${obj.title}</summary><p>${obj.body}</p></details>`;
 		} else {
-			return `<div class="custom-block c-${obj.type}"><p class="c-title">${obj.titleFallback}</p><p>${obj.body}</p></div>`;
+			return `<div class="custom-block c-${obj.type}"><p class="c-title">${obj.title}</p><p>${obj.body}</p></div>`;
 		};
 	},
 });
