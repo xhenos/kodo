@@ -10,6 +10,7 @@ backend:
   branch: gridsome
   open_authoring: true
   squash_merges: true
+  use_graphql: true
   commit_messages:
     create: "🚀 Create {{collection}} '{{slug}}'"
     update: "🚀 Update {{collection}} '{{slug}}'"
