@@ -3,6 +3,8 @@ title: Help Center
 description: From common questions to guides, find help for everything Tachiyomi.
 onThisPage: false
 cms:
+  collection: miscellaneous
+  slug: help
   edit: false
 ---
 

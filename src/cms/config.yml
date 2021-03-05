@@ -80,22 +80,73 @@ collections:
           minimal: true,
         }
 
-
-  - name: sandbox
-    label: Sandbox
-    description: Playground area
-    folder: content/sandbox
-    extension: md
-    format: yaml-frontmatter
-    create: true
-    slug: "{{slug}}"
-    preview_path: "sandbox/{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Body",
-          name: "body",
-          widget: "markdown",
-          buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
-          minimal: true,
-        }
+  - name: miscellaneous
+    label: Miscellaneous
+    description: Miscellaneous files
+    files:
+      - label: Download
+        name: download
+        file: content/download/index.md
+        preview_path: download/
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+              minimal: true,
+            }
+      - label: Extensions
+        label_singular: Extension
+        name: extensions
+        file: content/extensions/index.md
+        preview_path: extensions/
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+              minimal: true,
+            }
+      - label: Help
+        name: help
+        file: content/help/index.md
+        preview_path: help/
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+              minimal: true,
+            }
+      - label: Contribution
+        name: contribution
+        file: content/help/contribution.md
+        preview_path: help/contribution/
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+              minimal: true,
+            }
+      - label: Sandbox
+        name: sandbox
+        file: content/sandbox/index.md
+        preview_path: sandbox/
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"],
+              minimal: true,
+            }
