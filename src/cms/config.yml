@@ -1,5 +1,5 @@
 site_url: "https://xhenos.netlify.app"
-logo_url: "https://xhenos.netlify.app/ogimage.png"
+logo_url: "/cms/assets/logo.svg"
 publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img/
