@@ -75,7 +75,7 @@ module.exports = {
 					border: colors.coolGray[800],
 					primary: colors.indigo[400],
 					primary_dark: colors.indigo[600],
-					secondary: colors.pink[600],
+					secondary: colors.pink[500],
 					container: colors.coolGray[800],
 					select: "#d4359f33",
 					gray: colors.coolGray[600],
