@@ -5,7 +5,7 @@ cms:
   collection: forks
   entry: TachiyomiJ2K
   edit: true
-icon: /img/forks_logo-j2k.png
+icon: /assets/forks_logo-j2k.png
 forkName: tachiyomi-j2k
 metaImage: /ogimage_large-j2k.png
 metaImageType: summary_large_image
@@ -34,7 +34,7 @@ import DownloadButton from '~/components/DownloadButton.vue'
 
 This fork takes a new approach to the design of the base app along with several other enhancements.
 
-<g-image class="zoomable" src="/img/ogimage_large-j2k.png" immediate />
+<g-image class="zoomable" src="/assets/ogimage_large-j2k.png" immediate />
 
 ## Features
 :::videolink

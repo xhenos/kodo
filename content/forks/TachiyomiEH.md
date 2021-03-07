@@ -5,7 +5,7 @@ cms:
   collection: forks
   entry: TachiyomiEH
   edit: true
-icon: /img/forks_logo-eh.png
+icon: /assets/forks_logo-eh.png
 metaImage: /ogimage_large-eh.png
 metaImageType: summary_large_image
 metaColor: "#2E84BF"
@@ -22,7 +22,7 @@ This fork adds features that enhances the hentai experience with integrations to
 
 At the moment, it is **deprecated** as the developer does not have time to maintain it. Use [TachiyomiAZ](/forks/TachiyomiAZ/) instead.
 
-<g-image class="zoomable" src="/img/ogimage_large-eh.png" immediate />
+<g-image class="zoomable" src="/assets/ogimage_large-eh.png" immediate />
 
 ## Features
 :::videolink

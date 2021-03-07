@@ -5,7 +5,7 @@ cms:
   collection: forks
   entry: TachiyomiSY
   edit: true
-icon: /img/forks_logo-sy.png
+icon: /assets/forks_logo-sy.png
 forkName: tachiyomi-sy
 metaImage: /ogimage_large-sy.png
 metaImageType: summary_large_image
@@ -34,7 +34,7 @@ import DownloadButton from '~/components/DownloadButton.vue'
 This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ/) and adds quite a few custom unique features, it also has new features from the latest **Tachiyomi** version as well as from other forks such as [TachiyomiJ2K](/forks/TachiyomiJ2K/).
 
 ## Screenshots
-<g-image class="zoomable" src="/img/ogimage_large-sy.png" immediate />
+<g-image class="zoomable" src="/assets/ogimage_large-sy.png" immediate />
 
 ## Features
 - Uses the new **Tachiyomi** UI

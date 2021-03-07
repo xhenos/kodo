@@ -53,7 +53,7 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 ## Forks information
 
 <div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/img/forks_logo-neko.png" width="28" height="28" fit="contain" immediate />
+    <g-image class="inline align-top" src="/assets/forks_logo-neko.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/Neko">Neko</a></h3>
 </div>
 
@@ -61,13 +61,13 @@ This fork can only restore **MangaDex** entries in a backup. If there are entrie
 
 
 <div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/img/forks_logo-az.png" width="28" height="28" fit="contain" immediate />
+    <g-image class="inline align-top" src="/assets/forks_logo-az.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/TachiyomiAZ/">TachiyomiAZ</a></h3>
     <h3 style="margin-right: 0.25rem;">, </h3>
-    <g-image class="inline align-top" src="/img/forks_logo-sy.png" width="28" height="28" fit="contain" immediate />
+    <g-image class="inline align-top" src="/assets/forks_logo-sy.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/TachiyomiSY/">TachiyomiSY</a></h3>
     <h3 style="margin-left: 0.5rem; margin-right: 0.25rem;"> and </h3>
-    <g-image class="inline align-top" src="/img/forks_logo-eh.png" width="28" height="28" fit="contain" immediate />
+    <g-image class="inline align-top" src="/assets/forks_logo-eh.png" width="28" height="28" fit="contain" immediate />
     <h3><a href="/forks/TachiyomiEH/">TachiyomiEH</a></h3>
 </div>
 

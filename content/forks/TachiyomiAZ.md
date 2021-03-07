@@ -5,7 +5,7 @@ cms:
   collection: forks
   entry: TachiyomiAZ
   edit: true
-icon: /img/forks_logo-az.png
+icon: /assets/forks_logo-az.png
 forkName: tachiyomi-az
 metaImage: /ogimage-az.png
 metaColor: "#FFCC4D"
@@ -85,4 +85,4 @@ This hentai focused fork is based off of **[TachiyomiEH](/forks/TachiyomiEH/)**,
 - Grid view corner rounding configuration
 - Manga recommendations
 
-<g-image class="headerLogo" src="/img/ogimage-az.png" width="128" height="128" fit="contain"/>
+<g-image class="headerLogo" src="/assets/ogimage-az.png" width="128" height="128" fit="contain"/>

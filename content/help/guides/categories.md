@@ -17,7 +17,7 @@ You can even add your bookmarked manga in multiple categories and can easily con
 
 To create a category, follow the steps below.
 
-:::guide
+::: guide
 1. Go to <Navigation item="more"/> → <Navigation item="categories"/>.
 1. Press the **+ Add**  button in the bottom right.
 1. Enter a name and press **OK**.
@@ -27,7 +27,7 @@ To create a category, follow the steps below.
 
 To edit a category follow the steps below.
 
-:::guide
+::: guide
 1. Go to <Navigation item="more"/> → <Navigation item="categories"/>.
 1. Long press a category.
 1. Tap <Navigation item="edit"/> on the top-right.
@@ -39,7 +39,7 @@ You can change the order of Categories, such as bringing a certain Category to t
 
 To do this, follow the steps below.
 
-:::guide
+::: guide
 1. Go to <Navigation item="more"/> → <Navigation item="categories"/>.
 1. Drag the category to your prefered position using the <Navigation item="reorder"/> icon.
 :::
@@ -48,7 +48,7 @@ To do this, follow the steps below.
 
 To delete a category, follow the steps below.
 
-:::guide
+::: guide
 1. Go to <Navigation item="more"/> → <Navigation item="categories"/>.
 1. Long press a category.
 1. Tap <Navigation item="delete"/> on the top-right.
@@ -56,13 +56,13 @@ To delete a category, follow the steps below.
 
 ## Add manga to category
 
-:::videolink
+::: videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_category-add-to.webm)
 :::
 
 To add manga to a category, follow the steps below.
 
-:::guide
+::: guide
 1. Long press the manga you want to add.
 2. Press the <Navigation item="set_categories"/> button.
 3. Select which category or categories you want it in and press **OK**.
@@ -71,13 +71,13 @@ To add manga to a category, follow the steps below.
 
 ## Remove manga from category
 
-:::videolink
+::: videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_category-remove-from.webm)
 :::
 
 To remove manga from a category, follow the steps below.
 
-:::guide
+::: guide
 1. Long press the manga that you want to remove.
 1. Press the <Navigation item="set_categories"/> button.
 1. Deselect the category or categories you want to remove it from and press **OK**.
