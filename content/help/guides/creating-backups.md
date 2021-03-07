@@ -15,22 +15,44 @@ Backups are inter-compatible between **Tachiyomi** versions, with a few exceptio
 Backups can hold the following information:
 
 1. **Titles**
-2. **Categories**
-3. **Read chapters**
-4. **Tracking settings**
-5. **Reading history**
+1. **Categories**
+1. **Read chapters**
+1. **Tracking settings**
+1. **Reading history**
+1. **Manga information** such as Author, Artist, Date Added to Library, Selected Viewer, etc.
 
-:::guide
+::: guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create backup** and select a location to save it.
 :::
 
+Legacy Backups can hold the following information:
+
+1. **Titles**
+1. **Categories**
+1. **Read chapters**
+1. **Tracking settings**
+1. **Reading history**
+
+::: guide
+You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create legacy backup** and select a location to save it.
+:::
+
+Legacy Backups are intended for versions of Tachiyomi, or forks based on versions, older than **0.10.7**.
+
+
 ## Restoring
 
-Restoring is done from the <Navigation item="settings_backup"/> settings. To restore without issues be sure to:
+Restoring is done from the <Navigation item="settings_backup"/> settings.
+
+To restore a backup without issues be sure to:
+
+* Log into the <Navigation item="settings_tracking"/> services that you previously used.
+
+To restore a legacy backup without issues be sure to:
 
 * Install all the <Navigation item="tab_extensions"/> that were installed at the time of the backup.
-* Log into the <Navigation item="settings_tracking"/> services that you use.
-* Log into **MangaDex** using **WebView**[ as explained here](/help/faq/#no-results-when-searching).
+* Log into the <Navigation item="settings_tracking"/> services that you previously used.
+* If you use MangaDex, login to it using **WebView** <g-link to="/help/faq/sources/#why-are-there-no-results-when-searching">as explained here</g-link>.
 * You're able to access all the sources through the **WebView**.
 * Be on a consistent internet connection.
 
@@ -38,7 +60,7 @@ Restoring is done from the <Navigation item="settings_backup"/> settings. To res
 
 You can transfer downloaded manga chapters from one version of **Tachiyomi** to another.
 
-:::guide
+::: guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_downloads"/> and then set the download directory to that of the download folder of your old **Tachiyomi**, then restore the backup.
 :::
 
@@ -46,7 +68,7 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 It is highly recommended you turn on auto backups, this will ensure you can recover if need be.
 
-:::guide
+::: guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then setting a **backup frequency**. In the case of a catastrophic failure, at least you will be able to recover.
 :::
 

@@ -43,7 +43,7 @@ Double tap animation speed changes the speed in which the zoom happens when doub
 Briefly show current mode when reader is opened
 
 ## 32-bit color <Badge text="False" />
-This setting decodes images in ARGB888 format to allow the reader to display more colors.
+This setting decodes images in `ARGB888` format to allow the reader to display more colors.
 
 :::c-warning
 This setting will only show up on smartphones running **Android 8.0** or higher.
@@ -66,17 +66,17 @@ This allows you to control what color the background should be in reader. Backgr
 <Carousel v-bind:items="[
     {
         title: 'Black',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-background-black.png',
         desc: 'Surrounds page with black. With an AMOLED screen you can save battery by using this.'
     },
     {
         title: 'Gray',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-background-gray.png',
         desc: 'Surrounds page with gray.'
     },
     {
         title: 'White',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-background-white.png',
         desc: 'Surrounds page with white. Makes pages seemless with the screen.'
     }
 ]" />
@@ -102,6 +102,50 @@ This setting allows filtered chapters to be skipped during reading.
 ## Always show chapter transition <Badge text="True" />
 Chapter transition is the area between chapters that shows the names of current and next chapters. When this option is disabled, the reader will hide this area only if the next chapter is loaded.
 
+# Navigation layout
+This changes how tapping behaves.
+<Carousel v-bind:items="[
+    {
+        title: 'Right and Left',
+        image: '/assets/guides_nav-right-and-left-light.png',
+        desc: 'This is the default for Pager.'
+    },
+    {
+        title: 'L shaped',
+        image: '/assets/guides_nav-l-light.png',
+        desc: 'This is the default for Webtoon and Vertical.'
+    },
+    {
+        title: 'Kindlish',
+        image: '/assets/guides_nav-kindlish-light.png'
+    },
+    {
+        title: 'Edge',
+        image: '/assets/guides_nav-edge-light.png'
+    }
+]" />
+
+## Invert Tapping <Badge text="None" type="default-indicator" vertical="middle" />
+
+Inverts the tapping position depending on which setting you choose.
+
+**None**
+- Tapping left goes to the next page, and tapping right goes to the previous page
+- Tapping bottom goes to the next page, and tapping top goes to the previous page
+
+**Horizontal**
+- Tapping left goes to the previous page, and tapping right goes to the next page
+
+**Vertical**
+- Tapping bottom goes to the previous page, and tapping top goes to the next page
+
+**Both**
+- Applies the two previous mentioned settings
+
+::: c-warning
+This setting can only be used when Tapping is enabled.
+:::
+
 ## Scale type <Badge text="Fit screen" />
 Scale type lets you choose how the page fits in your screen.
 
@@ -112,28 +156,29 @@ All examples are illustrations and may not reflect what actually happens.
 <Carousel v-bind:items="[
     {
         title: 'Fit screen',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-fit-screen.png',
+        desc: 'Will fit either to width or height depending on image resolution'
     },
     {
         title: 'Stretch',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-stretch.png',
     },
     {
         title: 'Fit width',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-fit-width.png',
     },
     {
         title: 'Fit height',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-fit-height.png',
     },
     {
         title: 'Original size',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-original-size.png',
         desc: 'Will be either zoom in or out depending on image resolution'
     },
     {
         title: 'Smart fit',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-smart-fit.png',
         desc: 'Fits to the longest side of the image'
     }
 ]" />
@@ -153,17 +198,17 @@ All examples are illustrations
 <Carousel v-bind:items="[
     {
         title: 'Left',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-zoomstartpos-left.png',
         desc: 'Will start at the left side of the page.'
     },
     {
         title: 'Right',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-zoomstartpos-right.png',
         desc: 'Will start at the right side of the page.'
     },
     {
         title: 'Center',
-        image: 'https://tachiyomi.org/icons/logo.svg',
+        image: '/assets/guides_reader-zoomstartpos-center.png',
         desc: 'Will start at the center of the page.'
     }
 ]" />
@@ -171,46 +216,22 @@ All examples are illustrations
 ## Crop borders <Badge text="False" />
 Tries to remove excess white borders
 
-<Carousel name="carousel-crop-borders">
-    <Slide>
-        <figure class="centered">
-	        <h4>With Crop borders on</h4>
-            <img height="400" intrinsicsize="208x500" width="260" src="https://tachiyomi.org/icons/logo.svg">
-        </figure>
-    </Slide>
-    <Slide>
-        <figure class="centered">
-	        <h4>With Crop borders off</h4>
-            <img height="400" intrinsicsize="208x500" width="260" src="https://tachiyomi.org/icons/logo.svg">
-        </figure>
-    </Slide>
-</Carousel>
+<Carousel v-bind:items="[
+    {
+        title: 'With Crop borders on',
+        image: '/assets/guides_reader-crop-border-on.png'
+    },
+    {
+        title: 'With Crop borders off',
+        image: '/assets/guides_reader-crop-border-off.png'
+    }
+]" />
 
 ## Side padding <Badge text="Webtoon" color="gray" /> <Badge text="None" type="default-indicator" vertical="middle" />
 Adds a percentage side padding to the sides of the page
 
 ## Tapping <Badge text="True" />
 This setting enables switching pages by tapping the sides of the screen.
-
-## Invert Tapping <Badge text="None" />
-Inverts the tapping position depending on which setting you choose.
-
-**None**
-- Tapping left goes to the next page, and tapping right goes to the previous page
-- Tapping bottom goes to the next page, and tapping top goes to the previous page
-
-**Horizontal**
-- Tapping left goes to the previous page, and tapping right goes to the next page
-
-**Vertical**
-- Tapping bottom goes to the previous page, and tapping top goes to the next page
-
-**Both**
-- Applies the two previous mentioned settings
-
-:::c-warning
-This setting can only be used when Tapping is enabled.
-:::
 
 ## Long tap dialog <Badge text="True" />
 If enabled, you can long tap on the screen to get the options to set the current page as cover, share it, or save it.
@@ -223,5 +244,5 @@ This setting allows you to flip pages using the volume keys, with the volume up 
 Reverses the Volume keys function of volume up going to the next page and volume down going to the last page.
 
 :::c-warning
-This setting can only be used when Volume keys setting is enabled.
+This setting can only be used when **Volume keys** setting is enabled.
 :::

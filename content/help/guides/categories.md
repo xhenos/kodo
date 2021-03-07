@@ -64,9 +64,9 @@ To add manga to a category, follow the steps below.
 
 ::: guide
 1. Long press the manga you want to add.
-2. Press the <Navigation item="set_categories"/> button.
-3. Select which category or categories you want it in and press **OK**.
-	> You can also add multiple manga to a category by selecting them when you see the <Navigation item="set_categories"/> button.
+1. Press the <Navigation item="set_categories"/> button.
+1. Select which category or categories you want it in and press **OK**.
+> You can also add multiple manga to a category by selecting them when you see the <Navigation item="set_categories"/> button.
 :::
 
 ## Remove manga from category
@@ -81,5 +81,5 @@ To remove manga from a category, follow the steps below.
 1. Long press the manga that you want to remove.
 1. Press the <Navigation item="set_categories"/> button.
 1. Deselect the category or categories you want to remove it from and press **OK**.
-	> You can also remove multiple manga from a category by selecting them when you see the <Navigation item="set_categories"/> button.
+> You can also remove multiple manga from a category by selecting them when you see the <Navigation item="set_categories"/> button.
 :::

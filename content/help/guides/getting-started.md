@@ -13,12 +13,12 @@ import VersionTag from '~/components/VersionTag.vue'
 
 ## Installation
 
-You can download the latest version of **Tachiyomi** by going to our [download](/download/) page.
-When you've completed the download, open the <VersionTag stableFileName /> file and proceed with installing it.
+You can download the latest version of **Tachiyomi** by going to our <g-link to="/download/">download</g-link> page.
+When you've completed the download, open the <VersionTag stableFileName/> file and proceed with installing it.
 
 ## Installing an extension
 
-:::videolink
+::: videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_extension-install.mp4)
 :::
 
@@ -26,13 +26,13 @@ Now that **Tachiyomi** is installed, open the app and navigate to <Navigation it
 
 Find the extension that you'd like to use then press the <Navigation item="install"/> button next to your desired extension and then accept the installation prompt.
 
-:::c-warning
+::: c-warning
 You *might* need to give **Tachiyomi** the permission to *install unknown apps*, you can read how to do so [here](/help/faq/#how-do-i-allow-third-party-installations).
 :::
 
 ## Adding manga to your library
 
-:::videolink
+::: videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_library-add.mp4)
 :::
 
@@ -45,6 +45,7 @@ Now that you've presumably found manga that you want to add, click on it and the
 ::: guide Other ways to search for manga
 You can also search for manga globally across all your sources by using <Navigation item="search"/> located in the top-right of <Navigation item="browse"/> → **Sources**.
 :::
+
 ::: guide Trouble finding a specific manga
 Check your spelling and try again, there's also the chance that your used source may not host the manga you're looking for.
 * Some sources use **Japanese romanized** titles instead of **English** ones.
@@ -54,7 +55,8 @@ Check your spelling and try again, there's also the chance that your used source
 * Some sources use different wordings
   > For example **3-gatsu no Lion** instead of **Sangatsu no Lion**.
 
-  :::note
-  Find more potential answers to your questions [here](/help/faq/#why-can-t-i-find-x-manga).
-  :::
+::: note
+Find more potential answers to your questions [here](/help/faq/#why-can-t-i-find-x-manga).
+:::
+
 :::

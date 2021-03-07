@@ -9,6 +9,8 @@ sidebar: default
 prev: /help/faq/extensions/
 ---
 
+# 🎆 THIS PAGE NEEDS UPDATING
+
 ## MangaDex
 
 ### Why are there no results when searching?
