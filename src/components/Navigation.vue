@@ -1,10 +1,10 @@
 <template>
 	<span v-if="nav.link" id="NavigationVue" class="app-navigation" :class="nav.class" title="App navigation">
-		<a class="app-link" :href="nav.link + entry">
+		<g-link class="app-link" :to="nav.link + entry">
 			<MaterialIcon v-if="nav.icon" class="app-icon select-none" :icon="nav.icon" />
 			<span class="app-label" :class="nav.internalClass">{{ nav.text }}</span>
 			<slot />
-		</a>
+		</g-link>
 	</span>
 	<span v-else id="NavigationVue" class="app-navigation" :class="nav.class" title="App navigation">
 		<MaterialIcon v-if="nav.icon" class="app-icon select-none" :icon="nav.icon" />
@@ -82,11 +82,11 @@ export default {
 				reorder: { text: "Reorder", icon:"reorder" },
 				overflow: { text: "Overflow", icon:"more_vert" },
 				/* Forks */
-				neko: { text: "Neko", internalClass:"nav-tachiyomi_neko"},
-				tachiyomij2k: { text: "TachiyomiJ2K", link:"/forks/Neko/"},
-				tachiyomiaz: { text: "TachiyomiAZ", link:"/forks/TachiyomiAZ/"},
-				tachiyomisy: { text: "TachiyomiSY", link:"/forks/TachiyomiSY/"},
-				tachiyomieh: { text: "TachiyomiEH", link:"/forks/TachiyomiEH/"},
+				neko: { text: "Neko", link:"/forks/Neko/", class:"forkLink forkIconNeko"},
+				tachiyomij2k: { text: "TachiyomiJ2K", link:"/forks/TachiyomiJ2K/", class:"forkLink forkIconJ2K"},
+				tachiyomiaz: { text: "TachiyomiAZ", link:"/forks/TachiyomiAZ/", class:"forkLink forkIconAZ"},
+				tachiyomisy: { text: "TachiyomiSY", link:"/forks/TachiyomiSY/", class:"forkLink forkIconSY"},
+				tachiyomieh: { text: "TachiyomiEH", link:"/forks/TachiyomiEH/", class:"forkLink forkIconEH"},
 			}[this.item];
 		},
 	},
@@ -94,6 +94,68 @@ export default {
 </script>
 
 <style lang="stylus">
+.forkLink {
+	font-size inherit !important
+	&.forkIconNeko::before {
+		content ""
+		display inline-block
+		background url("/assets/forks_logo-neko.png") no-repeat
+		vertical-align middle
+		background-size 0.85em
+		width 0.85em
+		height 0.85em
+		margin-bottom 0.2em
+		margin-right 0.1em
+	}
+	&.forkIconJ2K::before {
+		content ""
+		display inline-block
+		background url("/assets/forks_logo-j2k.png") no-repeat
+		vertical-align middle
+		background-size 0.85em
+		width 0.85em
+		height 0.85em
+		margin-bottom 0.2em
+		margin-right 0.1em
+	}
+	&.forkIconAZ::before {
+		content ""
+		display inline-block
+		background url("/assets/forks_logo-az.png") no-repeat
+		vertical-align middle
+		background-size 0.85em
+		width 0.85em
+		height 0.85em
+		margin-bottom 0.2em
+		margin-right 0.1em
+	}
+	&.forkIconSY::before {
+		content ""
+		display inline-block
+		background url("/assets/forks_logo-sy.png") no-repeat
+		vertical-align middle
+		background-size 0.85em
+		width 0.85em
+		height 0.85em
+		margin-bottom 0.2em
+		margin-right 0.1em
+	}
+	&.forkIconEH::before {
+		content ""
+		display inline-block
+		background url("/assets/forks_logo-eh.png") no-repeat
+		vertical-align middle
+		background-size 0.85em
+		width 0.85em
+		height 0.85em
+		margin-bottom 0.2em
+		margin-right 0.1em
+	}
+	.app-label {
+		font-size inherit !important
+	}
+}
+
 #NavigationVue {
 
 	&.app-navigation {

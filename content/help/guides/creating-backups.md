@@ -52,26 +52,16 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 ## Forks information
 
-<div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/assets/forks_logo-neko.png" width="28" height="28" fit="contain" immediate />
-    <h3><a href="/forks/Neko">Neko</a></h3>
-</div>
+<div class="text-2xl"><Navigation item="neko"/></div>
 
 This fork can only restore **MangaDex** entries in a backup. If there are entries from other sources that are a part of that backup then they will not transfer.
 
+<div class="text-2xl"><Navigation item="tachiyomiaz"/>, <Navigation item="tachiyomisy"/>, <Navigation item="tachiyomieh"/></div>
 
-<div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/assets/forks_logo-az.png" width="28" height="28" fit="contain" immediate />
-    <h3><a href="/forks/TachiyomiAZ/">TachiyomiAZ</a></h3>
-    <h3 style="margin-right: 0.25rem;">, </h3>
-    <g-image class="inline align-top" src="/assets/forks_logo-sy.png" width="28" height="28" fit="contain" immediate />
-    <h3><a href="/forks/TachiyomiSY/">TachiyomiSY</a></h3>
-    <h3 style="margin-left: 0.5rem; margin-right: 0.25rem;"> and </h3>
-    <g-image class="inline align-top" src="/assets/forks_logo-eh.png" width="28" height="28" fit="contain" immediate />
-    <h3><a href="/forks/TachiyomiEH/">TachiyomiEH</a></h3>
-</div>
-
-These forks have some built-in extensions, namely: **E-Hentai**, **Hitomi.la**, and **nHentai** for <Navigation item="tachiyomiaz" /> and <Navigation item="tachiyomieh" /> while <Navigation item="tachiyomisy" /> only has **E-Hentai**.
-
+These forks have some built-in extensions, namely: **E-Hentai**, **Hitomi.la**, and **nHentai** for <Navigation item="tachiyomiaz"/> and <Navigation item="tachiyomieh"/> while <Navigation item="tachiyomisy"/> only has **E-Hentai**.
 
 Titles from said extensions will not be restored when restoring a backup made by these forks to standard Tachiyomi. It is possible to restore titles to these forks, but it is not possible to back them up out of these forks.
+
+<div class="text-2xl"><Navigation item="tachiyomij2k"/></div>
+
+This fork can only restore legacy backups, as it has not made the changes needed to support the new backup yet.
