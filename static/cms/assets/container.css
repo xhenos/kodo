@@ -141,3 +141,6 @@
 .custom-block.aside-guide a {
 	color: #476582;
 }
+.custom-block p {
+	white-space: pre-wrap;
+}
