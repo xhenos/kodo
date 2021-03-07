@@ -3,7 +3,7 @@ title: Contribution
 description: Find out how to help translate or build the app and extensions.
 cms:
   collection: miscellaneous
-  slug: contribution
+  entry: contribution
   edit: true
 sidebar: default
 next: /download/

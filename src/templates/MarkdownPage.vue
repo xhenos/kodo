@@ -67,7 +67,7 @@ query($id: ID!) {
 		prev
 		cms {
 			collection
-			slug
+			entry
 			edit
 		}
 		headings {

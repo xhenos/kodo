@@ -5,7 +5,7 @@ description: Here is a list of all available extensions to download inside the a
 onThisPage: false
 cms:
   collection: miscellaneous
-  slug: download
+  entry: download
   edit: false
 metaColor: "#667eea"
 prev: /help/contribution/

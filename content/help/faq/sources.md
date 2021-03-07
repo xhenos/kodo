@@ -3,7 +3,7 @@ title: Sources
 description: Need help with something? Most of your issues can probably be solved from this page.
 cms:
   collection: faq
-  slug: sources
+  entry: sources
   edit: true
 sidebar: default
 prev: /help/faq/extensions/

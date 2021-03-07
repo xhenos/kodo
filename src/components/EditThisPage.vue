@@ -20,7 +20,7 @@ export default {
 			return this.$route.matched[0].path;
 		},
 		editLink() {
-			return `/cms/#/edit/${this.$page.markdownPage.cms.collection}/${this.$page.markdownPage.cms.slug}`;
+			return `/cms/#/edit/${this.$page.markdownPage.cms.collection}/${this.$page.markdownPage.cms.entry}`;
 		},
 	},
 };

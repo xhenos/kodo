@@ -4,7 +4,7 @@ title: Application
 description: Need help with something? Most of your issues can probably be solved from this page.
 cms:
   collection: faq
-  slug: application
+  entry: application
   edit: true
 sidebar: default
 next: /help/faq/settings/

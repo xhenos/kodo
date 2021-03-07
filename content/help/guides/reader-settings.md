@@ -3,7 +3,7 @@ title: Reader settings
 description: Reader settings for Tachiyomi.
 cms:
   collection: guides
-  slug: reader-settings
+  entry: reader-settings
   edit: true
 sidebar: default
 prev: /help/guides/reading-local-manga/

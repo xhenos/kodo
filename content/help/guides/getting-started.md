@@ -3,7 +3,7 @@ title: Getting started
 description: Essential information to help you get set up with Tachiyomi.
 cms:
   collection: guides
-  slug: getting-started
+  entry: getting-started
   edit: true
 sidebar: default
 next: /help/guides/troubleshooting-problems/

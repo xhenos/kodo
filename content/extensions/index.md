@@ -3,7 +3,7 @@ title: Extensions
 description: Here is a list of all available extensions to download inside the app.
 cms:
   collection: miscellaneous
-  slug: extensions
+  entry: extensions
   edit: true
 sidebar: default
 onThisPage: false

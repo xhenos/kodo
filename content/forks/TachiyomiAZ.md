@@ -3,7 +3,7 @@ title: TachiyomiAZ
 description: This hentai focused fork is based off of TachiyomiEH, it has most features and fixes from Tachiyomi, as well as features from TachiyomiJ2K.
 cms:
   collection: forks
-  slug: TachiyomiAZ
+  entry: TachiyomiAZ
   edit: true
 icon: /img/forks_logo-az.png
 forkName: tachiyomi-az

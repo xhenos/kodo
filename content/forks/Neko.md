@@ -3,7 +3,7 @@ title: Neko
 description: MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains features specific to MangaDex that those versions cannot offer.
 cms:
   collection: forks
-  slug: Neko
+  entry: Neko
   edit: true
 icon: /img/forks_logo-neko.png
 forkName: neko

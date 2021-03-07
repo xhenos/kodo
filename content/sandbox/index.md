@@ -3,7 +3,7 @@ title: Sandbox
 description: Sandbox playground for demonstrating and documenting how different website functions work for easier integration by contributors.
 cms:
   collection: miscellaneous
-  slug: sandbox
+  entry: sandbox
   edit: true
 sidebar: default
 onThisPage: false
