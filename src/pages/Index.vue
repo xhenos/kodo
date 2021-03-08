@@ -7,7 +7,9 @@
 
 			<main>
 				<div class="jumbotron flex flex-wrap content-center">
-					<div class="container mx-auto px-4 flex flex-col items-center mt-32 mb-8 xl:my-64 xl:px-48">
+					<div
+						class="container mx-auto px-4 flex flex-col items-center mt-32 mb-8 xl:mt-48 xl:mb-24 xl:px-48"
+					>
 						<div class="flex flex-col items-center mb-2 text-ui-primary">
 							<Logo :width="80" />
 							<h2 class="text-5xl mt-5 lg:mt-2 lg:text-6xl font-medium tracking-tighter border-none">
@@ -15,8 +17,8 @@
 							</h2>
 						</div>
 						<h1 class="text-2xl font-normal text-center lg:text-3xl">
-							Tachiyomi is an open-source Android app that lets you read any manga from your
-							smartphone – faster and easier than ever.
+							Tachiyomi is an open-source Android app that lets you read any manga from your smartphone –
+							faster and easier than ever.
 						</h1>
 
 						<div class="w-full md:w-auto flex flex-col md:flex-row justify-center mt-8">
@@ -38,7 +40,7 @@
 						<span class="versionDisclaimer mt-4">* Requires Android 5.0 or higher.</span>
 					</div>
 				</div>
-				<div class="features container mx-auto px-4 pt-8 pb-0 xl:py-32 xl:px-48">
+				<div class="features container mx-auto px-4 pt-8 pb-0 xl:py-4 xl:px-48">
 					<div class="flex flex-wrap justify-center -mx-4">
 						<div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
 							<UserCheckIcon size="3x" class="mb-6 text-ui-primary" />
@@ -46,7 +48,8 @@
 								Tracking
 							</h3>
 							<p class="text-lg text-center">
-								Automatically keep track of your manga with MyAnimeList, AniList, Kitsu, Shikimori,and Bangumi.
+								Automatically keep track of your manga with MyAnimeList, AniList, Kitsu, Shikimori,and
+								Bangumi.
 							</p>
 						</div>
 
@@ -66,7 +69,8 @@
 								Customization
 							</h3>
 							<p class="text-lg text-center">
-								A configurable reader with multiple reading modes, custom color filters, and other settings.
+								A configurable reader with multiple reading modes, custom color filters, and other
+								settings.
 							</p>
 						</div>
 					</div>
@@ -74,7 +78,7 @@
 				<div class="copyright container mx-auto px-4 py-8 ">
 					<p class="mt-8 text-center">
 						<a href="https://www.apache.org/licenses/LICENSE-2.0">Open-source Apache Licensed</a>
-							| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
+						| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
 					</p>
 				</div>
 			</main>
@@ -177,7 +181,7 @@ export default {
 .jumbotron {
 	background: linear-gradient(
 			0deg,
-			rgba(var(--index-background-gradient-start), 1) 5%,
+			rgba(var(--index-background-gradient-start), 100%) 1%,
 			rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
 		),
 		var(--index-background-image);
