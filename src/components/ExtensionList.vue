@@ -32,7 +32,7 @@
 						title="Download APK"
 						download
 					>
-						<MaterialIcon icon="cloud_download" />
+						<DownloadIcon class="inline" size="1x" />
 						<span class="ml-2">Download</span>
 					</a>
 				</div>
@@ -46,9 +46,14 @@ import axios from "axios";
 import groupBy from "lodash.groupby";
 import sortBy from "lodash.sortby";
 import ISO6391 from "iso-639-1";
+import { DownloadIcon } from "vue-feather-icons";
 import { EXTENSION_JSON } from "~/constants";
 
 export default {
+	components: {
+		DownloadIcon,
+	},
+
 	data() {
 		return {
 			extensions: [],
@@ -112,6 +117,9 @@ export default {
 		.extension-download {
 			&:hover {
 				color white !important
+			}
+			svg {
+				margin-bottom 4px
 			}
 		}
 		&:not(:last-child) {
