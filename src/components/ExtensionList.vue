@@ -28,7 +28,7 @@
 					<img class="extension-icon" :src="iconUrl(extension.apk)" width="42" height="42" />
 					<div class="extension-text">
 						<div class="upper">
-							<span class="bold">{{ extension.name.split(": ")[1] }}</span>
+							<span class="font-semibold">{{ extension.name.split(": ")[1] }}</span>
 							<Badge :text="'v' + extension.version" />
 						</div>
 						<div class="down">
@@ -72,10 +72,8 @@ export default {
 		const { data } = await axios.get(EXTENSION_JSON);
 		const values = Object.values(groupBy(data, "lang"));
 		values.sort((a, b) => {
-			console.log(a, b);
 			let langA = this.langName(a[0].lang).split(" ")[0];
 			let langB = this.langName(b[0].lang).split(" ")[0];
-			console.log(langA, langB);
 			if (langA === "All" && langB === "English") {
 				return -1;
 			}
@@ -133,6 +131,7 @@ export default {
 
 .anchor {
 	margin-top -3.9em
+	padding-bottom 0.2em
 	padding-top 4.5em
 	.extension {
 		align-items center
@@ -164,17 +163,26 @@ export default {
 			}
 		}
 		.extension-download {
+			margin-right 0.5em
 			&:hover {
 				color white !important
 			}
 			svg {
 				margin-bottom 4px
-			}
-		}
+			}		}
 		@media (max-width: 767px) {
 			.extension-text .down,
 			.extension-download span {
 				display none
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		.extension {
+			border 1px solid var(--color-ui-border)
+			border-radius 8px
+			.extension-download {
+				background-color var(--color-ui-container)
 			}
 		}
 	}
