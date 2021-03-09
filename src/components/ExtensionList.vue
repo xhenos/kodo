@@ -53,7 +53,6 @@
 <script>
 import axios from "axios";
 import groupBy from "lodash.groupby";
-import sortBy from "lodash.sortby";
 import ISO6391 from "iso-639-1";
 import { DownloadIcon } from "vue-feather-icons";
 import { EXTENSION_JSON } from "~/constants";
@@ -72,7 +71,32 @@ export default {
 	async beforeMount() {
 		const { data } = await axios.get(EXTENSION_JSON);
 		const values = Object.values(groupBy(data, "lang"));
-		this.$data.extensions = sortBy(values, [g => this.langName(g[0].lang)]);
+		values.sort((a, b) => {
+			console.log(a, b);
+			let langA = this.langName(a[0].lang).split(" ")[0];
+			let langB = this.langName(b[0].lang).split(" ")[0];
+			console.log(langA, langB);
+			if (langA === "All" && langB === "English") {
+				return -1;
+			}
+			if (langA === "English" && langB === "All") {
+				return 1;
+			}
+			if (langA === "English") {
+				return -1;
+			}
+			if (langB === "English") {
+				return 1;
+			}
+			if (langA < langB) {
+				return -1;
+			}
+			if (langA > langB) {
+				return 1;
+			}
+			return 0;
+		});
+		this.$data.extensions = values;
 	},
 
 	updated() {
