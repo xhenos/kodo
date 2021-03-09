@@ -1,5 +1,6 @@
 <template>
 	<div id="ExtensionList">
+		<p>Here is a list of all available extensions you can download to use with Tachiyomi.</p>
 		<div v-for="extensionGroup in extensions" :key="extensionGroup[0].lang">
 			<h3>
 				{{ langName(extensionGroup[0].lang) }}
