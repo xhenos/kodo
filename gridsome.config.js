@@ -26,6 +26,7 @@ module.exports = {
 				sections: [
 					{
 						title: "Frequently Asked Questions",
+						index: "/help/",
 						items: [
 							"/help/faq/application/",
 							"/help/faq/settings/",
@@ -35,6 +36,7 @@ module.exports = {
 					},
 					{
 						title: "Guides",
+						index: "/help/",
 						items: [
 							"/help/guides/getting-started/",
 							"/help/guides/troubleshooting-problems/",
@@ -47,11 +49,7 @@ module.exports = {
 					},
 					{
 						title: "Tachiyomi",
-						items: ["/help/contribution/", "/download/", "/extensions/"],
-					},
-					{
-						title: "Tachiyomi Forks",
-						index: "/forks/",
+						items: ["/help/contribution/", "/download/", "/extensions/", "/forks/"],
 					},
 				],
 			},
