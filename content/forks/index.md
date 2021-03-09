@@ -14,10 +14,7 @@ Forks are alternative versions of **Tachiyomi** with exclusive features.
 
 <br>
 
-<div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/assets/forks_logo-neko.png" width="48" height="48" fit="contain" immediate />
-    <g-link to="/forks/Neko/" class="align-middle ml-2 text-3xl">Neko</g-link>
-</div>
+<div class="text-4xl"><Navigation item="neko"/></div>
 
 <hr>
 
@@ -33,11 +30,7 @@ Some features include:
 
 <br>
 
-<div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/assets/forks_logo-j2k.png" width="48" height="48" fit="contain" immediate />
-    <g-link to="/forks/TachiyomiJ2K/" class="align-middle ml-2 text-3xl">TachiyomiJ2K</g-link>
-</div>
-
+<div class="text-4xl"><Navigation item="tachiyomij2k"/></div>
 
 <hr>
 
@@ -53,10 +46,7 @@ Some features include:
 
 <br>
 
-<div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/assets/forks_logo-az.png" width="48" height="48" fit="contain" immediate />
-    <g-link to="/forks/TachiyomiAZ/" class="align-middle ml-2 text-3xl">TachiyomiAZ</g-link>
-</div>
+<div class="text-4xl"><Navigation item="tachiyomiaz"/></div>
 
 <hr>
 
@@ -74,10 +64,7 @@ Some features include:
 
 <br>
 
-<div class="contentHeader contentIcon">
-    <g-image class="inline align-top" src="/assets/forks_logo-sy.png" width="48" height="48" fit="contain" immediate />
-    <g-link to="/forks/TachiyomiSY/" class="align-middle ml-2 text-3xl">TachiyomiSY</g-link>
-</div>
+<div class="text-4xl"><Navigation item="tachiyomisy"/></div>
 
 <hr>
 

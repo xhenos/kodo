@@ -101,55 +101,55 @@ export default {
 		display inline-block
 		background url("/assets/forks_logo-neko.png") no-repeat
 		vertical-align middle
-		background-size 0.85em
-		width 0.85em
-		height 0.85em
+		background-size 1.4em
+		width 1.4em
+		height 1.4em
 		margin-bottom 0.2em
-		margin-right 0.1em
+		margin-right 0.2em
 	}
 	&.forkIconJ2K::before {
 		content ""
 		display inline-block
 		background url("/assets/forks_logo-j2k.png") no-repeat
 		vertical-align middle
-		background-size 0.85em
-		width 0.85em
-		height 0.85em
+		background-size 1.4em
+		width 1.4em
+		height 1.4em
 		margin-bottom 0.2em
-		margin-right 0.1em
+		margin-right 0.2em
 	}
 	&.forkIconAZ::before {
 		content ""
 		display inline-block
 		background url("/assets/forks_logo-az.png") no-repeat
 		vertical-align middle
-		background-size 0.85em
-		width 0.85em
-		height 0.85em
+		background-size 1.4em
+		width 1.4em
+		height 1.4em
 		margin-bottom 0.2em
-		margin-right 0.1em
+		margin-right 0.2em
 	}
 	&.forkIconSY::before {
 		content ""
 		display inline-block
 		background url("/assets/forks_logo-sy.png") no-repeat
 		vertical-align middle
-		background-size 0.85em
-		width 0.85em
-		height 0.85em
+		background-size 1.4em
+		width 1.4em
+		height 1.4em
 		margin-bottom 0.2em
-		margin-right 0.1em
+		margin-right 0.2em
 	}
 	&.forkIconEH::before {
 		content ""
 		display inline-block
 		background url("/assets/forks_logo-eh.png") no-repeat
 		vertical-align middle
-		background-size 0.85em
-		width 0.85em
-		height 0.85em
+		background-size 1.4em
+		width 1.4em
+		height 1.4em
 		margin-bottom 0.2em
-		margin-right 0.1em
+		margin-right 0.2em
 	}
 	.app-label {
 		font-size inherit !important
