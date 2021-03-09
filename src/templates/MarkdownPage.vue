@@ -168,6 +168,9 @@ export default {
 <style lang="stylus">
 
 #Markdown {
+	img {
+		border-radius 8px
+	}
 
 	a {
 		color var(--color-ui-primary)
