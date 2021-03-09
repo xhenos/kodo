@@ -1,6 +1,6 @@
 <template>
 	<span
-		class="badge px-4 h-6 rounded-full text-xs font-semibold flex items-center"
+		class="badge px-2 h-6 rounded-full text-xs font-semibold flex items-center"
 		:class="`bg-${color}-700 text-${color}-100`"
 	>
 		<material-icon v-if="icon" :icon="icon" color="color" class="mr-1" />

@@ -1,0 +1,134 @@
+<template>
+	<div>
+		<div v-for="extensionGroup in extensions" :key="extensionGroup[0].lang">
+			<h3>{{ langName(extensionGroup[0].lang) }}</h3>
+			<div
+				v-for="extension in extensionGroup"
+				:id="extension.pkg.replace('eu.kanade.tachiyomi.extension.', '')"
+				:key="extension.apk"
+				class="anchor"
+			>
+				<div class="extension">
+					<a
+						:href="`#${extension.pkg.replace('eu.kanade.tachiyomi.extension.', '')}`"
+						aria-hidden="true"
+						class="header-anchor"
+					>
+						#
+					</a>
+					<img class="extension-icon" :src="iconUrl(extension.apk)" width="42" height="42" />
+					<div class="extension-text">
+						<div class="upper">
+							<span class="bold">{{ extension.name.split(": ")[1] }}</span>
+							<Badge :text="'v' + extension.version" />
+						</div>
+						<div class="down">
+							{{ extension.pkg.replace("eu.kanade.tachiyomi.extension.", "") }}
+						</div>
+					</div>
+					<a
+						:href="apkUrl(extension.apk)"
+						class="extension-download mr-auto py-2 text-ui-primary font-bold px-4 border border-ui-border rounded-lg hover:bg-ui-primary hover:text-white transition-colors"
+						title="Download APK"
+						download
+					>
+						<MaterialIcon icon="cloud_download" />
+						<span class="ml-2">Download</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+import axios from "axios";
+import groupBy from "lodash.groupby";
+import sortBy from "lodash.sortby";
+import ISO6391 from "iso-639-1";
+import { EXTENSION_JSON } from "~/constants";
+
+export default {
+	data() {
+		return {
+			extensions: [],
+		};
+	},
+
+	async beforeMount() {
+		const { data } = await axios.get(EXTENSION_JSON);
+		const values = Object.values(groupBy(data, "lang"));
+		this.$data.extensions = sortBy(values, [g => this.langName(g[0].lang)]);
+	},
+
+	updated() {
+		if (window.location.hash) {
+			window.location.replace(window.location.hash);
+		}
+	},
+
+	methods: {
+		langName: code => (code === "all" ? "All" : `${ISO6391.getName(code)} (${ISO6391.getNativeName(code)})`),
+		iconUrl(pkg) {
+			const pkgName = pkg.substring(0, pkg.lastIndexOf("."));
+			return `https://raw.githubusercontent.com/tachiyomiorg/tachiyomi-extensions/repo/icon/${pkgName}.png`;
+		},
+		apkUrl: apk => `https://raw.githubusercontent.com/tachiyomiorg/tachiyomi-extensions/repo/apk/${apk}`,
+	},
+};
+</script>
+
+<style lang="stylus">
+.anchor {
+	margin-top -3.9em
+	padding-top 3.9em
+	.extension {
+		align-items center
+		display flex
+		padding 0.4em 0.2em
+		.header-anchor {
+			font-size 1.2em
+			opacity 0
+		}
+		&:hover .header-achor {
+			opacity 1
+		}
+		.extension-icon {
+			margin-right 0.5em
+		}
+		.extension-text {
+			flex 1
+			.upper {
+				.badge {
+					margin-left 8px
+				}
+			}
+			.down {
+				color #6c757d
+				font-family monospace
+				font-size 0.8rem
+			}
+		}
+		.extension-download {
+			&:hover {
+				color white !important
+			}
+		}
+		&:not(:last-child) {
+			border-bottom 1px solid #eaecef
+		}
+		@media (max-width: 767px) {
+			.extension-text .down,
+			.extension-download span {
+				display none
+			}
+		}
+	}
+	&:target {
+		.extension {
+			background-color var(--color-ui-container)
+			border-radius 8px
+		}
+	}
+}
+</style>

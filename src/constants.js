@@ -6,4 +6,5 @@ export const TACHIYOMI_J2K_STABLE_API_URL = "https://api.github.com/repos/Jays2K
 export const TACHIYOMI_SY_STABLE_API_URL = "https://api.github.com/repos/jobobby04/TachiyomiSY/releases/latest";
 export const TACHIYOMI_SY_PREVIEW_API_URL = "https://api.github.com/repos/jobobby04/TachiyomiSYPreview/releases/latest";
 export const NEKO_STABLE_API_URL = "https://api.github.com/repos/CarlosEsco/Neko/releases/latest";
+export const EXTENSION_JSON = "https://raw.githubusercontent.com/tachiyomiorg/tachiyomi-extensions/repo/index.json";
 export const EMPTY_URL = "";
