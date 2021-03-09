@@ -114,7 +114,7 @@ export default {
 			.down {
 				color #6c757d
 				font-family monospace
-				font-size 0.8rem
+				font-size 0.9rem
 			}
 		}
 		.extension-download {
