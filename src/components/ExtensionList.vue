@@ -1,7 +1,15 @@
 <template>
-	<div>
+	<div id="ExtensionList">
 		<div v-for="extensionGroup in extensions" :key="extensionGroup[0].lang">
-			<h3>{{ langName(extensionGroup[0].lang) }}</h3>
+			<h3>
+				{{ langName(extensionGroup[0].lang) }}
+				<span class="extensions-total">
+					Total:
+					<span class="extensions-total-sum">
+						{{ extensions.reduce((sum, item) => sum + item.length, 0) }}
+					</span>
+				</span>
+			</h3>
 			<div
 				v-for="extension in extensionGroup"
 				:id="extension.pkg.replace('eu.kanade.tachiyomi.extension.', '')"
@@ -85,6 +93,20 @@ export default {
 </script>
 
 <style lang="stylus">
+#ExtensionList {
+	h3 {
+		padding-bottom 0.75em
+		border-bottom 1px solid var(--color-ui-border)
+	}
+}
+
+.extensions-total {
+	float right
+	&-sum {
+		color var(--color-ui-primary)
+	}
+}
+
 .anchor {
 	margin-top -3.9em
 	padding-top 4.2em
@@ -125,9 +147,6 @@ export default {
 				margin-bottom 4px
 			}
 		}
-		&:not(:last-child) {
-			border-bottom 1px solid #eaecef
-		}
 		@media (max-width: 767px) {
 			.extension-text .down,
 			.extension-download span {
@@ -149,6 +168,16 @@ export default {
 			.header-anchor {
 				opacity 1
 			}
+		}
+	}
+	&:first-child {
+		border-top 1px solid var(--color-ui-border)
+	}
+}
+#ExtensionList > div {
+	&:not(:first-child) {
+		.extensions-total {
+			display none
 		}
 	}
 }
