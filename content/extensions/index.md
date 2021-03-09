@@ -4,7 +4,7 @@ description: Here is a list of all available extensions to download inside the a
 cms:
   collection: miscellaneous
   entry: extensions
-  edit: true
+  edit: false
 sidebar: default
 onThisPage: false
 prev: /download/

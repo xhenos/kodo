@@ -89,6 +89,7 @@ collections:
         name: download
         file: content/download/index.md
         preview_path: download/
+        hide: true
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -103,6 +104,7 @@ collections:
         name: extensions
         file: content/extensions/index.md
         preview_path: extensions/
+        hide: true
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -116,6 +118,7 @@ collections:
         name: help
         file: content/help/index.md
         preview_path: help/
+        hide: true
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
