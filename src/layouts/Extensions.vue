@@ -1,5 +1,5 @@
 <template>
-	<div id="ExtensionList">
+	<div class="extension-list">
 		<p>List of available extensions to use with Tachiyomi, you can download them from here or from the app.</p>
 		<div v-for="extensionGroup in extensions" :key="extensionGroup[0].lang">
 			<h3>
@@ -116,10 +116,17 @@ export default {
 </script>
 
 <style lang="stylus">
-#ExtensionList {
+.extension-list {
 	h3 {
 		padding-bottom 0.75em
 		border-bottom 1px solid var(--color-ui-border)
+	}
+	> div {
+		&:not(:first-of-type) {
+			.extensions-total {
+				display none
+			}
+		}
 	}
 }
 
@@ -205,13 +212,6 @@ export default {
 	}
 	&:first-child {
 		border-top 1px solid var(--color-ui-border)
-	}
-}
-#ExtensionList > div {
-	&:not(:first-child) {
-		.extensions-total {
-			display none
-		}
 	}
 }
 </style>
