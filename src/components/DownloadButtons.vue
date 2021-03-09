@@ -22,6 +22,9 @@ export default {};
 
 	.download-button {
 		flex-grow 1
+		&:hover {
+			cursor pointer
+		}
 	}
 
 	.download-button:nth-child(3) {
