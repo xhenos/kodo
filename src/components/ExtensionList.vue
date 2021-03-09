@@ -11,6 +11,7 @@
 				<div class="extension">
 					<a
 						:href="`#${extension.pkg.replace('eu.kanade.tachiyomi.extension.', '')}`"
+						@click.stop
 						aria-hidden="true"
 						class="header-anchor"
 					>
@@ -86,16 +87,18 @@ export default {
 <style lang="stylus">
 .anchor {
 	margin-top -3.9em
-	padding-top 3.9em
+	padding-top 4.2em
 	.extension {
 		align-items center
 		display flex
 		padding 0.4em 0.2em
 		.header-anchor {
-			font-size 1.2em
+			padding-left 0.2em
+			padding-right 0.2em
+			font-size 1.4em
 			opacity 0
 		}
-		&:hover .header-achor {
+		&:hover .header-anchor {
 			opacity 1
 		}
 		.extension-icon {
@@ -136,6 +139,16 @@ export default {
 		.extension {
 			background-color var(--color-ui-container)
 			border-radius 8px
+			transition 500ms background-color
+			.extension-download {
+				background-color var(--color-ui-background)
+				&:hover {
+					background-color var(--color-ui-primary)
+				}
+			}
+			.header-anchor {
+				opacity 1
+			}
 		}
 	}
 }
