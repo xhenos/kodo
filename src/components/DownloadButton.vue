@@ -7,7 +7,8 @@
 	>
 		<div class="download-header">
 			<i v-if="isGithub" class="download-icon material-icons"><github-logo height="21px" width="21.61px" /></i>
-			<material-icon v-else class="download-icon" iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
+			<CpuIcon v-else-if="isPreview" class="download-icon  mr-4" size="1x" />
+			<DownloadIcon v-else class="download-icon  mr-4" size="1x" />
 			<p class="download-title">{{ title }}</p>
 		</div>
 
@@ -44,10 +45,13 @@
 <script>
 import moment from "moment";
 import GithubLogo from "@/assets/images/github-logo.svg";
+import { DownloadIcon, CpuIcon } from "vue-feather-icons";
 
 export default {
 	components: {
 		GithubLogo,
+		DownloadIcon,
+		CpuIcon,
 	},
 	props: {
 		title: String,

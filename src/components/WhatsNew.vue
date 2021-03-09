@@ -1,13 +1,13 @@
 <template>
 	<div id="WhatsNew" class="bg-ui-container rounded-lg p-8">
 		<header class="bg-transparent flex justify-center">
-			<SunriseIcon class="mr-2" />
+			<InfoIcon class="mr-2" />
 			<h2>Whats New</h2>
 		</header>
 		<main>
 			<div v-html="marked" />
 		</main>
-		<footer>
+		<footer class="note">
 			<p>
 				View the full release
 				<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest" target="_blank" rel="noopener">
@@ -21,10 +21,10 @@
 
 <script>
 import marked from "marked";
-import { SunriseIcon } from "vue-feather-icons";
+import { InfoIcon } from "vue-feather-icons";
 
 export default {
-	components: { SunriseIcon },
+	components: { InfoIcon },
 	props: {
 		body: String,
 	},
@@ -39,9 +39,17 @@ export default {
 };
 </script>
 
-<style>
-#WhatsNew li {
-	list-style-type: disc;
-	list-style-position: inside;
+<style lang="stylus">
+#WhatsNew {
+	h2 {
+		display contents
+	}
+	svg {
+		margin-top 4px
+	}
+	li {
+		list-style-type disc
+		list-style-position inside
+	}
 }
 </style>

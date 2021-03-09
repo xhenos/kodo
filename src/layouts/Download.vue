@@ -4,9 +4,9 @@
 			Download the latest stable version of
 			<b>Tachiyomi</b>
 			that released
-			<b>{{ stable.date }}</b>
+			<b>{{ stable.releaseDate }}</b>
 			or the preview version that released
-			<b>{{ preview.date }}</b>
+			<b>{{ preview.releaseDate }}</b>
 			.
 		</p>
 
@@ -16,11 +16,7 @@
 				<download-button title="Preview" isPreview />
 			</template>
 			<template slot="footer">
-				<p>
-					Requires
-					<b>Android 5.0</b>
-					or higher.
-				</p>
+				<p>* Requires Android 5.0 or higher.</p>
 			</template>
 		</download-buttons>
 
@@ -40,13 +36,13 @@ export default {
 		return {
 			stable: {
 				body: "",
-				date: moment(0).fromNow(),
+				releaseDate: moment(0).fromNow(),
 				downloadUrl: "",
 				version: "v0.00.0",
 			},
 			preview: {
 				body: "",
-				date: moment(0).fromNow(),
+				releaseDate: moment(0).fromNow(),
 				downloadUrl: "",
 				version: "r0000",
 			},
