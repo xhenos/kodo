@@ -1,6 +1,6 @@
 ---
 title: Extensions
-description: Here is a list of all available extensions to download inside the app.
+description: List of available extensions to use with Tachiyomi, you can download them from here or from the app.
 cms:
   collection: miscellaneous
   entry: extensions
@@ -14,6 +14,6 @@ lang: en-US
 
 import ExtensionList from '~/components/ExtensionList.vue'
 
-Here is a list of all available extensions you can download to use with Tachiyomi.
+List of available extensions to use with Tachiyomi, you can download them from here or from the app.
 
 <ExtensionList />
