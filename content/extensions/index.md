@@ -1,6 +1,7 @@
 ---
 title: Extensions
 description: List of available extensions to use with Tachiyomi, you can download them from here or from the app.
+layout: ~/layouts/Extensions.vue
 cms:
   collection: miscellaneous
   entry: extensions
@@ -11,9 +12,3 @@ prev: /download/
 next: /forks/
 lang: en-US
 ---
-
-import ExtensionList from '~/components/ExtensionList.vue'
-
-List of available extensions to use with Tachiyomi, you can download them from here or from the app.
-
-<ExtensionList />
