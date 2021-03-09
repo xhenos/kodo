@@ -133,7 +133,7 @@ export default {
 
 .anchor {
 	margin-top -3.9em
-	padding-top 4.2em
+	padding-top 4.5em
 	.extension {
 		align-items center
 		display flex
@@ -187,10 +187,10 @@ export default {
 				background-color var(--color-ui-background)
 				&:hover {
 					background-color var(--color-ui-primary)
+					span {
+						color white
+					}
 				}
-			}
-			.header-anchor {
-				opacity 1
 			}
 		}
 	}
