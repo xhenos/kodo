@@ -14,7 +14,7 @@
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
     "gridsome": "^0.7.23",
-    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "gridsome-plugin-netlify-cms": "github:xhenos/gridsome-plugin-netlify-cms",
     "iso-639-1": "^2.1.8",
     "lodash.groupby": "^4.6.0",
     "marked": "^2.0.0",
