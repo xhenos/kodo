@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="download-button rounded-md px-20 py-2 select-none"
-		v-bind:class="`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''} ${this.name !== 'tachiyomi' ? isPreview ? 'preview-' : 'stable-' + this.name : ''}`"
+		v-bind:class="`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''} ${this.name !== 'tachiyomi' ? (isPreview ? 'preview-' : 'stable-') + this.name : ''}`"
 		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
 		:style="colorStyle"
 	>
