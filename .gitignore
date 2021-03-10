@@ -9,3 +9,4 @@ dist
 .env.*
 !.env.example
 *.code-workspace
+src/assets/style/sandbox.styl

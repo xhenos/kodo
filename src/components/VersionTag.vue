@@ -77,8 +77,7 @@ export default {
 	}
 }
 
-.version,
-.missingProps {
+.version {
 	color var(--color-ui-secondary)
 	font-weight 500
 	font-size 1em
