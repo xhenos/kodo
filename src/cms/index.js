@@ -27,7 +27,7 @@ CMS.registerEditorComponent({
 			name: "title",
 			label: "Title",
 			widget: "string",
-			required: false
+			required: false,
 		},
 		{
 			name: "body",
@@ -59,6 +59,6 @@ CMS.registerEditorComponent({
 			return `<details class="custom-block c-details"><summary class="c-title">${obj.title}</summary><p>${obj.body}</p></details>`;
 		} else {
 			return `<div class="custom-block c-${obj.type}"><p class="c-title">${obj.title}</p><p>${obj.body}</p></div>`;
-		};
+		}
 	},
 });

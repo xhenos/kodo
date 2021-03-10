@@ -49,42 +49,42 @@
 </template>
 
 <page-query>
-query($id: ID!) {
-	markdownPage(id: $id) {
-		id
-		title
-		description
-		icon
-		forkName
-		metaImage
-		metaImageType
-		metaColor
-		path
-		content
-		sidebar
-		onThisPage
-		next
-		prev
-		cms {
-			collection
-			entry
-			edit
+	query($id: ID!) {
+		markdownPage(id: $id) {
+			id
+			title
+			description
+			icon
+			forkName
+			metaImage
+			metaImageType
+			metaColor
+			path
+			content
+			sidebar
+			onThisPage
+			next
+			prev
+			cms {
+				collection
+				entry
+				edit
+			}
+			headings {
+				depth
+				value
+				anchor
+			}
 		}
-		headings {
-			depth
-			value
-			anchor
-		}
-	}
-	allMarkdownPage {
-		edges {
-			node {
-				path
-				title
+		allMarkdownPage {
+			edges {
+				node {
+					path
+					title
+				}
 			}
 		}
 	}
-}
 </page-query>
 
 <script>

@@ -87,12 +87,12 @@
 </template>
 
 <static-query>
-query {
-	metadata {
-		siteName
-		siteDescription
+	query {
+		metadata {
+			siteName
+			siteDescription
+		}
 	}
-}
 </static-query>
 
 <script>
@@ -180,10 +180,10 @@ export default {
 
 .jumbotron {
 	background: linear-gradient(
-		0deg,
-		rgba(var(--index-background-gradient-start), 100%) 1%,
-		rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
-	),
+			0deg,
+			rgba(var(--index-background-gradient-start), 100%) 1%,
+			rgba(var(--index-background-gradient-end), var(--index-background-gradient-start-alpha))
+		),
 		var(--index-background-image);
 	background-size: 2000px;
 	background-position: center;

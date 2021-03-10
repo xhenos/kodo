@@ -15,19 +15,19 @@ const fetchOrCreate = (object, target, clazz) => {
 export default class Fetchers {
 	constructor() {
 		this.fetchers = {
-			"tachiyomi": null,
+			tachiyomi: null,
 			"tachiyomi-az": null,
 			"tachiyomi-j2k": null,
 			"tachiyomi-sy": null,
-			"neko": null,
+			neko: null,
 		};
 		this.install = function(Vue) {
 			Vue.prototype.$fetchers = {
-				"tachiyomi": () => fetchOrCreate(this.fetchers, "tachiyomi", Tachiyomi),
+				tachiyomi: () => fetchOrCreate(this.fetchers, "tachiyomi", Tachiyomi),
 				"tachiyomi-az": () => fetchOrCreate(this.fetchers, "tachiyomi-az", TachiyomiAZ),
 				"tachiyomi-j2k": () => fetchOrCreate(this.fetchers, "tachiyomi-j2k", TachiyomiJ2K),
 				"tachiyomi-sy": () => fetchOrCreate(this.fetchers, "tachiyomi-sy", TachiyomiSY),
-				"neko": () => fetchOrCreate(this.fetchers, "neko", Neko),
+				neko: () => fetchOrCreate(this.fetchers, "neko", Neko),
 			};
 		};
 	}

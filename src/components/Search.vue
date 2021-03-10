@@ -67,22 +67,22 @@
 </template>
 
 <static-query>
-query Search {
-	allMarkdownPage {
-		edges {
-			node {
-				id
-				path
-				title
-				headings {
-					depth
-					value
-					anchor
+	query Search {
+		allMarkdownPage {
+			edges {
+				node {
+					id
+					path
+					title
+					headings {
+						depth
+						value
+						anchor
+					}
 				}
 			}
 		}
 	}
-}
 </static-query>
 
 <script>

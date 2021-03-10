@@ -87,23 +87,23 @@
 </template>
 
 <static-query>
-query {
-	metadata {
-		siteName
-		settings {
-			web
-			github
-			twitter
-			discord
-			nav {
-				links {
-					path
-					title
+	query {
+		metadata {
+			siteName
+			settings {
+				web
+				github
+				twitter
+				discord
+				nav {
+					links {
+						path
+						title
+					}
 				}
 			}
 		}
 	}
-}
 </static-query>
 
 <script>

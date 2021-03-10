@@ -48,20 +48,20 @@
 </template>
 
 <static-query>
-query Sidebar {
-	metadata {
-		settings {
-			sidebar {
-				name
-				sections {
-					title
-					index
-					items
+	query Sidebar {
+		metadata {
+			settings {
+				sidebar {
+					name
+					sections {
+						title
+						index
+						items
+					}
 				}
 			}
 		}
 	}
-}
 </static-query>
 
 <script>

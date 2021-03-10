@@ -24,8 +24,8 @@ module.exports = function(api) {
 		// Use the Pages API here: https://gridsome.org/docs/pages-api/
 	});
 
-	api.configureWebpack((config) => {
+	api.configureWebpack(config => {
 		config.mode = "development";
 		return config;
-    });
+	});
 };

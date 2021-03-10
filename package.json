@@ -5,7 +5,7 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "lint:code": "vue-cli-service lint",
+    "lint:code": "vue-cli-service lint --fix",
     "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax"
   },
   "dependencies": {
