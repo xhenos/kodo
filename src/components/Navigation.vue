@@ -65,6 +65,7 @@ export default {
 				/* Library info */
 				bookmark: { text: "Add to library", icon: "favorite_border" },
 				bookmarked: { text: "In library", icon: "favorite" },
+				tracking: { text: "Tracking", icon: "sync" },
 				set_categories: { text: "Set categories", icon: "label" },
 				share: { text: "Share", icon: "share" },
 				webview: { text: "WebView", icon: "public" },
