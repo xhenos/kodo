@@ -167,7 +167,14 @@ export default {
 
 <style lang="stylus">
 
-#Markdown {
+.markdownContent {
+	ol,
+	ul {
+		list-style revert
+		margin revert
+		padding revert
+	}
+
 	img {
 		border-radius 8px
 	}
@@ -195,22 +202,6 @@ export default {
 		}
 	}
 
-	ul,
-	ol {
-		list-style revert
-		padding revert
-		padding-left 1.25rem
-	}
-
-	ul {
-		li {
-			margin-bottom 0.5rem
-		}
-	}
-}
-
-
-.markdownContent {
 	.contentHeader {
 		display flex
 		align-items center
