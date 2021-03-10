@@ -57,15 +57,15 @@ export default {
 
 	watch: {
 		$route: function() {
-			if (process.isClient && window.location.hash) {
-				this.activeAnchor = window.location.hash;
+			if (process.isClient) {
+				if (window.location.hash) this.activeAnchor = window.location.hash;
+
+				// Clear the current observer.
+				this.observer.disconnect();
+
+				// And create another one for the next page.
+				this.$nextTick(this.initObserver);
 			}
-
-			// Clear the current observer.
-			this.observer.disconnect();
-
-			// And create another one for the next page.
-			this.$nextTick(this.initObserver);
 		},
 	},
 
