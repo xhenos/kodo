@@ -6,7 +6,8 @@ cms:
   entry: categories
   edit: true
 sidebar: default
-prev: /help/guides/reader-settings/
+prev: /help/guides/tracking/
+next: /help/guides/local-manga/
 ---
 
 **Categories** help you store your bookmarked manga in custom tabs, which keeps your library neat and organized. You can name and sort them however you want according to your preference (ie. _Genre_, _Reading Status_, etc).

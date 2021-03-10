@@ -1,12 +1,12 @@
 ---
-title: Reading local manga
+title: Local manga
 description: All the information you would need to read your own local manga.
 cms:
   collection: guides
-  entry: reading-local-manga
+  entry: local-manga
   edit: true
 sidebar: default
-prev: /help/guides/creating-backups/
+prev: /help/guides/categories/
 next: /help/guides/reader-settings/
 ---
 

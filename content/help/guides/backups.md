@@ -1,13 +1,13 @@
 ---
-title: Creating backups
+title: Backups
 description: Backups can save you a lot of headache in case something happens to your installation or device.
 cms:
   collection: guides
-  entry: creating-backups
+  entry: backups
   edit: true
 sidebar: default
 prev: /help/guides/source-migration/
-next: /help/guides/reading-local-manga/
+next: /help/guides/tracking/
 ---
 
 Backups are inter-compatible between **Tachiyomi** versions, with a few exceptions listed under [forks information](#forks-information).
@@ -15,11 +15,11 @@ Backups are inter-compatible between **Tachiyomi** versions, with a few exceptio
 Backups can hold the following information:
 
 1. **Titles**
-1. **Categories**
-1. **Read chapters**
-1. **Tracking settings**
-1. **Reading history**
-1. **Manga information** such as Author, Artist, Date Added to Library, Selected Viewer, etc.
+2. **Categories**
+3. **Read chapters**
+4. **Tracking settings**
+5. **Reading history**
+6. **Manga information** such as Author, Artist, Date Added to Library, Selected Viewer, etc.
 
 ::: guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create backup** and select a location to save it.

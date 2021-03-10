@@ -6,7 +6,7 @@ cms:
   entry: getting-started
   edit: true
 sidebar: default
-next: /help/guides/troubleshooting-problems/
+next: /help/guides/troubleshooting/
 ---
 
 import VersionTag from '~/components/VersionTag.vue'

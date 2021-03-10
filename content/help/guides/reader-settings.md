@@ -6,8 +6,7 @@ cms:
   entry: reader-settings
   edit: true
 sidebar: default
-prev: /help/guides/reading-local-manga/
-next: /help/guides/categories/
+prev: /help/guides/local-manga/
 ---
 
 import Carousel from '~/components/Carousel.vue'

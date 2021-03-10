@@ -39,12 +39,13 @@ module.exports = {
 						index: "/help/",
 						items: [
 							"/help/guides/getting-started/",
-							"/help/guides/troubleshooting-problems/",
+							"/help/guides/troubleshooting/",
 							"/help/guides/source-migration/",
-							"/help/guides/creating-backups/",
-							"/help/guides/reading-local-manga/",
-							"/help/guides/reader-settings/",
+							"/help/guides/backups/",
+							"/help/guides/tracking/",
 							"/help/guides/categories/",
+							"/help/guides/local-manga/",
+							"/help/guides/reader-settings/",
 						],
 					},
 					{
