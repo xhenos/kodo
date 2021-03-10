@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="download-button rounded-md px-20 py-2 select-none"
-		v-bind:class="`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''}`"
+		v-bind:class="`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''} ${this.name !== 'tachiyomi' ? isPreview ? 'preview-' : 'stable-' + this.name : ''}`"
 		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
 		:style="colorStyle"
 	>
@@ -102,56 +102,6 @@ export default {
 		},
 		link() {
 			return this.fetcher.githubUrl;
-		},
-		lighter() {
-			switch (this.name) {
-				case "tachiyomi-az":
-					return 10;
-					break;
-				case "tachiyomi-j2k":
-					return 10;
-					break;
-				case "tachiyomi-sy":
-					return 8;
-					break;
-				case "tachiyomi-neko":
-					return 10;
-					break;
-				default:
-					return 5;
-					break;
-			}
-		},
-		darker() {
-			switch (this.name) {
-				case "tachiyomi-az":
-					return -10;
-					break;
-				case "tachiyomi-j2k":
-					return -8;
-					break;
-				case "tachiyomi-sy":
-					return -4;
-					break;
-				case "neko":
-					return -8;
-					break;
-				default:
-					return -10;
-					break;
-			}
-		},
-		colorStyle() {
-			return `
-				fork {
-					--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(this.lighter)};
-					--color-ui-primary-light: ${this.$page.markdownPage.metaColor.toHSL(this.lighter)};
-    				--color-ui-primary: ${this.$page.markdownPage.metaColor.toHSL(0)};
-    				--color-ui-primary: ${this.$page.markdownPage.metaColor.toHSL(0)};
-					--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(this.darker)};
-					--color-ui-primary-dark: ${this.$page.markdownPage.metaColor.toHSL(this.darker)};
-				}
-			`;
 		},
 	},
 	methods: {
