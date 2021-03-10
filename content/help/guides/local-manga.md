@@ -42,11 +42,9 @@ Tachiyomi will see four chapters in a single manga.
 The path to the folder with images must contain both the manga title and the chapter name (as seen above).
 
 :::guide
-<figure class="centered">
-	<h4>Example structure using the file manager</h4>
-	<p>Here, the manga name is <strong>test</strong> so the file structure is <code>/Tachiyomi/local/test/ch1/images</code>.</p>
-	<img class="zoomable" height="300" src="/assets/guides_local-manga.jpg">
-</figure>
+#### Example structure using the file manager
+Here, the manga name is **test** so the file structure is `/Tachiyomi/local/test/ch1/images`.
+<img src="/assets/guides_local-manga.jpg"/>
 :::
 
 ## Archive Files
