@@ -6,10 +6,7 @@ module.exports = {
 	},
 	purge: {
 		layers: ["utilities"],
-		content: [
-			"./src/**/*.vue",
-			// other content types mentioned above
-		],
+		content: ["./src/**/*.vue", "./src/**/*.styl"],
 		options: {
 			whitelist: ["my-special-class", "other-class"],
 			whitelistPatterns: [/^fa-/, /^svg-inline--fa/],
