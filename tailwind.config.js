@@ -1,7 +1,11 @@
 const colors = { ...require("tailwindcss/defaultTheme").colors, ...require("@tailwindcss/postcss7-compat/colors") };
 
 module.exports = {
+	future: {
+		purgeLayersByDefault: true,
+	},
 	purge: {
+		layers: ["utilities"],
 		content: [
 			"./src/**/*.vue",
 			// other content types mentioned above
