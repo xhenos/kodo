@@ -43,5 +43,5 @@
 	"zeroUnits": "never",
 	"zIndexNormalize": false,
 	"stylusSupremacy.selectorSeparator": ",\n",
-	"stylusSupremacy.insertNewLineAroundBlocks": "root"
+	"stylusSupremacy.insertNewLineAroundBlocks": true
 }

@@ -9,7 +9,12 @@ module.exports = {
 		"stylus/property-no-unknown": null,
 		"stylus/selector-type-no-unknown": null,
 		"stylus/selector-list-comma": "always",
-		"rule-empty-line-before": "always",
+		"rule-empty-line-before": [
+			"always",
+			{
+				except: ["first-nested"],
+			},
+		],
 	},
 	extends: ["stylelint-plugin-stylus/standard"],
 };
