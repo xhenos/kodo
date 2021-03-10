@@ -13,7 +13,7 @@ prev: /help/faq/extensions/
 
 ### Why are there no results when searching?
 ::: videolink
-[<MaterialIcon icon="videocam"/> Click for video guide](/assets/faq_mangadex-no-results.mp4)
+[<MaterialIcon icon="videocam"/> Click for video guide](/assets/faq_mangadex-no-results.webm)
 :::
 
 If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
