@@ -121,6 +121,7 @@ export default {
 		padding-bottom 0.75em
 		border-bottom 1px solid var(--color-ui-border)
 	}
+
 	> div {
 		&:not(:first-of-type) {
 			.extensions-total {
@@ -132,6 +133,7 @@ export default {
 
 .extensions-total {
 	float right
+
 	&-sum {
 		color var(--color-ui-primary)
 	}
@@ -141,68 +143,86 @@ export default {
 	margin-top -3.9em
 	padding-bottom 0.2em
 	padding-top 4.5em
+
 	.extension {
 		align-items center
 		display flex
 		padding 0.4em 0.2em
+
 		.header-anchor {
 			padding-left 0.2em
 			padding-right 0.2em
 			font-size 1.4em
 			opacity 0
 		}
+
 		&:hover .header-anchor {
 			opacity 1
 		}
+
 		.extension-icon {
 			margin-right 0.5em
 		}
+
 		.extension-text {
 			flex 1
+
 			.upper {
 				.badge {
 					margin-left 8px
 				}
 			}
+
 			.down {
 				color #6c757d
 				font-family monospace
 				font-size 0.9rem
 			}
 		}
+
 		.extension-download {
 			margin-right 0.5em
+
 			&:hover {
 				color white !important
 			}
+
 			svg {
 				margin-bottom 4px
-			}		}
-		@media (max-width: 767px) {
+			}
+		}
+
+		@media (max-width 767px) {
 			.extension-text .down,
 			.extension-download span {
 				display none
 			}
 		}
 	}
-	@media (max-width: 767px) {
+
+	@media (max-width 767px) {
 		.extension {
 			border 1px solid var(--color-ui-border)
 			border-radius 8px
+
 			.extension-download {
 				background-color var(--color-ui-container)
 			}
 		}
 	}
+
 	&:target {
 		.extension {
 			background-color var(--color-ui-container)
 			border-radius 8px
 			transition 500ms background-color
+
 			.extension-download {
 				background-color var(--color-ui-background)
+
 				&:hover {
 					background-color var(--color-ui-primary)
+
 					span {
 						color white
 					}
@@ -210,6 +230,7 @@ export default {
 			}
 		}
 	}
+
 	&:first-child {
 		border-top 1px solid var(--color-ui-border)
 	}

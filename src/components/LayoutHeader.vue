@@ -150,9 +150,7 @@ export default {
 
 <style lang="stylus">
 header {
-
 	svg:not(.feather-search) {
-
 		&:hover {
 			@apply text-ui-primary
 		}
@@ -160,16 +158,13 @@ header {
 }
 
 .nav-link {
-
 	&.active {
 		@apply text-ui-primary border-ui-primary
 	}
 }
 
 .nav-link {
-
 	&.nav-primary {
-
 		&.active:not(.active--exact) {
 			color var(--color-ui-typo)
 

@@ -104,7 +104,6 @@ export default {
 
 <style lang="stylus">
 #Sidebar {
-
 	h3 {
 		color currentColor
 

@@ -231,7 +231,6 @@ export default {
 	}
 
 	.download-header {
-
 		& > * {
 			display inline
 		}

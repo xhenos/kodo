@@ -44,9 +44,11 @@ export default {
 	h2 {
 		display contents
 	}
+
 	svg {
 		margin-top 4px
 	}
+
 	li {
 		list-style-type disc
 		list-style-position inside

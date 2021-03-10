@@ -97,6 +97,7 @@ export default {
 <style lang="stylus">
 .forkLink {
 	font-size inherit !important
+
 	&.forkIconNeko::before {
 		content ""
 		display inline-block
@@ -108,6 +109,7 @@ export default {
 		margin-bottom 0.2em
 		margin-right 0.2em
 	}
+
 	&.forkIconJ2K::before {
 		content ""
 		display inline-block
@@ -119,6 +121,7 @@ export default {
 		margin-bottom 0.2em
 		margin-right 0.2em
 	}
+
 	&.forkIconAZ::before {
 		content ""
 		display inline-block
@@ -130,6 +133,7 @@ export default {
 		margin-bottom 0.2em
 		margin-right 0.2em
 	}
+
 	&.forkIconSY::before {
 		content ""
 		display inline-block
@@ -141,6 +145,7 @@ export default {
 		margin-bottom 0.2em
 		margin-right 0.2em
 	}
+
 	&.forkIconEH::before {
 		content ""
 		display inline-block
@@ -152,13 +157,13 @@ export default {
 		margin-bottom 0.2em
 		margin-right 0.2em
 	}
+
 	.app-label {
 		font-size inherit !important
 	}
 }
 
 #NavigationVue {
-
 	&.app-navigation {
 		white-space pre
 		font-size 0
@@ -176,7 +181,6 @@ export default {
 		}
 
 		.app-link {
-
 			&:hover {
 				cursor pointer
 				text-decoration none !important
@@ -200,7 +204,6 @@ export default {
 }
 
 blockquote {
-
 	.app-navigation .app-icon,
 	.app-label {
 		color inherit !important

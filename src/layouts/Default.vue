@@ -143,7 +143,6 @@ export default {
 // Temporary as SCSS until I figure out how Stylus does this
 
 .content {
-
 	h2 + h3,
 	h2 + h2,
 	h3 + h3 {
@@ -184,14 +183,12 @@ h4 {
 	@apply leading-snug font-semibold mb-4 text-ui-header
 
 	&:hover {
-
 		a::before {
 			@apply opacity-100
 		}
 	}
 
 	a {
-
 		&::before {
 			content "#"
 			margin-left -1em
@@ -232,7 +229,6 @@ blockquote {
 }
 
 .content {
-
 	a {
 		@apply text-ui-primary underline
 	}
@@ -366,7 +362,6 @@ table {
 }
 
 .note {
-
 	* {
 		font-size 0.9rem
 		text-align right
@@ -385,9 +380,7 @@ table {
 
 html [data-theme=dark],
 html [data-theme=experimental] {
-
 	.note {
-
 		p {
 			color rgba(255, 255, 255, 0.4) !important
 		}

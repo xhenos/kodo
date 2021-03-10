@@ -121,9 +121,7 @@ export default {
 
 <style lang="stylus">
 #OnThisPage {
-
 	a {
-
 		&.active--exact {
 			color var(--color-ui-primary)
 

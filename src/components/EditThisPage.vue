@@ -28,7 +28,6 @@ export default {
 
 <style lang="stylus">
 #EditThisPage {
-
 	a {
 		font-size 0.9rem
 		font-weight normal

@@ -37,7 +37,6 @@ export default {
 
 <style lang="stylus">
 .tabs {
-
 	ul {
 		padding 0 !important
 

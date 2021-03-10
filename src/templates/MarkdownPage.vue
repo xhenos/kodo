@@ -187,7 +187,6 @@ export default {
 	}
 
 	h2 {
-
 		&:before {
 			content " "
 			display block
@@ -204,7 +203,6 @@ export default {
 	}
 
 	ul {
-
 		li {
 			margin-bottom 0.5rem
 		}
@@ -218,6 +216,7 @@ export default {
 		align-items center
 		margin-top 2rem
 		flex-wrap wrap
+
 		&.contentIcon {
 			img {
 				margin-left 0.25rem
