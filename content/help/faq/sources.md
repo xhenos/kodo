@@ -24,11 +24,11 @@ To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item=
 
 ### Why is MangaDex slow?
 If pages are loading slowly or not at all, try:
-- Making sure you have the *latest* version of the extension.
-- Checking if **MangaDex** is either down, or is having the same issues.
-- Trying to **Clear database** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
-- Trying to **Clear chapter cache** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
-- Going to <Navigation item="browse"/> → <Navigation item="extensions"/> → **MangaDex** → **Image Server** and then selecting a *different* server location.
+-   Making sure you have the *latest* version of the extension.
+-   Checking if **MangaDex** is either down, or is having the same issues.
+-   Trying to **Clear database** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
+-   Trying to **Clear chapter cache** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
+-   Going to <Navigation item="browse"/> → <Navigation item="extensions"/> → **MangaDex** → **Image Server** and then selecting a *different* server location.
 
 :::alert Disclaimer
 Tachiyomi is not hosting any content, we are not affiliated with or responsible for any source that is; slow, down, missing chapters, or has subpar image quality.
@@ -67,10 +67,10 @@ Open the manga in <Navigation item="webview"/>, open a chapter, and wait for the
 ### How do I deal with duplicate chapters in MangaPark?
 To solve this issue, follow the below steps.
 
-1. Go to <Navigation item="browse"/> → <Navigation item="extensions"/>.
-1. Click on **MangaPark** extension and then **Chapter List Source**.
-1. Choose an option like **Smart list** or **Prioritize source**.
-1. Go back to **MangaPark**'s chapter list and refresh it.
+1.  Go to <Navigation item="browse"/> → <Navigation item="extensions"/>.
+1.  Click on **MangaPark** extension and then **Chapter List Source**.
+1.  Choose an option like **Smart list** or **Prioritize source**.
+1.  Go back to **MangaPark**'s chapter list and refresh it.
 
 ## Webtoons
 

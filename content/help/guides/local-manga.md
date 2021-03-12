@@ -14,11 +14,11 @@ import LocalMangaStructure from '~/components/LocalMangaStructure.vue'
 
 :::guide Creating local manga
 
-1. Create a folder named `local` in the `/Tachiyomi/` folder.
+1.  Create a folder named `local` in the `/Tachiyomi/` folder.
 	> The `/Tachiyomi/` folder is located in the root of phone's **internal storage** or **external SD card** and it's **not related** to the `eu.kanade.tachiyomi/` folder or the download location in the settings.
-1. Place correctly structured manga inside `/Tachiyomi/local/`.
+1.  Place correctly structured manga inside `/Tachiyomi/local/`.
 	> If adding manga in folders it is recommended to add a file named `.nomedia` to the local folder so images do not show up in the gallery.
-2. You should now be able to access the manga in <Navigation item="browse"/> → **Local source**.
+1.  You should now be able to access the manga in <Navigation item="browse"/> → **Local source**.
 
 :::
 

@@ -17,19 +17,19 @@ This section relates to the reading experience in the app and navigating the rea
 This setting sets the reader's default direction when you open a manga.
 
 **Left to right**
-- Swipe left for next page. Swipe right for previous page.
+-   Swipe left for next page. Swipe right for previous page.
 
 **Right to left**
-- Swipe right for next page. Swipe left for previous page. Default way of reading Manga.
+-   Swipe right for next page. Swipe left for previous page. Default way of reading Manga.
 
 **Vertical**
-- Swipe up for next page. Swipe down for previous.
+-   Swipe up for next page. Swipe down for previous.
 
 **Webtoon**
-- Webtoon is like vertical but stitches all the images together into one stream.
+-   Webtoon is like vertical but stitches all the images together into one stream.
 
 **Continuous vertical**
-- Similar to webtoon but with a little space between pages.
+-   Similar to webtoon but with a little space between pages.
 
 :::c-tip
 You can change viewer for different series by going to the series, opening a chapter, tapping the middle of the screen, pressing the gear icon, and selecting a different viewer in **Viewer for this series**.
@@ -54,10 +54,10 @@ This setting applies a smooth transition when tapping to change page.
 ## Rotation <Badge text="Free" />
 This allows you to control how the screen is going to be oriented.
 
-- **Free** lets you rotate the screen between portrait and landscape.
-- **Lock** will lock the orientation to whatever orientation you had before entering the reader.
-- **Force Portrait** forces the reader to be in portrait.
-- **Force Landscape** forces the reader to be in landscape.
+-   **Free** lets you rotate the screen between portrait and landscape.
+-   **Lock** will lock the orientation to whatever orientation you had before entering the reader.
+-   **Force Portrait** forces the reader to be in portrait.
+-   **Force Landscape** forces the reader to be in landscape.
 
 ## Background color <Badge text="Black" />
 This allows you to control what color the background should be in reader. Background color can either be **Black**, **Gray** or
@@ -129,17 +129,17 @@ This changes how tapping behaves.
 Inverts the tapping position depending on which setting you choose.
 
 **None**
-- Tapping left goes to the next page, and tapping right goes to the previous page
-- Tapping bottom goes to the next page, and tapping top goes to the previous page
+-   Tapping left goes to the next page, and tapping right goes to the previous page
+-   Tapping bottom goes to the next page, and tapping top goes to the previous page
 
 **Horizontal**
-- Tapping left goes to the previous page, and tapping right goes to the next page
+-   Tapping left goes to the previous page, and tapping right goes to the next page
 
 **Vertical**
-- Tapping bottom goes to the previous page, and tapping top goes to the next page
+-   Tapping bottom goes to the previous page, and tapping top goes to the next page
 
 **Both**
-- Applies the two previous mentioned settings
+-   Applies the two previous mentioned settings
 
 :::c-warning
 This setting can only be used when Tapping is enabled.

@@ -14,12 +14,12 @@ Backups are inter-compatible between **Tachiyomi** versions, with a few exceptio
 
 Backups can hold the following information:
 
-1. **Titles**
-2. **Categories**
-3. **Read chapters**
-4. **Tracking settings**
-5. **Reading history**
-6. **Manga information** such as Author, Artist, Date Added to Library, Selected Viewer, etc.
+1.  **Titles**
+1.  **Categories**
+1.  **Read chapters**
+1.  **Tracking settings**
+1.  **Reading history**
+1.  **Manga information** such as Author, Artist, Date Added to Library, Selected Viewer, etc.
 
 :::guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create backup** and select a location to save it.
@@ -27,11 +27,11 @@ You can do this by going to <Navigation item="more"/> → <Navigation item="sett
 
 Legacy Backups can hold the following information:
 
-1. **Titles**
-1. **Categories**
-1. **Read chapters**
-1. **Tracking settings**
-1. **Reading history**
+1.  **Titles**
+1.  **Categories**
+1.  **Read chapters**
+1.  **Tracking settings**
+1.  **Reading history**
 
 :::guide
 You can do this by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_backup"/> and then selecting **Create legacy backup** and select a location to save it.
@@ -46,15 +46,15 @@ Restoring is done from the <Navigation item="settings_backup"/> settings.
 
 To restore a backup without issues be sure to:
 
-* Log into the <Navigation item="settings_tracking"/> services that you previously used.
+-   Log into the <Navigation item="settings_tracking"/> services that you previously used.
 
 To restore a legacy backup without issues be sure to:
 
-* Install all the <Navigation item="tab_extensions"/> that were installed at the time of the backup.
-* Log into the <Navigation item="settings_tracking"/> services that you previously used.
-* If you use MangaDex, login to it using **WebView** <g-link to="/help/faq/sources/#why-are-there-no-results-when-searching">as explained here</g-link>.
-* You're able to access all the sources through the **WebView**.
-* Be on a consistent internet connection.
+-   Install all the <Navigation item="tab_extensions"/> that were installed at the time of the backup.
+-   Log into the <Navigation item="settings_tracking"/> services that you previously used.
+-   If you use MangaDex, login to it using **WebView** <g-link to="/help/faq/sources/#why-are-there-no-results-when-searching">as explained here</g-link>.
+-   You're able to access all the sources through the **WebView**.
+-   Be on a consistent internet connection.
 
 ## Transferring downloads
 

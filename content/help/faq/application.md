@@ -10,8 +10,6 @@ sidebar: default
 next: /help/faq/settings/
 ---
 
-# 🎆 THIS PAGE NEEDS UPDATING
-
 ## Library
 
 ### How can I see how many chapters I've downloaded?
@@ -41,8 +39,8 @@ Change library sorting by going to <Navigation item="library"/> → <Navigation 
 Sometimes you can struggle to find a source hosting the manga you're looking for, look here for some tips to help you find it.
 
 :::guide Tips to find your manga
-1. Look up the title on [Google](https://google.com/) or a manga database such as [MangaUpdates](https://www.mangaupdates.com/).
-1. See if a website or scanlator has the series, then check the [Extensions](/extensions/) list.
+1.  Look up the title on [Google](https://google.com/) or a manga database such as [MangaUpdates](https://www.mangaupdates.com/).
+1.  See if a website or scanlator has the series, then check the [Extensions](/extensions/) list.
 
 #### If you found the website/scanlator in the list
 Download the corresponding extension, go to the source, then search for the manga there.

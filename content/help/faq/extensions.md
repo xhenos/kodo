@@ -36,11 +36,9 @@ Some extensions contain multiple sources, look at the list below to find out whi
 
 :::guide
 User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
-
 :::note
 Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
 :::
-
 :::
 
 ### How do I request a new extension?
@@ -96,16 +94,16 @@ To uninstall an extension from within **Tachiyomi**, go to <Navigation item="bro
 :::
 
 ### Why don't I have extensions or any sources in Browse?
-- **Tachiyomi** no longer have pre-installed extensions, this means that you will need to install extensions you want to use from the <Navigation item="browse"/> → **Extensions** menu.
-- If you're getting the `Loader not implemented` error after clicking on a manga, you will need to reinstall the extensions you used to use.
+-   **Tachiyomi** no longer have pre-installed extensions, this means that you will need to install extensions you want to use from the <Navigation item="browse"/> → **Extensions** menu.
+-   If you're getting the `Loader not implemented` error after clicking on a manga, you will need to reinstall the extensions you used to use.
 
 ### How do see sources of other languages?
 
 You do this by following the steps below.
 
-1. Go to <Navigation item="browse"/> → **Sources**.
-1. Click on <Navigation item="filter"/> on the top right corner.
-1. Scroll down until you find the language of your source and enable it.
+1.  Go to <Navigation item="browse"/> → **Sources**.
+1.  Click on <Navigation item="filter"/> on the top right corner.
+1.  Scroll down until you find the language of your source and enable it.
 
 ### Why can't I restore my backup?
 To restore backups, **Tachiyomi** requires to have extensions installed for the respective manga you want to restore.
@@ -113,7 +111,7 @@ To restore backups, **Tachiyomi** requires to have extensions installed for the 
 
 ### Why can't I find manga when searching Browse?
 It might be because the title is worded differently. Follow any of the steps below:
-- Look up the title on a search engine like **Google** or a manga tracking service such as [AniList](https://anilist.co/home).
-- See which site has the series, often a single source will not satisfy all your needs.
-- Download the extension for that source from <Navigation item="browse"/> → **Extensions** if it exists, read [this](/help/faq/#which-sources-are-in-the-multi-source-extensions) for a list of which extensions contains what sources.
-- Go to <Navigation item="browse"/> and tap on a source then search for the manga again.
+-   Look up the title on a search engine like **Google** or a manga tracking service such as [AniList](https://anilist.co/home).
+-   See which site has the series, often a single source will not satisfy all your needs.
+-   Download the extension for that source from <Navigation item="browse"/> → **Extensions** if it exists, read [this](/help/faq/#which-sources-are-in-the-multi-source-extensions) for a list of which extensions contains what sources.
+-   Go to <Navigation item="browse"/> and tap on a source then search for the manga again.

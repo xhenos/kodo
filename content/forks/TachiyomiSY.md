@@ -37,26 +37,26 @@ This fork is based off of [TachiyomiAZ](/forks/TachiyomiAZ/) and adds quite a fe
 <g-image class="zoomable" src="/assets/ogimage_large-sy.png" immediate />
 
 ## Features
-- Uses the new **Tachiyomi** UI
-- Enhanced pages for certain sources
-- Latest tab preview configurable to show up to five sources
-- Ability to enable and disable Hentai features
-- Automatic webtoon detection, allowing the reader to switch to webtoon mode automatically when viewing one
-- Manga recommendations from both [MyAnimeList](https://myanimelist.net/) and [AniList](https://anilist.co/)
-- Lewd filter so you can hide the lewd manga in your library if you want to
-- Tracking filter so you can filter your tracked manga
-- Search tracking status in library
-- Backup saved searches
-- New E-Hentai/ExHentai features such as language settings and watched list settings
-- Comfortable grid view
-- Source categories
-- Manga info edit
-- Enhanced views for internal and delegated sources
-- Numerous features from [TachiyomiAZ](/forks/TachiyomiAZ/)
+-   Uses the new **Tachiyomi** UI
+-   Enhanced pages for certain sources
+-   Latest tab preview configurable to show up to five sources
+-   Ability to enable and disable Hentai features
+-   Automatic webtoon detection, allowing the reader to switch to webtoon mode automatically when viewing one
+-   Manga recommendations from both [MyAnimeList](https://myanimelist.net/) and [AniList](https://anilist.co/)
+-   Lewd filter so you can hide the lewd manga in your library if you want to
+-   Tracking filter so you can filter your tracked manga
+-   Search tracking status in library
+-   Backup saved searches
+-   New E-Hentai/ExHentai features such as language settings and watched list settings
+-   Comfortable grid view
+-   Source categories
+-   Manga info edit
+-   Enhanced views for internal and delegated sources
+-   Numerous features from [TachiyomiAZ](/forks/TachiyomiAZ/)
 
 ## Credits
-- [She11Shocked](https://github.com/she11sh0cked/) for the extra tracking, filter, recommendation features and a ton more.
-- [az4521](https://github.com/az4521) for the base recommendations and **AZ**.
+-   [She11Shocked](https://github.com/she11sh0cked/) for the extra tracking, filter, recommendation features and a ton more.
+-   [az4521](https://github.com/az4521) for the base recommendations and **AZ**.
 
 ## Disclaimer
 The developer of this application does not have any affiliation with the content providers available.

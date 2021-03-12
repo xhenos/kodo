@@ -29,12 +29,12 @@ At the moment, it is **deprecated** as the developer does not have time to maint
 For a full list of features, visit the GitHub page.
 :::
 
-- **Sync your favorites with your EHentai/ExHentai account**
-- **Search through your favorites by tag/language/artist**
-- **Open galleries in an incognito browser window**
-- **Faster download engine in the reader**
-- **Fingerprint/PIN app lock**
-- **Batch import gallery URLs**
-  - Import single URLs by pasting them into the catalogue search box
-- **Automatic captcha solving**
-- **Open gallery URLs directly in Tachiyomi**
+-   **Sync your favorites with your EHentai/ExHentai account**
+-   **Search through your favorites by tag/language/artist**
+-   **Open galleries in an incognito browser window**
+-   **Faster download engine in the reader**
+-   **Fingerprint/PIN app lock**
+-   **Batch import gallery URLs**
+    -   Import single URLs by pasting them into the catalogue search box
+-   **Automatic captcha solving**
+-   **Open gallery URLs directly in Tachiyomi**

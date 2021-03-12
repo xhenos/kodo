@@ -36,16 +36,16 @@ This is a [MangaDex](https://mangadex.org/) specific fork of **Tachiyomi** and [
 <g-image class="zoomable" src="/assets/ogimage_large-neko.png" immediate />
 
 ## Mangadex specific features:
-- Supports native login to **MangaDex** and supports 2FA
-- MDList support
-- Similar Manga recommendations
-- Manually sync of Manga to and from **MangaDex** follows list
-- MDList tracked manga can be auto marked read in app after reading on the website
-- Ability to filter chapters and skip by scanlator group
+-   Supports native login to **MangaDex** and supports 2FA
+-   MDList support
+-   Similar Manga recommendations
+-   Manually sync of Manga to and from **MangaDex** follows list
+-   MDList tracked manga can be auto marked read in app after reading on the website
+-   Ability to filter chapters and skip by scanlator group
 
 ## Credits
-- [Inorichi](https://github.com/inorichi/) for making the original **Tachiyomi**
-- [Jays2Kings](https://github.com/Jays2Kings/) for the wonderful new UI of **J2K**
+-   [Inorichi](https://github.com/inorichi/) for making the original **Tachiyomi**
+-   [Jays2Kings](https://github.com/Jays2Kings/) for the wonderful new UI of **J2K**
 
 ## Disclaimer
 The developer of this application does not have any affiliation with the content providers available.
