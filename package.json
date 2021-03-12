@@ -7,10 +7,13 @@
     "explore": "gridsome explore",
     "lint:code": "vue-cli-service lint --fix",
     "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax",
-	"lint:markdown": "remark ."
+    "lint:markdown": "remark ."
   },
   "remarkConfig": {
-	"plugins": ["remark-preset-lint-recommended", "remark-validate-links"]
+    "plugins": [
+      "remark-preset-lint-recommended",
+      "remark-validate-links"
+    ]
   },
   "dependencies": {
     "@gridsome/transformer-remark": "^0.6.4",
@@ -22,7 +25,7 @@
     "iso-639-1": "^2.1.8",
     "lodash.groupby": "^4.6.0",
     "marked": "^2.0.0",
-    "material-design-icons-iconfont": "^6.1.0",
+    "material-design-icons": "^3.0.1",
     "moment": "^2.29.1",
     "netlify-cms": "^2.10.96",
     "postcss": "^7.0.35",

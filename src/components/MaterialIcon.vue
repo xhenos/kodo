@@ -1,14 +1,12 @@
 <template>
 	<i v-if="iconOnly" :class="name" class="material-icons">{{ icon }}</i>
-	<div v-else-if="color" :class="classColor">
+	<span v-else :class="name" class="material-holder">
 		<i class="material-icons select-none">{{ icon }}</i>
-	</div>
-	<div v-else :class="name" class="material-holder">
-		<i class="material-icons select-none">{{ icon }}</i>
-	</div>
+	</span>
 </template>
 
 <script>
+
 /**
  * For material icon references use https://material.io/resources/icons/
  * Code example: <MaterialIcon icon="android" />
@@ -27,32 +25,17 @@ export default {
 			type: String,
 			default: "",
 		},
-		color: {
-			type: String,
-			default: "",
-		},
-	},
-	computed: {
-		classColor() {
-			return this.color ? `text-${this.color}-100` : "";
-		},
 	},
 };
 </script>
 
-<style lang="scss">
-// Temporary as SCSS until the developers stop forcing it.
-$material-design-icons-font-directory-path: "~material-design-icons-iconfont/dist/fonts/";
-
-@import "~material-design-icons-iconfont/src/material-design-icons";
-</style>
-
 <style lang="stylus">
+@import "~material-design-icons/iconfont/material-icons.css";
+
 .material-holder {
 	margin 0
 	font-size 0.85em
 	border-radius 3px
-	display inline
 }
 
 .material-icons {
