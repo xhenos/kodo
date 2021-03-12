@@ -1,0 +1,22 @@
+{
+	"plugins": [
+		"remark-validate-links",
+		"remark-lint-no-multiple-toplevel-headings",
+		"remark-lint-final-newline",
+		"remark-lint-list-item-bullet-indent",
+		"remark-lint-no-auto-link-without-protocol",
+		"remark-lint-no-literal-urls",
+		"remark-lint-hard-break-spaces",
+		"remark-lint-no-inline-padding",
+		["remark-lint-list-item-indent", "tab-size"],
+		["remark-lint-unordered-list-marker-style", "-"],
+		["remark-lint-ordered-list-marker-style", "."],
+		["remark-lint-ordered-list-marker-style", "."],
+		["remark-lint-ordered-list-marker-value", "one"],
+		["remark-lint-rule-style", "---"],
+		["remark-lint-strong-marker", "*"],
+		["remark-lint-emphasis-marker", "*"],
+		["remark-lint-linebreak-style", "unix"]
+
+	]
+}
