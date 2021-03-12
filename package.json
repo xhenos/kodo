@@ -6,7 +6,11 @@
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "lint:code": "vue-cli-service lint --fix",
-    "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax"
+    "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax",
+	"lint:markdown": "remark ."
+  },
+  "remarkConfig": {
+	"plugins": ["remark-preset-lint-recommended", "remark-validate-links"]
   },
   "dependencies": {
     "@gridsome/transformer-remark": "^0.6.4",
@@ -46,6 +50,8 @@
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "prism-themes": "^1.5.0",
+    "remark-cli": "^9.0.0",
+    "remark-preset-lint-recommended": "^5.0.0",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.10.0",
     "stylelint-plugin-stylus": "^0.10.0",
