@@ -12,13 +12,13 @@ prev: /help/faq/extensions/
 ## MangaDex
 
 ### Why are there no results when searching?
-::: videolink
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/faq_mangadex-no-results.webm)
 :::
 
 If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
 
-::: guide
+:::guide
 To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item="button_latest"/> next to **MangaDex**, then press on <Navigation item="webview"/> in the top right corner.
 :::
 
@@ -40,14 +40,14 @@ You can go to the manga's page in <Navigation item="webview"/> and block groups 
 ### Is there an alternate searching method?
 **MangaDex** allows you to search using the ID number to find manga. The easiest way to get the ID is by opening the manga in your browser and looking at the URL.
 
-::: guide
+:::guide
 An example search would be **`id:23427`** which would return results for [Candy & Cigarettes](https://mangadex.org/title/23427/candy-cigarettes)
 :::
 
 ### How do I fix chapters from Mangaplus being broken?
 Install the **MANGA Plus by SHUEISHA** extension instead and then migrate the manga that uses **MANGA Plus** on **MangaDex** onto the **MANGA Plus** source.
 
-::: note
+:::note
 Read about source migration [here](/help/guides/source-migration/)
 :::
 

@@ -37,7 +37,7 @@ Some extensions contain multiple sources, look at the list below to find out whi
 :::guide
 User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
 
-::: note
+:::note
 Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
 :::
 

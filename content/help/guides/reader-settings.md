@@ -141,7 +141,7 @@ Inverts the tapping position depending on which setting you choose.
 **Both**
 - Applies the two previous mentioned settings
 
-::: c-warning
+:::c-warning
 This setting can only be used when Tapping is enabled.
 :::
 

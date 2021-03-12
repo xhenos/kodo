@@ -12,7 +12,7 @@ next: /help/guides/reader-settings/
 
 import LocalMangaStructure from '~/components/LocalMangaStructure.vue'
 
-::: guide Follow the steps below to create local manga
+:::guide Follow the steps below to create local manga
 
 1. Create a folder named `local` in the `/Tachiyomi/` folder.
    - The `/Tachiyomi/` folder is located in the root of phone's **internal storage** or **external SD card** and it's **not related** to the `eu.kanade.tachiyomi/` folder or the download location in the settings.

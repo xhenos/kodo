@@ -24,8 +24,8 @@ Tracking is currently supported on [MyAnimeList](https://myanimelist.com), [AniL
 
 ### Logging in to trackers
 
-::: guide Guide
-::: videolink
+:::guide Guide
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_tracking_login-to.mp4)
 :::
 1. Go to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_tracking"/> to Login
@@ -34,8 +34,8 @@ Tracking is currently supported on [MyAnimeList](https://myanimelist.com), [AniL
 
 ### Setting up tracking for each entry
 
-::: guide Guide
-::: videolink
+:::guide Guide
+:::videolink
 [<MaterialIcon icon="videocam"/> Click for video guide](/assets/guides_tracking_add-to.mp4)
 :::
 1. Go to the manga you want to track.
