@@ -9,7 +9,8 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "lint:code": "vue-cli-service lint --fix",
+	"lint": "npm run lint:code & npm run lint:style & npm run lint:markdown",
+    "lint:code": "vue-cli-service lint",
     "lint:style": "stylelint --fix 'src/**/*.{vue,styl}' --custom-syntax stylelint-plugin-stylus/custom-syntax",
     "lint:markdown": "remark ."
   },

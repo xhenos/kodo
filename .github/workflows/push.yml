@@ -34,8 +34,8 @@ jobs:
 
       - name: Lint files
         run: |
-          npm run lint:style
           npm run lint:code
+          npm run lint:style
           npm run lint:markdown
 
       - name: Build website
