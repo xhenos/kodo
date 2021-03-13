@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Node v12
-        uses: actions/setup-node@v1
+      - name: Install Node v15
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 15
 
       - name: Build website
         run: |
@@ -25,12 +25,12 @@ jobs:
           npm run lint:code
           npm run build
         env:
-          SITE_URL: ${{ secrets.SITE_URL }}	
-          SITE_URL_PREFIX: ${{ secrets.SITE_URL_PREFIX }}	
-          SITE_COLOR: ${{ secrets.SITE_COLOR }}	
-          GA_ID: ${{ secrets.GA_ID }}	
-          URL_TWITTER: ${{ secrets.URL_TWITTER }}	
-          URL_DISCORD: ${{ secrets.URL_DISCORD }}	
+          SITE_URL: ${{ secrets.SITE_URL }}
+          SITE_URL_PREFIX: ${{ secrets.SITE_URL_PREFIX }}
+          SITE_COLOR: ${{ secrets.SITE_COLOR }}
+          GA_ID: ${{ secrets.GA_ID }}
+          URL_TWITTER: ${{ secrets.URL_TWITTER }}
+          URL_DISCORD: ${{ secrets.URL_DISCORD }}
           URL_GITHUB: ${{ secrets.URL_GITHUB }}
 
       - name: Add .nojekyll
