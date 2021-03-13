@@ -41,7 +41,7 @@ CMS.registerEditorComponent({
 	],
 	pattern: /^:{3}\s?(guide|alert|c-tip|c-warning|c-danger|note|videolink|collapse)(?:\s([\w ]+))?\s+((.|\s(?::{3}\s?(guide|alert|c-tip|c-warning|c-danger|note|videolink|collapse)(?:\s([\w ]+))?\s+((.|\s?)+?):{3}$)?)+?):{3}$/m,
 	fromBlock: function(match) {
-		console.log(match)
+		console.log(match);
 		return {
 			type: match[1],
 			title: match[2] || "",

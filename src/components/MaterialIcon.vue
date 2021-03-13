@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 /**
  * For material icon references use https://material.io/resources/icons/
  * Code example: <MaterialIcon icon="android" />
@@ -30,7 +29,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "~material-design-icons/iconfont/material-icons.css";
+@import "~material-design-icons/iconfont/material-icons.css"
 
 .material-holder {
 	margin 0
