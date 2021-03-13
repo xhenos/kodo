@@ -32,6 +32,7 @@
     "remark-validate-links": "^10.0.3",
     "tailwindcss": "^1.9.6",
     "vue-carousel": "^0.18.0",
+    "vue-loader": "^15.9.2",
     "vuex": "^3.6.0"
   },
   "devDependencies": {
