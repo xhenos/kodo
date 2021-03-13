@@ -24,7 +24,6 @@
     "netlify-cms": "^2.10.96",
     "postcss": "^7.0.35",
     "remark-containers": "^1.2.0",
-    "remark-frontmatter": "^3.0.0",
     "remark-lint-final-newline": "^1.0.5",
     "remark-lint-linebreak-style": "^2.0.1",
     "remark-lint-list-item-bullet-indent": "^3.0.0",
