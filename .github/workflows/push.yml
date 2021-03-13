@@ -19,13 +19,24 @@ jobs:
           node-version: 12
 
       - name: Install NPM v7
-        run: npm install -g npm@7
+        run: npm install npm@7
+
+      - name: Setup cache
+        uses: actions/cache@v2
+        id: npm-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm install
 
       - name: Build website
         run: |
-          npm install
           npm run lint:style
           npm run lint:code
+          npm run lint:markdown
           npm run build
         env:
           SITE_URL: ${{ secrets.SITE_URL }}
