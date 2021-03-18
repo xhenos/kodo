@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { VariantEnum } from "../scripts/fetcher/VariantEnum.js";
+import { TypeEnum } from "../scripts/fetcher/TypeEnum.js";
 /**
  * Code example: <VersionTag preview />
  */
@@ -46,10 +48,10 @@ export default {
 		};
 	},
 	async mounted() {
-		let stable = await this.$fetchers.tachiyomi().stable(this.$store);
+		let stable = await this.fetcher().fetch(VariantEnum.TACHIYOMI, TypeEnum.STABLE);
 		this.stableTagName = stable.data.version;
 
-		let preview = await this.$fetchers.tachiyomi().preview(this.$store);
+		let preview = await this.fetcher().fetch(VariantEnum.TACHIYOMI, TypeEnum.PREVIEW);
 		this.previewTagName = preview.data.version;
 	},
 };

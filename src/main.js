@@ -8,7 +8,7 @@ import MaterialIcon from "~/components/MaterialIcon.vue";
 import Navigation from "~/components/Navigation.vue";
 import Badge from "~/components/Badge.vue";
 
-import Fetchers from "./scripts/data-fetchers";
+import { Fetch } from "./scripts/fetcher/Fetcher.js";
 import PersistStore from "./scripts/store";
 
 import "./scripts/prototypes";
@@ -34,5 +34,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 
 	PersistStore(Vue, appOptions);
 
-	Vue.use(new Fetchers());
+	console.log(new Fetch());
+
+	Vue.use(new Fetch(), { appOptions });
 }

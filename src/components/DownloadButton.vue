@@ -7,7 +7,6 @@
 			}`
 		"
 		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
-		:style="colorStyle"
 	>
 		<div class="download-header">
 			<i v-if="isGithub" class="download-icon material-icons"><github-logo height="21px" width="21.61px" /></i>
@@ -47,6 +46,8 @@
 </template>
 
 <script>
+import { VariantEnum } from "../scripts/fetcher/VariantEnum.js";
+import { TypeEnum } from "../scripts/fetcher/TypeEnum.js";
 import moment from "moment";
 import GithubLogo from "@/assets/images/github-logo.svg";
 import { DownloadIcon, CpuIcon } from "vue-feather-icons";
@@ -79,7 +80,9 @@ export default {
 		};
 	},
 	async mounted() {
-		let release = this.isPreview ? this.fetcher.preview(this.$store) : this.fetcher.stable(this.$store);
+		let release = this.isPreview
+			? this.fetcher().fetch(this.variant, TypeEnum.PREVIEW)
+			: this.fetcher().fetch(this.variant, TypeEnum.STABLE);
 		let response = await release;
 		this.data = response.data;
 	},
@@ -95,14 +98,19 @@ export default {
 				)
 				.join(" ");
 		},
-		fetcher() {
-			try {
-				console.log(this.name);
-				return this.$fetchers[this.name]();
-			} catch (e) {
-				console.error("Missing fetcher in data-fetcher.js, or check the variable names is correct", e);
+		variant() {
+			switch (this.name) {
+				case "tachiyomi-az":
+					return VariantEnum.TACHIYOMI_AZ;
+				case "tachiyomi-j2k":
+					return VariantEnum.TACHIYOMI_J2K;
+				case "tachiyomi-sy":
+					return VariantEnum.TACHIYOMI_SY;
+				case "neko":
+					return VariantEnum.NEKO;
+				default:
+					return VariantEnum.TACHIYOMI;
 			}
-			return null;
 		},
 		link() {
 			return this.fetcher.githubUrl;

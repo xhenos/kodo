@@ -107,6 +107,8 @@
 </static-query>
 
 <script>
+import { VariantEnum } from "../scripts/fetcher/VariantEnum.js";
+import { TypeEnum } from "../scripts/fetcher/TypeEnum.js";
 import Logo from "@/components/Logo.vue";
 import ToggleTheme from "@/components/ToggleTheme";
 import { DownloadIcon } from "vue-feather-icons";
@@ -134,7 +136,7 @@ export default {
 		};
 	},
 	created: async function() {
-		let stable = await this.$fetchers.tachiyomi().stable(this.$store);
+		let stable = await this.fetcher().fetch(VariantEnum.TACHIYOMI, TypeEnum.STABLE);
 		this.stable = stable.data;
 	},
 	computed: {
