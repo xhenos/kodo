@@ -127,6 +127,9 @@ module.exports = {
 			padding: "1rem",
 		},
 	},
+	corePlugins: {
+		container: false,
+	},
 	variants: {},
 	plugins: [],
 };
