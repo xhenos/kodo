@@ -1,31 +1,27 @@
 <template>
-	<div class="font-sans antialiased text-ui-typo bg-ui-background">
-		<div class="flex flex-col justify-start min-h-screen">
-			<header
-				ref="header"
-				class="sticky top-0 z-10 w-full border-b bg-ui-background border-ui-border"
-				@resize="setHeaderHeight"
-			>
+	<div class="default-vue">
+		<div class="whole-page">
+			<header ref="header" @resize="setHeaderHeight">
 				<LayoutHeader />
 			</header>
 
-			<main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
+			<main class="container">
 				<aside
 					v-if="hasSidebar && this.$page.markdownPage.sidebar"
 					class="sidebar"
 					:class="{ open: sidebarOpen }"
 					:style="sidebarStyle"
 				>
-					<div class="w-full pb-16 bg-ui-background">
+					<div>
 						<Sidebar @navigate="sidebarOpen = false" />
 					</div>
 				</aside>
 
 				<div
-					class="w-full pb-24"
+					class="main-content"
 					:class="{
-						'pl-0 lg:pl-12 lg:w-3/4': hasSidebar && this.$page.markdownPage.sidebar,
-						'xl:mx-48': !hasSidebar,
+						'has-sidebar': hasSidebar && this.$page.markdownPage.sidebar,
+						'no-sidebar': !hasSidebar,
 					}"
 				>
 					<slot />
@@ -33,14 +29,8 @@
 			</main>
 		</div>
 
-		<div
-			v-if="hasSidebar && this.$page.markdownPage.sidebar !== ''"
-			class="fixed bottom-0 right-0 z-50 p-8 lg:hidden"
-		>
-			<button
-				class="p-3 text-white rounded-full shadow-lg bg-ui-primary hover:text-white"
-				@click="sidebarOpen = !sidebarOpen"
-			>
+		<div v-if="hasSidebar && this.$page.markdownPage.sidebar !== ''" class="sidebar-button">
+			<button @click="sidebarOpen = !sidebarOpen">
 				<XIcon v-if="sidebarOpen" />
 				<MenuIcon v-else />
 			</button>
@@ -138,6 +128,96 @@ export default {
 	},
 };
 </script>
+
+<style lang="stylus">
+.default-vue {
+	background-color var(--color-ui-background)
+	color var(--color-ui-typo)
+	font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+	.whole-page {
+		display flex
+		flex-direction column
+		justify-content flex-start
+		min-height 100vh
+
+		header {
+			background-color var(--color-ui-background)
+			border-color var(--color-ui-border)
+			border-bottom-width 1px
+			position sticky
+			top 0
+			z-index 10
+			width 100%
+		}
+
+		main {
+			background-color var(--color-ui-background)
+			position relative
+			display flex
+			flex 1 1 0%
+			flex-wrap wrap
+			justify-content flex-start
+			width 100%
+
+			aside {
+				> div {
+					width 100%
+					padding-bottom 4rem
+					background-color var(--color-ui-background)
+				}
+			}
+
+			.main-content {
+				width 100%
+				padding-bottom 6rem
+
+				&.has-sidebar {
+					padding-left 0
+
+					@media (min-width 1024px) {
+						padding-left 3rem
+						width 75%
+					}
+				}
+
+				&.no-sidebar {
+					@media (min-width 1280px) {
+						margin-left 12rem
+						margin-right 12rem
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar-button {
+		position fixed
+		bottom 0
+		right 0
+		z-index 50
+		padding 2rem
+
+		@media (min-width 1024px) {
+			display none
+		}
+
+		button {
+			padding 0.75rem
+			color #ffffff
+			border-radius 9999px
+			box-shadow 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%)
+			background-color var(--color-ui-primary)
+
+			&:hover {
+				color #ffffff
+			}
+		}
+	}
+}
+</style>
 
 <style lang="scss">
 // Temporary as SCSS until I figure out how Stylus does this
