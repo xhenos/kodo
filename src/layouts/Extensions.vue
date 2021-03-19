@@ -40,14 +40,9 @@
 							{{ extension.pkg.replace("eu.kanade.tachiyomi.extension.", "") }}
 						</div>
 					</div>
-					<a
-						:href="apkUrl(extension.apk)"
-						class="extension-download mr-auto py-2 text-ui-primary font-bold px-4 border border-ui-border rounded-lg hover:bg-ui-primary hover:text-white transition-colors"
-						title="Download APK"
-						download
-					>
+					<a :href="apkUrl(extension.apk)" class="extension-download" title="Download APK" download>
 						<DownloadIcon class="inline" size="1x" />
-						<span class="ml-2">Download</span>
+						<span>Download</span>
 					</a>
 				</div>
 			</div>
@@ -186,10 +181,25 @@ export default {
 		}
 
 		.extension-download {
+			color var(--color-ui-primary) !important
+			font-weight 700
+			border-color var(--color-ui-border)
+			border-width 1px
+			border-radius 0.5rem
 			margin-right 0.5em
+			padding-top 0.5rem
+			padding-bottom 0.5rem
+			padding-left 1rem
+			padding-right 1rem
+			transition-property background-color, border-color, color, fill, stroke
 
 			&:hover {
-				color white !important
+				background-color var(--color-ui-primary)
+				color #ffffff !important
+			}
+
+			span {
+				margin-left 0.5rem;
 			}
 
 			svg {
