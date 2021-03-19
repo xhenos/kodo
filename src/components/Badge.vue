@@ -1,6 +1,6 @@
 <template>
 	<span class="badge">
-		<material-icon v-if="icon" :icon="icon" class="mr-1" />
+		<material-icon v-if="icon" :icon="icon" />
 		{{ text }}
 	</span>
 </template>
