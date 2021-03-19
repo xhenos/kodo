@@ -29,6 +29,8 @@ import moment from "moment";
 import WhatsNew from "../components/WhatsNew.vue";
 import DownloadButton from "../components/DownloadButton.vue";
 import DownloadButtons from "../components/DownloadButtons.vue";
+import { VariantEnum } from "../scripts/fetcher/VariantEnum";
+import { TypeEnum } from "../scripts/fetcher/TypeEnum";
 
 export default {
 	components: { WhatsNew, DownloadButton, DownloadButtons },
@@ -50,8 +52,8 @@ export default {
 	},
 	created: async function() {
 		let all = await Promise.all([
-			this.$fetchers.tachiyomi().stable(this.$store),
-			this.$fetchers.tachiyomi().preview(this.$store),
+			this.fetcher().fetch(VariantEnum.TACHIYOMI, TypeEnum.STABLE),
+			this.fetcher().fetch(VariantEnum.TACHIYOMI, TypeEnum.PREVIEW),
 		]);
 
 		this.stable = all[0].data;
