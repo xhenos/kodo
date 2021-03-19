@@ -51,11 +51,8 @@
 </template>
 
 <script>
-import axios from "axios";
-import groupBy from "lodash.groupby";
 import ISO6391 from "iso-639-1";
 import { DownloadIcon } from "vue-feather-icons";
-import { EXTENSION_JSON } from "~/constants";
 
 export default {
 	components: {
@@ -68,33 +65,34 @@ export default {
 		};
 	},
 
-	async beforeMount() {
-		const { data } = await axios.get(EXTENSION_JSON);
-		const values = Object.values(groupBy(data, "lang"));
-		values.sort((a, b) => {
-			const langA = this.simpleLangName(a[0].lang);
-			const langB = this.simpleLangName(b[0].lang);
-			if (langA === "All" && langB === "English") {
-				return -1;
-			}
-			if (langA === "English" && langB === "All") {
-				return 1;
-			}
-			if (langA === "English") {
-				return -1;
-			}
-			if (langB === "English") {
-				return 1;
-			}
-			if (langA < langB) {
-				return -1;
-			}
-			if (langA > langB) {
-				return 1;
-			}
-			return 0;
+	beforeMount() {
+		this.$store.dispatch("fetchExtensions").then(data => {
+			const values = Object.values(data);
+			values.sort((a, b) => {
+				const langA = this.simpleLangName(a[0].lang);
+				const langB = this.simpleLangName(b[0].lang);
+				if (langA === "All" && langB === "English") {
+					return -1;
+				}
+				if (langA === "English" && langB === "All") {
+					return 1;
+				}
+				if (langA === "English") {
+					return -1;
+				}
+				if (langB === "English") {
+					return 1;
+				}
+				if (langA < langB) {
+					return -1;
+				}
+				if (langA > langB) {
+					return 1;
+				}
+				return 0;
+			});
+			this.$data.extensions = values;
 		});
-		this.$data.extensions = values;
 	},
 
 	updated() {

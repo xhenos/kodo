@@ -22,7 +22,6 @@
 		"gridsome": "^0.7.23",
 		"gridsome-plugin-netlify-cms": "github:xhenos/gridsome-plugin-netlify-cms",
 		"iso-639-1": "^2.1.8",
-		"lodash.groupby": "^4.6.0",
 		"marked": "^2.0.0",
 		"material-design-icons": "^3.0.1",
 		"moment": "^2.29.1",

@@ -9,9 +9,10 @@ import Navigation from "~/components/Navigation.vue";
 import Badge from "~/components/Badge.vue";
 
 import { Fetch } from "./scripts/fetcher/Fetcher.js";
-import PersistStore from "./scripts/store";
+import { ReleaseStore, ExtensionStore } from "./scripts/store";
 
 import "./scripts/prototypes";
+import Vuex from "vuex";
 
 export default function(Vue, { router, head, isClient, appOptions }) {
 	// Set default layout as a global component
@@ -32,7 +33,13 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 		next();
 	});
 
-	PersistStore(Vue, appOptions);
+	Vue.use(Vuex);
+	appOptions.store = new Vuex.Store({
+		modules: {
+			ReleaseStore,
+			ExtensionStore,
+		},
+	});
 
 	Vue.use(new Fetch(), { appOptions });
 }
