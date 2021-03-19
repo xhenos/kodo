@@ -2,9 +2,5 @@
   command = "gridsome build"
   publish = "dist/"
 
-[build.environment]
-  NODE_VERSION = "12"
-  NPM_VERSION = "7"
-
 [[plugins]]
   package = "netlify-plugin-gridsome-cache"
