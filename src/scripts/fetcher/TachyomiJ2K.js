@@ -1,14 +1,11 @@
-import axios from "axios";
-
 import { TACHIYOMI_J2K_STABLE_API_URL } from "~/constants";
-import { VariantEnum } from "./VariantEnum";
 import { TypeEnum } from "./TypeEnum";
+import { BaseVariant } from "./BaseVariant";
+import { VariantEnum } from "./VariantEnum";
 
-export class TachiyomiJ2K {
-	variant = VariantEnum.TACHIYOMI_J2K;
-
+export class TachiyomiJ2K extends BaseVariant {
 	constructor(store) {
-		this.store = store;
+		super(store, VariantEnum.TACHIYOMI_J2K);
 	}
 
 	fetch = type => {
@@ -44,17 +41,5 @@ export class TachiyomiJ2K {
 			downloadUrl: data.assets.find(a => a.name.includes(".apk")),
 			releaseDate: data.published_at,
 		};
-	};
-
-	isUpdated = type => {
-		return this.store.getters.isUpdated({ variant: this.variant, type: type });
-	};
-
-	fetchRemote = url => {
-		return axios.get(url);
-	};
-
-	fetchLocal = type => {
-		return this.store.getters.getRelease({ variant: this.variant, type: type });
 	};
 }

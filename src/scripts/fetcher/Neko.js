@@ -1,14 +1,11 @@
-import axios from "axios";
-
 import { NEKO_STABLE_API_URL } from "~/constants";
 import { VariantEnum } from "./VariantEnum";
 import { TypeEnum } from "./TypeEnum";
+import { BaseVariant } from "./BaseVariant";
 
-export class Neko {
-	variant = VariantEnum.NEKO;
-
+export class Neko extends BaseVariant {
 	constructor(store) {
-		this.store = store;
+		super(store, VariantEnum.NEKO);
 	}
 
 	fetch = type => {
@@ -44,17 +41,5 @@ export class Neko {
 			downloadUrl: data.assets.find(a => a.name.includes(".apk")),
 			releaseDate: data.published_at,
 		};
-	};
-
-	isUpdated = type => {
-		return this.store.getters.isUpdated({ variant: this.variant, type: type });
-	};
-
-	fetchRemote = url => {
-		return axios.get(url);
-	};
-
-	fetchLocal = type => {
-		return this.store.getters.getRelease({ variant: this.variant, type: type });
 	};
 }

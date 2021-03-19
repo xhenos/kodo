@@ -34,7 +34,5 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 
 	PersistStore(Vue, appOptions);
 
-	console.log(new Fetch());
-
 	Vue.use(new Fetch(), { appOptions });
 }

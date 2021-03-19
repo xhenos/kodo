@@ -3,12 +3,11 @@ import axios from "axios";
 import { TACHIYOMI_AZ_STABLE_API_URL, TACHIYOMI_AZ_PREVIEW_API_URL } from "~/constants";
 import { VariantEnum } from "./VariantEnum";
 import { TypeEnum } from "./TypeEnum";
+import { BaseVariant } from "./BaseVariant";
 
-export class TachiyomiAZ {
-	variant = VariantEnum.TACHIYOMI_AZ;
-
+export class TachiyomiAZ extends BaseVariant {
 	constructor(store) {
-		this.store = store;
+		super(store, VariantEnum.TACHIYOMI_AZ);
 	}
 
 	fetch = type => {
@@ -74,17 +73,5 @@ export class TachiyomiAZ {
 			downloadUrl: TACHIYOMI_AZ_PREVIEW_API_URL,
 			releaseDate: new Date(data * 1000).toJSON(),
 		};
-	};
-
-	isUpdated = type => {
-		return this.store.getters.isUpdated({ variant: this.variant, type: type });
-	};
-
-	fetchRemote = url => {
-		return axios.get(url);
-	};
-
-	fetchLocal = type => {
-		return this.store.getters.getRelease({ variant: this.variant, type: type });
 	};
 }

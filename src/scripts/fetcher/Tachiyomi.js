@@ -1,14 +1,11 @@
-import axios from "axios";
-
 import { TACHIYOMI_STABLE_API_URL, TACHIYOMI_PREVIEW_API_URL } from "~/constants";
 import { VariantEnum } from "./VariantEnum";
 import { TypeEnum } from "./TypeEnum";
+import { BaseVariant } from "./BaseVariant";
 
-export class Tachiyomi {
-	variant = VariantEnum.TACHIYOMI;
-
+export class Tachiyomi extends BaseVariant {
 	constructor(store) {
-		this.store = store;
+		super(store, VariantEnum.TACHIYOMI);
 	}
 
 	fetch = type => {
@@ -63,17 +60,5 @@ export class Tachiyomi {
 				resolve(this.fetchLocal(type));
 			});
 		});
-	};
-
-	isUpdated = type => {
-		return this.store.getters.isUpdated({ variant: this.variant, type: type });
-	};
-
-	fetchRemote = url => {
-		return axios.get(url);
-	};
-
-	fetchLocal = type => {
-		return this.store.getters.getRelease({ variant: this.variant, type: type });
 	};
 }
