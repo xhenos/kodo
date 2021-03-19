@@ -1,5 +1,5 @@
 <template>
-	<div class="extension-list">
+	<div v-if="extensions.length > 0" class="extension-list">
 		<p>List of available extensions to use with Tachiyomi, you can download them from here or from the app.</p>
 		<div v-for="extensionGroup in extensions" :key="extensionGroup[0].lang">
 			<h3>
@@ -48,6 +48,10 @@
 			</div>
 		</div>
 	</div>
+	<div v-else class="extension-list">
+		<p>List of available extensions to use with Tachiyomi, you can download them from here or from the app.</p>
+		<div class="circle-loader"></div>
+	</div>
 </template>
 
 <script>
@@ -64,8 +68,7 @@ export default {
 			extensions: [],
 		};
 	},
-
-	beforeMount() {
+	mounted() {
 		this.$store.dispatch("fetchExtensions").then(data => {
 			const values = Object.values(data);
 			values.sort((a, b) => {
@@ -197,7 +200,7 @@ export default {
 			}
 
 			span {
-				margin-left 0.5rem;
+				margin-left 0.5rem
 			}
 
 			svg {
@@ -246,6 +249,26 @@ export default {
 
 	&:first-child {
 		border-top 1px solid var(--color-ui-border)
+	}
+}
+
+.circle-loader {
+	border 8px solid #efefef
+	border-top 8px solid var(--color-ui-primary)
+	border-radius 99em
+	width 3em
+	height 3em
+	animation spin 2s linear infinite
+	margin 0 auto
+}
+
+@keyframes spin {
+	from {
+		transform rotate(0deg)
+	}
+
+	to {
+		transform rotate(360deg)
 	}
 }
 </style>
