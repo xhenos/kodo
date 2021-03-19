@@ -10,8 +10,8 @@
 	>
 		<div class="download-header">
 			<i v-if="isGithub" class="download-icon material-icons"><github-logo height="21px" width="21.61px" /></i>
-			<CpuIcon v-else-if="isPreview" class="download-icon  mr-4" size="1x" />
-			<DownloadIcon v-else class="download-icon  mr-4" size="1x" />
+			<CpuIcon v-else-if="isPreview" class="download-icon mr-4" size="1x" />
+			<DownloadIcon v-else class="download-icon mr-4" size="1x" />
 			<p class="download-title">{{ title }}</p>
 		</div>
 

@@ -24,7 +24,7 @@
 						<div class="w-full md:w-auto flex flex-col md:flex-row justify-center mt-8">
 							<g-link
 								to="/download/"
-								class="flex order-1  items-center place-content-center px-6 w-10/12 md:w-auto py-4 mx-auto md:mr-2 text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1 select-none"
+								class="flex order-1 items-center place-content-center px-6 w-10/12 md:w-auto py-4 mx-auto md:mr-2 text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1 select-none"
 							>
 								<DownloadIcon class="mr-4" size="1x" />
 								Download
