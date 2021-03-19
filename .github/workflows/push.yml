@@ -25,11 +25,15 @@ jobs:
         uses: actions/cache@v2
         id: npm-cache
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: |
+            "**/node_modules"
+            "**/.cache"
+          key: ${{ runner.os }}-npm-${{ hashFiles("**/package-lock.json") }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
 
       - name: Install dependencies
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+        if: steps.npm-cache.outputs.cache-hit != "true"
         run: npm install
 
       - name: Lint files
