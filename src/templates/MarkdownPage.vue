@@ -44,6 +44,16 @@
 	</Layout>
 </template>
 
+<static-query>
+	query {
+		metadata {
+			settings {
+				themeColor
+			}
+		}
+	}
+</static-query>
+
 <page-query>
 	query($id: ID!) {
 		markdownPage(id: $id) {
@@ -101,7 +111,7 @@ export default {
 			process.env.SITE_URL + process.env.SITE_URL_PREFIX + this.$page.markdownPage.metaImage ||
 			process.env.SITE_URL + process.env.SITE_URL_PREFIX + "/ogimage.png";
 		const imageType = this.$page.markdownPage.metaImageType || "summary";
-		const color = this.$page.markdownPage.metaColor || process.env.SITE_COLOR || "#667EEA";
+		const color = this.$page.markdownPage.metaColor || this.$static.metadata.settings.themeColor;
 
 		return {
 			title: title,
@@ -153,7 +163,7 @@ export default {
 				{
 					key: "twitter:card",
 					name: "twitter:card",
-					content: "summary_large_image",
+					content: imageType,
 				},
 			],
 		};

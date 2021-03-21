@@ -13,10 +13,10 @@ module.exports = {
 		touchicon: "./src/assets/favicon.png",
 	},
 	settings: {
-		web: process.env.URL_WEB || false,
-		twitter: process.env.URL_TWITTER || false,
-		discord: process.env.URL_DISCORD || false,
-		github: process.env.URL_GITHUB || false,
+		twitter: "https://twitter.com/tachiyomiorg",
+		discord: "https://discord.gg/tachiyomi",
+		github: "https://github.com/tachiyomiorg/tachiyomi",
+		themeColor: "#667EEA",
 		nav: {
 			links: [{ path: "/help/", title: "Help" }],
 		},

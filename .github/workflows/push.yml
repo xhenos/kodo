@@ -43,11 +43,7 @@ jobs:
         env:
           SITE_URL: ${{ secrets.SITE_URL }}
           SITE_URL_PREFIX: ${{ secrets.SITE_URL_PREFIX }}
-          SITE_COLOR: ${{ secrets.SITE_COLOR }}
           GA_ID: ${{ secrets.GA_ID }}
-          URL_TWITTER: ${{ secrets.URL_TWITTER }}
-          URL_DISCORD: ${{ secrets.URL_DISCORD }}
-          URL_GITHUB: ${{ secrets.URL_GITHUB }}
 
       - name: Add .nojekyll
         run: touch ./dist/.nojekyll

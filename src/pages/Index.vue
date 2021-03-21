@@ -91,6 +91,9 @@
 		metadata {
 			siteName
 			siteDescription
+			settings {
+				themeColor
+			}
 		}
 	}
 </static-query>
@@ -161,7 +164,7 @@ export default {
 					{
 						key: "theme-color",
 						name: "theme-color",
-						content: process.env.SITE_COLOR || "#667EEA",
+						content: this.$static.metadata.settings.themeColor,
 					},
 				],
 			};

@@ -91,7 +91,6 @@
 		metadata {
 			siteName
 			settings {
-				web
 				github
 				twitter
 				discord
