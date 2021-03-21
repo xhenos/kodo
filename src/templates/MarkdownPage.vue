@@ -1,11 +1,7 @@
 <template>
 	<Layout>
 		<div id="MarkdownPage" class="flex flex-wrap items-start justify-start">
-			<div
-				v-if="this.$page.markdownPage.onThisPage == true"
-				class="order-2 w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8 sticky"
-				style="top: 4rem"
-			>
+			<div class="toc" v-if="this.$page.markdownPage.onThisPage == true">
 				<OnThisPage />
 			</div>
 
@@ -166,7 +162,6 @@ export default {
 </script>
 
 <style lang="stylus">
-
 .markdownContent {
 	ol,
 	ul {
@@ -195,7 +190,7 @@ export default {
 
 	h2 {
 		&:before {
-			content " "
+			content ' '
 			display block
 			margin-bottom 1.5rem
 			border-top 1px solid var(--color-ui-border)
@@ -224,6 +219,32 @@ export default {
 				margin-left 0.75rem
 			}
 		}
+	}
+}
+
+.toc {
+	position sticky
+	order 2
+	width 100%
+	top 4rem
+}
+
+@media (min-width 640px) {
+	.toc {
+		padding-left 1rem
+	}
+}
+
+@media (min-width 768px) {
+	.toc {
+		width 33%
+		padding-left 1.5rem
+	}
+}
+
+@media (min-width 1024px) {
+	.toc {
+		padding-left 2rem
 	}
 }
 </style>

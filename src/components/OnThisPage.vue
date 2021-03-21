@@ -1,14 +1,14 @@
 <template>
-	<div id="OnThisPage" class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 sm:border-l border-ui-border md:mt-0">
-		<h3 class="pt-0 mt-0 text-sm tracking-wide uppercase border-none">On this page</h3>
+	<div id="OnThisPage">
+		<h3>On this page</h3>
 		<div>
 			<ul>
 				<li
 					v-for="(heading, index) in headings"
 					:key="`${page.path}${heading.anchor}`"
 					:class="{
-						'border-t border-dashed border-ui-border pt-2 mt-2': index > 0 && heading.depth === 2,
-						'font-semibold': heading.depth === 2,
+						'separator': index > 0 && heading.depth === 2,
+						'thighs': heading.depth === 2,
 						[`depth-${heading.depth}`]: true,
 					}"
 				>
@@ -121,6 +121,9 @@ export default {
 
 <style lang="stylus">
 #OnThisPage {
+	margin-top 2rem
+	border-color var(--color-ui-border)
+
 	a {
 		&.active--exact {
 			color var(--color-ui-primary)
@@ -143,5 +146,53 @@ export default {
 			padding-left 0.8rem
 		}
 	}
+
+	h3 {
+		letter-spacing 0.025em
+		text-transform uppercase
+		padding-top 0
+		margin-top 0
+		font-size 0.875rem
+		border-style none
+	}
+
+	.separator {
+		padding-top 0.5rem
+		margin-top 0.5rem
+		border-top-width 1px
+		border-style dashed
+		border-color var(--color-ui-border)
+	}
+
+	// I'm not horny you are
+
+	.thighs {
+		font-weight 600
+	}
 }
+
+@media (min-width 640px) {
+	#OnThisPage {
+		padding-bottom 4rem
+		padding-left 1rem
+	}
+}
+
+
+
+@media (min-width 768px) {
+	#OnThisPage {
+		padding-top 3rem
+		padding-left 1.5rem
+		margin-top 0
+		border-left-width 1px
+	}
+}
+
+@media (min-width 1024px) {
+	#OnThisPage {
+		padding-left 2rem
+	}
+}
+
 </style>
