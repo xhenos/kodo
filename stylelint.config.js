@@ -1,7 +1,6 @@
 module.exports = {
 	plugins: ["stylelint-plugin-stylus"],
 	rules: {
-		"stylus/indentation": "tab",
 		"stylus/pythonic": "never",
 		"stylus/declaration-colon": "never",
 		"stylus/semicolon": "never",
@@ -9,6 +8,12 @@ module.exports = {
 		"stylus/property-no-unknown": null,
 		"stylus/selector-type-no-unknown": null,
 		"stylus/selector-list-comma": "always",
+		"stylus/indentation": [
+			"tab",
+			{
+				indentInsideParens: "twice",
+			},
+		],
 		"rule-empty-line-before": [
 			"always",
 			{
