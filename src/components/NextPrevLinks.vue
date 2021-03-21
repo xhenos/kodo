@@ -101,17 +101,14 @@ export default {
 			}
 		}
 
-	}
-}
-
-@media (min-width 640px) {
-	#NextPrevLinks {
-		justify-content space-evenly
-		flex-direction row
-		
-		.nextPrevButton {
+		@media (min-width 640px) {
 			width max-content
 		}
+	}
+
+	@media (min-width 640px) {
+		justify-content space-evenly
+		flex-direction row
 	}
 }
 </style>

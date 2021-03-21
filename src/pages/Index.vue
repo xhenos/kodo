@@ -190,6 +190,10 @@ export default {
 		var(--index-background-image);
 	background-size: 2000px;
 	background-position: center;
+
+	@media screen and (max-width: 800px) {
+		background-size: 800px;
+	}
 }
 
 .index header {
@@ -205,12 +209,6 @@ export default {
 
 .index header input::placeholder {
 	color: var(--color-ui-search-text);
-}
-
-@media screen and (max-width: 800px) {
-	.jumbotron {
-		background-size: 800px;
-	}
 }
 </style>
 

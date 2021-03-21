@@ -237,23 +237,17 @@ export default {
 	order 2
 	width 100%
 	top 4rem
-}
 
-@media (min-width 640px) {
-	.toc {
+	@media (min-width 640px) {
 		padding-left 1rem
 	}
-}
 
-@media (min-width 768px) {
-	.toc {
+	@media (min-width 768px) {
 		width 33%
 		padding-left 1.5rem
 	}
-}
 
-@media (min-width 1024px) {
-	.toc {
+	@media (min-width 1024px) {
 		padding-left 2rem
 	}
 }
