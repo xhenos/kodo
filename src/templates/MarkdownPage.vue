@@ -27,7 +27,7 @@
 					<h1>{{ $page.markdownPage.title }}</h1>
 				</div>
 
-				<VueRemarkContent id="Markdown" />
+				<VueRemarkContent class="content" id="Markdown" />
 
 				<div v-if="this.$page.markdownPage.cms && this.$page.markdownPage.cms.edit" class="mt-2 pt-4">
 					<EditThisPage />

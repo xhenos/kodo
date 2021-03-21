@@ -1,5 +1,5 @@
 <template>
-	<div id="OnThisPage">
+	<div id="OnThisPage" class="on-this-page">
 		<h3>On this page</h3>
 		<div>
 			<ul>
@@ -14,13 +14,13 @@
 				>
 					<g-link
 						:to="`${page.path}${heading.anchor}`"
-						class="relative flex items-center py-1 text-sm transition transform"
+						class="anchor relative flex items-center py-1 text-sm transition transform"
 						:class="{
 							'pl-2': heading.depth === 3,
 							'pl-3': heading.depth === 4,
 							'pl-4': heading.depth === 5,
 							'pl-5': heading.depth === 6,
-							'font-bold text-ui-primary': activeAnchor === heading.anchor,
+							'active-anchor': activeAnchor === heading.anchor,
 						}"
 					>
 						<span
@@ -120,32 +120,9 @@ export default {
 </script>
 
 <style lang="stylus">
-#OnThisPage {
+.on-this-page {
 	margin-top 2rem
 	border-color var(--color-ui-border)
-
-	a {
-		&.active--exact {
-			color var(--color-ui-primary)
-
-			span {
-				background-color var(--color-ui-primary)
-			}
-		}
-
-		&:hover {
-			color var(--color-ui-primary)
-		}
-	}
-
-	li a {
-		transition all 0.3s
-
-		&.active {
-			color var(--color-ui-primary)
-			padding-left 0.8rem
-		}
-	}
 
 	h3 {
 		letter-spacing 0.025em
@@ -168,31 +145,35 @@ export default {
 
 	.thighs {
 		font-weight 600
-	}
-}
 
-@media (min-width 640px) {
-	#OnThisPage {
+		.anchor {
+			transition all 0.3s
+			padding-left 0.8rem
+
+			&.active-anchor {
+				color var(--color-ui-primary)
+
+				span {
+					background-color var(--color-ui-primary)
+				}
+			}
+		}
+	}
+
+	@media (min-width 640px) {
 		padding-bottom 4rem
 		padding-left 1rem
 	}
-}
 
-
-
-@media (min-width 768px) {
-	#OnThisPage {
+	@media (min-width 768px) {
 		padding-top 3rem
 		padding-left 1.5rem
 		margin-top 0
 		border-left-width 1px
 	}
-}
 
-@media (min-width 1024px) {
-	#OnThisPage {
+	@media (min-width 1024px) {
 		padding-left 2rem
 	}
 }
-
 </style>

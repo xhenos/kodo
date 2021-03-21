@@ -225,14 +225,6 @@ export default {
 <style lang="scss">
 // Temporary as SCSS until I figure out how Stylus does this
 
-.content {
-	h2 + h3,
-	h2 + h2,
-	h3 + h3 {
-		@apply border-none -mt-20;
-	}
-}
-
 h1 + .videolink,
 h2 + .videolink,
 h3 + .videolink {
@@ -298,10 +290,6 @@ h4 {
 	@apply text-lg
 }
 
-a:not(.active):not(.text-ui-primary):not(.text-white):not(:hover) {
-	@apply text-ui-typo
-}
-
 p,
 ol,
 ul,
@@ -309,55 +297,6 @@ pre,
 strong,
 blockquote {
 	@apply mb-4 text-base text-ui-typo
-}
-
-.content {
-	a {
-		@apply text-ui-primary underline
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply -mt-12 pt-20
-	}
-
-	h2,
-	h3 {
-		@apply border-b border-ui-border pb-1 mb-3
-	}
-
-	ul {
-		@apply list-disc
-
-		ul {
-			list-style circle
-		}
-	}
-
-	ol {
-		@apply list-decimal
-	}
-
-	ol,
-	ul {
-		@apply pl-5 py-1
-
-		li {
-			@apply mb-2
-
-			p {
-				@apply mb-0
-			}
-
-			&:last-child {
-				@apply mb-0
-			}
-		}
-	}
 }
 
 blockquote {
