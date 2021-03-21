@@ -7,8 +7,8 @@
 					v-for="(heading, index) in headings"
 					:key="`${page.path}${heading.anchor}`"
 					:class="{
-						'separator': index > 0 && heading.depth === 2,
-						'thighs': heading.depth === 2,
+						separator: index > 0 && heading.depth === 2,
+						thighs: heading.depth === 2,
 						[`depth-${heading.depth}`]: true,
 					}"
 				>

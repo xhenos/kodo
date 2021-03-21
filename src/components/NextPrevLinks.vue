@@ -1,20 +1,12 @@
 <template>
 	<div>
 		<div id="NextPrevLinks">
-			<g-link
-				v-if="prev"
-				:to="prev.path"
-				class="nextPrevButton"
-			>
+			<g-link v-if="prev" :to="prev.path" class="nextPrevButton">
 				<ArrowLeftIcon size="1x" />
 				{{ prev.title }}
 			</g-link>
 
-			<g-link
-				v-if="next"
-				:to="next.path"
-				class="nextPrevButton"
-			>
+			<g-link v-if="next" :to="next.path" class="nextPrevButton">
 				{{ next.title }}
 				<ArrowRightIcon size="1x" />
 			</g-link>
@@ -67,37 +59,39 @@ export default {
 	user-select none
 
 	.nextPrevButton {
-		align-items: center;
-		border-color: var(--color-ui-border);
-		border-radius: 0.5rem;
-		border-width: 1px;
-		color: var(--color-ui-primary);
-		display: flex;
-		font-weight: 700;
-		margin-bottom: 1rem;
-		padding-top: 0.5rem;
-    	padding-bottom: 0.5rem;
-		padding-left: 1rem;
-    	padding-right: 1rem;
-		transition-property: background-color, border-color, color, fill, stroke;
+		align-items center
+		border-color var(--color-ui-border)
+		border-radius 0.5rem
+		border-width 1px
+		color var(--color-ui-primary)
+		display flex
+		font-weight 700
+		margin-bottom 1rem
+		padding-top 0.5rem
+		padding-bottom 0.5rem
+		padding-left 1rem
+		padding-right 1rem
+		transition-property background-color, border-color, color, fill, stroke
 		width 100%
 
 		&:hover {
-			background-color: var(--color-ui-primary);
-			color: #fff;
+			background-color var(--color-ui-primary)
+			color #fff
 		}
 
 		&:first-child {
-			margin-right: auto;
+			margin-right auto
+
 			svg {
-				margin-right: 0.5rem;
+				margin-right 0.5rem
 			}
 		}
 
 		&:last-child {
-			margin-left: auto;
+			margin-left auto
+
 			svg {
-				margin-left: 0.5rem;
+				margin-left 0.5rem
 			}
 		}
 
