@@ -1,6 +1,6 @@
 <template>
-	<div class=" content-center text-center my-8">
-		<div class="buttons-container flex justify-center flex-col flex-wrap xxl:flex-row">
+	<div class="buttons">
+		<div class="buttons-container">
 			<slot></slot>
 		</div>
 		<slot name="footer"></slot>
@@ -12,23 +12,43 @@ export default {};
 </script>
 
 <style lang="stylus">
-// TODO Display this as GRID LAYOUT instead so height is uniform for all buttons
+.buttons {
+	text-align center
 
-.buttons-container {
-	& > .download-button {
-		margin 0.25rem
-	}
+  .buttons-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: min-content 1fr;
+    gap: 1rem 1rem;
+    grid-template-areas: 'First' 'Second' 'Third';
 
-	.download-button {
-		flex-grow 1
+    @media (min-width: 640px) {
+      grid-template-columns: 1fr minmax(0px, 1fr);
+      grid-template-rows: min-content 1fr;
+      grid-template-areas: 'First Second' 'Third Third';
+    }
 
-		&:hover {
-			cursor pointer
-		}
-	}
+    & > .download-button {
+      margin: 0.25rem;
+    }
 
-	.download-button:nth-child(3) {
-		flex 1 0 100%
-	}
+    .download-button {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:nth-child(1) {
+        grid-area: First;
+      }
+
+      &:nth-child(2) {
+        grid-area: Second;
+      }
+
+      &:nth-child(3) {
+        grid-area: Third;
+      }
+    }
+  }
 }
 </style>
