@@ -1,48 +1,22 @@
 <template>
 	<div
-		class="download-button rounded-md px-20 py-2 select-none"
-		v-bind:class="
-			`${isGithub ? 'github' : ''} ${isPreview ? 'preview' : ''} ${
-				this.name !== 'tachiyomi' ? (isPreview ? 'preview-' : 'stable-') + this.name : ''
-			}`
-		"
+		class="download-button"
+		:class="{
+			'github': isGithub,
+			'preview': isPreview,
+			[`${(isPreview ? 'preview-' : 'stable-') + this.name}`]: this.name !== 'tachiyomi'
+		}"
 		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
 	>
 		<div class="download-header">
 			<i v-if="isGithub" class="download-icon material-icons"><github-logo height="21px" width="21.61px" /></i>
-			<CpuIcon v-else-if="isPreview" class="download-icon mr-4" size="1x" />
-			<DownloadIcon v-else class="download-icon mr-4" size="1x" />
+			<CpuIcon v-else-if="isPreview" class="download-icon" size="1x" />
+			<DownloadIcon v-else class="download-icon" size="1x" />
 			<p class="download-title">{{ title }}</p>
 		</div>
 
 		<p v-show="!isGithub" class="download-description">{{ data.version }}</p>
 	</div>
-	<!--
-		<button
-		v-if="isGithub"
-		class="fork rounded-md my-2 md:mx-2 px-20 py-2"
-		v-bind:class="`${isGithub ? 'github' : ''}`"
-		:style="style"
-	>
-		<a v-bind:href="link">
-			<p class="font-bold text-white mb-0">{{ title }}</p>
-		</a>
-	</button>
-	<button
-		v-else
-		class="fork rounded-md my-2 md:mx-2 px-20 py-2"
-		v-bind:class="`${isPreview ? 'preview' : ''}`"
-		:style="style"
-		@click="isPreview ? downloadPreview() : downloadStable()"
-	>
-		<div class="download-container">
-			<material-icon iconOnly :icon="isPreview ? 'memory' : 'get_app'" />
-			<p class="font-bold text-white mb-0">{{ title }}</p>
-			<p v-if="data" class="text-sm font-light text-white m-0">{{ data.version }}</p>
-		</div>
-	</button>
-
-	-->
 </template>
 
 <script>
@@ -152,9 +126,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+// TODO Add fork specific colors
 .download-button {
 	background var(--color-ui-primary)
+	border-radius 0.375em
+	
+	padding 0.5rem 5rem
+	user-select none
 
 	&:hover {
 		filter brightness(1.25)
@@ -162,10 +140,12 @@ export default {
 
 	p {
 		margin 0
+		color #fff
 	}
 
 	svg {
 		margin 0
+		stroke #fff
 	}
 
 	&.github {
@@ -180,7 +160,16 @@ export default {
 	}
 
 	&.preview {
-		background var(--color-ui-primary-light)
+		background transparent
+		border 2px solid var(--color-ui-primary) 
+
+		p {
+			color var(--color-ui-primary) 
+		}
+
+		svg {
+			stroke var(--color-ui-primary) 
+		}
 	}
 
 	&.github {
@@ -188,7 +177,7 @@ export default {
 		border 1px solid var(--color-ui-primary-light)
 
 		p {
-			color var(--color-ui-primary-dark)
+			color var(--color-ui-primary)
 		}
 	}
 

@@ -14,12 +14,13 @@ export default {};
 <style lang="stylus">
 .buttons {
 	text-align center
+  margin-top 0.5rem
 
   .buttons-container {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: min-content 1fr;
-    gap: 1rem 1rem;
+    gap: 0.5rem 0.5rem;
     grid-template-areas: 'First' 'Second' 'Third';
 
     @media (min-width: 640px) {
