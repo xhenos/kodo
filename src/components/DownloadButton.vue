@@ -130,9 +130,14 @@ export default {
 .download-button {
 	background var(--color-ui-primary)
 	border-radius 0.375em
-	
+	width 100%
 	padding 0.5rem 5rem
 	user-select none
+
+	@media (min-width 640px) {
+		width 100%
+		max-width 250px
+	}
 
 	&:hover {
 		filter brightness(1.25)
@@ -148,11 +153,24 @@ export default {
 		stroke #fff
 	}
 
+	&:nth-child(1) {
+		margin-left auto
+	}
+
+	&:nth-child(2) {
+		margin-right auto
+	}
+
+	&:nth-child(3) {
+		margin 0 auto
+	}
+
 	&.github {
 		display flex
 		align-items center
 		justify-content center
 		height 64px
+		
 
 		path {
 			fill var(--color-ui-primary)
