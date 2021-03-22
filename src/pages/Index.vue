@@ -75,12 +75,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="copyright container mx-auto px-4 py-8 ">
-					<p class="mt-8 text-center">
+				<footer class="container">
+					<div class="copyright">
 						<a href="https://www.apache.org/licenses/LICENSE-2.0">Open-source Apache Licensed</a>
 						| Copyright &copy; 2015{{ " - " + new Date().getFullYear() }} Javier Tomás
-					</p>
-				</div>
+					</div>
+					<div class="netlify">
+						<a target="_blank" href="https://www.netlify.com/">This site is powered by Netlify</a>
+						<netlify-logo height="0.8rem" width="0.8rem" />
+					</div>
+				</footer>
 			</main>
 		</div>
 	</div>
@@ -101,6 +105,7 @@
 <script>
 import LayoutHeader from "@/components/LayoutHeader";
 import Logo from "@/components/Logo";
+import NetlifyLogo from "@/assets/images/netlify-logo.svg";
 import { DownloadIcon, BookIcon, UserCheckIcon, LayoutIcon, PackageIcon } from "vue-feather-icons";
 
 export default {
@@ -112,6 +117,7 @@ export default {
 		UserCheckIcon,
 		LayoutIcon,
 		PackageIcon,
+		NetlifyLogo,
 	},
 	data() {
 		return {
@@ -209,5 +215,51 @@ export default {
 
 .index header input::placeholder {
 	color: var(--color-ui-search-text);
+}
+</style>
+
+<style lang="stylus">
+footer {
+	position relative
+	padding 2.5rem
+	text-align center
+
+	.copyright {
+		font-size 0.9rem
+
+		a {
+			color var(--color-ui-typo)
+			font-weight normal
+
+			&:hover {
+				text-decoration underline
+			}
+		}
+	}
+
+	.netlify {
+		margin-top 1rem
+		font-size 0.8rem
+
+		a {
+			color var(--color-ui-primary)
+			font-weight 500
+
+			&:hover {
+				color #24827a
+			}
+		}
+
+		svg {
+			display inline-block
+			-ms-transform rotate(360deg)
+			-webkit-transform rotate(360deg)
+			transform rotate(360deg)
+			margin-bottom 2px
+			margin-left 4px
+			width 1em
+			height 1em
+		}
+	}
 }
 </style>
