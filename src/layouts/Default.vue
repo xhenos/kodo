@@ -165,11 +165,43 @@ export default {
 			justify-content flex-start
 			width 100%
 
-			aside {
+			.sidebar {
+				position fixed
+				background-color var(--color-ui-background)
+				padding-left 1rem
+				padding-right 1rem
+				right 0
+				left 0
+				bottom 0
+				width 100%
+				border-right-width 1px
+				border-color var(--color-ui-border)
+				overflow-y auto
+				z-index 40
+				transform translateX(-100%)
+
+				&.open {
+					transform translateX(0)
+				}
+
 				> div {
 					width 100%
 					padding-bottom 4rem
 					background-color var(--color-ui-background)
+				}
+
+				@media (min-width 1024px) {
+					width 25%
+					padding-left 0
+					padding-right 0
+					background-color transparent
+					top 0
+					bottom auto
+					right auto
+					left auto
+					position sticky
+					z-index 0
+					transform translateX(0)
 				}
 			}
 
@@ -220,183 +252,6 @@ export default {
 		}
 	}
 }
-</style>
-
-<style lang="scss">
-// Temporary as SCSS until I figure out how Stylus does this
-
-h1 + .videolink,
-h2 + .videolink,
-h3 + .videolink {
-	margin-top: -1rem;
-}
-
-pre[class*="language-"] {
-	@apply max-w-full overflow-x-auto rounded;
-
-	& + p {
-		@apply mt-4;
-	}
-
-	& > code[class*="language-"] {
-		@apply border-none leading-relaxed;
-	}
-}
-</style>
-
-<style lang="stylus">
-* {
-	transition-property color, background-color, border-color
-	transition-duration 0ms
-	transition-timing-function ease-in-out
-}
-
-h1,
-h2,
-h3,
-h4 {
-	@apply leading-snug font-semibold mb-4 text-ui-header
-
-	&:hover {
-		a::before {
-			@apply opacity-100
-		}
-	}
-
-	a {
-		&::before {
-			content "#"
-			margin-left -1em
-			padding-right 1em
-
-			@apply text-ui-primary absolute opacity-0 float-left
-		}
-	}
-}
-
-h1 {
-	@apply text-4xl
-}
-
-h2 {
-	@apply text-2xl
-}
-
-h3 {
-	@apply text-xl
-}
-
-h4 {
-	@apply text-lg
-}
-
-p,
-ol,
-ul,
-pre,
-strong,
-blockquote {
-	@apply mb-4 text-base text-ui-typo
-}
-
-blockquote {
-	@apply border-l-4 py-2 pl-4 mt-4
-
-	border-left-color var(--color-ui-gray)
-
-	p:last-child {
-		@apply mb-0
-	}
-}
-
-code {
-	@apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded
-}
-
-header {
-	background-color rgba(255, 255, 255, 0.9)
-	backdrop-filter blur(4px)
-}
-
-table {
-	@apply text-left mb-6
-
-	td,
-	th {
-		@apply py-3 px-4
-
-		&:first-child {
-			@apply pl-0
-		}
-
-		&:last-child {
-			@apply pr-0
-		}
-	}
-
-	tr {
-		@apply border-b border-ui-border
-
-		&:last-child {
-			@apply border-b-0
-		}
-	}
-}
-
-.sidebar {
-	@apply fixed bg-ui-background px-4 inset-x-0 bottom-0 w-full border-r border-ui-border overflow-y-auto z-40
-	transform translateX(-100%)
-
-	&.open {
-		transform translateX(0)
-	}
-
-	@media (min-width theme('screens.lg')) {
-		@apply w-1/4 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0
-		transform translateX(0)
-	}
-}
-
-.bg-ui-container {
-	background var(--color-ui-container)
-}
-
-.videolink {
-	background-color transparent !important
-	border none !important
-	padding-left 0.75rem !important
-	padding-top 0.25rem
-	text-align left
-
-	p {
-		margin-top 0
-		font-size 0.9rem
-	}
-
-	.material-holder {
-		user-select none
-	}
-
-	a,
-	.material-holder {
-		color var(--color-ui-primary)
-	}
-}
-
-.note {
-	* {
-		font-size 0.9rem
-		text-align right
-	}
-
-	p {
-		color rgba(0, 0, 0, 0.4) !important
-	}
-
-	a {
-		color var(--color-ui-primary) !important
-	}
-}
 
 // TODO Move color to a varaible?
 
@@ -406,21 +261,6 @@ html [data-theme=experimental] {
 		p {
 			color rgba(255, 255, 255, 0.4) !important
 		}
-	}
-}
-
-.guide {
-	background-color var(--color-ui-container)
-	border-radius 0.5em // $containerBorderRadius;
-	margin 1rem 0
-	padding 0.1rem 1.5rem
-
-	.title {
-		font-weight bold
-	}
-
-	.videolink {
-		margin-top -1rem
 	}
 }
 </style>

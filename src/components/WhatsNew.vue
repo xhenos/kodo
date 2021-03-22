@@ -54,4 +54,8 @@ export default {
 		list-style-position inside
 	}
 }
+
+.bg-ui-container {
+	background var(--color-ui-container)
+}
 </style>
