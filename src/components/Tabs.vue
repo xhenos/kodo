@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="tabs">
-			<ul class="flex">
-				<li class="flex-1" v-for="tab in tabs" :key="tab.name" :class="{ isActive: tab.isActive }">
+			<ul>
+				<li v-for="tab in tabs" :key="tab.name" :class="{ isActive: tab.isActive }">
 					<a :href="tab.href" @click="selectTab(tab)">
 						{{ tab.name }}
 					</a>
@@ -38,9 +38,11 @@ export default {
 <style lang="stylus">
 .tabs {
 	ul {
+		display flex
 		padding 0 !important
 
 		li {
+			flex 1 1 0%
 			list-style none
 			padding 0 0.5rem 1rem
 			margin-bottom 0 !important
