@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<div id="NextPrevLinks">
-			<g-link v-if="prev" :to="prev.path" class="nextPrevButton">
+			<g-link v-if="prev" :to="prev.path" class="nextPrevButton next">
 				<ArrowLeftIcon size="1x" />
 				{{ prev.title }}
 			</g-link>
 
-			<g-link v-if="next" :to="next.path" class="nextPrevButton">
+			<g-link v-if="next" :to="next.path" class="nextPrevButton prev">
 				{{ next.title }}
 				<ArrowRightIcon size="1x" />
 			</g-link>
@@ -79,7 +79,7 @@ export default {
 			color #fff
 		}
 
-		&:first-child {
+		&.next {
 			margin-right auto
 
 			svg {
@@ -87,7 +87,7 @@ export default {
 			}
 		}
 
-		&:last-child {
+		&.prev {
 			margin-left auto
 
 			svg {
@@ -99,6 +99,8 @@ export default {
 			width max-content
 		}
 	}
+
+	
 
 	@media (min-width 640px) {
 		justify-content space-evenly

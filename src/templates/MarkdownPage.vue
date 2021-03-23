@@ -1,15 +1,15 @@
 <template>
 	<Layout>
-		<div id="MarkdownPage" class="flex flex-wrap items-start justify-start">
-			<div class="toc" v-if="this.$page.markdownPage.onThisPage == true">
+		<div id="MarkdownPage">
+			<div class="toc" v-if="hasTableOfContent">
 				<OnThisPage />
 			</div>
 
 			<div
-				class="markdownContent order-1"
+				class="markdownContent"
 				:class="{
-					'md:w-2/3': this.$page.markdownPage.onThisPage == true,
-					'lg:px-56': this.$page.markdownPage.onThisPage == false && this.$page.markdownPage.sidebar == '',
+					'allowTableOfContent': this.$page.markdownPage.onThisPage == true,
+					'onlyContent': this.$page.markdownPage.onThisPage == false && this.$page.markdownPage.sidebar == '',
 				}"
 			>
 				<div v-if="this.$page.markdownPage.icon" class="contentHeader contentIcon">
@@ -29,14 +29,11 @@
 
 				<VueRemarkContent class="content" id="Markdown" />
 
-				<div v-if="this.$page.markdownPage.cms && this.$page.markdownPage.cms.edit" class="mt-2 pt-4">
+				<div v-if="isEditable" class="editThisPage">
 					<EditThisPage />
 				</div>
 
-				<div
-					v-if="this.$page.markdownPage.prev || this.$page.markdownPage.next"
-					class="mt-6 pt-8 border-t border-ui-border"
-				>
+				<div v-if="hasPrevNextPage" class="prevNextPage">
 					<NextPrevLinks />
 				</div>
 			</div>
@@ -168,11 +165,47 @@ export default {
 			],
 		};
 	},
+	methods: {
+		isEditable() {
+			return this.$page.markdownPage.cms && this.$page.markdownPage.cms.edit
+		},
+	
+		hasTableOfContent() {
+			return this.$page.markdownPage.onThisPage == true
+		},
+		hasPrevNextPage() {
+			return this.$page.markdownPage.prev || this.$page.markdownPage.next
+		}
+	}
 };
 </script>
 
 <style lang="stylus">
+#MarkdownPage {
+	display flex
+	flex-wrap wrap 
+	align-items flex-start
+	justify-content flex-start
+}
+
 .markdownContent {
+	order 1
+
+	&.allowTableOfContent {
+		@media (min-width: 768px) {
+    		width: 66.666667%;
+		}
+	}
+
+	&.onlyContent {
+		@media (min-width: 1024px) {
+   			padding-left: 14rem;
+    		padding-right: 14rem;
+		}
+	}
+
+	
+
 	ol,
 	ul {
 		list-style revert
@@ -229,6 +262,18 @@ export default {
 				margin-left 0.75rem
 			}
 		}
+	}
+
+	.editThisPage {
+		padding-top: 1rem;
+    	margin-top: 0.5rem;
+	}
+
+	.prevNextPage {
+		padding-top: 2rem;
+		margin-top: 1.5rem;
+		border-top-width: 1px;
+		border-color: var(--color-ui-border);
 	}
 }
 
