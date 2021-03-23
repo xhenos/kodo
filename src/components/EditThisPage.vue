@@ -1,6 +1,6 @@
 <template>
-	<div id="EditThisPage">
-		<a :href="editLink" target="_blank" class="hover:text-ui-primary">
+	<div class="edit-page">
+		<a class="edit-link" :href="editLink" target="_blank">
 			<Edit3Icon />
 			<span>Edit this page</span>
 		</a>
@@ -27,12 +27,17 @@ export default {
 </script>
 
 <style lang="stylus">
-#EditThisPage {
-	a {
+.edit-page {
+	.edit-link {
 		font-size 0.9rem
 		font-weight normal
 		display inline-flex
 		align-items center
+		color var(--color-ui-typo)
+
+		&:hover {
+			color var(--color-ui-primary)
+		}
 
 		svg {
 			margin-right 0.5rem
