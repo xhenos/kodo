@@ -127,6 +127,7 @@ export default {
 
 <style lang="stylus" scoped>
 // TODO Add fork specific colors
+
 .download-button {
 	background var(--color-ui-primary)
 	border-radius 0.375em
@@ -170,7 +171,7 @@ export default {
 		align-items center
 		justify-content center
 		height 64px
-		
+
 
 		path {
 			fill var(--color-ui-primary)
@@ -179,14 +180,14 @@ export default {
 
 	&.preview {
 		background transparent
-		border 2px solid var(--color-ui-primary) 
+		border 2px solid var(--color-ui-primary)
 
 		p {
-			color var(--color-ui-primary) 
+			color var(--color-ui-primary)
 		}
 
 		svg {
-			stroke var(--color-ui-primary) 
+			stroke var(--color-ui-primary)
 		}
 	}
 

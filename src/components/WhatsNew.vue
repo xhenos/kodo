@@ -1,10 +1,10 @@
 <template>
-	<div id="WhatsNew" class="bg-ui-container rounded-lg p-8">
-		<header class="bg-transparent flex justify-center">
-			<InfoIcon class="mr-2" />
+	<div id="WhatsNew">
+		<header class="whats-new">
+			<InfoIcon />
 			<h2>Whats New</h2>
 		</header>
-		<main>
+		<main class="changelog">
 			<div v-html="marked" />
 		</main>
 		<footer class="note">
@@ -41,6 +41,24 @@ export default {
 
 <style lang="stylus">
 #WhatsNew {
+	background var(--color-ui-container)
+	border-radius 0.5rem
+	padding 2rem
+
+	.whats-new {
+		background-color transparent
+		display flex
+		justify-content center
+
+		svg {
+			margin-right 0.5rem
+		}
+	}
+
+	.changelog {
+		background-color transparent
+	}
+
 	h2 {
 		display contents
 	}
@@ -53,9 +71,5 @@ export default {
 		list-style-type disc
 		list-style-position inside
 	}
-}
-
-.bg-ui-container {
-	background var(--color-ui-container)
 }
 </style>
