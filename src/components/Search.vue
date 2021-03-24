@@ -1,15 +1,14 @@
 <template>
-	<div @keydown.down="increment" @keydown.up="decrement" @keydown.enter="go" class="relative">
-		<label class="relative block">
+	<div @keydown.down="increment" @keydown.up="decrement" @keydown.enter="go" class="search">
+		<label>
 			<span class="sr-only">Search docs...</span>
-			<div class="searchIcon absolute inset-y-0 left-0 flex items-center justify-center px-3 py-2 opacity-60">
-				<SearchIcon size="1.25x" class="text-ui-typo" />
+			<div class="search-icon">
+				<SearchIcon size="1.25x" />
 			</div>
 			<input
 				ref="input"
 				type="search"
 				:value="query"
-				class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg select-none"
 				placeholder="Search docs..."
 				@focus="focused = true"
 				@blur="focused = false"
@@ -20,15 +19,11 @@
 				@change="query = $event.target.value"
 			/>
 		</label>
-		<div
-			v-if="showResult"
-			class="fixed inset-x-0 mt-2 z-50 overflow-y-auto border-2 border-t-0 rounded-lg rounded-t-none shadow-lg results bg-ui-background bottom:0 sm:bottom-auto sm:absolute border-ui-sidebar"
-			style="max-height: calc(100vh - 120px)"
-		>
-			<ul class="px-4 py-2 m-0">
-				<li v-if="results.length === 0" class="px-2">
+		<div v-if="showResult" class="search-results">
+			<ul>
+				<li v-if="results.length === 0" class="no-results">
 					No results for
-					<span class="font-bold">{{ query }}</span>
+					<span>{{ query }}</span>
 					.
 				</li>
 
@@ -38,26 +33,17 @@
 					:key="result.path + result.anchor"
 					@mouseenter="focusIndex = index"
 					@mousedown="go"
-					class="border-ui-sidebar"
-					:class="{
-						'border-b': index + 1 !== results.length,
-					}"
+					class="result-item"
 				>
-					<g-link
-						:to="result.path + result.anchor"
-						class="block p-2 -mx-2 text-base font-bold rounded-lg"
-						:class="{
-							'bg-ui-sidebar text-ui-primary': focusIndex === index,
-						}"
-					>
-						<span v-if="result.value === result.title">
+					<g-link :to="result.path + result.anchor">
+						<span v-if="result.value === result.title" class="single">
 							{{ result.value }}
 						</span>
 
-						<span v-else class="flex items-center">
+						<span v-else class="multi">
 							{{ result.title }}
-							<ChevronsRightIcon size="1x" class="mx-1" />
-							<span class="font-normal opacity-75">{{ result.value }}</span>
+							<ChevronsRightIcon size="1x" />
+							<span>{{ result.value }}</span>
 						</span>
 					</g-link>
 				</li>
@@ -169,15 +155,129 @@ export default {
 };
 </script>
 
-<style>
-header input {
-	background-color: rgba(var(--color-ui-search), 1);
-	border-color: transparent;
-	transition: border-color 0.3s;
+<style lang="stylus">
+.search {
+	position relative
+
+	label {
+		position relative
+		display block
+
+		.search-icon {
+			position absolute
+			top 0
+			bottom 0
+			left 0
+			display flex
+			opacity 0.6
+			padding-left 0.75rem
+			padding-right 0.75rem
+			align-items center
+			justify-content center
+
+			svg {
+				color var(--color-ui-typo)
+			}
+		}
+
+		input {
+			display block
+			width 100%
+			padding 0.5rem 1rem 0.5rem 2.5rem
+			border-width 2px
+			border-radius 0.5rem
+			user-select none
+		}
+	}
+
+	.search-results {
+		position fixed
+		z-index 50
+		bottom 0
+		left 0
+		right 0
+		margin-top 0.5rem
+		box-shadow 0 10px 15px -3px #000, 0 4px 6px -2px #000
+		border-width 2px
+		border-color var(--color-ui-sidebar)
+		border-radius 0.5rem
+		border-top-width 0
+		border-top-left-radius 0
+		border-top-right-radius 0
+		max-height calc(100vh - 120px)
+		background-color var(--color-ui-background)
+		overflow-y auto
+
+		@media (min-width 640px) {
+			bottom auto
+			position absolute
+		}
+
+		ul {
+			padding 0.5rem 1rem 0.5rem 1rem
+			margin 0
+
+			.no-results {
+				padding-left 0.5rem
+				padding-right 0.5rem
+
+				span {
+					font-weight 700
+				}
+			}
+
+			.result-item {
+				border-color var(--color-ui-sidebar)
+				border-bottom-width 1px
+
+				&:last-child {
+					border-bottom-width 0px
+				}
+
+				&:hover a {
+					background-color var(--color-ui-sidebar)
+					color var(--color-ui-primary)
+				}
+
+				a {
+					display block
+					padding 0.5rem
+					margin-left -0.5rem
+					margin-right -0.5rem
+					font-size 1rem
+					font-weight 700
+					border-radius 0.5rem
+
+					.multi {
+						display flex
+						align-items center
+
+						svg {
+							margin-left 0.25rem
+							margin-right 0.25rem
+						}
+
+						span {
+							font-weight 400
+							opacity 0.75
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-header input:focus {
-	outline: 0;
-	border-color: var(--color-ui-primary);
+@css {
+	header input {
+		background-color: rgba(var(--color-ui-search), 1);
+		border-color: transparent;
+		transition: border-color 0.3s;
+	}
+
+	header input:focus {
+		outline: 0;
+		border-color: var(--color-ui-primary);
+	}
 }
 </style>
