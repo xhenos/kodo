@@ -20,6 +20,7 @@ export default {
 <style lang="stylus">
 .badge {
 	background-color var(--color-ui-primary)
+	color white
 	border-radius 99em
 	display inline-flex
 	font-size 0.45em
