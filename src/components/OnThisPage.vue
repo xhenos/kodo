@@ -1,5 +1,5 @@
 <template>
-	<div id="OnThisPage" class="on-this-page">
+	<div class="on-this-page">
 		<h3>On this page</h3>
 		<div>
 			<ul>
@@ -14,19 +14,14 @@
 				>
 					<g-link
 						:to="`${page.path}${heading.anchor}`"
-						class="anchor relative flex items-center py-1 text-sm transition transform"
+						class="anchor"
 						:class="{
-							'pl-2': heading.depth === 3,
-							'pl-3': heading.depth === 4,
-							'pl-4': heading.depth === 5,
-							'pl-5': heading.depth === 6,
 							'active-anchor': activeAnchor === heading.anchor,
 						}"
 					>
 						<span
-							class="absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-ui-primary transition transform scale-0 origin-center"
 							:class="{
-								'opacity-100 scale-100': activeAnchor === heading.anchor,
+								visible: activeAnchor === heading.anchor,
 							}"
 						></span>
 						{{ heading.value }}
@@ -70,7 +65,7 @@ export default {
 	},
 
 	methods: {
-		observerCallback(entries, observer) {
+		observerCallback(entries) {
 			// This early return fixes the jumping
 			// of the bubble active state when we click on a link.
 			// There should be only one intersecting element anyways.
@@ -94,7 +89,7 @@ export default {
 		initObserver() {
 			this.observer = new IntersectionObserver(this.observerCallback, {
 				// This rootMargin should allow intersections at the top of the page.
-				rootMargin: "0px 0px 99999px",
+				rootMargin: "0px 0px 9999px",
 				threshold: 1,
 			});
 
@@ -145,18 +140,49 @@ export default {
 
 	.thighs {
 		font-weight 600
+	}
 
-		.anchor {
-			transition all 0.3s
-			padding-left 0.8rem
+	.anchor {
+		position relative
+		display flex
+		align-items center
+		padding-top 0.25rem
+		padding-bottom 0.25rem
+		font-size 0.875rem
+		transition-property background-color, border-color, color, fill, stroke, opacity, box-shadow, transform
 
-			&.active-anchor {
-				color var(--color-ui-primary)
+		&:hover {
+			color var(--color-ui-primary)
+		}
 
-				span {
-					background-color var(--color-ui-primary)
-				}
+		&.active-anchor {
+			color var(--color-ui-primary)
+		}
+
+		span {
+			position absolute
+			width 0.5rem
+			height 0.5rem
+			margin-left -0.75rem
+			border-radius 100%
+			opacity 0
+			background-color var(--color-ui-primary)
+			transition-property background-color, border-color, color, fill, stroke, opacity, box-shadow, transform
+			transform-origin center
+			--transform-scale-x 0
+			--transform-scale-y 0
+
+			&.visible {
+				opacity 1
+				--transform-scale-x 1
+				--transform-scale-y 1
 			}
+		}
+	}
+
+	for depth in 3 4 5 6 {
+		.depth-{depth} .anchor {
+			padding-left 0.25rem * depth - 0.25rem
 		}
 	}
 

@@ -129,6 +129,8 @@ module.exports = {
 	},
 	corePlugins: {
 		container: false,
+		transform: false,
+		visible: false,
 	},
 	variants: {},
 	plugins: [],
