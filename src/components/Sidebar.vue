@@ -1,30 +1,22 @@
 <template>
-	<div id="Sidebar" ref="sidebar" v-if="showSidebar" class="px-4 pt-8 lg:pt-12">
-		<div
-			v-for="(section, index) in sidebar.sections"
-			:key="section.title"
-			class="pb-4 mb-4 border-ui-border"
-			:class="{ 'border-b': index < sidebar.sections.length - 1 }"
-		>
+	<div ref="sidebar" v-if="showSidebar" class="sidebar-container">
+		<div v-for="section in sidebar.sections" :key="section.title" class="sidebar-section">
 			<g-link
 				v-if="section.index.length > 0"
 				:to="`${section.index}`"
-				class="menu-item menu-link flex items-center py-1 font-semibold"
+				class="sidebar-header sidebar-link sidebar-item"
 				:class="getClassesForAnchor({ page: section.index })"
 				@mousedown="$emit('navigate')"
 			>
-				<span
-					class="menu-item-dot absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-ui-primary transition transform scale-0 origin-center"
-				></span>
-				<h3 class="menu-item pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
+				<h3 class="sidebar-item">
 					{{ section.title }}
 				</h3>
 			</g-link>
-			<h3 v-else class="menu-item pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
+			<h3 v-else class="sidebar-item">
 				{{ section.title }}
 			</h3>
 
-			<ul class="max-w-full pl-2 mb-0">
+			<ul>
 				<li
 					v-for="page in findPages(section.items)"
 					:id="page.path"
@@ -32,11 +24,11 @@
 					:class="getClassesForAnchor(page)"
 					@mousedown="$emit('navigate')"
 				>
-					<g-link :to="`${page.path}`" class="menu-item menu-link flex items-center py-1 font-semibold">
+					<g-link :to="`${page.path}`" class="sidebar-subheader sidebar-item sidebar-link">
 						<span
-							class="menu-item-dot absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-ui-primary transition transform scale-0 origin-center"
+							class="sidebar-item-dot"
 							:class="{
-								'opacity-100 scale-100': currentPage.path === page.path,
+								visible: currentPage.path === page.path,
 							}"
 						></span>
 						{{ page.title }}
@@ -91,8 +83,7 @@ export default {
 		getClassesForAnchor({ path }) {
 			if (!path) return {};
 			return {
-				"text-ui-primary": this.currentPage.path === path,
-				"transform hover:translate-x-1 hover:text-ui-primary": !this.currentPage.path === path,
+				active: this.currentPage.path === path,
 			};
 		},
 		findPages(links) {
@@ -103,41 +94,90 @@ export default {
 </script>
 
 <style lang="stylus">
-#Sidebar {
-	h3 {
-		color currentColor
+.sidebar {
+	.sidebar-container {
+		padding-left 1rem
+		padding-right 1rem
+		padding-top 2rem
 
-		&.active--exact {
-			color var(--color-ui-primary)
+		@media (min-width 1024px) {
+			padding-top 3rem
+		}
 
-			span {
-				background-color var(--color-ui-primary)
+		.sidebar-section {
+			padding-bottom 1rem
+			margin-bottom 1rem
+			border-color var(--color-ui-border)
+			border-bottom-width 1px
+
+			&:last-child {
+				border-bottom-width 0px
 			}
-		}
-	}
 
-	a {
-		color currentColor
-
-		&.active--exact {
-			color var(--color-ui-primary)
-
-			span {
-				background-color var(--color-ui-primary)
+			.sidebar-header,
+			.sidebar-subheader {
+				display flex
+				align-items center
+				padding-top 0.25rem
+				padding-bottom 0.25rem
+				font-weight 600
 			}
-		}
 
-		&:hover {
-			color var(--color-ui-primary)
-		}
-	}
+			.sidebar-item-dot {
+				position absolute
+				width 0.5rem
+				height 0.5rem
+				margin-left -0.75rem
+				border-radius 100%
+				opacity 0
+				background var(--color-ui-primary)
+				transition translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))
+				transform-origin center
+				--transform-scale-x 0
+				--transform-scale-y 0
 
-	li a {
-		transition all 0.3s, color 0s
+				&.visible {
+					opacity 1
+					--transform-scale-x 1
+					--transform-scale-y 1
+				}
+			}
 
-		&.active {
-			color var(--color-ui-primary)
-			padding-left 0.8rem
+			h3 {
+				color currentColor
+				padding-top 0
+				margin-top 0
+				margin-bottom 0.25rem
+				font-size 0.875rem
+				letter-spacing -0.025em
+				text-transform uppercase
+				border-style none
+			}
+
+			ul {
+				max-width 100%
+				padding-left 0.5rem
+				margin-bottom 0
+
+				li {
+					&:hover {
+						color var(--color-ui-primary)
+					}
+
+					&.active {
+						color var(--color-ui-primary)
+					}
+
+					a {
+						transition all 0.3s, color 0s
+
+						&.active {
+							color var(--color-ui-primary)
+							padding-left 0.8rem
+						}
+					}
+				}
+			}
 		}
 	}
 }
