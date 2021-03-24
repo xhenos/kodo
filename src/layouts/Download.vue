@@ -4,9 +4,9 @@
 			Download the latest stable version of
 			<b>Tachiyomi</b>
 			that released
-			<b>{{ stable.releaseDate }}</b>
+			<b :title="stable.releaseDate">{{ date(stable.releaseDate) }}</b>
 			or the preview version that released
-			<b>{{ preview.releaseDate }}</b>
+			<b :title="preview.releaseDate">{{ date(preview.releaseDate) }}</b>
 			.
 		</p>
 
@@ -38,13 +38,13 @@ export default {
 		return {
 			stable: {
 				body: "",
-				releaseDate: moment(0).fromNow(),
+				releaseDate: "",
 				downloadUrl: "",
 				version: "v0.00.0",
 			},
 			preview: {
 				body: "",
-				releaseDate: moment(0).fromNow(),
+				releaseDate: "",
 				downloadUrl: "",
 				version: "r0000",
 			},
@@ -58,6 +58,14 @@ export default {
 
 		this.stable = all[0].data;
 		this.preview = all[1].data;
+	},
+	methods: {
+		moment: function(date) {
+			return moment(date);
+		},
+		date: function(date) {
+			return moment(date).fromNow();
+		},
 	},
 	computed: {},
 };
