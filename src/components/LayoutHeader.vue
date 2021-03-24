@@ -1,40 +1,38 @@
 <template>
-	<div class="py-2 border-t-2 border-ui-primary">
+	<div class="layout-header">
 		<div class="container">
-			<div class="flex items-center justify-between -mx-2 sm:-mx-4">
-				<div class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row">
-					<g-link to="/" class="flex items-center nav-link nav-primary hover:text-ui-primary" title="Home">
-						<Logo :width="32" class="text-ui-primary" />
-						<span class="hidden ml-2 text-xl font-semibold md:block select-none">
-							{{ meta.siteName }}
-						</span>
+			<div class="header-row">
+				<div class="header-item">
+					<g-link to="/" class="brand nav-link nav-primary" title="Home">
+						<Logo :width="32" />
+						<span>{{ meta.siteName }}</span>
 					</g-link>
 
-					<div v-if="settings.nav.links.length > 0" class="hidden ml-2 mr-5 sm:block sm:ml-8">
+					<div v-if="settings.nav.links.length > 0" class="links">
 						<g-link
 							v-for="link in settings.nav.links"
 							:key="link.path"
 							:to="link.path"
-							class="block p-1 font-medium nav-link nav-secondary text-ui-typo hover:text-ui-primary select-none"
+							class="link nav-link nav-secondary"
 						>
 							{{ link.title }}
 						</g-link>
 					</div>
 				</div>
 
-				<div class="w-full px-2 sm:px-4 max-w-screen-xs">
+				<div class="header-item">
 					<ClientOnly>
 						<Search />
 					</ClientOnly>
 				</div>
 
-				<div class="flex items-center justify-end px-2 sm:px-4">
+				<div class="header-item">
 					<ToggleTheme />
 
 					<a
 						v-if="settings.twitter"
 						:href="settings.twitter"
-						class="hidden ml-4 sm:block"
+						class="icon twitter"
 						target="_blank"
 						rel="noopener noreferrer"
 						title="Twitter"
@@ -46,7 +44,7 @@
 					<a
 						v-if="settings.discord"
 						:href="settings.discord"
-						class="hidden ml-4 sm:block"
+						class="icon discord"
 						target="_blank"
 						rel="noopener noreferrer"
 						title="Discord"
@@ -58,7 +56,7 @@
 					<a
 						v-if="settings.github"
 						:href="settings.github"
-						class="ml-4"
+						class="icon github"
 						target="_blank"
 						rel="noopener noreferrer"
 						title="Github"
@@ -69,14 +67,14 @@
 
 					<g-link
 						to="/download/"
-						class="md:hidden ml-4 md:block text-xl font-medium nav-link text-ui-typo hover:text-ui-primary"
+						class="download icon nav-link"
 					>
 						<DownloadIcon size="22" />
 					</g-link>
 
 					<g-link
 						to="/download/"
-						class="hidden ml-4 md:block p-1 text-lg font-fancy font-medium nav-link text-ui-typo hover:text-ui-primary select-none"
+						class="download hidden nav-link"
 					>
 						{{ stable.version }}
 					</g-link>
@@ -154,6 +152,141 @@ header {
 	svg:not(.feather-search) {
 		&:hover {
 			@apply text-ui-primary
+		}
+	}
+}
+
+.layout-header {
+	border-color var(--color-ui-primary)
+	border-top-width 2px
+	padding-top 0.5rem
+	padding-bottom 0.5rem
+}
+
+.header-row {
+	align-items center
+	display flex
+	justify-content space-between
+	margin-left -0.5rem
+	margin-right -0.5rem
+
+	@media (min-width 640px) {
+		margin-left -1rem
+		margin-right -1rem
+	}
+
+	.header-item {
+		padding-left 0.5rem
+		padding-right 0.5rem
+
+		@media (min-width 640px) {
+			padding-left 1rem
+			padding-right 1rem
+		}
+
+		&:nth-child(2) {
+			width 100%
+		}
+
+		&:not(:nth-child(2)) {
+			display flex
+			align-items center
+			justify-content flex-end
+		}
+
+		.brand {
+			align-items center
+			display flex
+
+			svg {
+				color var(--color-ui-primary)
+			}
+
+			span {
+				display none
+				margin-left 0.5rem
+				font-size 1.25rem
+				font-weight 600
+				user-select none
+
+				@media (min-width 768px) {
+					display block
+				}
+			}
+		}
+
+		.links {
+			margin-left 0.5rem
+			margin-right 1.25rem
+			display none
+
+			@media (min-width 640px) {
+				margin-left 2rem
+				display block
+			}
+
+			& .link {
+				display block
+				font-weight 500
+				padding 0.25rem
+				user-select none
+			}
+		}
+
+		.icon {
+			margin-left 1rem
+			display none
+
+			@media (min-width 640px) {
+				display block
+			}
+
+			$.twitter {
+				svg:hover {
+					color #1da1f2
+				}
+			}
+
+			&.discord {
+				svg:hover {
+					color #7289da
+				}
+			}
+
+			&.github {
+				display block
+
+				svg:hover {
+					color black
+				}
+			}
+		}
+
+		& .download {
+			display none
+			font-family Jost, Helvetica, Helvetica Neue, Segoe UI, Arial, sans-serif
+			font-weight 500
+			font-size 1.125rem
+			margin-left 1rem
+			padding 0.25rem
+			color var(--color-ui-typo)
+			user-select none
+
+			&:hover {
+				color var(--color-ui-primary)
+			}
+
+			@media (min-width 768px) {
+				display block
+			}
+
+			&.icon {
+				display block
+
+				@media (min-width 768px) {
+					display none
+				}
+			}
 		}
 	}
 }
