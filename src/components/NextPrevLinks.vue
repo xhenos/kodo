@@ -100,7 +100,7 @@ export default {
 		}
 	}
 
-	
+
 
 	@media (min-width 640px) {
 		justify-content space-evenly

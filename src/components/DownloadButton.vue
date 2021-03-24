@@ -2,9 +2,9 @@
 	<div
 		class="download-button"
 		:class="{
-			'github': isGithub,
-			'preview': isPreview,
-			[`${(isPreview ? 'preview-' : 'stable-') + this.name}`]: this.name !== 'tachiyomi'
+			github: isGithub,
+			preview: isPreview,
+			[`${(isPreview ? 'preview-' : 'stable-') + this.name}`]: this.name !== 'tachiyomi',
 		}"
 		@click="isGithub ? onClickGitHub() : isPreview ? onClickPreview() : onClickStable()"
 	>
