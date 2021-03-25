@@ -59,13 +59,6 @@ module.exports = {
 		defaultBlur: 20,
 		defaultQuality: 90,
 	},
-	css: {
-		loaderOptions: {
-			postcss: {
-				plugins: [require("tailwindcss")],
-			},
-		},
-	},
 	plugins: [
 		{
 			use: "@gridsome/plugin-google-analytics",
