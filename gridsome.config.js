@@ -7,7 +7,6 @@ module.exports = {
 	siteName: "Tachiyomi",
 	siteDescription: "Free and open source manga reader for Android",
 	siteUrl: process.env.SITE_URL ? process.env.SITE_URL : "https://tachiyomi.org",
-	pathPrefix: process.env.SITE_URL_PREFIX ? process.env.SITE_URL_PREFIX : "",
 	icon: {
 		favicon: "./src/assets/favicon.png",
 		touchicon: "./src/assets/favicon.png",

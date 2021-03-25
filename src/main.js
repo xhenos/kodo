@@ -22,14 +22,10 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 	Vue.component("Badge", Badge);
 
 	router.beforeEach((to, _from, next) => {
-		head.meta.popAndPushContent(
-			process.env.SITE_URL + process.env.SITE_URL_PREFIX + _from.path,
-			process.env.SITE_URL + process.env.SITE_URL_PREFIX + to.path,
-			{
-				key: "og:url",
-				name: "og:url",
-			}
-		);
+		head.meta.popAndPushContent(process.env.SITE_URL + _from.path, process.env.SITE_URL + to.path, {
+			key: "og:url",
+			name: "og:url",
+		});
 		next();
 	});
 

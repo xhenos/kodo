@@ -113,12 +113,12 @@ export default {
 					{
 						key: "og:image",
 						name: "og:image",
-						content: process.env.SITE_URL + process.env.SITE_URL_PREFIX + "/ogimage_large.png",
+						content: process.env.SITE_URL + "/ogimage_large.png",
 					},
 					{
 						key: "twitter:image",
 						name: "twitter:image",
-						content: process.env.SITE_URL + process.env.SITE_URL_PREFIX + "/ogimage_large.png",
+						content: process.env.SITE_URL + "/ogimage_large.png",
 					},
 					{
 						key: "theme-color",
