@@ -143,6 +143,7 @@ export default {
 	}
 
 	.anchor {
+		margin-top unset
 		position relative
 		display flex
 		align-items center
