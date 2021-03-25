@@ -1,0 +1,50 @@
+.container {
+	width 100%
+	margin-right auto
+	margin-left auto
+	padding-right 1rem
+	padding-left 1rem
+
+	@media (min-width 640px) {
+		max-width 640px
+	}
+
+	@media (min-width 768px) {
+		max-width 768px
+	}
+
+	@media (min-width 1024px) {
+		max-width 1024px
+	}
+
+	@media (min-width 1280px) {
+		max-width 1280px
+	}
+
+	@media (min-width 1400px) {
+		max-width 1400px
+	}
+}
+
+.transform {
+	--transform-translate-x 0
+	--transform-translate-y 0
+	--transform-rotate 0
+	--transform-skew-x 0
+	--transform-skew-y 0
+	--transform-scale-x 1
+	--transform-scale-y 1
+	transform translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))
+}
+
+.sr-only {
+	position absolute
+	width 1px
+	height 1px
+	padding 0
+	margin -1px
+	overflow hidden
+	clip rect(0, 0, 0, 0)
+	white-space nowrap
+	border-width 0
+}
