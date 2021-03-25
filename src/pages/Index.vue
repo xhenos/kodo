@@ -31,35 +31,35 @@
 					<span class="disclaimer">* Requires Android 5.0 or higher.</span>
 				</div>
 			</div>
-			<div class="features container px-4 pt-8 pb-0 xl:py-4 xl:px-48">
-				<div class="feature-container flex-wrap justify-center -mx-4">
-					<div class="feature flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-						<UserCheckIcon size="3x" class="mb-6 text-ui-primary" />
-						<h3 class="font-bold tracking-wide uppercase text-ui-primary">
+			<div class="features container">
+				<div class="feature-container">
+					<div class="feature">
+						<UserCheckIcon size="3x" />
+						<h3>
 							Tracking
 						</h3>
-						<p class="text-lg text-center">
+						<p>
 							Automatically keep track of your manga with MyAnimeList, AniList, Kitsu, Shikimori,and
 							Bangumi.
 						</p>
 					</div>
 
-					<div class="feature flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-						<PackageIcon size="3x" class="mb-6 text-ui-primary" />
-						<h3 class="font-bold tracking-wide uppercase text-ui-primary">
+					<div class="feature">
+						<PackageIcon size="3x" />
+						<h3>
 							Extensions
 						</h3>
-						<p class="text-lg text-center">
+						<p>
 							Online and offline reading from sources like MangaDex, MangaKakalot, and hundreds more.
 						</p>
 					</div>
 
-					<div class="feature flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-						<LayoutIcon size="3x" class="mb-6 text-ui-primary" />
-						<h3 class="font-bold tracking-wide uppercase text-ui-primary">
+					<div class="feature">
+						<LayoutIcon size="3x" />
+						<h3>
 							Customization
 						</h3>
-						<p class="text-lg text-center">
+						<p>
 							A configurable reader with multiple reading modes, custom color filters, and other settings.
 						</p>
 					</div>
@@ -319,57 +319,94 @@ export default {
 		.features {
 			margin-right auto
 			margin-left auto
+			padding 2rem 1rem 0rem 1rem
+
+			@media (min-width 1280px) {
+				padding 1rem 12rem 1rem 12rem
+			}
 
 			.feature-container {
 				display flex
+				flex-wrap wrap
+				justify-content center
+				margin-left -1rem
+				margin-right -1rem
 
 				.feature {
 					display flex
+					flex-direction column
+					align-items center
+					width 100%
+					padding-left 1rem
+					padding-right 1rem
+					margin-bottom 2rem
+					text-align center
+
+					@media (min-width 768px) {
+						width 33.333333%
+					}
+
+					svg {
+						color var(--color-ui-primary)
+						margin-bottom 1.5rem
+					}
+
+					h3 {
+						font-weight 700
+						letter-spacing 0.025em
+						text-transform uppercase
+						color var(--color-ui-primary)
+					}
+
+					p {
+						font-size 1.125rem
+						text-align center
+					}
 				}
 			}
 		}
-	}
 
-	footer {
-		position relative
-		padding 2.5rem
-		text-align center
+		footer {
+			position relative
+			padding 2.5rem
+			text-align center
 
-		.copyright {
-			font-size 0.9rem
+			.copyright {
+				font-size 0.9rem
 
-			a {
-				color var(--color-ui-typo)
-				font-weight normal
+				a {
+					color var(--color-ui-typo)
+					font-weight normal
 
-				&:hover {
-					text-decoration underline
-				}
-			}
-		}
-
-		.netlify {
-			margin-top 1rem
-			font-size 0.8rem
-
-			a {
-				color var(--color-ui-primary)
-				font-weight 500
-
-				&:hover {
-					color #24827a
+					&:hover {
+						text-decoration underline
+					}
 				}
 			}
 
-			svg {
-				display inline-block
-				margin-bottom 2px
-				margin-left 4px
-				width 1em
-				height 1em
-				transform rotate(360deg)
-				-ms-transform rotate(360deg)
-				-webkit-transform rotate(360deg)
+			.netlify {
+				margin-top 1rem
+				font-size 0.8rem
+
+				a {
+					color var(--color-ui-primary)
+					font-weight 500
+
+					&:hover {
+						color #24827a
+					}
+				}
+
+				svg {
+					display inline-block
+					margin-bottom 2px
+					margin-left 4px
+					width 1em
+					height 1em
+					transform rotate(360deg)
+					-ms-transform rotate(360deg)
+					-webkit-transform rotate(360deg)
+				}
 			}
 		}
 	}
