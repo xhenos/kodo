@@ -170,11 +170,11 @@ export default {
 
 <style lang="stylus">
 .index {
-	color var(--color-ui-typo)
 	display flex
 	flex-direction column
 	justify-content flex-start
 	min-height 100vh
+	color var(--color-ui-typo)
 	font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
@@ -191,8 +191,8 @@ export default {
 	main {
 		position absolute
 		top 0
-		left 0
 		right 0
+		left 0
 
 		.jumbotron {
 			display flex
@@ -200,18 +200,18 @@ export default {
 			align-content center
 
 			.container {
-				margin 8rem auto 2rem auto
-				padding-left 1rem
-				padding-right 1rem
 				display flex
 				flex-direction column
 				align-items center
+				margin 8rem auto 2rem
+				padding-right 1rem
+				padding-left 1rem
 
 				@media (min-width 1280px) {
 					margin-top 12rem
 					margin-bottom 6rem
-					padding-left 12rem
 					padding-right 12rem
+					padding-left 12rem
 				}
 
 				.branding {
@@ -222,23 +222,23 @@ export default {
 					color var(--color-ui-primary)
 
 					h2 {
-						font-size 3rem
 						margin-top 1.25rem
-						font-weight 500
-						letter-spacing -0.05em
 						border-style none
+						letter-spacing -0.05em
+						font-weight 500
+						font-size 3rem
 
 						@media (min-width 1024px) {
-							font-size 4rem
 							margin-top 0.5rem
+							font-size 4rem
 						}
 					}
 				}
 
 				.description {
-					font-size 1.5rem
-					font-weight 400
 					text-align center
+					font-weight 400
+					font-size 1.5rem
 
 					@media (min-width 1024px) {
 						font-size 1.875rem
@@ -246,36 +246,36 @@ export default {
 				}
 
 				.buttons {
-					width 100%
 					display flex
 					flex-direction column
 					justify-content center
 					margin-top 2rem
+					width 100%
 
 					@media (min-width 768px) {
-						width auto
 						flex-direction row
+						width auto
 					}
 
 					.button {
 						display flex
 						align-items center
-						padding 1rem 1.5rem 1rem 1.5rem
-						width 83.333333%
-						font-size 1.5rem
-						font-weight 700
-						margin-left auto
 						margin-right auto
-						line-height 1
-						color #ffffff
-						background-color var(--color-ui-primary)
+						margin-left auto
+						padding 1rem 1.5rem
+						width 83.333333%
 						border-width 1px
 						border-color var(--color-ui-primary)
 						border-radius 0.5rem
+						background-color var(--color-ui-primary)
 						box-shadow -1px 2px 15px -3px #0000009c
-						transition-property all
-						transition-duration 200ms
+						color #ffffff
+						font-weight 700
+						font-size 1.5rem
+						line-height 1
 						transition-timing-function cubic-bezier(0, 0, 0.2, 1)
+						transition-duration 200ms
+						transition-property all
 						user-select none
 						place-content center
 
@@ -317,8 +317,8 @@ export default {
 		}
 
 		.features {
-			margin-left auto
 			margin-right auto
+			margin-left auto
 
 			.feature-container {
 				display flex
@@ -363,17 +363,18 @@ export default {
 
 			svg {
 				display inline-block
-				-ms-transform rotate(360deg)
-				-webkit-transform rotate(360deg)
-				transform rotate(360deg)
 				margin-bottom 2px
 				margin-left 4px
 				width 1em
 				height 1em
+				transform rotate(360deg)
+				-ms-transform rotate(360deg)
+				-webkit-transform rotate(360deg)
 			}
 		}
 	}
 }
+
 
 @css {
 	.index header input {
