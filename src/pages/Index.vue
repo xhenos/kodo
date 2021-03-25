@@ -186,6 +186,12 @@ export default {
 		width 100%
 		background-color inherit
 		backdrop-filter none
+
+		svg {
+			&:not(.feather-search):hover {
+				color var(--color-ui-primary)
+			}
+		}
 	}
 
 	main {

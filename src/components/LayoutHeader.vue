@@ -65,17 +65,11 @@
 						<github-logo height="20px" width="20px" />
 					</a>
 
-					<g-link
-						to="/download/"
-						class="download icon nav-link"
-					>
+					<g-link to="/download/" class="download icon nav-link">
 						<DownloadIcon size="22" />
 					</g-link>
 
-					<g-link
-						to="/download/"
-						class="download hidden nav-link"
-					>
+					<g-link to="/download/" class="download hidden nav-link">
 						{{ stable.version }}
 					</g-link>
 				</div>
@@ -148,162 +142,152 @@ export default {
 </script>
 
 <style lang="stylus">
-header {
-	svg:not(.feather-search) {
-		&:hover {
-			@apply text-ui-primary
-		}
-	}
-}
-
 .layout-header {
 	border-color var(--color-ui-primary)
 	border-top-width 2px
 	padding-top 0.5rem
 	padding-bottom 0.5rem
-}
 
-.header-row {
-	align-items center
-	display flex
-	justify-content space-between
-	margin-left -0.5rem
-	margin-right -0.5rem
-
-	@media (min-width 640px) {
-		margin-left -1rem
-		margin-right -1rem
-	}
-
-	.header-item {
-		padding-left 0.5rem
-		padding-right 0.5rem
+	.header-row {
+		align-items center
+		display flex
+		justify-content space-between
+		margin-left -0.5rem
+		margin-right -0.5rem
 
 		@media (min-width 640px) {
-			padding-left 1rem
-			padding-right 1rem
+			margin-left -1rem
+			margin-right -1rem
 		}
 
-		&:nth-child(2) {
-			width 100%
-		}
+		.header-item {
+			padding-left 0.5rem
+			padding-right 0.5rem
 
-		&:not(:nth-child(2)) {
-			display flex
-			align-items center
-			justify-content flex-end
-		}
-
-		.brand {
-			align-items center
-			display flex
-
-			svg {
-				color var(--color-ui-primary)
+			@media (min-width 640px) {
+				padding-left 1rem
+				padding-right 1rem
 			}
 
-			span {
-				display none
+			&:nth-child(2) {
+				width 100%
+			}
+
+			&:not(:nth-child(2)) {
+				display flex
+				align-items center
+				justify-content flex-end
+			}
+
+			.brand {
+				align-items center
+				display flex
+
+				svg {
+					color var(--color-ui-primary)
+				}
+
+				span {
+					display none
+					margin-left 0.5rem
+					font-size 1.25rem
+					font-weight 600
+					user-select none
+
+					@media (min-width 768px) {
+						display block
+					}
+				}
+			}
+
+			.links {
 				margin-left 0.5rem
-				font-size 1.25rem
-				font-weight 600
+				margin-right 1.25rem
+				display none
+
+				@media (min-width 640px) {
+					margin-left 2rem
+					display block
+				}
+
+				& .link {
+					display block
+					font-weight 500
+					padding 0.25rem
+					user-select none
+				}
+			}
+
+			.icon {
+				margin-left 1rem
+				display none
+
+				@media (min-width 640px) {
+					display block
+				}
+
+				&.twitter {
+					svg:hover {
+						color #1da1f2
+					}
+				}
+
+				&.discord {
+					svg:hover {
+						color #7289da
+					}
+				}
+
+				&.github {
+					display block
+				}
+			}
+
+			.download {
+				display none
+				font-family Jost, Helvetica, Helvetica Neue, Segoe UI, Arial, sans-serif
+				font-weight 500
+				font-size 1.125rem
+				margin-left 1rem
+				padding 0.25rem
+				color var(--color-ui-typo)
 				user-select none
+
+				&:hover {
+					color var(--color-ui-primary)
+				}
 
 				@media (min-width 768px) {
 					display block
 				}
-			}
-		}
 
-		.links {
-			margin-left 0.5rem
-			margin-right 1.25rem
-			display none
+				&.icon {
+					display block
 
-			@media (min-width 640px) {
-				margin-left 2rem
-				display block
-			}
-
-			& .link {
-				display block
-				font-weight 500
-				padding 0.25rem
-				user-select none
-			}
-		}
-
-		.icon {
-			margin-left 1rem
-			display none
-
-			@media (min-width 640px) {
-				display block
-			}
-
-			$.twitter {
-				svg:hover {
-					color #1da1f2
+					@media (min-width 768px) {
+						display none
+					}
 				}
 			}
 
-			&.discord {
-				svg:hover {
-					color #7289da
+			.nav-link {
+				&.active {
+					color var(--color-ui-primary)
 				}
-			}
 
-			&.github {
-				display block
+				&:not(.active--exact) {
+					&:hover {
+						color var(--color-ui-primary)
+					}
 
-				svg:hover {
-					color black
+					&.nav-primary {
+						color var(--color-ui-typo)
+
+						&:hover {
+							color var(--color-ui-primary)
+						}
+					}
 				}
-			}
-		}
-
-		& .download {
-			display none
-			font-family Jost, Helvetica, Helvetica Neue, Segoe UI, Arial, sans-serif
-			font-weight 500
-			font-size 1.125rem
-			margin-left 1rem
-			padding 0.25rem
-			color var(--color-ui-typo)
-			user-select none
-
-			&:hover {
-				color var(--color-ui-primary)
-			}
-
-			@media (min-width 768px) {
-				display block
-			}
-
-			&.icon {
-				display block
-
-				@media (min-width 768px) {
-					display none
-				}
-			}
-		}
-	}
-}
-
-.nav-link {
-	&.active {
-		@apply text-ui-primary border-ui-primary
-	}
-}
-
-.nav-link {
-	&.nav-primary {
-		&.active:not(.active--exact) {
-			color var(--color-ui-typo)
-
-			&:hover {
-				color var(--color-ui-primary)
 			}
 		}
 	}
