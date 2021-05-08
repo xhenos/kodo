@@ -261,8 +261,7 @@ export default {
 
 // TODO Move color to a varaible?
 
-html [data-theme=dark],
-html [data-theme=experimental] {
+html [data-theme=dark] {
 	.note {
 		p {
 			color rgba(255, 255, 255, 0.4) !important
