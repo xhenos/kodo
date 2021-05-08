@@ -250,7 +250,7 @@ export default {
 				font-size 1.125rem
 				margin-left 1rem
 				padding 0.25rem
-				color var(--typo)
+				color var(--text)
 				user-select none
 
 				&:hover {
@@ -281,7 +281,7 @@ export default {
 					}
 
 					&.nav-primary {
-						color var(--typo)
+						color var(--text)
 
 						&:hover {
 							color var(--primary)

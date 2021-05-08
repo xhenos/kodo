@@ -176,7 +176,7 @@ export default {
 			justify-content center
 
 			svg {
-				color var(--typo)
+				color var(--text)
 			}
 		}
 

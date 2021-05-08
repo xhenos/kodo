@@ -174,7 +174,7 @@ export default {
 	flex-direction column
 	justify-content flex-start
 	min-height 100vh
-	color var(--typo)
+	color var(--text)
 	font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
@@ -381,7 +381,7 @@ export default {
 				font-size 0.9rem
 
 				a {
-					color var(--typo)
+					color var(--text)
 					font-weight normal
 
 					&:hover {

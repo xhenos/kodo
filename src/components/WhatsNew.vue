@@ -76,7 +76,7 @@ export default {
 	}
 
 	hr {
-		border-color var(--typo)
+		border-color var(--text)
 		opacity 0.2
 	}
 }

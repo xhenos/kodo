@@ -33,7 +33,7 @@ export default {
 		font-weight normal
 		display inline-flex
 		align-items center
-		color var(--typo)
+		color var(--text)
 
 		&:hover {
 			color var(--primary)

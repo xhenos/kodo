@@ -135,7 +135,7 @@ export default {
 <style lang="stylus">
 .default-vue {
 	background-color var(--background)
-	color var(--typo)
+	color var(--text)
 	font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale

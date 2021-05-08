@@ -54,7 +54,7 @@ export default {
 			}
 
 			a {
-				color var(--typo) !important
+				color var(--text) !important
 
 				&:hover {
 					color var(--primary) !important
