@@ -29,11 +29,11 @@
 
 				<VueRemarkContent class="content" id="Markdown" />
 
-				<div v-if="isEditable" class="editThisPage">
+				<div v-if="isEditable == true" class="editThisPage">
 					<EditThisPage />
 				</div>
 
-				<div v-if="hasPrevNextPage" class="prevNextPage">
+				<div v-if="hasPrevNextPage == true" class="prevNextPage">
 					<NextPrevLinks />
 				</div>
 			</div>
