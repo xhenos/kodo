@@ -14,7 +14,7 @@ module.exports = {
 	settings: {
 		twitter: "https://twitter.com/tachiyomiorg",
 		discord: "https://discord.gg/tachiyomi",
-		github: "https://github.com/tachiyomiorg/tachiyomi",
+		github: "https://github.com/tachiyomiorg/",
 		themeColor: "#667EEA",
 		nav: {
 			links: [{ path: "/help/", title: "Help" }],
