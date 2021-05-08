@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<div id="MarkdownPage">
-			<div class="toc" v-if="hasTableOfContent">
+			<div class="toc" v-if="hasTableOfContent && this.$page.markdownPage.onThisPage == true">
 				<OnThisPage />
 			</div>
 

@@ -205,6 +205,7 @@ export default {
 
 			svg {
 				margin-bottom 4px
+				display inline-block
 			}
 		}
 

@@ -4,6 +4,7 @@
 		{{ text }}
 	</span>
 </template>
+
 <script>
 export default {
 	props: {
@@ -17,17 +18,21 @@ export default {
 	},
 };
 </script>
+
 <style lang="stylus">
 .badge {
 	background-color var(--color-ui-primary)
-	color white
 	border-radius 99em
+	color var(--color-ui-background)
 	display inline-flex
-	font-size 0.45em
+	font-size 0.75em
+	font-weight 500
 	margin 0 5px
-	padding 4px 16px
+	padding 2px 8px
 	transform translateY(-0.5em)
 	width max-content
+	vertical-align middle
+	margin-bottom -8px
 
 	.material-holder {
 		margin-right 0.2rem

@@ -156,6 +156,10 @@ export default {
 			color var(--color-ui-primary)
 		}
 
+		&:first-child {
+			border none
+		}
+
 		&.active-anchor {
 			color var(--color-ui-primary)
 		}

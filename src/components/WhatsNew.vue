@@ -1,6 +1,6 @@
 <template>
-	<div id="WhatsNew">
-		<header class="whats-new">
+	<div class="whats-new">
+		<header class="title">
 			<InfoIcon />
 			<h2>Whats New</h2>
 		</header>
@@ -9,11 +9,11 @@
 		</main>
 		<footer class="note">
 			<p>
-				View the full release
+				View the
 				<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest" target="_blank" rel="noopener">
-					here
+					detailed log
 				</a>
-				.
+				on GitHub.
 			</p>
 		</footer>
 	</div>
@@ -40,36 +40,44 @@ export default {
 </script>
 
 <style lang="stylus">
-#WhatsNew {
+.whats-new {
 	background var(--color-ui-container)
 	border-radius 0.5rem
 	padding 2rem
 
-	.whats-new {
-		background-color transparent
+	.title {
+		background-color transparent !important
+		border none
 		display flex
 		justify-content center
+		padding-bottom 1.5rem
+
+		h2 {
+			font-size 1.25rem
+		}
 
 		svg {
+			margin-top 0.2rem
 			margin-right 0.5rem
 		}
 	}
 
 	.changelog {
-		background-color transparent
+		background-color transparent !important
 	}
 
 	h2 {
 		display contents
 	}
 
-	svg {
-		margin-top 4px
-	}
-
 	li {
 		list-style-type disc
 		list-style-position inside
+	}
+
+	hr {
+		border-color var(--color-ui-typo)
+		opacity 0.2
 	}
 }
 </style>
