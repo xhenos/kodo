@@ -120,7 +120,7 @@ export default {
 .extension-list {
 	h3 {
 		padding-bottom 0.75em
-		border-bottom 1px solid var(--color-ui-border)
+		border-bottom 1px solid var(--border)
 	}
 
 	> div {
@@ -136,7 +136,7 @@ export default {
 	float right
 
 	&-sum {
-		color var(--color-ui-primary)
+		color var(--primary)
 	}
 }
 
@@ -182,9 +182,9 @@ export default {
 		}
 
 		.extension-download {
-			color var(--color-ui-primary) !important
+			color var(--primary) !important
 			font-weight 700
-			border-color var(--color-ui-border)
+			border-color var(--border)
 			border-width 1px
 			border-radius 0.5rem
 			margin-right 0.5em
@@ -195,7 +195,7 @@ export default {
 			transition-property background-color, border-color, color, fill, stroke
 
 			&:hover {
-				background-color var(--color-ui-primary)
+				background-color var(--primary)
 				color #ffffff !important
 			}
 
@@ -219,26 +219,26 @@ export default {
 
 	@media (max-width 767px) {
 		.extension {
-			border 1px solid var(--color-ui-border)
+			border 1px solid var(--border)
 			border-radius 8px
 
 			.extension-download {
-				background-color var(--color-ui-container)
+				background-color var(--container)
 			}
 		}
 	}
 
 	&:target {
 		.extension {
-			background-color var(--color-ui-container)
+			background-color var(--container)
 			border-radius 8px
 			transition 500ms background-color
 
 			.extension-download {
-				background-color var(--color-ui-background)
+				background-color var(--background)
 
 				&:hover {
-					background-color var(--color-ui-primary)
+					background-color var(--primary)
 
 					span {
 						color white
@@ -249,13 +249,13 @@ export default {
 	}
 
 	&:first-child {
-		border-top 1px solid var(--color-ui-border)
+		border-top 1px solid var(--border)
 	}
 }
 
 .circle-loader {
 	border 8px solid #efefef
-	border-top 8px solid var(--color-ui-primary)
+	border-top 8px solid var(--primary)
 	border-radius 99em
 	width 3em
 	height 3em

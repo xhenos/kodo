@@ -46,18 +46,18 @@ export default {
 			list-style none
 			padding 0 0.5rem 1rem
 			margin-bottom 0 !important
-			border-bottom 1px solid var(--color-ui-border)
+			border-bottom 1px solid var(--border)
 			text-align center
 
 			&.isActive {
-				border-bottom 2px solid var(--color-ui-primary)
+				border-bottom 2px solid var(--primary)
 			}
 
 			a {
-				color var(--color-ui-typo) !important
+				color var(--typo) !important
 
 				&:hover {
-					color var(--color-ui-primary) !important
+					color var(--primary) !important
 				}
 			}
 		}

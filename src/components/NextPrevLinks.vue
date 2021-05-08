@@ -60,10 +60,10 @@ export default {
 
 	.nextPrevButton {
 		align-items center
-		border-color var(--color-ui-border)
+		border-color var(--border)
 		border-radius 0.5rem
 		border-width 1px
-		color var(--color-ui-primary)
+		color var(--primary)
 		display flex
 		font-weight 700
 		margin-bottom 1rem
@@ -75,7 +75,7 @@ export default {
 		width 100%
 
 		&:hover {
-			background-color var(--color-ui-primary)
+			background-color var(--primary)
 			color #fff
 		}
 

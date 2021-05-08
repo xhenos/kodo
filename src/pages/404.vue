@@ -28,13 +28,13 @@ export default {
 	.header {
 		font-weight 700
 		font-size 2.25rem
-		color var(--color-ui-primary)
+		color var(--primary)
 	}
 
 	.go-back {
 		font-weight 700
 		border-bottom-width 1px
-		border-color var(--color-ui-primary)
+		border-color var(--primary)
 		font-size 1.25rem
 	}
 }

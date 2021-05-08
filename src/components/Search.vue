@@ -176,7 +176,7 @@ export default {
 			justify-content center
 
 			svg {
-				color var(--color-ui-typo)
+				color var(--typo)
 			}
 		}
 
@@ -199,13 +199,13 @@ export default {
 		margin-top 0.5rem
 		box-shadow 0 10px 15px -3px #000, 0 4px 6px -2px #000
 		border-width 2px
-		border-color var(--color-ui-sidebar)
+		border-color var(--sidebar)
 		border-radius 0.5rem
 		border-top-width 0
 		border-top-left-radius 0
 		border-top-right-radius 0
 		max-height calc(100vh - 120px)
-		background-color var(--color-ui-background)
+		background-color var(--background)
 		overflow-y auto
 
 		@media (min-width 640px) {
@@ -227,7 +227,7 @@ export default {
 			}
 
 			.result-item {
-				border-color var(--color-ui-sidebar)
+				border-color var(--sidebar)
 				border-bottom-width 1px
 
 				&:last-child {
@@ -235,8 +235,8 @@ export default {
 				}
 
 				&:hover a {
-					background-color var(--color-ui-sidebar)
-					color var(--color-ui-primary)
+					background-color var(--sidebar)
+					color var(--primary)
 				}
 
 				a {
@@ -270,14 +270,14 @@ export default {
 
 @css {
 	header input {
-		background-color: rgba(var(--color-ui-search), 1);
+		background-color: rgba(var(--search), 1);
 		border-color: transparent;
 		transition: border-color 0.3s;
 	}
 
 	header input:focus {
 		outline: 0;
-		border-color: var(--color-ui-primary);
+		border-color: var(--primary);
 	}
 }
 </style>

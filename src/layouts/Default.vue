@@ -134,8 +134,8 @@ export default {
 
 <style lang="stylus">
 .default-vue {
-	background-color var(--color-ui-background)
-	color var(--color-ui-typo)
+	background-color var(--background)
+	color var(--typo)
 	font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
@@ -147,8 +147,8 @@ export default {
 		min-height 100vh
 
 		header {
-			background-color var(--color-ui-background)
-			border-color var(--color-ui-border)
+			background-color var(--background)
+			border-color var(--border)
 			border-bottom-width 1px
 			position sticky
 			top 0
@@ -157,13 +157,13 @@ export default {
 
 			svg {
 				&:not(.feather-search):hover {
-					color var(--color-ui-primary)
+					color var(--primary)
 				}
 			}
 		}
 
 		main {
-			background-color var(--color-ui-background)
+			background-color var(--background)
 			position relative
 			display flex
 			flex 1 1 0%
@@ -173,7 +173,7 @@ export default {
 
 			.sidebar {
 				position fixed
-				background-color var(--color-ui-background)
+				background-color var(--background)
 				padding-left 1rem
 				padding-right 1rem
 				right 0
@@ -181,7 +181,7 @@ export default {
 				bottom 0
 				width 100%
 				border-right-width 1px
-				border-color var(--color-ui-border)
+				border-color var(--border)
 				overflow-y auto
 				z-index 40
 				transform translateX(-100%)
@@ -193,7 +193,7 @@ export default {
 				> div {
 					width 100%
 					padding-bottom 4rem
-					background-color var(--color-ui-background)
+					background-color var(--background)
 				}
 
 				@media (min-width 1024px) {
@@ -250,7 +250,7 @@ export default {
 			color #ffffff
 			border-radius 9999px
 			box-shadow 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%)
-			background-color var(--color-ui-primary)
+			background-color var(--primary)
 
 			&:hover {
 				color #ffffff

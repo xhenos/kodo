@@ -143,7 +143,7 @@ export default {
 
 <style lang="stylus">
 .layout-header {
-	border-color var(--color-ui-primary)
+	border-color var(--primary)
 	border-top-width 2px
 	padding-top 0.5rem
 	padding-bottom 0.5rem
@@ -184,7 +184,7 @@ export default {
 				display flex
 
 				svg {
-					color var(--color-ui-primary)
+					color var(--primary)
 				}
 
 				span {
@@ -250,11 +250,11 @@ export default {
 				font-size 1.125rem
 				margin-left 1rem
 				padding 0.25rem
-				color var(--color-ui-typo)
+				color var(--typo)
 				user-select none
 
 				&:hover {
-					color var(--color-ui-primary)
+					color var(--primary)
 				}
 
 				@media (min-width 768px) {
@@ -272,19 +272,19 @@ export default {
 
 			.nav-link {
 				&.active {
-					color var(--color-ui-primary)
+					color var(--primary)
 				}
 
 				&:not(.active--exact) {
 					&:hover {
-						color var(--color-ui-primary)
+						color var(--primary)
 					}
 
 					&.nav-primary {
-						color var(--color-ui-typo)
+						color var(--typo)
 
 						&:hover {
-							color var(--color-ui-primary)
+							color var(--primary)
 						}
 					}
 				}

@@ -41,7 +41,7 @@ export default {
 
 <style lang="stylus">
 .whats-new {
-	background var(--color-ui-container)
+	background var(--container)
 	border-radius 0.5rem
 	padding 2rem
 
@@ -76,7 +76,7 @@ export default {
 	}
 
 	hr {
-		border-color var(--color-ui-typo)
+		border-color var(--typo)
 		opacity 0.2
 	}
 }

@@ -107,7 +107,7 @@ export default {
 		.sidebar-section {
 			padding-bottom 1rem
 			margin-bottom 1rem
-			border-color var(--color-ui-border)
+			border-color var(--border)
 			border-bottom-width 1px
 
 			&:last-child {
@@ -130,7 +130,7 @@ export default {
 				margin-left -0.75rem
 				border-radius 100%
 				opacity 0
-				background var(--color-ui-primary)
+				background var(--primary)
 				transition translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))
 				transform-origin center
 				--transform-scale-x 0
@@ -161,18 +161,18 @@ export default {
 
 				li {
 					&:hover {
-						color var(--color-ui-primary)
+						color var(--primary)
 					}
 
 					&.active {
-						color var(--color-ui-primary)
+						color var(--primary)
 					}
 
 					a {
 						transition all 0.3s, color 0s
 
 						&.active {
-							color var(--color-ui-primary)
+							color var(--primary)
 							padding-left 0.8rem
 						}
 					}

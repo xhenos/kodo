@@ -216,10 +216,10 @@ export default {
 	}
 
 	a {
-		color var(--color-ui-primary)
+		color var(--primary)
 
 		&:hover {
-			color var(--color-ui-primary-dark)
+			color var(--primary-dark)
 		}
 	}
 
@@ -234,7 +234,7 @@ export default {
 			content ' '
 			display block
 			margin-bottom 1.5rem
-			border-top 1px solid var(--color-ui-border)
+			border-top 1px solid var(--border)
 		}
 	}
 
@@ -271,7 +271,7 @@ export default {
 		padding-top 2rem
 		margin-top 1.5rem
 		border-top-width 1px
-		border-color var(--color-ui-border)
+		border-color var(--border)
 	}
 }
 

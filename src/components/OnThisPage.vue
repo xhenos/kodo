@@ -117,7 +117,7 @@ export default {
 <style lang="stylus">
 .on-this-page {
 	margin-top 2rem
-	border-color var(--color-ui-border)
+	border-color var(--border)
 
 	h3 {
 		letter-spacing 0.025em
@@ -133,7 +133,7 @@ export default {
 		margin-top 0.5rem
 		border-top-width 1px
 		border-style dashed
-		border-color var(--color-ui-border)
+		border-color var(--border)
 	}
 
 	// I'm not horny you are
@@ -153,7 +153,7 @@ export default {
 		transition-property background-color, border-color, color, fill, stroke, opacity, box-shadow, transform
 
 		&:hover {
-			color var(--color-ui-primary)
+			color var(--primary)
 		}
 
 		&:first-child {
@@ -161,7 +161,7 @@ export default {
 		}
 
 		&.active-anchor {
-			color var(--color-ui-primary)
+			color var(--primary)
 		}
 
 		span {
@@ -171,7 +171,7 @@ export default {
 			margin-left -0.75rem
 			border-radius 100%
 			opacity 0
-			background-color var(--color-ui-primary)
+			background-color var(--primary)
 			transition-property background-color, border-color, color, fill, stroke, opacity, box-shadow, transform
 			transform-origin center
 			--transform-scale-x 0

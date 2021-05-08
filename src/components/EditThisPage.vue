@@ -33,10 +33,10 @@ export default {
 		font-weight normal
 		display inline-flex
 		align-items center
-		color var(--color-ui-typo)
+		color var(--typo)
 
 		&:hover {
-			color var(--color-ui-primary)
+			color var(--primary)
 		}
 
 		svg {

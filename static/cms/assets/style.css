@@ -1,22 +1,22 @@
 :root {
-	--color-ui-background: #FFFFFF;
-	--color-ui-border: #E5E7EB;
-	--color-ui-container: #edf2f740;
-	--color-ui-tip-background: #3b82f61a;
-	--color-ui-tip-border: #3b82f633;
-	--color-ui-tip-text: #3c83f6;
-	--color-ui-tip-link: #3c83f6;
-	--color-ui-warning-background: #fbbf241a;
-	--color-ui-warning-border: #fbbf2466;
-	--color-ui-warning-text: #a08603e6;
-	--color-ui-warning-link: #a08603;
-	--color-ui-danger-background: #ef44441a;
-	--color-ui-danger-border: #ef444433;
-	--color-ui-danger-text: #ef4444e6;
-	--color-ui-danger-link: #ef4444;
-	--color-ui-alert-background: #F4F4F5;
-	--color-ui-alert-border: #F4F4F5;
-	--color-ui-alert-text: #909399;
+	--background: #FFFFFF;
+	--border: #E5E7EB;
+	--container: #edf2f740;
+	--tip-background: #3b82f61a;
+	--tip-border: #3b82f633;
+	--tip-text: #3c83f6;
+	--tip-link: #3c83f6;
+	--warning-background: #fbbf241a;
+	--warning-border: #fbbf2466;
+	--warning-text: #a08603e6;
+	--warning-link: #a08603;
+	--danger-background: #ef44441a;
+	--danger-border: #ef444433;
+	--danger-text: #ef4444e6;
+	--danger-link: #ef4444;
+	--alert-background: #F4F4F5;
+	--alert-border: #F4F4F5;
+	--alert-text: #909399;
 }
 
 body {

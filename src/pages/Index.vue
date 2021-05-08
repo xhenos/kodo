@@ -174,7 +174,7 @@ export default {
 	flex-direction column
 	justify-content flex-start
 	min-height 100vh
-	color var(--color-ui-typo)
+	color var(--typo)
 	font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
@@ -189,7 +189,7 @@ export default {
 
 		svg {
 			&:not(.feather-search):hover {
-				color var(--color-ui-primary)
+				color var(--primary)
 			}
 		}
 	}
@@ -225,7 +225,7 @@ export default {
 					flex-direction column
 					align-items center
 					margin-bottom 0.5rem
-					color var(--color-ui-primary)
+					color var(--primary)
 
 					h2 {
 						margin-top 1.25rem
@@ -271,9 +271,9 @@ export default {
 						padding 1rem 1.5rem
 						width 83.333333%
 						border-width 1px
-						border-color var(--color-ui-primary)
+						border-color var(--primary)
 						border-radius 0.5rem
-						background-color var(--color-ui-primary)
+						background-color var(--primary)
 						box-shadow -1px 2px 15px -3px #0000009c
 						color #ffffff
 						font-weight 700
@@ -353,7 +353,7 @@ export default {
 					}
 
 					svg {
-						color var(--color-ui-primary)
+						color var(--primary)
 						margin-bottom 1.5rem
 					}
 
@@ -361,7 +361,7 @@ export default {
 						font-weight 700
 						letter-spacing 0.025em
 						text-transform uppercase
-						color var(--color-ui-primary)
+						color var(--primary)
 					}
 
 					p {
@@ -381,7 +381,7 @@ export default {
 				font-size 0.9rem
 
 				a {
-					color var(--color-ui-typo)
+					color var(--typo)
 					font-weight normal
 
 					&:hover {
@@ -395,7 +395,7 @@ export default {
 				font-size 0.8rem
 
 				a {
-					color var(--color-ui-primary)
+					color var(--primary)
 					font-weight 500
 
 					&:hover {
@@ -421,12 +421,12 @@ export default {
 
 @css {
 	.index header input {
-		background-color: rgba(var(--color-ui-search), 0.7) !important;
-		filter: brightness(var(--color-ui-search-fade));
+		background-color: rgba(var(--search), 0.7) !important;
+		filter: brightness(var(--search-fade));
 	}
 
 	.index header input::placeholder {
-		color: var(--color-ui-search-text);
+		color: var(--search-text);
 	}
 
 	.index main .jumbotron {

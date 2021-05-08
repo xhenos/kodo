@@ -129,7 +129,7 @@ export default {
 // TODO Add fork specific colors
 
 .download-button {
-	background var(--color-ui-primary)
+	background var(--primary)
 	border-radius 0.375em
 	width 100%
 	padding 0.5rem 5rem
@@ -174,29 +174,29 @@ export default {
 
 
 		path {
-			fill var(--color-ui-primary)
+			fill var(--primary)
 		}
 	}
 
 	&.preview {
 		background transparent
-		border 2px solid var(--color-ui-primary)
+		border 2px solid var(--primary)
 
 		p {
-			color var(--color-ui-primary)
+			color var(--primary)
 		}
 
 		svg {
-			stroke var(--color-ui-primary)
+			stroke var(--primary)
 		}
 	}
 
 	&.github {
 		background transparent
-		border 1px solid var(--color-ui-primary-light)
+		border 1px solid var(--primary-light)
 
 		p {
-			color var(--color-ui-primary)
+			color var(--primary)
 		}
 	}
 
