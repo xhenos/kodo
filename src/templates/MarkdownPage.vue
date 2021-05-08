@@ -73,6 +73,12 @@
 				entry
 				edit
 			}
+			help {
+				title
+				description
+				link
+				linkExt
+			}
 			headings {
 				depth
 				value
