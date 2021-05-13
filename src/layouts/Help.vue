@@ -9,61 +9,51 @@
 			<div v-for="(helpItem, index) in this.$page.markdownPage.help" :key="index" class="column helpItem">
 				<a v-if="helpItem.link" :href="helpItem.link" tabindex="1">
 					<div class="card" :class="'card__' + helpItem.title">
-						<header v-if="helpItem.title == 'FAQ'">
+						<div class="header" v-if="helpItem.title == 'FAQ'">
 							<MaterialIcon icon="question_answer" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
-						</header>
-						<header v-else-if="helpItem.title == 'Troubleshooting'">
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Troubleshooting'">
 							<MaterialIcon icon="assistant_photo" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
-						</header>
-						<header v-else-if="helpItem.title == 'Guides'">
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Guides'">
 							<MaterialIcon icon="format_list_numbered" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
-						</header>
-						<header v-else-if="helpItem.title == 'Forks'">
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Forks'">
 							<MaterialIcon icon="call_split" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
-						</header>
-						<header v-else-if="helpItem.title == 'Contribution'">
-							<MaterialIcon icon="child_care" iconOnly />
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Contribution'">
+							<MaterialIcon icon="support" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
-						</header>
+						</div>
 						<p>{{ helpItem.description }}</p>
 					</div>
 				</a>
 				<a v-else-if="helpItem.linkExt" :href="helpItem.linkExt" target="_blank" rel="noreferrer" tabindex="1">
 					<div class="card" :class="'card__' + helpItem.title">
-						<header v-if="helpItem.title == 'GitHub'">
-							<MaterialIcon icon="blur_circular" iconOnly />
-							<span>
-								<h3>{{ helpItem.title }}</h3>
-							</span>
-						</header>
-						<header v-else-if="helpItem.title == 'Discord'">
-							<MaterialIcon icon="blur_circular" iconOnly />
-							<span>
-								<h3>{{ helpItem.title }}</h3>
-							</span>
-						</header>
-						<header v-else-if="helpItem.title == 'Reddit'">
-							<MaterialIcon icon="blur_circular" iconOnly />
-							<span>
-								<h3>{{ helpItem.title }}</h3>
-							</span>
-						</header>
-						<header v-else-if="helpItem.title == 'Twitter'">
-							<MaterialIcon icon="blur_circular" iconOnly />
-							<span>
-								<h3>{{ helpItem.title }}</h3>
-							</span>
-						</header>
-						<header v-else-if="helpItem.title == 'Facebook'">
-							<MaterialIcon icon="blur_circular" iconOnly />
-							<span>
-								<h3>{{ helpItem.title }}</h3>
-							</span>
-						</header>
+						<div class="header" v-if="helpItem.title == 'GitHub'">
+							<github-logo height="2.5em" width="2.5em" />
+							<h3>{{ helpItem.title }}</h3>
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Discord'">
+							<discord-logo height="2.5em" width="2.5em" />
+							<h3>{{ helpItem.title }}</h3>
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Reddit'">
+							<reddit-logo height="2.5em" width="2.5em" />
+							<h3>{{ helpItem.title }}</h3>
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Twitter'">
+							<twitter-logo height="2.5em" width="2.5em" />
+							<h3>{{ helpItem.title }}</h3>
+						</div>
+						<div class="header" v-else-if="helpItem.title == 'Facebook'">
+							<facebook-logo height="2.5em" width="2.5em" />
+							<h3>{{ helpItem.title }}</h3>
+						</div>
 						<p>{{ helpItem.description }}</p>
 					</div>
 				</a>
@@ -72,9 +62,28 @@
 	</div>
 </template>
 
+<script>
+import GithubLogo from "@/assets/images/github-logo.svg";
+import DiscordLogo from "@/assets/images/discord-logo.svg";
+import RedditLogo from "@/assets/images/reddit-logo.svg";
+import TwitterLogo from "@/assets/images/twitter-logo.svg";
+import FacebookLogo from "@/assets/images/facebook-logo.svg";
+
+export default {
+	components: {
+		GithubLogo,
+		DiscordLogo,
+		RedditLogo,
+		TwitterLogo,
+		FacebookLogo,
+	},
+};
+</script>
+
 <style lang="stylus">
 .intro {
 	text-align center
+
 	.h1,
 	.h3 {
 		line-height 1.375
@@ -82,16 +91,20 @@
 		margin-bottom 1rem
 		color var(--header)
 	}
+
 	.h1 {
 		font-size 2.25rem
 		margin-top 4rem
 	}
+
 	.h3 {
 		font-size 1.25rem
 	}
+
 	span {
 		display block
 		margin-bottom 1rem
+
 		&:last-child {
 			margin-bottom 4rem
 		}
@@ -156,7 +169,7 @@
 		box-shadow 0 0 30px #0e1421e3
 	}
 
-	header {
+	.header {
 		background-color transparent !important
 		border none
 		margin-top 1.25rem
@@ -167,6 +180,10 @@
 			display contents
 			font-size 2.5em
 			color $accentColorSecondary
+		}
+
+		svg {
+			display inline
 		}
 
 		.material-design-icon > .material-design-icon__svg {
@@ -209,18 +226,6 @@
 
 		.material-design-icon {
 			color var(--primary)
-
-			&.discord-icon {
-				color $discordAccentColor
-			}
-
-			&.reddit-icon {
-				color $redditAccentColor
-			}
-
-			&.github-icon {
-				color $githubAccentColor
-			}
 		}
 
 		.icon.outbound {
@@ -228,27 +233,77 @@
 		}
 	}
 
-	&__Discord:hover {
-		border-bottom 2px solid $discordAccentColor
+	&__GitHub:hover {
+		:root [data-theme=light] & {
+			$github-accent = #424242
+			border-bottom 2px solid $github-accent
 
-		h3 {
-			color $discordAccentColor
+			h3,
+			svg {
+				color $github-accent
+			}
+		}
+
+		:root [data-theme=dark] & {
+			$github-accent = #cccccc
+			border-bottom 2px solid $github-accent
+
+			h3,
+			svg {
+				color $github-accent
+			}
+		}
+	}
+
+	&__Discord:hover {
+		$discord-accent = #5865f2
+		border-bottom 2px solid $discord-accent
+
+		h3,
+		svg {
+			color $discord-accent
 		}
 	}
 
 	&__Reddit:hover {
-		border-bottom 2px solid $redditAccentColor
+		$reddit-accent = #ff4500
+		border-bottom 2px solid $reddit-accent
 
-		h3 {
-			color $redditAccentColor
+		h3,
+		svg {
+			color $reddit-accent
 		}
 	}
 
-	&__GitHub:hover {
-		border-bottom 2px solid $githubAccentColor
+	&__Twitter:hover {
+		$twitter-accent = #00acee
+		border-bottom 2px solid $twitter-accent
 
-		h3 {
-			color $githubAccentColor
+		h3,
+		svg {
+			color $twitter-accent
+		}
+	}
+
+	&__Facebook:hover {
+		:root [data-theme=light] & {
+			$facebook-accent = #4a78d8
+			border-bottom 2px solid $facebook-accent
+
+			h3,
+			svg {
+				color $facebook-accent
+			}
+		}
+
+		:root [data-theme=dark] & {
+			$facebook-accent = #4a78d8
+			border-bottom 2px solid $facebook-accent
+
+			h3,
+			svg {
+				color $facebook-accent
+			}
 		}
 	}
 }
@@ -262,7 +317,7 @@
 		height auto
 		width auto
 
-		header {
+		.header {
 			margin-top 1rem
 
 			.material-icons,
@@ -317,24 +372,6 @@
 
 			.material-design-icon {
 				color var(--primary-dark)
-			}
-		}
-
-		&__Discord {
-			h3 {
-				color $discordAccentColor
-			}
-		}
-
-		&__Reddit {
-			h3 {
-				color $redditAccentColor
-			}
-		}
-
-		&__GitHub {
-			h3 {
-				color $githubAccentColor
 			}
 		}
 	}
