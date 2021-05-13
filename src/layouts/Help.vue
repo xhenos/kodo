@@ -7,7 +7,7 @@
 		</div>
 		<div v-if="this.$page.markdownPage.help" class="row help">
 			<div v-for="(helpItem, index) in this.$page.markdownPage.help" :key="index" class="column helpItem">
-				<a v-if="helpItem.link" :href="helpItem.link" tabindex="1">
+				<g-link v-if="helpItem.link" :to="helpItem.link" tabindex="1">
 					<div class="card" :class="'card__' + helpItem.title">
 						<div class="header" v-if="helpItem.title == 'FAQ'">
 							<MaterialIcon icon="question_answer" iconOnly />
@@ -31,7 +31,7 @@
 						</div>
 						<p>{{ helpItem.description }}</p>
 					</div>
-				</a>
+				</g-link>
 				<a v-else-if="helpItem.linkExt" :href="helpItem.linkExt" target="_blank" rel="noreferrer" tabindex="1">
 					<div class="card" :class="'card__' + helpItem.title">
 						<div class="header" v-if="helpItem.title == 'GitHub'">
