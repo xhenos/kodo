@@ -26,7 +26,7 @@
 							<h3>{{ helpItem.title }}</h3>
 						</div>
 						<div class="header" v-else-if="helpItem.title == 'Contribution'">
-							<MaterialIcon icon="support" iconOnly />
+							<MaterialIcon icon="groups" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
 						</div>
 						<p>{{ helpItem.description }}</p>
