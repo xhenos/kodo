@@ -23,6 +23,7 @@
 					/>
 					<h1>{{ $page.markdownPage.title }}</h1>
 				</div>
+				<template v-else-if="this.$page.markdownPage.title == 'Help Center'"></template>
 				<div v-else class="contentHeader">
 					<h1>{{ $page.markdownPage.title }}</h1>
 				</div>

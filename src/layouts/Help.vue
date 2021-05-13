@@ -1,34 +1,32 @@
 <template>
 	<div>
-		<h3>Need help? We've got your back.</h3>
-		<p>
-			From common questions to guides, find help for everything Tachiyomi.
-		</p>
-		<input type="text" placeholder="Search.." />
-		<br />
-		<br />
+		<div class="intro">
+			<span class="h1">Help Center</span>
+			<span class="h3">Need help? We've got your back.</span>
+			<span>From common questions to guides, find help for everything!</span>
+		</div>
 		<div v-if="this.$page.markdownPage.help" class="row help">
 			<div v-for="(helpItem, index) in this.$page.markdownPage.help" :key="index" class="column helpItem">
 				<a v-if="helpItem.link" :href="helpItem.link" tabindex="1">
 					<div class="card" :class="'card__' + helpItem.title">
 						<header v-if="helpItem.title == 'FAQ'">
-							<MaterialIcon icon="question_answer" icononly />
+							<MaterialIcon icon="question_answer" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
 						</header>
 						<header v-else-if="helpItem.title == 'Troubleshooting'">
-							<MaterialIcon icon="assistant_photo" icononly />
+							<MaterialIcon icon="assistant_photo" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
 						</header>
 						<header v-else-if="helpItem.title == 'Guides'">
-							<MaterialIcon icon="format_list_numbered" icononly />
+							<MaterialIcon icon="format_list_numbered" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
 						</header>
 						<header v-else-if="helpItem.title == 'Forks'">
-							<MaterialIcon icon="call_split" icononly />
+							<MaterialIcon icon="call_split" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
 						</header>
 						<header v-else-if="helpItem.title == 'Contribution'">
-							<MaterialIcon icon="child_care" icononly />
+							<MaterialIcon icon="child_care" iconOnly />
 							<h3>{{ helpItem.title }}</h3>
 						</header>
 						<p>{{ helpItem.description }}</p>
@@ -37,38 +35,33 @@
 				<a v-else-if="helpItem.linkExt" :href="helpItem.linkExt" target="_blank" rel="noreferrer" tabindex="1">
 					<div class="card" :class="'card__' + helpItem.title">
 						<header v-if="helpItem.title == 'GitHub'">
-							<MaterialIcon icon="blur_circular" icononly />
+							<MaterialIcon icon="blur_circular" iconOnly />
 							<span>
 								<h3>{{ helpItem.title }}</h3>
-								<OutboundLink />
 							</span>
 						</header>
 						<header v-else-if="helpItem.title == 'Discord'">
-							<MaterialIcon icon="blur_circular" icononly />
+							<MaterialIcon icon="blur_circular" iconOnly />
 							<span>
 								<h3>{{ helpItem.title }}</h3>
-								<OutboundLink />
 							</span>
 						</header>
 						<header v-else-if="helpItem.title == 'Reddit'">
-							<MaterialIcon icon="blur_circular" icononly />
+							<MaterialIcon icon="blur_circular" iconOnly />
 							<span>
 								<h3>{{ helpItem.title }}</h3>
-								<OutboundLink />
 							</span>
 						</header>
 						<header v-else-if="helpItem.title == 'Twitter'">
-							<MaterialIcon icon="blur_circular" icononly />
+							<MaterialIcon icon="blur_circular" iconOnly />
 							<span>
 								<h3>{{ helpItem.title }}</h3>
-								<OutboundLink />
 							</span>
 						</header>
 						<header v-else-if="helpItem.title == 'Facebook'">
-							<MaterialIcon icon="blur_circular" icononly />
+							<MaterialIcon icon="blur_circular" iconOnly />
 							<span>
 								<h3>{{ helpItem.title }}</h3>
-								<OutboundLink />
 							</span>
 						</header>
 						<p>{{ helpItem.description }}</p>
@@ -79,9 +72,32 @@
 	</div>
 </template>
 
-<script></script>
-
 <style lang="stylus">
+.intro {
+	text-align center
+	.h1,
+	.h3 {
+		line-height 1.375
+		font-weight 600
+		margin-bottom 1rem
+		color var(--header)
+	}
+	.h1 {
+		font-size 2.25rem
+		margin-top 4rem
+	}
+	.h3 {
+		font-size 1.25rem
+	}
+	span {
+		display block
+		margin-bottom 1rem
+		&:last-child {
+			margin-bottom 4rem
+		}
+	}
+}
+
 .row {
 	display grid
 	grid-template-columns repeat(5, 1fr)
