@@ -234,7 +234,7 @@ export default {
 
 				&.discord {
 					svg:hover {
-						color #7289da
+						color #5865F2
 					}
 				}
 
