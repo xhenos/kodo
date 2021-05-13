@@ -53,9 +53,7 @@ It is also recommended you lint your files before the PR.
 ## Project Structure
 
 - **`content`**: contains all the markdown files used for the website.
-
 - **[`dist`](https://gridsome.org/docs/gridsome-cli/#build)**: contains built files for distribution. Note this directory is only updated when a release happens or when you run the build command. Changes to this folder will not carry over with Git.
-
 - **[`src`](https://gridsome.org/docs/directory-structure/#the-src-directory)**: contains the main code files.
 
   - `constants.js`: all reused variables/constants is stored here.
@@ -79,20 +77,38 @@ It is also recommended you lint your files before the PR.
   - **`scripts`**: this contains the data store files used to connect features like downloads to main app and its forks.
 
   - **[`templates`](https://gridsome.org/docs/directory-structure/#templates-directory)**: this contains the basic template `MarkdownPage.vue` file used for the Markdown pages.
-
 - **[`static`](https://gridsome.org/docs/directory-structure/#the-static-directory)**: contains files you want to access at a static url.
 
   - **`assets`**: contains the static images/videos you'll want to use for the website.
-
 - `.env`: this file you'll need to create yourself by editing and renaming `.env.example`.
-
 - `.env.example`: to make certain features work you'll need to add it's value here and rename it to `.env`.
-
 - [`gridsome.config.js`](https://gridsome.org/docs/directory-structure/#gridsomeconfigjs): this file contains configuration and options for installed plugins.
-
 - [`gridsome.server.js`](https://gridsome.org/docs/directory-structure/#gridsomeserverjs): this file is optional and is used to hook into various parts of the Gridsome server.
-
 - [`package.json`](https://gridsome.org/docs/directory-structure/#packagejson): contains information about which plugins are installed in the project.
+
+## Images and Videos guidelines
+
+### Common
+
+- Use the Android Emulator
+
+- Use the white theme
+
+- Preferably use local source or a self-hosted extension
+  - If you are going to show a manga
+
+- Resize to have a width of 648px
+
+### Images
+
+- Use `.png` format
+
+### Videos
+
+- Use `.webm` format
+  - Encode it with our [HandBreak profile](../.github/tachiyomi-handbrake-profile.json)
+
+- Remove audio track
 
 ## Credits
 
@@ -101,3 +117,4 @@ Thank you to all the people who have already contributed!
 <a href="https://github.com/tachiyomiorg/website/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tachiyomiorg/website" />
 </a>
+
