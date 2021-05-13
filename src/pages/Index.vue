@@ -437,7 +437,7 @@ export default {
 			),
 			var(--index-background-image);
 		background-position: center;
-		background-size: 2000px;
+		background-size: 1500px;
 	}
 
 	@media screen and (max-width: 800px) {
