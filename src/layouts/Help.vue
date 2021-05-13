@@ -308,7 +308,7 @@ export default {
 	}
 }
 
-@media screen and (max-width $MQMobile) {
+@media screen and (max-width 1380px) {
 	.column {
 		margin 0.4rem 0.6rem
 	}
@@ -319,23 +319,6 @@ export default {
 
 		.header {
 			margin-top 1rem
-
-			.material-icons,
-			.material-design-icon {
-				font-size 1.6em
-
-				&.discord-icon {
-					color $discordAccentColor
-				}
-
-				&.reddit-icon {
-					color $redditAccentColor
-				}
-
-				&.github-icon {
-					color $githubAccentColor
-				}
-			}
 
 			span {
 				display inline-block
@@ -376,6 +359,12 @@ export default {
 		}
 	}
 
+	.row {
+		grid-template-columns repeat(2, 1fr)
+	}
+}
+
+@media screen and (max-width 767px) {
 	.row {
 		grid-template-columns repeat(1, 1fr)
 	}
