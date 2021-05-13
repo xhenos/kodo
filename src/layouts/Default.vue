@@ -155,9 +155,11 @@ export default {
 			z-index 10
 			width 100%
 
-			svg {
-				&:not(.feather-search):hover {
-					color var(--primary)
+			.header-item {
+				svg {
+					&:not(.feather-search):hover {
+						color var(--primary)
+					}
 				}
 			}
 		}
