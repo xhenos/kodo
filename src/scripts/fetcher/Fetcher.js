@@ -33,6 +33,10 @@ export class Fetch {
 		return (fetch[bit] = fetch[bit] || this.fetcher[variant]().fetch(type));
 	}
 
+	githubUrl(variant) {
+		return this.fetcher[variant]().githubUrl
+	}
+
 	destory() {
 		fetch = {};
 	}

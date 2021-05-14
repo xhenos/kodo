@@ -6,6 +6,7 @@ import { VariantEnum } from "./VariantEnum";
 export class TachiyomiJ2K extends BaseVariant {
 	constructor(store) {
 		super(store, VariantEnum.TACHIYOMI_J2K);
+		this.githubUrl = "https://github.com/Jays2Kings/tachiyomiJ2K";
 	}
 
 	fetch = type => {

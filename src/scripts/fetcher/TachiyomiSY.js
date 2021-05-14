@@ -6,6 +6,7 @@ import { BaseVariant } from "./BaseVariant";
 export class TachiyomiSY extends BaseVariant {
 	constructor(store) {
 		super(store, VariantEnum.TACHIYOMI_SY);
+		this.githubUrl = "https://github.com/jobobby04/TachiyomiSY";
 	}
 
 	fetch = type => {

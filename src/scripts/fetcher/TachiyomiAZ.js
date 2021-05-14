@@ -8,6 +8,7 @@ import { BaseVariant } from "./BaseVariant";
 export class TachiyomiAZ extends BaseVariant {
 	constructor(store) {
 		super(store, VariantEnum.TACHIYOMI_AZ);
+		this.githubUrl = "https://github.com/az4521/tachiyomiAZ";
 	}
 
 	fetch = type => {

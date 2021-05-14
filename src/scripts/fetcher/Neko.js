@@ -6,6 +6,7 @@ import { BaseVariant } from "./BaseVariant";
 export class Neko extends BaseVariant {
 	constructor(store) {
 		super(store, VariantEnum.NEKO);
+		this.githubUrl = "https://github.com/CarlosEsco/Neko";
 	}
 
 	fetch = type => {

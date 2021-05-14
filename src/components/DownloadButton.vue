@@ -87,7 +87,7 @@ export default {
 			}
 		},
 		link() {
-			return this.fetcher.githubUrl;
+			return this.fetcher().githubUrl(this.variant);
 		},
 	},
 	methods: {
