@@ -102,7 +102,9 @@ export default {
 			let name = this.$page.markdownPage.forkName || "tachiyomi";
 			console.log(name, "Lets download preview version");
 			// TODO Add modal
-			this.promptPreview();
+			if (confirm("Are you sure? Preview can break features and contain bugs!")) {
+  				this.promptPreview();
+			}
 		},
 		onClickGitHub() {
 			if (window) {
@@ -112,13 +114,13 @@ export default {
 		promptStable() {
 			const name = this.prettifyName;
 			console.log(name);
-			window.location.assign(this.data.downloadUrl);
+			window.location.assign(this.data.downloadUrl.browser_download_url);
 			// window.ga("send", "event", "Action", "Download", name);
 		},
 		promptPreview() {
 			const name = this.prettifyName;
 			console.log(`${name} Preview`);
-			window.location.assign(this.data.downloadUrl);
+			window.location.assign(this.data.downloadUrl.browser_download_url);
 			// window.ga("send", "event", "Action", "Download", `${name} Preview`);
 		},
 	},
