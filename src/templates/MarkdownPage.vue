@@ -170,7 +170,7 @@ export default {
 			],
 		};
 	},
-	methods: {
+	computed: {
 		isEditable() {
 			return this.$page.markdownPage.cms && this.$page.markdownPage.cms.edit;
 		},
