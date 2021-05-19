@@ -9,58 +9,38 @@ sidebar: default
 prev: /help/faq/extensions/
 ---
 
-## MangaDex
+## Mangadex
 
-### Why are there no results when searching?
-:::videolink
-[<MaterialIcon icon="videocam"/> Click for video guide](/assets/faq_mangadex-no-results.webm)
-:::
+### Version 5 API Rewrite
 
-If you're not getting any results when searching **MangaDex** then you need to log in. To do so enter the <Navigation item="webview"/> for **MangaDex** then press the **Manga** drop-down and choose either **Sign up** or **Log in** to proceed with the login.
+### Do I need to log in to search?
+You do not need to log in to MangaDex to read manga anymore.
 
-:::guide
-To enter the **WebView** go to <Navigation item="browse"/> → <Navigation item="button_latest"/> next to **MangaDex**, then press on <Navigation item="webview"/> in the top right corner.
-:::
+### Why are all the covers placeholders?
+Covers do not work right now due to it not being in the API yet.
 
-### Why is MangaDex slow?
-If pages are loading slowly or not at all, try:
--   Making sure you have the *latest* version of the extension.
--   Checking if **MangaDex** is either down, or is having the same issues.
--   Trying to **Clear database** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
--   Trying to **Clear chapter cache** under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/>.
--   Going to <Navigation item="browse"/> → <Navigation item="extensions"/> → **MangaDex** → **Image Server** and then selecting a *different* server location.
+### Can I read and download manga from MangaDex right now?
+Reading and downloading works fine.
 
-:::alert Disclaimer
-Tachiyomi is not hosting any content, we are not affiliated with or responsible for any source that is; slow, down, missing chapters, or has subpar image quality.
-:::
+### Why aren't there any new manga updates?
+There are no new uploads as the frontend is not up yet, so the scanlators cannot upload anything new.
 
-### How do I ignore chapters from certain scanlator groups?
-You can go to the manga's page in <Navigation item="webview"/> and block groups you do not want to see. Close <Navigation item="webview"/> and refresh the manga in the app. The group's chapters should be gone now.
+### Why are all my manga saying "Manga ID format has changed, migrate from MangaDex to MangaDex to continue reading"?
+You need to [migrate](/help/guides/source-migration) all your MangaDex manga from MangaDex to MangaDex as MangaDex has changed their manga ID system from IDs to UUIDs.
 
-### Is there an alternate searching method?
-**MangaDex** allows you to search using the ID number to find manga. The easiest way to get the ID is by opening the manga in your browser and looking at the URL.
+### Will I lose my downloads if I migrate?
+Downloads from before will not be removed or lost by the app.
 
-:::guide
-An example search would be **`id:23427`** which would return results for [Candy & Cigarettes](https://mangadex.org/title/23427/candy-cigarettes)
-:::
+### Why can I not restore from a JSON backup?
+JSON backups are now unusable due to the ID change. You will have to manually re-add your manga.
 
-### How do I fix chapters from Mangaplus being broken?
-Install the **MANGA Plus by SHUEISHA** extension instead and then migrate the manga that uses **MANGA Plus** on **MangaDex** onto the **MANGA Plus** source.
-
-:::note
-Read about source migration [here](/help/guides/source-migration/)
-:::
-
-## Former Mangabox extensions
-
-### What happend to Mangabox?
-As part of a general move to split up multi-source extensions, the Mangabox extension was removed, and all of its sources were made into their own extensions, namely **Mangakakalot**, **Manganelo**, **Mangabat** and **Mangairo**.
+## Mangakakalot, Manganelo, Mangabat and Mangairo
 
 ### What do `Page list is empty` and `Source URL has changed` mean?
 The former **Mangabox** extensions have created new entries for many of the manga on their websites. The old entries are obsolete and will not work. To resolve this, [migrate](/help/guides/source-migration/) the manga from the source to itself to get the new entry, or better yet, to a different source entirely to avoid similar errors in the future.
 
 ### How do I fix the `Image could not be decoded` error?
-Open the manga in <Navigation item="webview"/>, open a chapter, and wait for the images to load. If they don't load, you will need to look elsewhere to read that particular manga, as some of the former **Mangabox** sources, such as **Mangakakalot**, are now blocking entire regions.
+Open the manga in <Navigation item="webview"/>, open a chapter, and wait for the images to load. If they do not load, you will need to look elsewhere to read that particular manga, as some of the former **Mangabox** sources, such as **Mangakakalot**, are now blocking entire regions.
 
 ## MangaPark
 
@@ -72,12 +52,7 @@ To solve this issue, follow the below steps.
 1.  Choose an option like **Smart list** or **Prioritize source**.
 1.  Go back to **MangaPark**'s chapter list and refresh it.
 
-## Webtoons
+## Toonily 
 
-### How do I fix the `Page list is empty` error?
-You will have to open the manga entry in WebView and verify your age, as Webtoons has recently added age verifications on their website.
-
-## KissManga and MangaRock
-
-### Where are Kissmanga and MangaRock?
-**KissManga** went under permanently in August 2020. **MangaRock** converted from a piracy app and went legit. They are now called **INKR** but have nowhere near their old library.
+### Why am I unable to access Toonily?
+The Toonily source may have issues loading due to the Cloudflare bypass in WebView timing out.

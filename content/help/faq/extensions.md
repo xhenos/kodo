@@ -13,7 +13,6 @@ next: /help/faq/sources/
 import Tabs from "~/components/Tabs.vue";
 import Tab from "~/components/Tab.vue";
 
-# 🎆 THIS PAGE NEEDS UPDATING
 
 ## General
 
@@ -25,21 +24,9 @@ Tachiyomi is not hosting any content, we are not affiliated with or responsible 
 :::
 
 ### What are scanlator sources?
-Manga that are not officially licensed are translated by scanlators, who either publish manga on their own website or **MangaDex**. Scanlator sources always provide the fastest manga updates and have the highest scan quality.
+Manga that are not officially licensed are translated by scanlators, who either publish manga on their own website or **MangaDex**. This practice contrasts with official sources like **MANGA Plus By SHUEISHA** or **VIZ Shonen Jump**, which host officially licensed and translated manga.
 
-Some popular scanlator sources are  **MerakiScans**, **Hatigarm Scans** and **Leviatan Scans**. (in **Genkan** extension)
-
-Learn more about scanlation in this **Wikipedia** [**article**](https://en.wikipedia.org/wiki/Scanlation).
-
-### Which sources are in the multi-source extensions?
-Some extensions contain multiple sources, look at the list below to find out which extension to install for the specific source that you want.
-
-:::guide
-User [SnakeDoc83](https://github.com/snakedoc83) has made a handy spreadsheet showing the different multi-source extensions and their sources.
-:::note
-Access the spreadsheet [here](https://tachiyomi.org/extensions-spreadsheet)
-:::
-:::
+Learn more about scanlation in this [**Wikipedia article**](https://en.wikipedia.org/wiki/Scanlation).
 
 ### How do I request a new extension?
 Open an issue [on GitHub](https://github.com/tachiyomiorg/tachiyomi-extensions/issues) if one does not already exist.
@@ -48,10 +35,8 @@ Open an issue [on GitHub](https://github.com/tachiyomiorg/tachiyomi-extensions/i
 You can find the list of extensions to download [here](/extensions/)
 :::
 
-### Why won't the extensions install?
-In some cases your phone might have some issues downloading the extensions, in those cases you can try installing them yourselves directly from the source.
-
-To install just download the file for the extension you want and then install it, like how you installed **Tachiyomi**.
+### I am having problems installing an extension; what can I do?
+In some cases, your device might have some issues downloading and automatically installing an extension. In those cases, you can manually download and install the extension yourself. Go to the [extension list](/extensions/), find the extension you want, and tap **Download**. Once the .apk file has been downloaded, use your file manager to find it and open it. A prompt to install it as an app should pop up. Once it is done installing, it will be automatically added to Tachiyomi as a source.
 
 ### How do I allow third-party installations?
 
@@ -87,7 +72,7 @@ If you need more help regarding this, read [this](https://www.theandroidsoul.com
 :::
 
 ### How do I uninstall an extension?
-Extensions for **Tachiyomi** are technically installed the same as normal apps. Either you uninstall them through the app section on your phone's settings or you go can do it in the app.
+Extensions for **Tachiyomi** are technically installed the same as normal apps. Either you uninstall them through the app section on your device's settings or do it in **Tachiyomi**
 
 :::guide
 To uninstall an extension from within **Tachiyomi**, go to <Navigation item="browse"/> → **Extensions** then tap **Uninstall** on the extension you want to remove.
@@ -115,3 +100,36 @@ It might be because the title is worded differently. Follow any of the steps bel
 -   See which site has the series, often a single source will not satisfy all your needs.
 -   Download the extension for that source from <Navigation item="browse"/> → **Extensions** if it exists, read [this](/help/faq/#which-sources-are-in-the-multi-source-extensions) for a list of which extensions contains what sources.
 -   Go to <Navigation item="browse"/> and tap on a source then search for the manga again.
+
+
+## Removed Extensions
+
+### Why am I unable to download an extension that used to exist?
+Extensions tend to be removed for a variety of reasons: 
+
+-   They become too much of a cat and mouse game to maintain due to the website owners changing the site frequently to deter scrapers.
+-   The site scrambles images in more than one way, making it impossible to make every image unscrambleable.
+-   A scanlator team requests the removal of their site from Tachiyomi.
+-   The site is paywalled.
+-   Require reverse engineering another app.
+-   The site has been shut down.
+
+A list of extensions that have been removed is available [here](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/3475), but it does not include sites that have gone offline.
+
+## Split Extensions
+Extensions have been split due to the sheer number of extensions in a single extension, with Madara reaching over 200 extensions at one point, making it unreasonable for both devs and users to filter through extensions. For a deeper explanation of the issue, [this](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/4287) GitHub issue explains in more detail.
+
+### What extensions have been split?
+All of them have been split.
+
+### Why does my multisource extension show up as obsolete? 
+The multisource extension is obsolete because it has been split. The multisource extension has been removed from the repository. It is not actually obsolete.
+
+### How do I move to a split extension?
+Install the extension that your manga is from, and then uninstall the multisource extension. If the manga shows the source as a bunch of numbers, force close the app. For known issues with split extensions, go to this [GitHub issue](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/5672).
+
+### Do I need to migrate? 
+No, unless expressly stated, the internal ID of sources has not changed, so migration is unnecessary.
+
+#### What if I uninstall the multisource extension before I install the singular extensions?
+See what extension IDs correspond to what extensions [here](https://pastebin.com/raw/QX2scdRT).

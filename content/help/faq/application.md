@@ -19,23 +19,28 @@ This can be done by enabling **Download badges** under <Navigation item="library
 Enable it by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Display** section and then checking the **Download badges** option at the bottom.
 :::
 
-### Why are some covers white after restoring from backup?
-The URL to the cover has probably changed. To fix this, refresh the metadata of your library.
+### How do I ignore duplicate chapters?
+Sometimes, you find a manga that is translated by more than one group. Because of this, you get multiple releases for each chapter in the manga. There are several ways to skip the duplicate chapters:
 
-:::guide
-Refresh your metadata by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> then pressing **Refresh library metadata**.
+-   On the manga page, tap on <Navigation item="filter"/> → **Sort** and choose **By chapter number**. Doing this will cause the reader to skip duplicates as you read.
+-   Bookmark or mark as read the unwanted chapters, then tap on <Navigation item="filter"/> → **Filter** and double-tap **Bookmarked** or single-tap **Unread**, respectively. This will hide any bookmarked or read chapters and skip them as you read along, as long as you have **Skip filtered chapters** enabled under <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_reader"/> → **Reading**.
+-   Migrate to another source that does not have duplicates. For more information on how to migrate a manga, see the [migration guide](/help/guides/source-migration/).
+
+
+### Why are some cover thumbnails corrupted, white, or showing a broken page?
+The thumbnail download likely did not complete correctly. To fix this, refresh covers in settings.
+
+::: guide
+Refresh your covers by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> then pressing **Refresh library manga covers**.
 :::
 
-### How do I ignore chapters from certain scanlator groups?
-Every now and then you find a manga that is translated by more than one group. Because of this, you get multiple releases for each chapter in the manga. The easiest way to fix this is to change sorting to **Total chapters**. You won't see any changes but, when you start reading you'll automatically skip the duplicate releases.
+#### Why have some manga chapters been marked as unread when I haven't touched them?
+The URLs of the manga chapters have changed, so Tachiyomi detects the chapter(s) as new chapters.
 
-:::guide
-Change library sorting by going to <Navigation item="library"/> → <Navigation item="filter"/> → **Sort** section then in this case selecting **Total chapters**.
-:::
 
 ## Browse
 
-### Why can't I find X manga?
+### Why can I not find a certain manga?
 Sometimes you can struggle to find a source hosting the manga you're looking for, look here for some tips to help you find it.
 
 :::guide Tips to find your manga
@@ -43,7 +48,7 @@ Sometimes you can struggle to find a source hosting the manga you're looking for
 1.  See if a website or scanlator has the series, then check the [Extensions](/extensions/) list.
 
 #### If you found the website/scanlator in the list
-Download the corresponding extension, go to the source, then search for the manga there.
+Download the corresponding extension, tap on it under <Navigation item="browse"/> → **Sources**, and then search for the manga there.
 
 #### If you didn't find the website/scanlator in the list
 If you found a website or scanlator that hosts your manga but doesn't exist as a source or extension, then you can see if its [already been requested](https://github.com/tachiyomiorg/tachiyomi-extensions/issues) or you can [request it yourself](https://github.com/tachiyomiorg/tachiyomi-extensions/issues/new/choose).
@@ -56,34 +61,49 @@ If the website/scanlator group doesn't have an online manga reader, you can down
 ### Why are some images not displayed?
 Aside from network issues, it could be because the images are too big or that the decoder doesn't support that image type.
 
-## Downloads
-
-### Why are Downloads unstable?
-Be aware that it could be a network issue on your device or on the catalog you are trying to download from.
-
-### Can you make it possible to store manga on both internal storage and external SD-card?
-At the moment, no. You could try using symlinks but that requires having your phone rooted.
-
-:::note
-Read more about rooting your phone [here](https://www.xda-developers.com/root/)
-:::
-
-## Tracking
-
-### Why can't I find manga in MAL's search results?
-You can search a manga from your MAL profile's list by searching in the following format: `my:<manga>`
-
-:::note
-Related GitHub issue: [#65](https://github.com/tachiyomiorg/tachiyomi/issues/65)
-:::
-
 ## Local Manga
 
 ### How do I import my manga into Tachiyomi?
 We recommend you to read [this](/help/guides/reading-local-manga) guide on how to do so.
 
 ### What do I do if I can't find the Tachiyomi folder?
-If you don't see a **Tachiyomi** folder on your device, try downloading a chapter of any manga or creating a backup so that the folder can be created.
+If you do not see the **Tachiyomi** folder on your device, try setting the download location to default and downloading a chapter of any manga so that Tachiyomi creates a folder. If needed, you may manually create a Tachiyomi folder as well.
+
+::: guide
+Set download location to default by going to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_downloads"/> → **Download location** and selecting first option. Restart the app after changing download location.
+:::
+
+### How do I fix empty/blank covers on my local manga?
+Sometimes some covers for local manga aren't displayed. Follow these steps to fix it:
+
+::: guide
+1.  Make sure you've created the right folder structure. To check it, open the manga with the missing cover and check if you can read chapters in the app. If not, follow [this](/help/guides/local-manga) guide first.
+1.  Take a screenshot of which chapters you've read, and then remove manga from the library.
+1.  Go to <Navigation item="more"/> → <Navigation item="settings"/> → <Navigation item="settings_advanced"/> and tap **Clear database**. This only affects manga that aren't in your library.
+1.  Go to <Navigation item="browse"/> → **Local source** and find the manga. The cover should be fixed now. Add the manga back to your library, mark your read chapters, and re-add tracking if needed.
+:::
+
+::: note
+Related GitHub issue: [#932](https://github.com/tachiyomiorg/tachiyomi/issues/932)
+:::
+
+## Android 11
+
+### What changed in Android 11?
+In Android 11, Google began forcing users to use [Scoped Storage](https://developer.android.com/about/versions/11/privacy/storage), which was introduced in Android 5.0 Lollipop, but Google only began forcing developers to use it on Android 11. Some OEMs seem to better implement Scoped Storage than others, with some users not running into any issues while users using other phone brands have multitudes of problems.
+
+### What does it mean for Tachiyomi?
+The introduction of Scoped Storage means that many storage-related functions that Tachiyomi uses may be much slower due to the inherent slowness of Scoped Storage, as outlined [here](https://www.xda-developers.com/android-q-storage-access-framework-scoped-storage/). These include deleting chapters, library load times, accessing the folders outside the data folders to download to or read from, and more.
+
+### Is there any way to improve performance?
+
+You can try the command below if you know how to use ADB, a guide on installing it is also outlined on the site [here](/help/guides/troubleshooting/#what-are-some-common-errors).
+```
+adb shell cmd appops set eu.kanade.tachiyomi Android:legacy_storage allow
+```
+This command enables general storage access for the app, allowing Tachiyomi to use the old general storage access interface. 
+
+If you are using a Tachiyomi Preview or a fork, replace `eu.kanade.tachiyomi` with the corresponding fork's package name.
 
 ## Miscellaneous
 
@@ -111,8 +131,8 @@ No. Tachiyomi is an image parser, meaning it can't parse text.
 ### Can I revert back from the Material Design 2 update of Tachiyomi?
 While there will never be a toggle between the two UI versions, you can continue to use the old UI version by using [TachiyomiAZ](https://tachiyomi.org/forks/TachiyomiAZ/).
 
-### I see manga images in my phone gallery, what gives!?
-Tachiyomi by default adds a `.nomedia` file to prevent this from happening but sometimes it doesn't work or something went wrong. To fix this, all you need to do is create the file yourself. Name it `.nomedia` and place it in your download folder.
+### Why can I see manga pages in my device's photo gallery?
+Tachiyomi adds a `.nomedia` file to the Downloads folder by default to prevent this from happening, but sometimes it does not work, or something goes wrong. To fix this, all you need to do is create the file yourself. Name it `.nomedia` and place it in your downloads folder. If you have the same problem with your local manga, place the `.nomedia` file in the local folder.
 
 ### I lost everything, what now?
 To avoid data loss in the future, you can use the automatic backup feature.
@@ -120,3 +140,4 @@ To avoid data loss in the future, you can use the automatic backup feature.
 :::note
 Learn how to create automatic backups [here](/help/guides/creating-backups/#turning-on-auto-backups/)
 :::
+
