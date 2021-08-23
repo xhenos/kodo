@@ -34,7 +34,7 @@ export class Fetch {
 	}
 
 	githubUrl(variant) {
-		return this.fetcher[variant]().githubUrl
+		return this.fetcher[variant]().githubUrl;
 	}
 
 	destory() {

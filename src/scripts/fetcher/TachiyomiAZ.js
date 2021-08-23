@@ -59,19 +59,21 @@ export class TachiyomiAZ extends BaseVariant {
 				this.store.commit("setRelease", {
 					variant: this.variant,
 					type: type,
-					newData: stripPreviewData(data),
+					newData: this.stripPreviewData(data),
 				});
 				resolve(this.fetchLocal(type));
 			});
-			resolve(this.fetchLocal(type));
 		});
 	};
 
 	stripPreviewData = data => {
+		var versionRelease = new Date(data * 1000).toLocaleDateString();
 		return {
 			body: "",
-			version: "Preview",
-			downloadUrl: TACHIYOMI_AZ_PREVIEW_API_URL,
+			version: versionRelease,
+			downloadUrl: {
+				browser_download_url: TACHIYOMI_AZ_PREVIEW_API_URL,
+			},
 			releaseDate: new Date(data * 1000).toJSON(),
 		};
 	};

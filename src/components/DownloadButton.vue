@@ -103,7 +103,7 @@ export default {
 			console.log(name, "Lets download preview version");
 			// TODO Add modal
 			if (confirm("Are you sure? Preview can break features and contain bugs!")) {
-  				this.promptPreview();
+				this.promptPreview();
 			}
 		},
 		onClickGitHub() {
