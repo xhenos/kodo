@@ -1,0 +1,8 @@
+{
+  "name": "tachiyomi-common",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "svelte": "^3.0.0"
+  }
+}

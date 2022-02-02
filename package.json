@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "packageManager": "yarn@3.1.1",
+  "name": "tachiyomi-website",
+  "scripts": {
+    "dev": "yarn workspaces foreach --exclude common -pt run dev"
+  },
+  "workspaces": [
+    "packages/common/",
+    "packages/landing/",
+    "packages/download/",
+    "packages/extensions/"
+  ]
+}
