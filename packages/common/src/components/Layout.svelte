@@ -1,50 +1,25 @@
 <script>
-import DarkModeButton from "./DarkModeButton.svelte";
-
+import "../stylesheets/global.css"
+import Navbar from "./Navbar.svelte";
+import Footer from "./Footer.svelte";
 </script>
 
 <div>
-    <nav>
-        <a href=".">Home</a>
-        <a href=".">Download</a>
-        <a href=".">Extensions</a>
-        <a href=".">Docs</a>
-        <DarkModeButton />
-    </nav>
+    <Navbar />
     <main>
         <slot></slot>
     </main>
-	<footer>
-        <p>Footer goes brrr</p>
-    </footer>
+	<Footer />
 </div>
 
 <style>
 :global(body) {
-    --main-bg-color: white
+    --background-color: white;
+    --text-color: black;
 }
 
 :global(body.dark-mode) {
-    --main-bg-color: rgb(32, 32, 32)
-}
-
-main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-}
-
-:global(h1) {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-}
-
-@media (min-width: 640px) {
-    main {
-        max-width: none;
-    }
+    --background-color: rgb(32, 32, 32);
+    --text-color: white;
 }
 </style>

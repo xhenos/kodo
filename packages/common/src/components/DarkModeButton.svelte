@@ -27,3 +27,9 @@ function toggle() {
         🌚
     {/if}
 </button>
+
+<style>
+    button {
+        font-family: 'Noto Color Emoji', 'Apple Color Emoji';
+    }
+</style>
