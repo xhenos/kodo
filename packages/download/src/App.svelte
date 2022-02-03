@@ -12,11 +12,11 @@
 			<Icon name="logo" height="80" width="80" />
 			<h2>Download</h2>
 		</div>
-		<h1 class="description">
+		<div class="description">
 			Download the latest stable version of Tachiyomi the preview version.
-		</h1>
+		</div>
 		<div class="requirement">
-			{(System.OSName == "Android" || System.OSName == "Windows") ? "Requires Android 6.0 or higher." : `You are using ${System.OSName == "(n/a)" ? "an unknown OS" : System.OSName}, unfortunately we only support Android`}
+			{(System.OSName == "iOS" || System.OSName == "MacOS") ? "Unfortunately we only support Android, anyone claiming otherwise should not be trusted." : ""}
 		</div>
 		<div class="download {(System.OSName == "Android" || System.OSName == "Windows") ? "" : "unsupported"}">
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest">
@@ -50,25 +50,21 @@
 
 	.branding h2 {
 		margin-top: 1.25rem;
+		margin-block-end: 0.5rem;
 		border-style: none;
 		letter-spacing: -.05em;
 		font-weight: 500;
-		font-size: 3rem;
+		font-size: 2.4rem;
 	}
 
 	.description {
 		text-align: center;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.requirement {
-		text-align: center;
-		font-weight: 400;
-		font-size: 1rem;
-	}
-
-	.requirement span {
 		text-align: center;
 		font-weight: 500;
 		font-size: 1rem;
