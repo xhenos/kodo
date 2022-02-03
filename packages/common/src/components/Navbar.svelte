@@ -1,13 +1,18 @@
 <script>
     import DarkModeButton from "./DarkModeButton.svelte";
+
+    const landingPageUrl = isProduction ? 'https://kodo.moe/' : `http://localhost:${landingPagePort}`;
+    const downloadPageUrl = isProduction ? 'https://download.kodo.moe/' : `http://localhost:${downloadPagePort}`;
+    const extensionsPageUrl = isProduction ? 'https://extensions.kodo.moe/' : `http://localhost:${extensionsPagePort}`;
+    const documentationPageUrl = 'https://docs.kodo.moe'
 </script>
 
 <nav>
     <div class="left">
-        <a href=".">Home</a>
-        <a href=".">Download</a>
-        <a href=".">Extensions</a>
-        <a href=".">Docs</a>
+        <a href="{landingPageUrl}">Home</a>
+        <a href="{downloadPageUrl}">Download</a>
+        <a href="{extensionsPageUrl}">Extensions</a>
+        <a href="{documentationPageUrl}">Docs</a>
     </div>
     <div class="right">
         <a href=".">Twitter</a>

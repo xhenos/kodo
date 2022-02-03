@@ -186,6 +186,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-replace@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@rollup/plugin-replace@npm:3.0.1"
+  dependencies:
+    "@rollup/pluginutils": ^3.1.0
+    magic-string: ^0.25.7
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0
+  checksum: 0cd97439783d3d23ba4f0c74146f5cdf0965d57977cc8227a77dfdd9604930905619e405c961ae146a0e68c8239b9a3a817704fa90f7d62d5087ed84d8c33ead
+  languageName: node
+  linkType: hard
+
 "@rollup/pluginutils@npm:4":
   version: 4.1.2
   resolution: "@rollup/pluginutils@npm:4.1.2"
@@ -547,6 +559,13 @@ __metadata:
   version: 2.3.1
   resolution: "deprecation@npm:2.3.1"
   checksum: f56a05e182c2c195071385455956b0c4106fe14e36245b00c689ceef8e8ab639235176a96977ba7c74afb173317fac2e0ec6ec7a1c6d1e6eaa401c586c714132
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.0.0":
+  version: 16.0.0
+  resolution: "dotenv@npm:16.0.0"
+  checksum: 664cebb51f0a9a1d1b930f51f0271e72e26d62feaecc9dc03df39453dd494b4e724809ca480fb3ec3213382b1ed3f791aaeb83569a137f9329ce58efd4853dbf
   languageName: node
   linkType: hard
 
@@ -1657,6 +1676,8 @@ __metadata:
   dependencies:
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-node-resolve": ^11.0.0
+    "@rollup/plugin-replace": ^3.0.1
+    dotenv: ^16.0.0
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-livereload: ^2.0.0
@@ -1675,6 +1696,8 @@ __metadata:
     "@octokit/core": ^3.5.1
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-node-resolve": ^11.0.0
+    "@rollup/plugin-replace": ^3.0.1
+    dotenv: ^16.0.0
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-livereload: ^2.0.0
@@ -1692,6 +1715,8 @@ __metadata:
   dependencies:
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-node-resolve": ^11.0.0
+    "@rollup/plugin-replace": ^3.0.1
+    dotenv: ^16.0.0
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-livereload: ^2.0.0
