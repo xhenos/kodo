@@ -1,4 +1,5 @@
 <script>
+import "../stylesheets/base/grid.css"
 import "../stylesheets/global.css"
 import Navbar from "./Navbar.svelte";
 import Footer from "./Footer.svelte";

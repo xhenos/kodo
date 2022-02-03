@@ -1,5 +1,4 @@
 const svelte = require('rollup-plugin-svelte')
-
 const commonjs = require( '@rollup/plugin-commonjs');
 const resolve = require ('@rollup/plugin-node-resolve').nodeResolve;
 const livereload = require ('rollup-plugin-livereload');
@@ -10,22 +9,11 @@ const replace = require ('@rollup/plugin-replace');
 
 const production = !process.env.ROLLUP_WATCH;
 
-let env
-
-if (!production) {
-	env = {
-		'LANDING_PAGE': JSON.stringify('http://localhost:8080'),
-		'DOWNLOAD_PAGE': JSON.stringify('http://localhost:8081'),
-		'EXTENSION_PAGE': JSON.stringify('http://localhost:8082'),
-		'DOCS_PAGE': JSON.stringify('https://docs.kodo.moe')
-	}
-} else {
-	env = {
-		'LANDING_PAGE': JSON.stringify(process.env.LANDING),
-		'DOWNLOAD_PAGE': JSON.stringify(process.env.DOWNLOAD),
-		'EXTENSION_PAGE': JSON.stringify(process.env.EXTENSION),
-		'DOCS_PAGE': JSON.stringify(process.env.DOCS)
-	}
+const env = {
+	'LANDING_PAGE': JSON.stringify(!production ? 'http://localhost:8080' : process.env.LANDING),
+	'DOWNLOAD_PAGE': JSON.stringify(!production ? 'http://localhost:8081' : process.env.DOWNLOAD),
+	'EXTENSION_PAGE': JSON.stringify(!production ? 'http://localhost:8082' : process.env.EXTENSION),
+	'DOCS_PAGE': JSON.stringify(!production ? 'https://docs.kodo.moe' : process.env.DOCS)
 }
 
 function serve() {
