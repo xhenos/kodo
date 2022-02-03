@@ -4,6 +4,11 @@
 	import System from 'svelte-system-info'
 
 	export let name;
+
+	console.log('BrowserName',    System.BrowserName)
+	console.log('BrowserVersion', System.BrowserVersion)
+	console.log('OSName',         System.OSName)
+	console.log('OSVersion',      System.OSVersion)
 </script>
 
 <Layout>
