@@ -16,9 +16,9 @@
 			Download the latest stable version of Tachiyomi the preview version.
 		</h1>
 		<div class="requirement">
-			{System.OSName == "Android" ? "Required Android version is 6 and above" : `You are using ${System.OSName == "(n/a)" ? "an unknown OS" : System.OSName}, unfortunately we only support Android 6+`}
+			{(System.OSName == "Android" || System.OSName == "Windows") ? "Requires Android 6.0 or higher." : `You are using ${System.OSName == "(n/a)" ? "an unknown OS" : System.OSName}, unfortunately we only support Android`}
 		</div>
-		<div class="download">
+		<div class="download {System.OSName == "Android" ? "" : "unsupported"}">
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest">
 				<button id="stable">
 					Stable
@@ -76,5 +76,9 @@
 
 	.download {
 		text-align: center;
+	}
+
+	.download.unsupported {
+		display: none;
 	}
 </style>
