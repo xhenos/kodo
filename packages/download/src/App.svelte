@@ -18,7 +18,7 @@
 		<div class="requirement">
 			{(System.OSName == "Android" || System.OSName == "Windows") ? "Requires Android 6.0 or higher." : `You are using ${System.OSName == "(n/a)" ? "an unknown OS" : System.OSName}, unfortunately we only support Android`}
 		</div>
-		<div class="download {System.OSName == "Android" ? "" : "unsupported"}">
+		<div class="download {(System.OSName == "Android" || System.OSName == "Windows") ? "" : "unsupported"}">
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest">
 				<button id="stable">
 					Stable
