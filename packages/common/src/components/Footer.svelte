@@ -11,7 +11,6 @@
 
 <style>
 footer {
-    background-color: var(--background-color);
     width: 100%;
     height: 100px;
     display: flex;

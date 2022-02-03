@@ -28,8 +28,9 @@
         width: calc(100% - 100px);
         height: 75px;
         background-color: var(--background-color);
+        border-bottom: 1px solid rgb(245, 245, 245);
         display: flex;
-        filter: brightness(95%);
+        filter: brightness(99%);
         padding: 0 50px;
         flex-direction: row;
         flex-wrap: nowrap;
