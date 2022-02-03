@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "sirv-cli": "^2.0.0",
+    "svelte-system-info": "^0.1.12",
     "tachiyomi-common": "workspace:*"
   }
 }

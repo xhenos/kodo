@@ -1,6 +1,7 @@
 <script>
 	import Layout from "tachiyomi-common/src/components/Layout.svelte";
 	import Icon from "tachiyomi-common/src/components/Icon.svelte";
+	import System from 'svelte-system-info'
 
 	export let name;
 </script>
@@ -14,6 +15,10 @@
 		<h1 class="description">
 			Download the latest stable version of Tachiyomi the preview version.
 		</h1>
+		<div class="requirement">
+			Your are using: <span class="detected">{System.OSName} {System.OSVersion !== "(n/a)" || ""}</span>
+			Required: <span class="required">Android 6</span>+
+		</div>
 		<div class="download">
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest">
 				<button id="stable">
@@ -56,6 +61,18 @@
 		text-align: center;
 		font-weight: 400;
 		font-size: 1.5rem;
+	}
+
+	.requirement {
+		text-align: center;
+		font-weight: 400;
+		font-size: 1rem;
+	}
+
+	.requirement span {
+		text-align: center;
+		font-weight: 500;
+		font-size: 1rem;
 	}
 
 	.download {
