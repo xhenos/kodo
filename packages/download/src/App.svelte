@@ -16,8 +16,7 @@
 			Download the latest stable version of Tachiyomi the preview version.
 		</h1>
 		<div class="requirement">
-			Your are using: <span class="detected">{System.OSName} {System.OSVersion !== "(n/a)" || ""}</span>
-			Required: <span class="required">Android 6</span>+
+			{System.OSName == "Android" ? "Required Android version is 6 and above" : `You are using ${System.OSName == "(n/a)" ? "an unknown OS" : System.OSName}, unfortunately we only support Android 6+`}
 		</div>
 		<div class="download">
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest">
