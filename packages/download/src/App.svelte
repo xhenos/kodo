@@ -1,9 +1,39 @@
 <script>
 	import Layout from "tachiyomi-common/src/components/Layout.svelte";
 	import Icon from "tachiyomi-common/src/components/Icon.svelte";
+	import API from "./scripts/api" 
 	import System from 'svelte-system-info'
+	import { onMount } from "svelte";
 
-	export let name;
+	const api = new API()
+
+	let stable = undefined
+	let preview = undefined
+
+	$: stableUrls = extractDownloadUrls(stable, false)
+	$: previewUrls = extractDownloadUrls(preview, true)
+
+	function extractDownloadUrls(object, preview) {
+		if (object === undefined) return {
+			universal: "",
+			other: []
+		}
+		const { data: { assets } } = object
+		const index = assets.findIndex((element) => {
+			const regex = preview ? /^tachiyomi-r\d{4,}.apk/ : /^tachiyomi-v\d+\.\d+\.\d+.apk/
+			return regex.test(element.name)
+		})
+		return {
+			universal: assets.splice(index, 1)[0].browser_download_url,
+			other: assets.map((element) => element.browser_download_url).sort()
+		}
+	}
+
+	onMount(async () => {
+		const [stableResult, previewResult] = await api.fetchLatest()
+		stable = stableResult
+		preview = previewResult
+	})
 
 	console.log('BrowserName',    System.BrowserName)
 	console.log('BrowserVersion', System.BrowserVersion)
@@ -23,13 +53,13 @@
 		<div class="requirement">
 			{(System.OSName == "iOS" || System.OSName == "MacOS") ? "Unfortunately we only support Android, anyone claiming otherwise should not be trusted." : ""}
 		</div>
-		<div class="download {(System.OSName == "Android" || System.OSName == "Windows") ? "" : "unsupported"}">
-			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest">
+		<div class="download {(System.OSName == "Android" || System.OSName == "Windows" || System.OSName == "Linux" || System.OSName == '(n/a)') ? "" : "unsupported"}">
+			<a href={stableUrls.universal}>
 				<button id="stable">
 					Stable
 				</button>
 			</a>
-			<a href="https://github.com/tachiyomiorg/tachiyomi-preview/releases/latest">
+			<a href={previewUrls.universal}>
 				<button id="preview">
 					Preview
 				</button>

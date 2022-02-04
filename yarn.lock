@@ -562,13 +562,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.0.0":
-  version: 16.0.0
-  resolution: "dotenv@npm:16.0.0"
-  checksum: 664cebb51f0a9a1d1b930f51f0271e72e26d62feaecc9dc03df39453dd494b4e724809ca480fb3ec3213382b1ed3f791aaeb83569a137f9329ce58efd4853dbf
-  languageName: node
-  linkType: hard
-
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -1498,9 +1491,9 @@ __metadata:
   linkType: hard
 
 "signal-exit@npm:^3.0.0":
-  version: 3.0.6
-  resolution: "signal-exit@npm:3.0.6"
-  checksum: b819ac81ba757af559dad0804233ae31bf6f054591cd8a671e9cbcf09f21c72ec3076fe87d1e04861f5b33b47d63f0694b568de99c99cd733ee2060515beb6d5
+  version: 3.0.7
+  resolution: "signal-exit@npm:3.0.7"
+  checksum: a2f098f247adc367dffc27845853e9959b9e88b01cb301658cfe4194352d8d2bb32e18467c786a7fe15f1d44b233ea35633d076d5e737870b7139949d1ab6318
   languageName: node
   linkType: hard
 
@@ -1663,9 +1656,9 @@ __metadata:
   linkType: hard
 
 "svelte@npm:^3.0.0":
-  version: 3.46.3
-  resolution: "svelte@npm:3.46.3"
-  checksum: 58659dd03edaf7f4e21e029bb92babe53c26b727d8e1d2beb61baebb360131829016f2ff4c222fa23d789dbbb3e1d092ece79178f441fa385378456b425044f7
+  version: 3.46.4
+  resolution: "svelte@npm:3.46.4"
+  checksum: 929e6790cdd6d94c123b4b8a7b5a541164dbea6d4f4ed311f4e65cde60caa1c704e531bbf2e63519d1a96163cd3f812c6e5be5b2fd05f72d0177af5fd8ca8637
   languageName: node
   linkType: hard
 
@@ -1689,10 +1682,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tachiyomi-download@workspace:packages/download"
   dependencies:
+    "@octokit/core": ^3.5.1
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-node-resolve": ^11.0.0
     "@rollup/plugin-replace": ^3.0.1
-    dotenv: ^16.0.0
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-livereload: ^2.0.0
@@ -1713,7 +1706,6 @@ __metadata:
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-node-resolve": ^11.0.0
     "@rollup/plugin-replace": ^3.0.1
-    dotenv: ^16.0.0
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-livereload: ^2.0.0
@@ -1732,7 +1724,6 @@ __metadata:
     "@rollup/plugin-commonjs": ^17.0.0
     "@rollup/plugin-node-resolve": ^11.0.0
     "@rollup/plugin-replace": ^3.0.1
-    dotenv: ^16.0.0
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-livereload: ^2.0.0
