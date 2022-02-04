@@ -1648,10 +1648,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-system-info@npm:^0.1.12":
-  version: 0.1.12
-  resolution: "svelte-system-info@npm:0.1.12"
-  checksum: 949167a5b26c8f5deeeca61e5449bf4035705d4d049cb873e39aa5d89ca3282ac2c57549af9612607eb2ee62ec9c4571bc7d5fbab26894d0bc34e8a7816a9c06
+"svelte-system-info@npm:^0.1.13":
+  version: 0.1.13
+  resolution: "svelte-system-info@npm:0.1.13"
+  checksum: e4a94208f794c17d92a1a7f3719b7f70803bffd199b6fe2074faacfe050fd13b92e13a24aadd7b780cb277c94546d0f61f78dbb75bd17750fec10a28d5abab1d
   languageName: node
   linkType: hard
 
@@ -1693,7 +1693,7 @@ __metadata:
     rollup-plugin-terser: ^7.0.0
     sirv-cli: ^2.0.0
     svelte: ^3.0.0
-    svelte-system-info: ^0.1.12
+    svelte-system-info: ^0.1.13
     tachiyomi-common: "workspace:*"
   languageName: unknown
   linkType: soft
