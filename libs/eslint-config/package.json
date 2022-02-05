@@ -8,5 +8,8 @@
   "devDependencies": {
     "eslint": "^8.8.0",
     "eslint-plugin-svelte3": "^3.4.0"
+  },
+  "peerDependencies": {
+    "svelte": "*"
   }
 }
