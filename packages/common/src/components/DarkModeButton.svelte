@@ -1,35 +1,35 @@
 <script>
-import { onMount } from "svelte";
+  import { onMount } from "svelte";
 
-import { darkmode } from "../stores";
+  import { darkmode } from "../stores";
 
-let darkmodeValue;
-darkmode.subscribe(value => {
-    darkmodeValue = value
-})
+  let darkmodeValue;
+  darkmode.subscribe((value) => {
+    darkmodeValue = value;
+  });
 
-onMount(() => {
+  onMount(() => {
     if (darkmodeValue) {
-        window.document.body.classList.add('dark-mode')
+      window.document.body.classList.add("dark-mode");
     }
-})
+  });
 
-function toggle() {
-    darkmode.set(!darkmodeValue)
-    window.document.body.classList.toggle('dark-mode')
-}
+  function toggle() {
+    darkmode.set(!darkmodeValue);
+    window.document.body.classList.toggle("dark-mode");
+  }
 </script>
 
 <button on:click={toggle}>
-    {#if darkmodeValue}
-        🌞
-    {:else}
-        🌚
-    {/if}
+  {#if darkmodeValue}
+    🌞
+  {:else}
+    🌚
+  {/if}
 </button>
 
 <style>
-    button {
-        font-family: 'Noto Color Emoji', 'Apple Color Emoji';
-    }
+  button {
+    font-family: "Noto Color Emoji", "Apple Color Emoji";
+  }
 </style>
