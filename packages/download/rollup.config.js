@@ -1,5 +1,3 @@
-import { base } from "tachiyomi-common/rollup.config";
+import common from "@tachiyomi/rollup-config";
 
-const production = !process.env.ROLLUP_WATCH;
-
-export default Object.assign(base, {});
+export default Object.assign(common, {});
