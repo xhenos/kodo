@@ -18,9 +18,12 @@ const env = {
 	EXTENSION_PAGE: JSON.stringify(
 		!production ? "http://localhost:8082" : process.env.EXTENSION
 	),
-	DOCS_PAGE: JSON.stringify(
-		!production ? "https://docs.kodo.moe" : process.env.DOCS
-	),
+	DOCS_PAGE: JSON.stringify("https://docs.kodo.moe"),
+	TWITTER_LINK: JSON.stringify("https://twitter.com/tachiyomiorg"),
+	FACEBOOK_LINK: JSON.stringify("https://www.facebook.com/tachiyomiorg"),
+	REDDIT_LINK: JSON.stringify("https://www.reddit.com/r/Tachiyomi/"),
+	GITHUB_LINK: JSON.stringify("https://github.com/tachiyomiorg/"),
+	DISCORD_LINK: JSON.stringify("https://discord.gg/tachiyomi"),
 };
 
 function serve() {

@@ -15,10 +15,16 @@
     <a href={DOCS_PAGE}>Docs</a>
   </div>
   <div class="right">
-    <a href=".">Twitter</a>
-    <a href=".">Facebook</a>
-    <a href=".">Reddit</a>
-    <a href=".">GitHub</a>
+    <!-- svelte-ignore missing-declaration -->
+    <a href={TWITTER_LINK} target="_blank">Twitter</a>
+    <!-- svelte-ignore missing-declaration -->
+    <a href={FACEBOOK_LINK} target="_blank">Facebook</a>
+    <!-- svelte-ignore missing-declaration -->
+    <a href={REDDIT_LINK} target="_blank">Reddit</a>
+    <!-- svelte-ignore missing-declaration -->
+    <a href={GITHUB_LINK} target="_blank">GitHub</a>
+    <!-- svelte-ignore missing-declaration -->
+    <a href={DISCORD_LINK} target="_blank">Discord</a>
     <DarkModeButton />
   </div>
 </nav>
