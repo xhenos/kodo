@@ -2,6 +2,7 @@
   import Layout from "tachiyomi-common/src/components/Layout.svelte";
   import Extension from "./components/Extension.svelte";
   import API from "./scripts/api";
+  import { fullLanguageName, sortLanguages } from "./scripts/language";
 
   const api = new API();
 
@@ -13,6 +14,7 @@
   let nsfwPreference = "meh";
 
   api.getLanguages().then((value) => {
+    value.sort(sortLanguages);
     languages = value;
   });
 
@@ -38,23 +40,6 @@
   function openChangelog(value) {
     console.log("Open changelog", value);
   }
-
-  function simpleLangName(code) {
-    if (code === "all") {
-      return "All";
-    }
-    const namesInEnglish = new Intl.DisplayNames(["en"], { type: "language" });
-    return namesInEnglish.of(code);
-  }
-
-  function langName(code) {
-    if (code === "all") {
-      return "All";
-    }
-    const namesInEnglish = new Intl.DisplayNames(["en"], { type: "language" });
-    const namesInNative = new Intl.DisplayNames([code], { type: "language" });
-    return `${namesInEnglish.of(code)} - ${namesInNative.of(code)}`;
-  }
 </script>
 
 <Layout>
@@ -66,7 +51,7 @@
   <div>
     <select bind:value={selectedLanguages} multiple>
       {#each languages || [] as language}
-        <option value={language}>{langName(language)}</option>
+        <option value={language}>{fullLanguageName(language)}</option>
       {/each}
     </select>
     <p>{selectedLanguages}</p>
@@ -119,7 +104,7 @@
     <p>{nsfwPreference}</p>
   </div>
   {#each currentLanguages as language}
-    <h1>{langName(language)}</h1>
+    <h1>{fullLanguageName(language)}</h1>
     {#each extensions[language] || [] as extension (extension.id)}
       <Extension
         {extension}

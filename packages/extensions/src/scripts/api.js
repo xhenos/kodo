@@ -24,8 +24,8 @@ export default class API {
       const grouped = data.reduce((previousValue, currentValue) => {
         (previousValue[currentValue["lang"]] =
           previousValue[currentValue["lang"]] || []).push(
-          processEntry(currentValue)
-        );
+            processEntry(currentValue)
+          );
         return previousValue;
       }, {});
 
@@ -43,7 +43,6 @@ export default class API {
       let data = (await this.fetchExtensions()).extensions;
       let extensions = {};
       Object.assign(extensions, data);
-      console.log(cache, query, languages);
       if (languages.length > 0) {
         Object.keys(extensions).forEach((value) => {
           if (!languages.includes(value)) {
@@ -55,6 +54,9 @@ export default class API {
       if (query) {
         Object.keys(extensions).forEach((value) => {
           extensions[value] = extensions[value].filter((value) => {
+            if (/^\d+/.test(query)) {
+              return value.sources.some((source) => source.id.includes(query))
+            }
             return value.name.toLowerCase().includes(query.toLowerCase());
           });
         });
