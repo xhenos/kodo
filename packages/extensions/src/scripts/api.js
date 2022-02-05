@@ -1,6 +1,6 @@
 import { Octokit } from "@octokit/core";
 
-export class API {
+export default class API {
   constructor() {
     let cache = undefined;
     let job = undefined;
