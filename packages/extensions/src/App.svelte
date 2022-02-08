@@ -5,8 +5,8 @@
   import Preference from "./components/Preference.svelte";
   import LanguageSelection from "./components/LanguageSelection.svelte";
   import Search from "./components/Search.svelte";
-  import API from "./scripts/api";
-  import { fullLanguageName, sortLanguages } from "./scripts/language";
+  import API from "./api";
+  import { fullLanguageName, sortLanguages } from "./util/language";
 
   const api = new API();
 

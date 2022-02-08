@@ -1,5 +1,5 @@
 <script>
-  import { fullLanguageName } from "../scripts/language";
+  import { fullLanguageName } from "../util/language";
   export let selected;
   export let languages;
 </script>

@@ -51,33 +51,35 @@ export default class API {
         });
       }
 
-      if (query) {
-        Object.keys(extensions).forEach((value) => {
+
+      for (const value of Object.keys(extensions)) {
+        if (languages.length > 0 && !languages.includes(value)) {
+          delete extensions[value]
+          continue
+        }
+
+        if (query) {
           extensions[value] = extensions[value].filter((value) => {
             if (/^\d+/.test(query)) {
               return value.sources.some((source) => source.id.includes(query))
             }
             return value.name.toLowerCase().includes(query.toLowerCase());
           });
-        });
-      }
+        }
 
-      if (nsfw !== "meh") {
-        Object.keys(extensions).forEach((value) => {
+        if (nsfw !== "meh") {
           extensions[value] = extensions[value].filter((value) => {
             return (
               (nsfw === "yes" && value.nsfw) || (nsfw === "no" && !value.nsfw)
             );
           });
-        });
-      }
+        }
 
-      if (sort === "desc") {
-        Object.keys(extensions).forEach((value) => {
+        if (sort === "desc") {
           extensions[value] = extensions[value].reverse();
-        });
+        }
       }
-
+      
       return extensions;
     };
 
