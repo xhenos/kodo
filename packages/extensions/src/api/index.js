@@ -1,12 +1,25 @@
 import { Octokit } from "@octokit/core";
+import { extensions, updatedAt } from "../util/stores";
+
+let cache
+let cachedAt
+
+extensions.subscribe(value => {
+  cache = value
+})
+
+updatedAt.subscribe(value => {
+  cachedAt = value
+})
 
 export default class API {
   constructor() {
-    let cache = undefined;
     let job = undefined;
 
     this.fetchExtensions = async function () {
-      if (cache != undefined) {
+      const now = new Date().getTime()
+      if (cache != undefined && cachedAt + 1000 * 60 * 60 > now) {
+        console.log("Returning cache", cache)
         return cache;
       }
       const octokit = new Octokit();
@@ -29,10 +42,16 @@ export default class API {
         return previousValue;
       }, {});
 
-      return (cache = cache || {
+      const newData = {
         languages: Object.keys(grouped),
         extensions: grouped,
-      });
+      }
+
+      extensions.set(newData)
+      updatedAt.set(new Date().getTime())
+
+      console.log("Freshly backed", newData)
+      return newData;
     };
 
     this.getLanguages = async function () {
