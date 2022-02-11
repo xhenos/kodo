@@ -19,15 +19,24 @@
 </script>
 
 <div class="extension" {id}>
-  <img class="extension-icon" src={iconUrl} loading="lazy" alt={"Icon for " + name} />
+  <img
+    class="extension-icon"
+    src={iconUrl}
+    loading="lazy"
+    alt={"Icon for " + name}
+  />
   <div class="extension-info">
-    <span class="extension-name">{name} <span class="extension-version">{version}</span></span>
+    <span class="extension-name"
+      >{name} <span class="extension-version">{version}</span></span
+    >
     <a class="extension-id" href={"#" + id}>{id}</a>
   </div>
   {#if hasChangelog || hasReadme}
     <div class="extension-button-secondary">
       {#if hasChangelog}
-        <a class="extension-changelog" href={`#${id}`} on:click={onChangelog}>Changelog</a>
+        <a class="extension-changelog" href={`#${id}`} on:click={onChangelog}
+          >Changelog</a
+        >
       {/if}
       {#if hasReadme}
         <a class="extension-readme" href={`#${id}`} on:click={onReadme}>Help</a>
@@ -58,7 +67,7 @@
     background-color: #ebebeb;
   }
   .extension-icon {
-    margin-right: .5em;
+    margin-right: 0.5em;
     height: 3em;
     width: 3em;
   }
@@ -92,9 +101,9 @@
     fill: #4f46e5;
     font-weight: 700;
     border: 1px solid #e5e7eb;
-    border-radius: .5rem;
-    margin-right: .5em;
-    padding: .5rem 1rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5em;
+    padding: 0.5rem 1rem;
     transition-property: background-color, border-color, color, fill, stroke;
     text-decoration: none;
   }

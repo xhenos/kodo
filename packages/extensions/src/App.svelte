@@ -4,11 +4,11 @@
   import SortDirection from "./components/SortDirection.svelte";
   import Preference from "./components/Preference.svelte";
   import LanguageSelection from "./components/LanguageSelection.svelte";
+  import ExtensionGroupHead from "./components/ExtensionGroupHead.svelte";
   import Search from "./components/Search.svelte";
-  import API from "./api";
-  import { fullLanguageName, sortLanguages } from "./util/language";
+  import Repository from "./data";
 
-  const api = new API();
+  const api = new Repository();
 
   let languages = [];
 
@@ -16,11 +16,6 @@
   let selected = [];
   let direction = "asc";
   let preference = "meh";
-
-  api.getLanguages().then((value) => {
-    value.sort(sortLanguages);
-    languages = value;
-  });
 
   let extensions = {};
 
@@ -32,9 +27,10 @@
       preference,
       direction
     );
+    languages = api.getLanguages();
   })();
 
-  $: console.log(extensions);
+  $: console.log(languages, extensions);
 
   function openReadme(value) {
     console.log("Open readme", value);
@@ -52,13 +48,15 @@
   <SortDirection bind:direction />
   <Preference bind:preference />
   {#each currentLanguages as language}
-    <h1>{fullLanguageName(language)}</h1>
-    {#each extensions[language] || [] as extension (extension.id)}
-      <Extension
-        {extension}
-        on:readme={openReadme(extension)}
-        on:changelog={openChangelog(extension)}
-      />
-    {/each}
+    {#if (extensions[language] || []).length > 0}
+      <ExtensionGroupHead {language} />
+      {#each extensions[language] as extension (extension.id)}
+        <Extension
+          {extension}
+          on:readme={openReadme(extension)}
+          on:changelog={openChangelog(extension)}
+        />
+      {/each}
+    {/if}
   {/each}
 </Layout>
