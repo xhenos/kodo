@@ -6,7 +6,7 @@ export default class ExtensionAPI {
   job = undefined;
 
   createOrGet() {
-    if (this.job != undefined) {
+    if (this.job !== undefined) {
       return this.job;
     }
 

@@ -1,7 +1,7 @@
 <script>
   import Layout from "tachiyomi-common/src/components/Layout.svelte";
   import Icon from "tachiyomi-common/src/components/Icon.svelte";
-  import API from "./scripts/api";
+  import API from "./data";
   import System from "svelte-system-info";
   import { onMount } from "svelte";
 
@@ -35,7 +35,7 @@
   }
 
   onMount(async () => {
-    const [stableResult, previewResult] = await api.fetchLatest();
+    const [stableResult, previewResult] = await api.getLatest();
     stable = stableResult;
     preview = previewResult;
   });

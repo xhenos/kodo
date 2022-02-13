@@ -15,7 +15,7 @@ updatedAt.subscribe((value) => {
 export default class ExtensionStore {
   isValid() {
     const now = new Date().getTime();
-    return cache != undefined && cachedAt + 1000 * 60 * 60 > now;
+    return cache !== undefined && cachedAt + 1000 * 60 * 60 > now;
   }
 
   fetch() {
