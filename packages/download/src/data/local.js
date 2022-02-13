@@ -4,26 +4,26 @@ let cache;
 let cachedAt;
 
 releases.subscribe((value) => {
-    cache = value;
+  cache = value;
 });
 
 updatedAt.subscribe((value) => {
-    cachedAt = value;
+  cachedAt = value;
 });
 
 export default class ReleaseStore {
-    isValid() {
-        const now = new Date().getTime();
-        return cache !== undefined && cachedAt + 1000 * 60 * 60 > now;
-    }
+  isValid() {
+    const now = new Date().getTime();
+    return cache !== undefined && cachedAt + 1000 * 60 * 60 > now;
+  }
 
-    fetch() {
-        return cache;
-    }
+  fetch() {
+    return cache;
+  }
 
-    save(data) {
-        releases.set(data);
-        updatedAt.set(new Date().getTime());
-        return data;
-    }
+  save(data) {
+    releases.set(data);
+    updatedAt.set(new Date().getTime());
+    return data;
+  }
 }
