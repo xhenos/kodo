@@ -1,5 +1,5 @@
 {
-  "name": "tachiyomi-common",
+  "name": "@tachiyomi/shared",
   "version": "1.0.0",
   "scripts": {
     "lint": "eslint --fix 'src/**/*.{js,svelte}' --no-ignore",

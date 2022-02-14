@@ -1,5 +1,5 @@
 {
-  "name": "tachiyomi-landing",
+  "name": "@tachiyomi/index",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -25,7 +25,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^2.0.0",
-    "tachiyomi-common": "workspace:*"
+    "@tachiyomi/shared": "workspace:*",
+    "sirv-cli": "^2.0.0"
   }
 }

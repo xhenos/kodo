@@ -16,7 +16,7 @@ yarn install
 # Run all 
 yarn dev
 # Run specific 
-# Replace <workspace-name> with tachiyomi-landing, tachiyomi-download, or tachiyomi-extensions
+# Replace <workspace-name> with @tachiyomi/index, @tachiyomi/download, or @tachiyomi/extensions
 yarn workspace <workspace-name> dev
 ```
 

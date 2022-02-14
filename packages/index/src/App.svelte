@@ -1,5 +1,5 @@
 <script>
-  import Layout from "tachiyomi-common/src/components/Layout.svelte";
+  import Layout from "@tachiyomi/shared/src/components/Layout.svelte";
 </script>
 
 <Layout>

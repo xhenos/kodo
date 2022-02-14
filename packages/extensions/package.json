@@ -1,5 +1,5 @@
 {
-  "name": "tachiyomi-extensions",
+  "name": "@tachiyomi/extensions",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",
-    "sirv-cli": "^2.0.0",
-    "tachiyomi-common": "workspace:*"
+    "@tachiyomi/shared": "workspace:*",
+    "sirv-cli": "^2.0.0"
   }
 }

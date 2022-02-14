@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  import Icon from "tachiyomi-common/src/components/Icon.svelte";
+  import Icon from "@tachiyomi/shared/src/components/Icon.svelte";
 
   export let extension;
 

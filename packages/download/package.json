@@ -1,5 +1,5 @@
 {
-  "name": "tachiyomi-download",
+  "name": "@tachiyomi/download",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",
+    "@tachiyomi/shared": "workspace:*",
     "sirv-cli": "^2.0.0",
-    "svelte-system-info": "^0.1.13",
-    "tachiyomi-common": "workspace:*"
+    "svelte-system-info": "^0.1.13"
   }
 }
