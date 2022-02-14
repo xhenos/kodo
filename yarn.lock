@@ -367,9 +367,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tachiyomi/shared@workspace:*, @tachiyomi/shared@workspace:packages/common":
+"@tachiyomi/shared@workspace:*, @tachiyomi/shared@workspace:libs/shared":
   version: 0.0.0-use.local
-  resolution: "@tachiyomi/shared@workspace:packages/common"
+  resolution: "@tachiyomi/shared@workspace:libs/shared"
   dependencies:
     "@tachiyomi/eslint-config": "workspace:*"
     "@tachiyomi/prettier-config": "workspace:*"
