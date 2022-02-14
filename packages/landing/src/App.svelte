@@ -1,22 +1,36 @@
 <script>
   import Layout from "tachiyomi-common/src/components/Layout.svelte";
-  import Icon from "tachiyomi-common/src/components/Icon.svelte";
-
-  export let name;
 </script>
 
 <Layout>
-  <div class="container">
-    <div class="branding">
-      <div class="hero">
-        <Icon name="logo" height="80" width="80" />
-        <h2>Tachiyomi</h2>
+  <div class="jumbotron">
+    <div class="background" />
+    <div class="foreground flex-column align-center justify-center">
+      <div class="text-center">
+        <img
+          src="/icon.png"
+          alt="The logo for Tachiyomi"
+          width="160"
+          height="160"
+        />
+        <h1>Tachiyomi</h1>
+        <h2>
+          Tachiyomi is an open-source Android app that lets you read any manga
+          from your smartphone – faster and easier than ever.
+        </h2>
+        <div>
+          <a href="https://tachiyomi.org/help/guides/getting-started/">
+            <button>Get started</button>
+          </a>
+          <a href="https://tachiyomi.org/download/">
+            <button>Download</button>
+          </a>
+        </div>
       </div>
-      <h1 class="description">
-        Tachiyomi is an open-source Android app that lets you read any manga
-        from your smartphone – faster and easier than ever.
-      </h1>
     </div>
+  </div>
+
+  <div class="container">
     <div class="features">
       <div class="feature-tracking">
         <div class="description-tracking">
@@ -25,14 +39,6 @@
             Automatically keep track of your manga with MyAnimeList, AniList,
             Kitsu, Shikimori,and Bangumi.
           </span>
-          <div>
-            <a href="https://tachiyomi.org/help/guides/getting-started/">
-              <button>Get started</button>
-            </a>
-            <a href="https://tachiyomi.org/download/">
-              <button>Download</button>
-            </a>
-          </div>
         </div>
         <div class="image-tracking">
           <img
@@ -79,24 +85,52 @@
 </Layout>
 
 <style>
-  .hero {
-    text-align: center;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  :global(body) {
+    --jumbotron-bg-opacity: 0.08;
   }
 
-  .hero h2 {
-    margin-top: 1.25rem;
-    border-style: none;
-    letter-spacing: -0.05em;
-    font-weight: 500;
-    font-size: 3rem;
+  :global(body.dark-mode) {
+    --jumbotron-bg-opacity: 0.02;
   }
 
-  .hero + .description {
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.5rem;
+  :global(nav) {
+    position: absolute;
+    z-index: 999;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  .jumbotron {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .jumbotron .background {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 48vh;
+    background-color: #e5e5f7;
+    opacity: var(--jumbotron-bg-opacity);
+    background-image: url("/tile.svg");
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    padding-top: 75px;
+  }
+
+  .jumbotron .foreground {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  @media only screen and (max-width: 990px) {
+    .jumbotron .foreground {
+      width: 90%;
+    }
   }
 
   .container {
@@ -108,10 +142,6 @@
     grid-template-areas:
       "branding branding branding"
       "features features features";
-  }
-
-  .branding {
-    grid-area: branding;
   }
 
   .features {
