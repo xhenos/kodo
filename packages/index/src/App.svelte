@@ -115,7 +115,7 @@
     opacity: var(--jumbotron-bg-opacity);
     background-image: url("/tile.svg");
     background-position: 10px 0, 10px 0, 0 0, 0 0;
-    background-size: 50px 50px;
+    background-size: 100px 100px;
     background-repeat: repeat;
     padding-top: 75px;
   }
