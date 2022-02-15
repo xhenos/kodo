@@ -20,10 +20,10 @@
         </h2>
         <div>
           <a href="https://tachiyomi.org/help/guides/getting-started/">
-            <button>Get started</button>
+            <button class="button">Get started</button>
           </a>
           <a href="https://tachiyomi.org/download/">
-            <button>Download</button>
+            <button class="button">Download</button>
           </a>
         </div>
       </div>

@@ -69,10 +69,10 @@
         : 'unsupported'}"
     >
       <a href={stableUrls.universal}>
-        <button id="stable"> Stable </button>
+        <button class="button large" id="stable"> Stable </button>
       </a>
       <a href={previewUrls.universal}>
-        <button id="preview"> Preview </button>
+        <button class="button large" id="preview"> Preview </button>
       </a>
     </div>
   </div>

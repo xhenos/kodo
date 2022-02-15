@@ -20,7 +20,7 @@
   }
 </script>
 
-<button on:click={toggle}>
+<button class="button rounded" on:click={toggle}>
   {#if darkmodeValue}
     🌞
   {:else}
