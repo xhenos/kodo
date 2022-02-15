@@ -80,6 +80,7 @@ module.exports = {
 
 		replace(
 			Object.assign(env, {
+				preventAssignment: true,
 				isProduction: production,
 			})
 		),
