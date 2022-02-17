@@ -10,29 +10,8 @@
   let stable = undefined;
   let preview = undefined;
 
-  $: stableUrls = extractDownloadUrls(stable, false);
-  $: previewUrls = extractDownloadUrls(preview, true);
-
-  function extractDownloadUrls(object, preview) {
-    if (object === undefined)
-      return {
-        universal: "",
-        other: [],
-      };
-    const {
-      data: { assets },
-    } = object;
-    const index = assets.findIndex((element) => {
-      const regex = preview
-        ? /^tachiyomi-r\d{4,}.apk/
-        : /^tachiyomi-v\d+\.\d+\.\d+.apk/;
-      return regex.test(element.name);
-    });
-    return {
-      universal: assets.splice(index, 1)[0].browser_download_url,
-      other: assets.map((element) => element.browser_download_url).sort(),
-    };
-  }
+  $: stableUrls = stable?.downloads;
+  $: previewUrls = preview?.downloads;
 
   onMount(async () => {
     const [stableResult, previewResult] = await api.getLatest();
@@ -68,12 +47,18 @@
         ? ''
         : 'unsupported'}"
     >
-      <a href={stableUrls.universal}>
+      <a href={stableUrls?.universal}>
         <button class="button large" id="stable"> Stable </button>
       </a>
-      <a href={previewUrls.universal}>
+      <a href={previewUrls?.universal}>
         <button class="button large" id="preview"> Preview </button>
       </a>
+    </div>
+    <div class="debug">
+      <h1>Stable</h1>
+      {JSON.stringify(stable)}
+      <h1>Preview</h1>
+      {JSON.stringify(preview)}
     </div>
   </div>
 </Layout>
