@@ -16,8 +16,8 @@ yarn install
 # Run all 
 yarn dev
 # Run specific 
-# Replace <workspace-name> with @tachiyomi/index, @tachiyomi/download, or @tachiyomi/extensions
-yarn workspace <workspace-name> dev
+# Replace <target> with index, download, or extensions
+yarn dev@<target>
 ```
 
 Navigate to [localhost:8080](http://localhost:8080) for landing page

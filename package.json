@@ -3,6 +3,9 @@
   "name": "tachiyomi-website",
   "scripts": {
     "dev": "yarn workspaces foreach --exclude common -pt run dev",
+    "dev@index": "yarn workspace @tachiyomi/index run dev",
+    "dev@download": "yarn workspace @tachiyomi/download run dev",
+    "dev@extension": "yarn workspace @tachiyomi/extension run dev",
     "lint": "yarn workspaces foreach --exclude config -pt run lint",
     "prettier": "yarn workspaces foreach --exclude config -pt run prettier"
   },
