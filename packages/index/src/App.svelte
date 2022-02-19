@@ -47,6 +47,8 @@
 
   :global(.showcase .image) {
     height: 40vh;
+    border-radius: 0.75em;
+    box-shadow: 0 0 1em 0.25em #c4c4c4;
   }
 
   @media only screen and (max-width: 990px) {

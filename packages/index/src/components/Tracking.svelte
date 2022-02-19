@@ -5,7 +5,7 @@
         <h2>Tracking</h2>
         <span>
           Automatically keep track of your manga with MyAnimeList, AniList,
-          Kitsu, Shikimori,and Bangumi.
+          Kitsu, Shikimori, and Bangumi.
         </span>
       </div>
       <div class="col-6 col-sm-12 showcase">

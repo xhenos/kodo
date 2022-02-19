@@ -7,8 +7,7 @@
       <div class="col-6 col-sm-12 first description">
         <h2>Extensions</h2>
         <span>
-          Online and offline reading from sources like MangaDex, MangaKakalot,
-          and hundreds more.
+          Online and offline reading from over a thousand sources, including MangaDex.
         </span>
       </div>
     </div>
