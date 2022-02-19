@@ -50,12 +50,17 @@
   }
 
   @media only screen and (max-width: 990px) {
+    :global(.section) {
+      height: unset;
+    }
+
     :global(.feature) {
       flex-direction: column;
     }
 
     :global(.showcase .image) {
-      height: 30vh;
+      height: unset;
+      width: 50vw;
     }
 
     :global(.feature .description) {
@@ -80,7 +85,8 @@
     }
 
     :global(.showcase .image) {
-      height: 25vh;
+      height: unset;
+      width: 75vw;
     }
   }
 </style>
