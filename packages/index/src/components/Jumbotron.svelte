@@ -22,11 +22,17 @@
 
 <style>
   :global(body) {
-    --jumbotron-bg-opacity: 0.08;
+    --jumbotron-bg-image: url(/images/background-dark.png);
+    --jumbotron-bg-gradient-start: 231,230,255;
+    --jumbotron-bg-gradient-start-alpha: 0.95;
+    --jumbotron-bg-gradient-end: 255,255,255;
   }
 
   :global(body.dark-mode) {
-    --jumbotron-bg-opacity: 0.02;
+    --jumbotron-bg-image: url(/images/background-light.png);
+    --jumbotron-bg-gradient-start: 20,22,24;
+    --jumbotron-bg-gradient-start-alpha: 0.95;
+    --jumbotron-bg-gradient-end: 32,32,32;
   }
 
   .jumbotron {
@@ -40,12 +46,12 @@
   }
 
   .jumbotron h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .jumbotron h2 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.875rem;
+    font-weight: 400;
   }
 
   .jumbotron .background {
@@ -53,12 +59,9 @@
     top: 0;
     left: 0;
     height: 48vh;
-    background-color: #e5e5f7;
-    opacity: var(--jumbotron-bg-opacity);
-    background-image: url("/tile.svg");
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
-    background-size: 100px 100px;
-    background-repeat: repeat;
+    background: linear-gradient(0deg, rgba(var(--jumbotron-bg-gradient-end), 100%) 1%, rgba(var(--jumbotron-bg-gradient-start), var(--jumbotron-bg-gradient-start-alpha))), url(https://tachiyomi-v2.netlify.app/background-dark.png);
+    background-position: 50%;
+    background-size: 1500px;
     padding-top: 75px;
   }
 
