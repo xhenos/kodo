@@ -32,8 +32,4 @@
   .interest div h2 {
     font-weight: 600;
   }
-
-  .interest .download {
-    margin-top: 600px;
-  }
 </style>

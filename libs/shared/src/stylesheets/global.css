@@ -5,3 +5,13 @@ body {
   font-family: var(--font-family-sans-serif);
   margin: 0;
 }
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
