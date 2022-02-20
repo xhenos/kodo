@@ -9,10 +9,12 @@
         from your smartphone – faster and easier than ever.
       </h2>
       <div>
-        <a href="https://tachiyomi.org/help/guides/getting-started/">
+        <!-- svelte-ignore missing-declaration -->
+        <a href={DOCS_PAGE}>
           <button class="button">Get started</button>
         </a>
-        <a href="https://tachiyomi.org/download/">
+        <!-- svelte-ignore missing-declaration -->
+        <a href={DOWNLOAD_PAGE}>
           <button class="button">Download</button>
         </a>
       </div>
