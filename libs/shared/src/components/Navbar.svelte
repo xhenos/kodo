@@ -1,58 +1,129 @@
 <script>
   import DarkModeButton from "./DarkModeButton.svelte";
+
+  const links = {
+    INDEX: LANDING_PAGE,
+    DOWNLOAD: DOWNLOAD_PAGE,
+    EXTENSIONS: EXTENSION_PAGE,
+    DOCS: DOCS_PAGE,
+    GITHUB: GITHUB_LINK,
+    TWITTER: TWITTER_LINK,
+    REDDIT: REDDIT_LINK,
+    FACEBOOK: FACEBOOK_LINK,
+    DISCORD: DISCORD_LINK,
+  };
+
+  let toggle = false;
+
+  function onToggle() {
+    toggle = !toggle;
+    let body = document.body;
+    let nav = document.getElementsByTagName("nav");
+    if (toggle) {
+      body.classList.add("responsive");
+      nav.classList.add("responsive");
+    } else {
+      body.classList.remove("responsive");
+      nav.classList.remove("responsive");
+    }
+  }
+
+  function isActivePage(origin) {
+    return window.location.origin;
+  }
+
   /* eslint-disable no-undef */
 </script>
 
-<nav>
-  <div class="left">
-    <!-- svelte-ignore missing-declaration -->
-    <a href={LANDING_PAGE}>Home</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={DOWNLOAD_PAGE}>Download</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={EXTENSION_PAGE}>Extensions</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={DOCS_PAGE}>Docs</a>
-  </div>
-  <div class="right">
-    <!-- svelte-ignore missing-declaration -->
-    <a href={TWITTER_LINK} target="_blank">Twitter</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={FACEBOOK_LINK} target="_blank">Facebook</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={REDDIT_LINK} target="_blank">Reddit</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={GITHUB_LINK} target="_blank">GitHub</a>
-    <!-- svelte-ignore missing-declaration -->
-    <a href={DISCORD_LINK} target="_blank">Discord</a>
-    <DarkModeButton />
-  </div>
+<nav class={toggle ? "responsive" : ""}>
+  <a href={links.INDEX} class={isActivePage(links.INDEX) ? "active" : ""}
+    >Home</a
+  >
+  <a href={links.DOWNLOAD} class={isActivePage(links.DOWNLOAD) ? "active" : ""}
+    >Download</a
+  >
+  <a
+    href={links.EXTENSIONS}
+    class={isActivePage(links.EXTENSION) ? "active" : ""}>Extensions</a
+  >
+  <a href={links.DOCS}>Docs</a>
+  <div class="spacer" />
+  <a href={links.TWITTER} target="_blank">Twitter</a>
+  <a href={links.FACEBOOK} target="_blank">Facebook</a>
+  <a href={links.REDDIT} target="_blank">Reddit</a>
+  <a href={links.GITHUB} target="_blank">GitHub</a>
+  <a href={links.DISCORD} target="_blank">Discord</a>
+  <DarkModeButton />
+  <!-- svelte-ignore a11y-missing-attribute -->
+  <button class="button rounded" on:click={onToggle}>
+    {#if toggle}
+      🔺
+    {:else}
+      🔷
+    {/if}
+  </button>
 </nav>
 
 <style>
   nav {
-    width: calc(100% - 100px);
-    height: 75px;
-    background-color: var(--background-color);
-    border-bottom: 1px solid rgb(245, 245, 245);
     display: flex;
-    filter: brightness(99%);
-    padding: 0 50px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
+    height: 50px;
+    width: 100%;
   }
 
-  nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
+  nav *:not(.spacer, button) {
+    box-sizing: border-box;
+    align-self: center;
+    padding: 0 1rem;
   }
 
-  nav a:hover {
-    color: blue;
-    text-decoration: underline;
+  .spacer {
+    width: 100%;
+  }
+
+  button:last-child {
+    display: none;
+  }
+
+  @media only screen and (max-width: 990px) {
+    nav *:not(:first-child, .spacer, button) {
+      display: none;
+    }
+
+    nav *:not(.spacer, button) {
+      box-sizing: border-box;
+      align-self: stretch;
+      padding: 0 1rem;
+    }
+
+    button {
+      float: right;
+    }
+
+    button:last-child {
+      display: unset;
+    }
+
+    :global(.responsive:not(nav)) {
+      overflow: hidden;
+    }
+
+    .responsive {
+      position: fixed;
+      background-color: var(--background-color) !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .responsive .spacer {
+      display: none;
+    }
+
+    .responsive *:not(:first-child, button) {
+      display: unset;
+    }
   }
 </style>
