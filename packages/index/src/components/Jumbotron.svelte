@@ -3,8 +3,8 @@
   <div class="foreground flex-column align-center justify-center">
     <div class="text-center">
       <img src="/icon.png" alt="The logo for Tachiyomi" />
-      <h1>Tachiyomi</h1>
-      <h2>
+      <h1 class="app-name">Tachiyomi</h1>
+      <h2 class="app-description">
         Tachiyomi is an open-source Android app that lets you read any manga
         from your smartphone – faster and easier than ever.
       </h2>
@@ -47,13 +47,15 @@
     height: 10vh;
   }
 
-  .jumbotron h1 {
-    font-size: 4rem;
+  .jumbotron .app-name {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
   }
 
-  .jumbotron h2 {
-    font-size: 1.875rem;
-    font-weight: 400;
+  .jumbotron .app-description {
+    font-size: 1.75rem;
+    font-weight: 300;
   }
 
   .jumbotron .background {

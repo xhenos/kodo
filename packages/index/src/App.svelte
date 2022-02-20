@@ -39,6 +39,10 @@
     font-size: 1.5rem;
   }
 
+  :global(.description h2) {
+    font-weight: 600;
+  }
+
   :global(.showcase) {
     display: flex;
     align-items: center;
