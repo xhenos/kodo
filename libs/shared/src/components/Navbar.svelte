@@ -29,7 +29,7 @@
   }
 
   function isActivePage(origin) {
-    return window.location.origin;
+    return window.location.origin === origin;
   }
 
   /* eslint-disable no-undef */
@@ -44,7 +44,7 @@
   >
   <a
     href={links.EXTENSIONS}
-    class={isActivePage(links.EXTENSION) ? "active" : ""}>Extensions</a
+    class={isActivePage(links.EXTENSIONS) ? "active" : ""}>Extensions</a
   >
   <a href={links.DOCS}>Docs</a>
   <div class="spacer" />
@@ -77,12 +77,16 @@
     padding: 0 1rem;
   }
 
+  button:last-child {
+    display: none;
+  }
+
   .spacer {
     width: 100%;
   }
 
-  button:last-child {
-    display: none;
+  .active {
+    color: var(--secondary-color);
   }
 
   @media only screen and (max-width: 990px) {

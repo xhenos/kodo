@@ -1,6 +1,6 @@
 .button {
-  color: var(--primary-color);
-  fill: var(--primary-color);
+  color: var(--button-text-color);
+  fill: var(--button-text-color);
   font-weight: 700;
   background-color: var(--button-background-color);
   border: 1px solid var(--button-background-color);
@@ -12,11 +12,11 @@
 }
 
 .button:hover {
-  color: var(--button-background-color);
-  fill: var(--button-background-color);
+  color: #fff;
+  fill: #fff;
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .rounded {
@@ -29,15 +29,15 @@
 }
 
 .inverted {
-  color: var(--button-background-color);
-  fill: var(--button-background-color);
+  color: #fff;
+  fill: #fff;
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
 .inverted:hover {
-  color: var(--primary-color);
-  fill: var(--primary-color);
+  color: var(--button-text-color);
+  fill: var(--button-text-color);
   background-color: var(--button-background-color);
   border: 1px solid var(--button-background-color);
 }
