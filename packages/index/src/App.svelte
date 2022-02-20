@@ -1,9 +1,10 @@
 <script>
   import Layout from "@tachiyomi/shared/src/components/Layout.svelte";
-  import Customization from "./components/Customization.svelte";
-  import Extensions from "./components/Extensions.svelte";
   import Jumbotron from "./components/Jumbotron.svelte";
   import Tracking from "./components/Tracking.svelte";
+  import Extensions from "./components/Extensions.svelte";
+  import Customization from "./components/Customization.svelte";
+  import Interest from "./components/Interest.svelte";
 </script>
 
 <Layout>
@@ -11,6 +12,7 @@
   <Tracking />
   <Extensions />
   <Customization />
+  <Interest />
 </Layout>
 
 <style>

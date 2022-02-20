@@ -11,11 +11,11 @@
       <div>
         <!-- svelte-ignore missing-declaration -->
         <a href={DOCS_PAGE}>
-          <button class="button">Get started</button>
+          <button class="button large">Get started</button>
         </a>
         <!-- svelte-ignore missing-declaration -->
         <a href={DOWNLOAD_PAGE}>
-          <button class="button">Download</button>
+          <button class="button large">Download</button>
         </a>
       </div>
     </div>
