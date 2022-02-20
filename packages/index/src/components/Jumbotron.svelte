@@ -1,3 +1,18 @@
+<script>
+  window.CSS.registerProperty({
+    name: "--jumbotron-bg-gradient-end",
+    syntax: "<color>",
+    inherits: false,
+    initialValue: "#c0ffee",
+  });
+  window.CSS.registerProperty({
+    name: "--jumbotron-bg-gradient-start",
+    syntax: "<color>",
+    inherits: false,
+    initialValue: "#adbeef",
+  });
+</script>
+
 <div class="jumbotron">
   <div class="background" />
   <div class="foreground flex-column align-center justify-center">
@@ -23,18 +38,14 @@
 </div>
 
 <style>
-  :global(body) {
-    --jumbotron-bg-image: url(/images/background-dark.png);
-    --jumbotron-bg-gradient-start: 231, 230, 255;
-    --jumbotron-bg-gradient-start-alpha: 0.95;
-    --jumbotron-bg-gradient-end: 255, 255, 255;
+  :global(body .jumbotron .background) {
+    --jumbotron-bg-gradient-start: #e7e6fff2;
+    --jumbotron-bg-gradient-end: #ffffff;
   }
 
-  :global(body.dark-mode) {
-    --jumbotron-bg-image: url(/images/background-light.png);
-    --jumbotron-bg-gradient-start: 20, 22, 24;
-    --jumbotron-bg-gradient-start-alpha: 0.95;
-    --jumbotron-bg-gradient-end: 32, 32, 32;
+  :global(body.dark-mode .jumbotron .background) {
+    --jumbotron-bg-gradient-start: #141618f2;
+    --jumbotron-bg-gradient-end: #202020;
   }
 
   .jumbotron {
@@ -65,16 +76,15 @@
     height: 48vh;
     background: linear-gradient(
         0deg,
-        rgba(var(--jumbotron-bg-gradient-end), 100%) 1%,
-        rgba(
-          var(--jumbotron-bg-gradient-start),
-          var(--jumbotron-bg-gradient-start-alpha)
-        )
+        var(--jumbotron-bg-gradient-end),
+        var(--jumbotron-bg-gradient-start)
       ),
       url(/tile.svg);
     background-position: 50%;
     background-size: 150px;
     padding-top: 75px;
+    transition: --jumbotron-bg-gradient-end 0.3s,
+      --jumbotron-bg-gradient-start 0.3s;
   }
 
   .jumbotron .foreground {
