@@ -13,7 +13,6 @@
   </div>
 </div>
 
-
 <style>
   .interest {
     display: flex;
@@ -29,7 +28,11 @@
     font-size: 1.5rem;
   }
 
-  .interest div h2 {
+  .interest h2 {
     font-weight: 600;
+  }
+
+  .interest button {
+    margin-top: 3rem;
   }
 </style>
