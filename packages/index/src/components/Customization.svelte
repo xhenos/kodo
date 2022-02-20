@@ -9,7 +9,15 @@
         </span>
       </div>
       <div class="col-6 col-sm-12 showcase">
-        <img class="image" src="/images/reader.png" alt="Placeholder" />
+        <picture>
+          <source
+            class="image"
+            srcset="/images/reader.webp"
+            type="image/webp"
+          />
+          <source class="image" srcset="/images/reader.png" type="image/jpeg" />
+          <img class="image" src="/images/reader.png" alt="Alt Text!" />
+        </picture>
       </div>
     </div>
   </div>
