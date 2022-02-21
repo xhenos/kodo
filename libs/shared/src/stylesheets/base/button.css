@@ -8,6 +8,7 @@
   margin: 0.25em;
   padding: 0.5rem 1.5rem;
   transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.3s;
   text-decoration: none;
 }
 

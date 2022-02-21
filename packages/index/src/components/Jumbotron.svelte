@@ -11,6 +11,11 @@
     inherits: false,
     initialValue: "#adbeef",
   });
+
+  const links = {
+    DOCS: DOCS_PAGE,
+    DOWNLOAD: DOWNLOAD_PAGE
+  }
 </script>
 
 <div class="jumbotron">
@@ -24,13 +29,12 @@
         from your smartphone – faster and easier than ever.
       </h2>
       <div>
-        <!-- svelte-ignore missing-declaration -->
-        <a href={DOCS_PAGE}>
-          <button class="button large">Get started</button>
+        
+        <a href={links.DOWNLOAD}>
+          <button class="button large inverted">Download</button>
         </a>
-        <!-- svelte-ignore missing-declaration -->
-        <a href={DOWNLOAD_PAGE}>
-          <button class="button large">Download</button>
+        <a href={links.DOCS}>
+          <button class="button large">Documentation</button>
         </a>
       </div>
     </div>
