@@ -5,6 +5,21 @@
   import "../stylesheets/global.css";
   import Navbar from "./Navbar.svelte";
   import Footer from "./Footer.svelte";
+
+  import { darkmode } from "../stores";
+
+  darkmode.subscribe((value) => {
+    if (value) {
+      window.document.body.classList.add("dark-mode")
+    } else {
+      window.document.body.classList.remove("dark-mode")
+    }
+  });
+
+  window.addEventListener('load', function () {
+    window.document.body.classList.remove("no-transition")
+})
+
 </script>
 
 <div>
@@ -39,5 +54,9 @@
     --box-shadow-color: #141414;
     --button-background-color: #383838;
     --button-text-color: #fff;
+  }
+
+  :global(body.no-transition) {
+    transition: none !important;
   }
 </style>
