@@ -59,4 +59,8 @@
   :global(body.no-transition) {
     transition: none !important;
   }
+
+  :global(body.no-transition *) {
+    transition: none !important;
+  }
 </style>

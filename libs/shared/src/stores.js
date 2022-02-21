@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-export const darkmode = writable(true);
+export const darkmode = writable(false);
 
 (async () => {
     darkmode.set((await cookieStore.get("darkmode")).value === "true")
