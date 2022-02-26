@@ -32,13 +32,15 @@
 
 <style>
   :global(body) {
-    --primary-color: #2b7bb2;
-    --primary-color-dark: #21608c;
+    --primary-color: #4A74EA;
+    --primary-color-dark: #3253AD;
+    --primary-color-light: #E4E8FB;
     --secondary-color: #be185d;
     --text-color: black;
     --background-color: white;
     --box-shadow-color: #c4c4c4;
-    --button-background-color: #efefef;
+    --border-color: #0b2a41;
+    --button-background-color: #ffffff;
     --button-text-color: #000;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -48,10 +50,12 @@
   }
 
   :global(body.dark-mode) {
+    --primary-color-light: #3253AD;
     --secondary-color: #ec4899;
     --text-color: white;
     --background-color: #202020;
     --box-shadow-color: #141414;
+    --border-color: rgb(20, 20, 20);
     --button-background-color: #383838;
     --button-text-color: #fff;
   }

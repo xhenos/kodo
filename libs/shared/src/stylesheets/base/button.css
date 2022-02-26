@@ -1,9 +1,9 @@
 .button {
   color: var(--button-text-color);
   fill: var(--button-text-color);
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--button-background-color);
-  border: 1px solid var(--button-background-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   margin: 0.25em;
   padding: 0.5rem 1.5rem;
@@ -15,8 +15,8 @@
 .button:hover {
   color: #fff;
   fill: #fff;
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
   cursor: pointer;
 }
 
@@ -25,20 +25,21 @@
 }
 
 .large {
-  font-size: 1.2rem;
-  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  min-width: 10rem;
+  padding: 1rem 1.5rem;
 }
 
 .inverted {
   color: #fff;
   fill: #fff;
   background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .inverted:hover {
-  color: var(--button-text-color);
-  fill: var(--button-text-color);
-  background-color: var(--button-background-color);
-  border: 1px solid var(--button-background-color);
+  color: #fff;
+  fill: #fff;
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
 }

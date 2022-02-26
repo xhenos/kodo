@@ -1,4 +1,6 @@
 <script>
+  import Icon from "@tachiyomi/shared/src/components/Icon.svelte";
+
   window.CSS.registerProperty({
     name: "--jumbotron-bg-gradient-end",
     syntax: "<color>",
@@ -22,7 +24,7 @@
   <div class="background" />
   <div class="foreground flex-column align-center justify-center">
     <div class="text-center">
-      <img src="/icon.png" alt="The logo for Tachiyomi" />
+      <Icon name="logo" height="80" width="80" />
       <h1 class="app-name">Tachiyomi</h1>
       <h2 class="app-description">
         Tachiyomi is an open-source Android app that lets you read any manga
