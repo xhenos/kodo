@@ -27,6 +27,7 @@
   "dependencies": {
     "@octokit/core": "^3.5.1",
     "@tachiyomi/shared": "workspace:*",
+    "dayjs": "^1.10.7",
     "sirv-cli": "^2.0.0",
     "svelte-system-info": "^0.1.13"
   }

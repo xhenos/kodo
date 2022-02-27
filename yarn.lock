@@ -268,6 +268,7 @@ __metadata:
     "@tachiyomi/prettier-config": "workspace:*"
     "@tachiyomi/rollup-config": "workspace:*"
     "@tachiyomi/shared": "workspace:*"
+    dayjs: ^1.10.7
     eslint: ^8.8.0
     prettier: ^2.5.1
     rollup: ^2.3.4
@@ -767,6 +768,13 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.10.7":
+  version: 1.10.7
+  resolution: "dayjs@npm:1.10.7"
+  checksum: a0a4ca95abaa03d0702161dc2c35d16121188e342f5052b9c61cdf784dab68af766f477c04f87f71c6af666fd4d13db9b9853b87265850d6093b7b04e1bb1cd7
   languageName: node
   linkType: hard
 
