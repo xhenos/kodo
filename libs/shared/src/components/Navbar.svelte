@@ -90,14 +90,22 @@
   }
 
   @media only screen and (max-width: 990px) {
+    nav {
+      align-items: center;
+    }
+
     nav *:not(:first-child, .spacer, button) {
       display: none;
     }
 
-    nav *:not(.spacer, button) {
+    nav *:not(:first-child, .spacer, button) {
       box-sizing: border-box;
-      align-self: stretch;
+      align-self: center;
       padding: 0 1rem;
+    }
+
+    a {
+      padding: 0.5rem 1rem !important;
     }
 
     button {
@@ -126,8 +134,15 @@
       display: none;
     }
 
-    .responsive *:not(:first-child, button) {
+    .responsive *:not(button) {
       display: unset;
+      align-self: stretch;
+      padding: 1rem 1rem;
+    }
+
+    .responsive *:not(button):hover {
+      background-color: var(--secondary-color);
+      color: white;
     }
   }
 </style>
