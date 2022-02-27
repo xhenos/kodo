@@ -50,8 +50,8 @@
   }
 
   :global(body.dark-mode .jumbotron .background) {
-    --jumbotron-bg-gradient-start: #141618f2;
-    --jumbotron-bg-gradient-end: #202020;
+    --jumbotron-bg-gradient-start: #0f1524f2;
+    --jumbotron-bg-gradient-end: #1c1e22;
   }
 
   .jumbotron {

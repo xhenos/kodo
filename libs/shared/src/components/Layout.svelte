@@ -53,10 +53,10 @@
     --primary-color-light: #3253AD;
     --secondary-color: #ec4899;
     --text-color: white;
-    --background-color: #202020;
+    --background-color: #1c1e22;
     --box-shadow-color: #141414;
     --border-color: rgb(20, 20, 20);
-    --button-background-color: #383838;
+    --button-background-color: #1e2124;
     --button-text-color: #fff;
   }
 
