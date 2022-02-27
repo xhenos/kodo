@@ -37,7 +37,7 @@
     --primary-color-light: #E4E8FB;
     --secondary-color: #be185d;
     --text-color: black;
-    --background-color: white;
+    --background-color: #f8f8fe;
     --box-shadow-color: #c4c4c4;
     --border-color: #0b2a41;
     --button-background-color: #ffffff;

@@ -46,7 +46,7 @@
 <style>
   :global(body .jumbotron .background) {
     --jumbotron-bg-gradient-start: #e7e6fff2;
-    --jumbotron-bg-gradient-end: #ffffff;
+    --jumbotron-bg-gradient-end: #f8f8fe;
   }
 
   :global(body.dark-mode .jumbotron .background) {
