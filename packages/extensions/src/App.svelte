@@ -42,21 +42,23 @@
 </script>
 
 <Layout>
-  <h1>Extensions</h1>
-  <Search bind:query />
-  <LanguageSelection bind:selected bind:languages />
-  <SortDirection bind:direction />
-  <Preference bind:preference />
-  {#each currentLanguages as language}
-    {#if (extensions[language] || []).length > 0}
-      <ExtensionGroupHead {language} />
-      {#each extensions[language] as extension (extension.id)}
-        <Extension
-          {extension}
-          on:readme={openReadme(extension)}
-          on:changelog={openChangelog(extension)}
-        />
-      {/each}
-    {/if}
-  {/each}
+  <div class="container">
+    <h1>Extensions</h1>
+    <Search bind:query />
+    <LanguageSelection bind:selected bind:languages />
+    <SortDirection bind:direction />
+    <Preference bind:preference />
+    {#each currentLanguages as language}
+      {#if (extensions[language] || []).length > 0}
+        <ExtensionGroupHead {language} />
+        {#each extensions[language] as extension (extension.id)}
+          <Extension
+            {extension}
+            on:readme={openReadme(extension)}
+            on:changelog={openChangelog(extension)}
+          />
+        {/each}
+      {/if}
+    {/each}
+  </div>
 </Layout>

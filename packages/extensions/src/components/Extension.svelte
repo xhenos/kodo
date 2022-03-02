@@ -18,6 +18,18 @@
   }
 </script>
 
+<!--
+  TODO: Remake this
+
+  Desktop:
+  Icon Text Button Button Button
+
+  Mobile:
+  Icon Text
+  Small-Button Small-Button Button
+  
+-->
+
 <div class="extension" {id}>
   <img
     class="extension-icon"
@@ -56,7 +68,6 @@
     align-items: center;
     display: flex;
     padding: 0.4em 1.5em;
-    max-width: 600px;
     border-radius: 6px;
     margin: 4px;
   }

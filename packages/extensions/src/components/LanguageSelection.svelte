@@ -4,6 +4,7 @@
   export let languages;
 </script>
 
+<!-- TODO: Remake this as button pills -->
 <div>
   <select bind:value={selected} multiple>
     {#each languages || [] as language}
