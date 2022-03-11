@@ -35,7 +35,8 @@ export default class Repository {
           if (/^\d+/.test(query)) {
             return value.sources.some((source) => source.id.includes(query));
           }
-          return value.name.toLowerCase().includes(query.toLowerCase());
+          const regex = new RegExp(`${query.replace(/\s/g, '')}`, 'i')
+          return regex.test(value.name.replace(/\s/g, ''));
         });
       }
 
