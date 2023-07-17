@@ -185,7 +185,7 @@ If none of these solutions help, try asking in our [Discord Server](https://disc
 
 #### It only happens to me <a href="#it-only-happens-to-me" id="it-only-happens-to-me"></a>
 
-You may be getting a [Cloudflare](broken-reference) protection, may have been IP-banned, or encountered some other counter-measure that website owners deploy against programs like **Tachiyomi**. If that is the case, there is probably nothing that can be done about that. Some of them (like [Cloudflare](broken-reference)) have to be manually solved, some are temporary (IP bans).
+You may be getting a Cloudflare protection, may have been IP-banned, or encountered some other counter-measure that website owners deploy against programs like **Tachiyomi**. If that is the case, there is probably nothing that can be done about that. Some of them (like Cloudflare) have to be manually solved, some are temporary (IP bans).
 
 **Workarounds that can lower the chance of it happening again:**
 
