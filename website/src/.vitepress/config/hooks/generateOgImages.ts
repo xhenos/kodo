@@ -40,9 +40,9 @@ async function generateOgImages(config: SiteConfig) {
 		},
 	];
 
-	console.log(config.outDir);
-	for (const page of pages) {
-		console.log(page.url);
+	const filteredPages = pages.filter(p => p.frontmatter.image === undefined);
+
+	for (const page of filteredPages) {
 		await generateImage({
 			page,
 			template,
