@@ -121,6 +121,10 @@ function defaultSidebar() {
 			link: "/extensions/",
 		},
 		{
+			text: "Changelogs",
+			link: "/changelogs/",
+		},
+		{
 			text: "Forks",
 			link: "/forks/",
 		},
