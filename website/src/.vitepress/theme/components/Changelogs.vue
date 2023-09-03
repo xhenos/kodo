@@ -2,6 +2,7 @@
 import MarkdownIt from "markdown-it";
 import { data as changelogs } from "../data/changelogs.data";
 import { onMounted } from "vue";
+import {} from "vitepress/theme"
 
 const md = new MarkdownIt();
 
@@ -29,11 +30,17 @@ onMounted(() => {
 
 <template>
 	<div
-		v-for="release of changelogs"
+		v-for="(release, index) of changelogs"
 		:key="release.tag_name"
 	>
 		<h2 :id="release.tag_name">
-			{{ release.tag_name.substring(1) }}
+			<a
+				:href="release.html_url"
+				target="_blank"
+			>
+				{{ release.tag_name.substring(1) }}
+			</a>
+			<Badge v-if="index === 0" type="tip" text="Latest" />
 		</h2>
 		<time :datetime="release.published_at!">
 			{{ dateFormatter.format(new Date(release.published_at!)) }}
