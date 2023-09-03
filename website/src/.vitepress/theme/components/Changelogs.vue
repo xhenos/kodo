@@ -23,7 +23,7 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 
 <template>
 	<div
-		v-for="release of changelogs"
+		v-for="(release, index) of changelogs"
 		:key="release.tag_name"
 	>
 		<h2 :id="release.tag_name">
@@ -33,6 +33,7 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 			>
 				{{ release.tag_name.substring(1) }}
 			</a>
+			<Badge v-if="index === 0" type="tip" text="Latest" />
 			<a
 				class="header-anchor"
 				:href="`#${release.tag_name}`"
@@ -49,6 +50,9 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 <style lang="stylus" scoped>
 h2 {
 	margin-bottom: 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 time {
