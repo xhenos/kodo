@@ -11,6 +11,7 @@ const md = new MarkdownIt();
 const whatsNew = computed(() => {
 	const flavoredString = (release[type.value].body ?? "")
 		.replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, "[@$2](https://github.com/$2)")
+		.replace('https://github.com/tachiyomiorg/tachiyomi/releases', '/changelogs/');
 
 	return md.render(flavoredString);
 })
@@ -30,7 +31,7 @@ const whatsNew = computed(() => {
 			View the full release
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest" target="_blank" rel="noopener">
 				here
-			</a>
+			</a>.
 		</p>
 	</div>
 </template>

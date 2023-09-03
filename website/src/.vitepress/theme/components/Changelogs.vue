@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import MarkdownIt from "markdown-it";
 import { data as changelogs } from "../data/changelogs.data";
-import { onMounted } from "vue";
-import {} from "vitepress/theme"
 
 const md = new MarkdownIt();
 
@@ -11,6 +9,8 @@ function renderMarkdown(string: string | null | undefined) {
 	const flavoredString = body
 		.split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
 		.replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, "[@$2](https://github.com/$2)")
+		.replace(/^Check out the .*past release notes.* if you're.*$/m, "")
+		.replace(/https\:\/\/github.com\/tachiyomiorg\/tachiyomi\/releases\/tag\/(.*)/, "#$1")
 		.trim();
 
 	return md.render(flavoredString);
@@ -19,18 +19,11 @@ function renderMarkdown(string: string | null | undefined) {
 const dateFormatter = new Intl.DateTimeFormat("en", {
 	dateStyle: "medium",
 });
-
-onMounted(() => {
-	if (window.location.hash) {
-		document.getElementById(window.location.hash)
-			?.scrollIntoView({ behavior: "smooth" });
-	}
-})
 </script>
 
 <template>
 	<div
-		v-for="(release, index) of changelogs"
+		v-for="release of changelogs"
 		:key="release.tag_name"
 	>
 		<h2 :id="release.tag_name">
@@ -40,7 +33,11 @@ onMounted(() => {
 			>
 				{{ release.tag_name.substring(1) }}
 			</a>
-			<Badge v-if="index === 0" type="tip" text="Latest" />
+			<a
+				class="header-anchor"
+				:href="`#${release.tag_name}`"
+				:aria-label="`Permalink to &quot;${release.tag_name}&quot;`"
+			/>
 		</h2>
 		<time :datetime="release.published_at!">
 			{{ dateFormatter.format(new Date(release.published_at!)) }}
