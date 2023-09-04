@@ -1,14 +1,27 @@
 <script setup lang="ts">
-import { computed, toRefs } from "vue";
+import { computed, ref, toRefs } from "vue";
 
-const props = defineProps<{ body: string }>();
-const { body } = toRefs(props);
+const props = defineProps<{ body: string; author: string; tag: string; }>();
+const { body, author, tag } = toRefs(props);
+
+function isHigherThan(tagName: string, reference: string) {
+	return reference.localeCompare(tagName, undefined, { numeric: true, sensitivity: "base" }) >= 0;
+}
+
+const notMentioned = computed(() => {
+	return isHigherThan("v0.8.5", tag.value) ? ['arkon'] : [];
+});
+
+const nonExistent = ref<string[]>([])
 
 const contributors = computed(() => {
 	const list = [...body.value.matchAll(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g)]
-		.map((match) => match[2]);
+		.map((match) => match[2])
+	const uncredited = author.value.includes('[bot]')
+		? notMentioned.value
+		: [author.value, ...notMentioned.value];
 
-	return [...new Set(list)];
+	return [...new Set([...uncredited, ...list])].filter((user) => !nonExistent.value.includes(user));
 });
 
 // @ts-expect-error
@@ -26,7 +39,13 @@ const contributorsText = computed(() => {
 		...contributors.value.slice(0, 2),
 		`${contributors.value.length - 2} other contributors`
 	]);
-})
+});
+
+function addToNonExistent(user: string) {
+	if (!nonExistent.value.includes(user)) {
+		nonExistent.value.push(user);
+	}
+}
 </script>
 
 <template>
@@ -46,6 +65,7 @@ const contributorsText = computed(() => {
 					<img
 						:src="`https://github.com/${contributor}.png?size=32`"
 						:alt="`@${contributor} profile picture`"
+						@error="addToNonExistent(contributor)"
 						loading="lazy"
 						class="avatar"
 					>

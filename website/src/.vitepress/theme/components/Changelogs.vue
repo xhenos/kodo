@@ -10,6 +10,7 @@ function renderMarkdown(string: string | null | undefined) {
 	const flavoredString = body
 		.split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
 		.replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, "[@$2](https://github.com/$2)")
+		.replace(/#(\d+)/g, '[#$1](https://github.com/tachiyomiorg/tachiyomi/issues/$1)')
 		.replace(/^Check out the .*past release notes.* if you're.*$/m, "")
 		.replace(/https\:\/\/github.com\/tachiyomiorg\/tachiyomi\/releases\/tag\/(.*?)/g, "#$1")
 		.trim();
@@ -45,7 +46,11 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 			{{ dateFormatter.format(new Date(release.published_at!)) }}
 		</time>
 		<div v-html="renderMarkdown(release.body)"></div>
-		<Contributors :body="release.body!" />
+		<Contributors
+			:body="release.body!"
+			:author="release.author.login"
+			:tag="release.tag_name"
+		/>
 	</div>
 </template>
 

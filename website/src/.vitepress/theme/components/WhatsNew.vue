@@ -25,7 +25,11 @@ const whatsNew = computed(() => {
 			<h2>What's new</h2>
 		</header>
 		<div v-html="whatsNew" />
-		<Contributors :body="release[type].body!" />
+		<Contributors
+			:body="release[type].body!"
+			:author="release[type].author.login"
+			:tag="release[type].tag_name"
+		/>
 	</div>
 	<div class="fullChangelog">
 		<p>
