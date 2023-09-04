@@ -1,6 +1,8 @@
 import { getSidebar } from "vitepress-plugin-auto-sidebar";
 
 const sidebar = {
+	"/download/": defaultSidebar(),
+	"/extensions/": defaultSidebar(),
 	"/docs/": defaultSidebar(),
 	"/forks/": defaultSidebar(),
 	"/changelogs/": defaultSidebar(),
