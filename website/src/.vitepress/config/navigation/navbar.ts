@@ -8,7 +8,7 @@ const nav = [
 	},
 	{
 		text: APP_VERSION,
-		activeMatch: "/^\/*?(download|changelog)\/*?$/",
+		activeMatch: "^\/*?(download|changelog)\/*?$",
 		items: [
 			{
 				text: "Download",
