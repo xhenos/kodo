@@ -2,6 +2,7 @@
 import { computed, toRefs } from "vue";
 import MarkdownIt from "markdown-it";
 import { data as release, type AppRelease } from "../data/release.data";
+import Contributors from "./Contributors.vue";
 
 const props = defineProps<{ type: keyof AppRelease }>();
 const { type } = toRefs(props);
@@ -23,15 +24,15 @@ const whatsNew = computed(() => {
 			<IconNewReleases />
 			<h2>What's new</h2>
 		</header>
-		<div v-html="whatsNew">
-		</div>
+		<div v-html="whatsNew" />
+		<Contributors :body="release[type].body!" />
 	</div>
 	<div class="fullChangelog">
 		<p>
 			View the full release
 			<a href="https://github.com/tachiyomiorg/tachiyomi/releases/latest" target="_blank" rel="noopener">
 				here
-			</a>.
+			</a>
 		</p>
 	</div>
 </template>
