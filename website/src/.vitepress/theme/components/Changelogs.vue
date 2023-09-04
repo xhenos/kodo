@@ -112,7 +112,8 @@ time {
 	ul {
 		display: flex;
 		align-items: center;
-		gap: 0.25rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 		list-style-type: none;
 		padding-left: 0;
 
