@@ -8,7 +8,7 @@ next: false
 ---
 
 <script setup>
-import Changelogs from "../.vitepress/theme/components/Changelogs.vue";
+import Changelogs from "@theme/components/Changelogs.vue";
 </script>
 
 # Changelogs
