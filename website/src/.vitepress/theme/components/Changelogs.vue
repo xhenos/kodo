@@ -82,6 +82,7 @@ function contributorsText(body: string) {
 					>
 						<img
 							:src="`https://github.com/${contributor}.png?size=32`"
+							:alt="`@${contributor} profile picture`"
 							loading="lazy"
 							class="avatar"
 						>
