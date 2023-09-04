@@ -93,7 +93,7 @@ const dateFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium" });
 		font-weight: 500
 		font-size: 0.875rem
 		line-height: 1.25rem
-		color: var(--vp-c-brand-2)
+		color: var(--vp-c-brand-1)
 		display: flex
 		align-items: center
 
