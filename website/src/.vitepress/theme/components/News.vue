@@ -11,16 +11,18 @@ const dateFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium" });
 		:key="news.url"
 		class="news"
 	>
-		<time :datetime="news.date">
-			{{ dateFormatter.format(new Date(news.date)) }}
-		</time>
-		<h3>
-			<a :href="news.url">
-				<span class="hover" />
-				<span class="title">{{ news.title }}</span>
-			</a>
-			<div class="background" />
-		</h3>
+		<div>
+			<h3>
+				<a :href="news.url">
+					<span class="hover" />
+					<span class="title">{{ news.title }}</span>
+				</a>
+				<div class="background" />
+			</h3>
+			<time :datetime="news.date">
+				{{ dateFormatter.format(new Date(news.date)) }}
+			</time>
+		</div>
 		<p>{{ news.description }}</p>
 		<div class="readPrompt" aria-hidden="true">
 			<span>Read article</span>
@@ -47,8 +49,6 @@ const dateFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium" });
 		font-size: 0.875rem
 		line-height: 1.25rem
 		color: var(--vp-c-text-2)
-		border-left: 2px solid var(--vp-c-divider)
-		padding-left: 0.5rem
 		z-index: 10
 	}
 
@@ -77,10 +77,6 @@ const dateFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium" });
 		}
 	}
 
-	p {
-		font-size: 0.875rem
-	}
-
 	.title,	.readPrompt, p,	time {
 		position: relative
 	}
@@ -96,6 +92,7 @@ const dateFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium" });
 		color: var(--vp-c-brand-1)
 		display: flex
 		align-items: center
+		margin-top: 0.25rem
 
 		svg {
 			margin-bottom: -2px
