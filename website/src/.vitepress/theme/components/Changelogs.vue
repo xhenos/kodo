@@ -11,7 +11,7 @@ function renderMarkdown(string: string | null | undefined) {
 		.split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
 		.replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, "[@$2](https://github.com/$2)")
 		.replace(/^Check out the .*past release notes.* if you're.*$/m, "")
-		.replace(/https\:\/\/github.com\/tachiyomiorg\/tachiyomi\/releases\/tag\/(.*)/, "#$1")
+		.replace(/https\:\/\/github.com\/tachiyomiorg\/tachiyomi\/releases\/tag\/(.*?)/g, "#$1")
 		.trim();
 
 	return md.render(flavoredString);
