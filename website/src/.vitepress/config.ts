@@ -41,6 +41,12 @@ export default defineConfig({
 						new URL("./theme/components/CustomNavBarMenu.vue", import.meta.url)
 					),
 				},
+				{
+					find: /^.*VPNavScreenMenu\.vue$/,
+					replacement: fileURLToPath(
+						new URL("./theme/components/CustomNavScreenMenu.vue", import.meta.url)
+					),
+				},
 			]
 		}
 	}
