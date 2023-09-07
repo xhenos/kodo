@@ -1,3 +1,4 @@
+import { URL, fileURLToPath } from "node:url";
 import { defineConfig, loadEnv } from "vitepress";
 
 import markdownConfig from "./config/markdownConfig"; // For use with loading Markdown plugins
@@ -30,4 +31,17 @@ export default defineConfig({
 		generateFeed(context, hostname);
 		generateOgImages(context);
 	},
+	vite: {
+		resolve: {
+			alias: [
+				{
+					// Used to show the release version on navbar.
+					find: /^.*\/VPNavBarMenu\.vue$/,
+					replacement: fileURLToPath(
+						new URL("./theme/components/CustomNavBarMenu.vue", import.meta.url)
+					),
+				},
+			]
+		}
+	}
 });

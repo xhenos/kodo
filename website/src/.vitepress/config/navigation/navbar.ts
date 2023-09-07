@@ -1,13 +1,13 @@
-const APP_VERSION = "0.14.6";
+import type { DefaultTheme } from "vitepress";
 
-const nav = [
+const nav: DefaultTheme.NavItem[] = [
 	{
 		text: "Documentation",
 		link: "/docs/guides/getting-started",
 		activeMatch: "/docs/",
 	},
 	{
-		text: APP_VERSION,
+		text: "{app_version}",
 		activeMatch: "^/*?(download|changelogs)/*?$",
 		items: [
 			{
@@ -16,7 +16,7 @@ const nav = [
 			},
 			{
 				text: "Changelog",
-				link: `/changelogs/#v${APP_VERSION}`,
+				link: "/changelogs/#v{app_version}",
 			},
 			{
 				text: "Contributing",
