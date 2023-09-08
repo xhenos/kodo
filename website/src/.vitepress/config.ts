@@ -1,5 +1,6 @@
 import { URL, fileURLToPath } from "node:url";
 import { defineConfig, loadEnv } from "vitepress";
+import ElementPlus from "unplugin-element-plus/vite";
 
 import markdownConfig from "./config/markdownConfig"; // For use with loading Markdown plugins
 import themeConfig from "./config/themeConfig"; // Theme related config
@@ -48,6 +49,10 @@ export default defineConfig({
 					),
 				},
 			]
-		}
-	}
+		},
+		plugins: [ElementPlus({})],
+		ssr: {
+			noExternal: ["element-plus"],
+		},
+	},
 });
