@@ -106,18 +106,16 @@ watch([isLoading, loadingInstance], async ([newIsLoading]) => {
 </script>
 
 <template>
-	<ClientOnly>
-		<ExtensionFilters
-			v-model:search="filters.search"
-			v-model:lang="filters.lang"
-			v-model:nsfw="filters.nsfw"
-			v-model:sort="filters.sort"
-			:extensions="extensions ?? []"
-		/>
-		<div class="extensions">
-			<ExtensionList v-if="!isLoading" :extensions="filteredExtensions" />
-		</div>
-	</ClientOnly>
+	<ExtensionFilters
+		v-model:search="filters.search"
+		v-model:lang="filters.lang"
+		v-model:nsfw="filters.nsfw"
+		v-model:sort="filters.sort"
+		:extensions="extensions ?? []"
+	/>
+	<div class="extensions">
+		<ExtensionList v-if="!isLoading" :extensions="filteredExtensions" />
+	</div>
 </template>
 
 <style lang="stylus" scoped>
