@@ -14,7 +14,9 @@ const momentInfo = computed(() => ({
 </script>
 
 <template>
-	<time :datetime="momentInfo.iso" :title="momentInfo.exact">
-		{{ momentInfo.relative }}
-	</time>
+	<ClientOnly>
+		<time :datetime="momentInfo.iso" :title="momentInfo.exact">
+			{{ momentInfo.relative }}
+		</time>
+	</ClientOnly>
 </template>
