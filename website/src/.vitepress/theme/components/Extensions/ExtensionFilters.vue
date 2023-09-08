@@ -3,6 +3,16 @@ import { toRefs } from "vue";
 import { langName, simpleLangName } from "../../../config/scripts/languages";
 import type { Extension } from "../../queries/useExtensionsRepositoryQuery";
 
+import {
+	ElForm,
+	ElFormItem,
+	ElInput,
+	ElSelect,
+	ElOption,
+	ElRadioGroup,
+	ElRadio,
+} from "element-plus";
+
 export type Nsfw = "Show all" | "NSFW" | "SFW";
 export type Sort = "Ascending" | "Descending";
 
