@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import groupBy from "lodash.groupby";
+import { ElLoading } from "element-plus";
+
 import { simpleLangName } from "../../../config/scripts/languages";
 import ExtensionFilters from "./ExtensionFilters.vue";
 import ExtensionList from "./ExtensionList.vue";
 import useExtensionsRepositoryQuery from "../../queries/useExtensionsRepositoryQuery";
-import { computed, nextTick, onUpdated, reactive, watch } from 'vue';
+import { computed, nextTick, onMounted, onUpdated, reactive, ref, watch } from 'vue';
 import type { Extension } from "../../queries/useExtensionsRepositoryQuery";
 import type { Nsfw, Sort } from "./ExtensionFilters.vue";
 
@@ -78,11 +80,27 @@ const filteredExtensions = computed(() => {
 	return filtered;
 });
 
+const loadingInstance = ref<ReturnType<typeof ElLoading['service']>>();
+
+onMounted(() => {
+	loadingInstance.value = ElLoading.service({
+		target: ".extensions",
+		fullscreen: false,
+		background: "transparent",
+	});
+})
+
 watch(extensions, async () => {
 	if (window.location.hash) {
 		await nextTick()
 		document.getElementById(window.location.hash.substring(1))
 			?.scrollIntoView({ behavior: 'smooth' });
+	}
+});
+
+watch([isLoading, loadingInstance], async ([newIsLoading]) => {
+	if (!newIsLoading) {
+		loadingInstance.value?.close();
 	}
 });
 </script>
@@ -95,20 +113,13 @@ watch(extensions, async () => {
 		v-model:nsfw="filters.nsfw"
 		v-model:sort="filters.sort"
 	/>
-	<Transition name="fade" mode="out-in">
-		<div class="loading" v-if="isLoading" v-loading="isLoading" style="min-height: 200px"></div>
-		<ExtensionList v-else :extensions="filteredExtensions" />
-	</Transition>
+	<div class="extensions">
+		<ExtensionList v-if="!isLoading" :extensions="filteredExtensions" />
+	</div>
 </template>
 
 <style lang="stylus" scoped>
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.5s ease
-}
-
-.fade-enter-from,
-.fade-leave-to {
-	opacity: 0
+.extensions {
+	min-height: 200px
 }
 </style>
