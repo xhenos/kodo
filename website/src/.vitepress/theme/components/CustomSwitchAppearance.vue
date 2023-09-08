@@ -15,6 +15,7 @@ const supportsViewTransition = ref(false)
 
 onMounted(() => {
 	supportsViewTransition.value = "startViewTransition" in document
+		&& window.matchMedia("(prefers-reduced-motion: no-preference)").matches
 })
 </script>
 
