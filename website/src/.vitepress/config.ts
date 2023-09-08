@@ -33,5 +33,8 @@ export default defineConfig({
 	},
 	vite: {
 		plugins: [ElementPlus({})],
+		ssr: {
+			noExternal: ["element-plus"],
+		},
 	},
 });
