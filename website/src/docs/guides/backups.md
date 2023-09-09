@@ -79,7 +79,7 @@ in order to sync backup files to Google Drive automatically with the following s
 
 1. Install the app from the link above
 
-2. Enable [Automatic Backups](/docs/guides/backups#enabling-automatic-backups) and set it to your desired frequency and storage location.
+2. Enable [Automatic Backups](/docs/guides/backups#enable-automatic-backups) and set it to your desired frequency and storage location.
 
 3. Download the latest backup from Google Drive and restore to whatever device you have
 
