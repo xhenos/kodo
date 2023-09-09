@@ -101,7 +101,7 @@ In addition, some forks have specific limitations regarding backup restoration:
   > Migrate everything to MangaDex if you require to.
 - All forks have fork-specific settings and changes that might be saved in Backups.
   Such settings are not restored in original Tachiyomi and will get lost when creating a new backup.
-  > For Example: [TachiyomiSy](/forks/TachiyomiSy/) backups have the option to store Read History for titles not in Library.
+  > For Example: [TachiyomiSy](/forks/TachiyomiSY/) backups have the option to store Read History for titles not in Library.
   These will **NOT** be restored to original Tachiyomi or other forks.
 - Only [TachiyomiAZ](/forks/TachiyomiAZ/) supports creating/restoring legacy `.json` backups and current `.proto.gz` backups.
   > Users are recommended to update their `.json` backups to use the improved and efficient `.proto.gz` backups.
