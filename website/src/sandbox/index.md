@@ -6,7 +6,7 @@ search: false
 head:
   - - meta
     - name: robots
-	  content: noindex, nofollow
+      content: noindex, nofollow
 ---
 
 # Sandbox
