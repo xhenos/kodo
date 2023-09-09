@@ -20,7 +20,6 @@ import { IconRssBox } from "@iconify-prerendered/vue-mdi"
 	svg {
 		width: 1em
 		height: 1em
-		color: #f26522
 		display: inline-block
 		margin-right: 4px
 	}
