@@ -5,21 +5,32 @@ description: Backups helps you prevent losing your library if something happens.
 
 # Backups
 
-Backups in **Tachiyomi** are compatible between different versions of the app, with a few exceptions listed under forks information.
+Backups in **Tachiyomi** are compatible between different versions of the app.
 
-## What's Included in a Backup?
+## General Backup Details
+
+### What's Included in a Backup?
 
 Backups store the following information:
 
 - **Titles**
 - **Categories**
-- **Read chapters**
+- **Read chapters** for titles in Library
 - **Tracking settings**
 - **Reading history**
 - **Series information**
   - Author, Artist, Date Added to Library, Selected Viewer, Read Duration, etc.
+- **Extensions** used
 
-::: tip How to create a backup
+### What's NOT Included in a Backup?
+
+Backups do NOT store:
+
+- **Reading history** of Titles NOT in Library
+- **Settings** including App Settings and Extension-specific Settings
+- **Downloaded** Chapters including [Local Source](/docs/guides/local-series/) Chapters
+
+::: tip How To Create A Backup
 1. Go to <nav to="backup-and-restore">.
 1. Select **Create backup** and choose a location to save it.
 
@@ -36,11 +47,17 @@ To ensure a smooth restoration process, remember to:
 1. Log into the Tracking services you previously used.
 1. Download any extensions you've used in your backup.
 
-## Transferring Downloads to a New Installation
+Tracking Services used and Extensions previously used are stored in the Backup.
+Before starting to import the selected backup, the app will remind the user of these.
 
-You can transfer downloaded series chapters from one version of **Tachiyomi** to another.
+### Transferring Downloads to a New Installation
 
-## Enabling Automatic Backups
+You can transfer downloaded series chapters from one version of **Tachiyomi** to another
+by correctly specifying the Download Folder Location
+
+## Suggestions regarding Backups
+
+### Enabling Automatic Backups
 
 It is highly recommended to enable automatic backups to ensure you can recover in case of any issues.
 
@@ -54,16 +71,39 @@ This way, you can recover from catastrophic failures.
 ![Automatic Backupse](/docs/guides/backups/automatic_backups.dark.webp#dark =414x402)
 :::
 
-## Forks Information
+### Sync Backups with External Cloud Services
 
-Some forks of **Tachiyomi** have specific limitations regarding backup restoration:
+Cross Device Sync in Tachiyomi is not planned in the future, but users can use 
+[Autosync for Google Drive](https://play.google.com/store/apps/details?id=com.ttxapps.drivesync)
+in order to sync backup files to Google Drive automatically with the following steps:
+
+1. Install the app from the link above
+
+2. Enable [Automatic Backups](docs/guides/backups#enabling-automatic-backups) and set it to your desired frequency and storage location.
+
+3. Download the latest backup from Google Drive and restore to whatever device you have
+
+Users who are familiar with [FolderSync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite)
+or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) can setup auto sync of their backups similarly
+
+## Additional Information for Forks
+
+::: warning
+This section explores some extra details regarding [Official Forks](/forks).
+:::
+
+All [Official Tachiyomi Forks](/forks) support the `proto.gz` format to backup/restore your library
+
+In addition, some forks have specific limitations regarding backup restoration:
 
 - [Neko](/forks/Neko/) can only restore [MangaDex](/extensions/#all.mangadex) entries in a backup.
   > Entries from other sources will not transfer.
-- Some forks, such as [TachiyomiAZ](/forks/TachiyomiAZ/) and [TachiyomiSY](/forks/TachiyomiSY/), have built-in extensions.
-  > Example: [E-Hentai](/extensions/#all.ehentai), [nHentai](/extensions/#all.nhentai), and **Hitomi.la**.
-- Restoring a backup made by these forks to standard **Tachiyomi** will not restore titles from such extensions.
-  > While it is possible to restore titles to these forks, backing them up out of these forks is not possible.
-- Some forks only support restoring legacy backups and haven't implemented the changes needed for new backup formats yet.
+  > Migrate everything to MangaDex if you require to.
+- All forks have fork-specific settings and changes that might be saved in Backups.
+  Such settings are not restored in original Tachiyomi and will get lost when creating a new backup.
+  > For Example: [TachiyomiSy](/forks/TachiyomiSy) backups have the option to store Read History for titles not in Library.
+  These will **NOT** be restored to original Tachiyomi or other forks.
+- Only [TachiyomiAZ](/forks/TachiyomiAZ) supports creating/restoring legacy `.json` backups and current `.proto.gz` backups.
+  > Users are recommended to update their `.json` backups to use the improved and efficient `.proto.gz` backups.
 
 Be aware of these limitations when dealing with backups in different **Tachiyomi** forks.
