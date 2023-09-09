@@ -7,6 +7,15 @@ description: Backups helps you prevent losing your library if something happens.
 
 Backups in **Tachiyomi** are compatible between different versions of the app.
 
+::: tip How To Create A Backup
+1. Go to <nav to="backup-and-restore">.
+1. Select **Create backup** and choose a location to save it.
+
+![Backup and Restore](/docs/guides/backups/backup.light.webp#light =414x215)
+
+![Backup and Restore](/docs/guides/backups/backup.dark.webp#dark =414x215)
+:::
+
 ## General Backup Details
 
 ### What's Included in a Backup?
@@ -30,15 +39,6 @@ Backups do NOT store:
 - **Settings** including App Settings and Extension-specific Settings
 - **Downloaded** Chapters including [Local Source](/docs/guides/local-series/) Chapters
 
-::: tip How To Create A Backup
-1. Go to <nav to="backup-and-restore">.
-1. Select **Create backup** and choose a location to save it.
-
-![Backup and Restore](/docs/guides/backups/backup.light.webp#light =414x215)
-
-![Backup and Restore](/docs/guides/backups/backup.dark.webp#dark =414x215)
-:::
-
 ## Restoring a Backup
 
 Restoring a backup can be done through the Backup and Restore settings.
@@ -55,9 +55,9 @@ Before starting to import the selected backup, the app will remind the user of t
 You can transfer downloaded series chapters from one version of **Tachiyomi** to another
 by correctly specifying the Download Folder Location
 
-## Suggestions regarding Backups
+## Suggestions for Backups
 
-### Enabling Automatic Backups
+### Enable Automatic Backups
 
 It is highly recommended to enable automatic backups to ensure you can recover in case of any issues.
 
@@ -101,7 +101,7 @@ In addition, some forks have specific limitations regarding backup restoration:
   > Migrate everything to MangaDex if you require to.
 - All forks have fork-specific settings and changes that might be saved in Backups.
   Such settings are not restored in original Tachiyomi and will get lost when creating a new backup.
-  > For Example: [TachiyomiSy](/forks/TachiyomiSY/) backups have the option to store Read History for titles not in Library.
+  > For Example: [TachiyomiSY](/forks/TachiyomiSY/) backups have the option to store Read History for titles not in Library.
   These will **NOT** be restored to original Tachiyomi or other forks.
 - Only [TachiyomiAZ](/forks/TachiyomiAZ/) supports creating/restoring legacy `.json` backups and current `.proto.gz` backups.
   > Users are recommended to update their `.json` backups to use the improved and efficient `.proto.gz` backups.
