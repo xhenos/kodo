@@ -1,7 +1,12 @@
 ---
 title: Getting started
+titleTemplate: Guides
 description: Essential information to help you get set up with Tachiyomi.
 ---
+
+<script setup lang="ts">
+import { data as release } from "@theme/data/release.data"
+</script>
 
 # Getting started
 
@@ -12,7 +17,7 @@ Essential information to help you get set up with Tachiyomi.
 ### 1. Downloading Tachiyomi
 
 1. Visit our [download](/download/) page to get the latest version of **Tachiyomi**.
-1. After the download is complete, open the `tachiyomi-*.apk` file.
+1. After the download is complete, open the `tachiyomi-{{ release.stable.tag_name }}.apk` file.
 1. Proceed with the installation process.
 
 ### 2. Adding sources

@@ -1,5 +1,6 @@
 ---
 title: TachiyomiJ2K
+titleTemplate: false
 description: New design approach along with several other enhancements
 
 layout: home
