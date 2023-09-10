@@ -1,4 +1,6 @@
 <script setup lang="ts">
+/// <reference types="@types/gtag.js" />
+
 import { computed, toRefs } from "vue"
 import type { Extension } from "../../queries/useExtensionsRepositoryQuery"
 
@@ -19,6 +21,13 @@ const iconUrl = computed(() => {
 const apkUrl = computed(() => {
 	return `https://raw.githubusercontent.com/tachiyomiorg/tachiyomi-extensions/repo/apk/${item.value.apk}`
 })
+
+function handleAnalytics() {
+	window.gtag?.("event", "Download", {
+		event_label: `${pkgName.value} v${item.value.version}`,
+		event_category: "Extension",
+	})
+}
 </script>
 
 <template>
@@ -35,7 +44,15 @@ const apkUrl = computed(() => {
 		</div>
 		<Badge v-if="pkgIsNsfw" type="danger" :text="item.version" title="This extension contains NSFW entries." />
 		<Badge v-else type="info" :text="item.version" title="This extension is free from NSFW entries." />
-		<a :href="apkUrl" class="extension-download" title="Download APK" download>↓</a>
+		<a
+			:href="apkUrl"
+			class="extension-download"
+			title="Download APK"
+			:download="item.apk"
+			@click="handleAnalytics"
+		>
+			↓
+		</a>
 	</div>
 </template>
 

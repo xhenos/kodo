@@ -60,6 +60,9 @@ devDependencies:
   '@resvg/resvg-js':
     specifier: ^2.4.1
     version: 2.4.1
+  '@types/gtag.js':
+    specifier: ^0.0.13
+    version: 0.0.13
   '@types/lodash.groupby':
     specifier: ^4.6.7
     version: 4.6.7
@@ -1177,6 +1180,10 @@ packages:
 
   /@types/estree@1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: true
+
+  /@types/gtag.js@0.0.13:
+    resolution: {integrity: sha512-yOXFkfnt1DQr1v9B4ERulJOGnbdVqnPHV8NG4nkQhnu4qbrJecQ06DlaKmSjI3nzIwBj5U9/X61LY4sTc2KbaQ==}
     dev: true
 
   /@types/json-schema@7.0.12:
