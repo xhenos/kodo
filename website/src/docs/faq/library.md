@@ -6,11 +6,11 @@ description: Frequently Asked Questions about the Library.
 # Library
 Frequently Asked Questions about the Library.
 
-## How Can I Monitor My Downloaded Chapters?
+## How can I see the number of downloaded chapters?
 You can enable badges by navigating to <nav to="main_library">, then going to **Filter** and clicking the **Display** tab.
 Then, at the bottom, select **Download badges**.
 
-## Why Does Global Update Skip Certain Entries?
+## Why is Global Update skipping entries?
 The app's default behavior is to skip updates for entries that meet the following criteria:
 
 * Have unread chapters
@@ -24,7 +24,7 @@ We recommend sticking with the default settings and prioritizing unread chapters
 
 If you wish to disable the notification about skipped items, you can do so at <nav to="advanced"> and then **Manage notifications** (doing so requires Android 8 or above).
 
-## Why Am I Warned About Large Bulk Updates and Downloads?
+## Why am I warned about large bulk updates and downloads?
 Excessive server queries and superfluous site interactions could trigger anti-**Tachiyomi** measures from sources. See the previous question for more context. Long-running update checks and downloads might also impact your device's battery life.
 
 To mitigate these concerns:
@@ -35,7 +35,18 @@ To mitigate these concerns:
   * Update only the Reading category by navigating to <nav to="library">, then tap **Categories** under **Global update**.
   * If the warning persists, create a new category for infrequently updated entries (like monthly series or those on hiatus) and set global updates to target the more frequently updated reading category.
 
-## How Can I Ignore Duplicate Chapters?
+## Why aren't library updates working?
+Some Android skins (e.g., **MIUI**) aggressively save battery, potentially shutting down apps in the background.
+
+Whitelist **Tachiyomi** from your battery saver by going to <nav to="advanced"> and tapping **Disable battery optimization**.
+
+If unsuccessful, refer to [DontKillMyApp](https://dontkillmyapp.com/) for battery-saving options on your device and workarounds.
+
+## Can I sync between multiple devices?
+**Tachiyomi** can't sync between devices.
+Use its [backup and restore](/docs/guides/backups) features, including [auto backups](/docs/guides/backups#enabling-automatic-backups), for series database and content migration to another device.
+
+## How can I ignore duplicate chapters?
 Dealing with series translated by multiple groups that result in duplicate chapter releases?
 
 Bookmark or mark as read the undesired chapters, then open the **Filter** menu, ensure you're on the **Filter** tab, then double-tap **Bookmarked** or single-tap **Unread**.
@@ -46,11 +57,20 @@ Ensure [Skip filtered chapters](/docs/guides/reader-settings#skip-filtered-chapt
 Alternatively, migrate to a source without duplicates.
 Refer to the [migration guide](/docs/guides/source-migration) for detailed instructions.
 
-## Why Are Some Cover Thumbnails Corrupted or Blank?
+## Why are some cover thumbnails corrupted or blank?
 If cover thumbnails appear corrupted, blank, or broken, it's likely due to an incomplete download. Fix this by refreshing the covers in settings.
 
 Refresh your covers at <nav to="advanced"> then tap **Refresh library covers**.
 
-## Why Have Some Series Chapters Been Marked as Unread?
+## Why have some chapters been marked as unread?
 If certain series chapters are marked as unread without your interaction, it could be due to changed URLs.
 **Tachiyomi** detects these changes and interprets the chapters as new.
+
+## How do I pause reading history?
+Activate **Incognito Mode** through <nav to="incognito-mode">.
+
+## How do I only read downloaded chapters?
+Activate **Download only** via <nav to="downloaded-only">.
+
+## Why can't I disable the Downloaded filter?
+Deactivate **Download only** via <nav to="downloaded-only">.

@@ -13,53 +13,65 @@ const sidebar: DefaultTheme.SidebarMulti = {
 function defaultSidebar(): DefaultTheme.SidebarItem[] {
 	return [
 		{
+			items: [
+				{
+					text: "Download",
+					link: "/download/",
+				},
+				{
+					text: "Extensions",
+					link: "/extensions/",
+				},
+				{
+					text: "Changelogs",
+					link: "/changelogs/",
+				},
+				{
+					text: "Forks",
+					link: "/forks/",
+				},
+				{
+					text: "Contribute",
+					link: "/docs/contribute",
+				},
+			],
+		},
+		{
 			text: "Frequently Asked Questions",
 			items: [
 				{ text: "General", link: "/docs/faq/general" },
 				{
-					text: "Application",
-					link: "/docs/faq/application/",
+					text: "Library",
+					link: "/docs/faq/library",
+				},
+				{
+					text: "Browse",
+					link: "/docs/faq/browse/",
 					collapsed: true,
 					items: [
+						{ text: "Extensions", link: "/docs/faq/browse/extensions" },
 						{
-							text: "Library",
-							link: "/docs/faq/application/library",
-						},
-						{
-							text: "Browse",
-							link: "/docs/faq/application/browse/",
-							collapsed: true,
-							items: [
-								{
-									text: "Local sources",
-									link: "/docs/faq/application/browse/local-sources",
-								},
-							],
-						},
-						{
-							text: "Downloads",
-							link: "/docs/faq/application/downloads",
-						},
-						{
-							text: "Reader",
-							link: "/docs/faq/application/reader",
-						},
-						{
-							text: "User interface",
-							link: "/docs/faq/application/user-interface",
-						},
-						{
-							text: "Android 11+",
-							link: "/docs/faq/application/android-11+",
-						},
-						{
-							text: "Shizuku",
-							link: "/docs/faq/application/shizuku",
+							text: "Local source",
+							link: "/docs/faq/browse/local-source",
 						},
 					],
 				},
-				{ text: "Extensions", link: "/docs/faq/extensions" },
-				{ text: "Miscellaneous", link: "/docs/faq/miscellaneous" },
+				{
+					text: "Downloads",
+					link: "/docs/faq/downloads",
+				},
+				{
+					text: "Reader",
+					link: "/docs/faq/reader",
+				},
+				{
+					text: "Settings",
+					link: "/docs/faq/settings",
+				},
+				{
+					text: "Android 11+",
+					link: "/docs/faq/android-11+",
+				},
 			],
 		},
 		{
@@ -92,13 +104,13 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				{ text: "Tracking", link: "/docs/guides/tracking" },
 				{ text: "Categories", link: "/docs/guides/categories" },
 				{
-					text: "Local series",
-					link: "/docs/guides/local-series/",
+					text: "Local source",
+					link: "/docs/guides/local-source/",
 					collapsed: true,
 					items: [
 						{
 							text: "Advanced editing",
-							link: "/docs/guides/local-series/advanced",
+							link: "/docs/guides/local-source/advanced",
 						},
 					],
 				},
@@ -106,34 +118,9 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Reader settings",
 					link: "/docs/guides/reader-settings",
 				},
-			],
-		},
-		{
-			text: "Application",
-			items: [
 				{
-					text: "Contribution",
-					link: "/docs/contribution",
-				},
-				{
-					text: "Download",
-					link: "/download/",
-				},
-				{
-					text: "Extensions",
-					link: "/extensions/",
-				},
-				{
-					text: "Changelogs",
-					link: "/changelogs/",
-				},
-				{
-					text: "Forks",
-					link: "/forks/",
-				},
-				{
-					text: "News",
-					link: "/news/",
+					text: "Shizuku",
+					link: "/docs/guides/shizuku",
 				},
 			],
 		},
