@@ -25,10 +25,11 @@ onMounted(() => {
 
 function handleAnalytics(type: "preview" | "stable") {
 	window.gtag?.("event", "Download", {
-		event_label: type === "stable"
-			? `Stable ${release.stable.tag_name}`
-			: `Preview ${release.preview.tag_name}`,
 		event_category: "App",
+		event_label: type === "stable" ? "Stable" : "Preview",
+		version: type === "stable"
+			? release.stable.tag_name
+			: release.preview.tag_name,
 	})
 }
 </script>

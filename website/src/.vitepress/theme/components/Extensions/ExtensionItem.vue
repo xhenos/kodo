@@ -24,8 +24,9 @@ const apkUrl = computed(() => {
 
 function handleAnalytics() {
 	window.gtag?.("event", "Download", {
-		event_label: `${pkgName.value} v${item.value.version}`,
 		event_category: "Extension",
+		event_label: pkgName.value,
+		version: item.value.version,
 	})
 }
 </script>
