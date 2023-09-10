@@ -11,7 +11,7 @@ const downloadInformation = computed(() => ({
 			.find((a) => /^tachiyomi-r\d{4,}.apk/.test(a.name)),
 	},
 	stable: {
-		tagName: release.stable.tag_name?.slice(1) ?? "0.00.0",
+		tagName: release.stable.tag_name ?? "v0.00.0",
 		asset: (release.stable.assets ?? [])
 			.find((a) => /^tachiyomi-v\d+\.\d+\.\d+.apk/.test(a.name)),
 	},
@@ -38,7 +38,7 @@ function handleAnalytics(type: "preview" | "stable") {
 	<div>
 		<div v-if="!isAndroid" class="custom-block danger">
 			<p class="custom-block-title">
-				Unsupported Operating System
+				Unsupported operating system
 			</p>
 			<p>
 				<strong>Tachiyomi</strong> is an <strong>Android app</strong> only.
@@ -50,11 +50,8 @@ function handleAnalytics(type: "preview" | "stable") {
 				Caution
 			</p>
 			<p>
-				Any app for other operating systems that are not Android and
-				that calls itself <strong>Tachiyomi</strong> is
-				<strong>impersonating</strong> the original
-				<strong>Tachiyomi</strong> app for <strong>Android</strong>
-				and is not affiliated with the project.
+				Any app for any operating systems other than Android called
+				<strong>Tachiyomi</strong> is not affiliated with this project.
 			</p>
 			<blockquote>
 				For more information, read the

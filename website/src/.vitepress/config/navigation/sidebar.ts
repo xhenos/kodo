@@ -13,6 +13,30 @@ const sidebar: DefaultTheme.SidebarMulti = {
 function defaultSidebar(): DefaultTheme.SidebarItem[] {
 	return [
 		{
+			items: [
+				{
+					text: "Download",
+					link: "/download/",
+				},
+				{
+					text: "Extensions",
+					link: "/extensions/",
+				},
+				{
+					text: "Changelogs",
+					link: "/changelogs/",
+				},
+				{
+					text: "Forks",
+					link: "/forks/",
+				},
+				{
+					text: "Contribute",
+					link: "/docs/contribute",
+				},
+			],
+		},
+		{
 			text: "Frequently Asked Questions",
 			items: [
 				{ text: "General", link: "/docs/faq/general" },
@@ -31,8 +55,8 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 							collapsed: true,
 							items: [
 								{
-									text: "Local sources",
-									link: "/docs/faq/application/browse/local-sources",
+									text: "Local source",
+									link: "/docs/faq/application/browse/local-source",
 								},
 							],
 						},
@@ -45,10 +69,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 							link: "/docs/faq/application/reader",
 						},
 						{
-							text: "User interface",
-							link: "/docs/faq/application/user-interface",
-						},
-						{
 							text: "Android 11+",
 							link: "/docs/faq/application/android-11+",
 						},
@@ -56,10 +76,13 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 							text: "Shizuku",
 							link: "/docs/faq/application/shizuku",
 						},
+						{
+							text: "Miscellaneous",
+							link: "/docs/faq/application/miscellaneous",
+						},
 					],
 				},
 				{ text: "Extensions", link: "/docs/faq/extensions" },
-				{ text: "Miscellaneous", link: "/docs/faq/miscellaneous" },
 			],
 		},
 		{
@@ -92,48 +115,19 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				{ text: "Tracking", link: "/docs/guides/tracking" },
 				{ text: "Categories", link: "/docs/guides/categories" },
 				{
-					text: "Local series",
-					link: "/docs/guides/local-series/",
+					text: "Local source",
+					link: "/docs/guides/local-source/",
 					collapsed: true,
 					items: [
 						{
 							text: "Advanced editing",
-							link: "/docs/guides/local-series/advanced",
+							link: "/docs/guides/local-source/advanced",
 						},
 					],
 				},
 				{
 					text: "Reader settings",
 					link: "/docs/guides/reader-settings",
-				},
-			],
-		},
-		{
-			text: "Application",
-			items: [
-				{
-					text: "Contribution",
-					link: "/docs/contribution",
-				},
-				{
-					text: "Download",
-					link: "/download/",
-				},
-				{
-					text: "Extensions",
-					link: "/extensions/",
-				},
-				{
-					text: "Changelogs",
-					link: "/changelogs/",
-				},
-				{
-					text: "Forks",
-					link: "/forks/",
-				},
-				{
-					text: "News",
-					link: "/news/",
 				},
 			],
 		},
