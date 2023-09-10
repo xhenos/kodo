@@ -20,6 +20,8 @@ function mountGoogleAnalytics(id: string) {
 
 		gtag("js", new Date())
 		gtag("config", id)
+
+		window.gtag = gtag
 	})
 
 	analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
