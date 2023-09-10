@@ -28,7 +28,7 @@ features:
     details: Get recommendations from MyAnimeList and AniDB.
     icon: 📚
   - title: Autoscroll
-    details: Allows reading your series easily without any extra interaction.
+    details: Allows you to read without any extra interaction.
     icon: 📜
 
 theme: "#CE2828"
