@@ -1,6 +1,6 @@
 ---
 title: TachiyomiJ2K
-description: New approach to the design of the base app along with several other enhancements
+description: New design approach along with several other enhancements
 
 layout: home
 pageClass: page-tachiyomi-j2k
@@ -8,7 +8,7 @@ pageClass: page-tachiyomi-j2k
 hero:
   name: TachiyomiJ2K
   text: Redesigned
-  tagline: New approach to the design of the base app along with several other enhancements
+  tagline: New design approach along with several other enhancements
   image: /forks/logo-j2k.webp
   actions:
     - theme: brand
